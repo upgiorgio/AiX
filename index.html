@@ -17,7 +17,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/styles.css?v=20260221-2" />
   </head>
   <body>
     <div class="bg-orb bg-orb-a"></div>
@@ -165,6 +165,88 @@
         </div>
         <p id="historyMeta" class="muted"></p>
       </section>
+
+      <section class="card reveal">
+        <h2>9) 多平台适配工作台（草稿共享）</h2>
+        <p class="muted no-top">默认读取上方 X 草稿，可共享到各平台做二次优化，并输出对应审核提醒。</p>
+        <div class="platform-chooser" id="platformChooser">
+          <label class="chip-option">
+            <input type="checkbox" value="x" checked />
+            <span>X</span>
+          </label>
+          <label class="chip-option">
+            <input type="checkbox" value="wechat" checked />
+            <span>公众号</span>
+          </label>
+          <label class="chip-option">
+            <input type="checkbox" value="zhihu" checked />
+            <span>知乎</span>
+          </label>
+          <label class="chip-option">
+            <input type="checkbox" value="bilibili" checked />
+            <span>哔哩哔哩</span>
+          </label>
+          <label class="chip-option">
+            <input type="checkbox" value="xiaohongshu" checked />
+            <span>小红书</span>
+          </label>
+        </div>
+        <div class="action-row">
+          <button id="generatePlatformsBtn" class="btn btn-primary">基于当前草稿生成所选平台版本</button>
+          <button id="copyPlatformsBtn" class="btn btn-secondary">复制全部平台建议</button>
+          <button id="clearPlatformsBtn" class="btn btn-ghost">清空平台输出</button>
+        </div>
+        <div id="platformCards" class="platform-cards"></div>
+      </section>
+
+      <section class="card reveal">
+        <h2>10) 官方规则与案例速查</h2>
+        <p class="muted no-top">按平台 + 分类筛选官方规则、填写技巧、案例与审核提示。最终审核以平台实时提示为准。</p>
+        <div class="resource-filters">
+          <label>
+            平台
+            <select id="resourcePlatformSelect">
+              <option value="all">全部</option>
+              <option value="x">X</option>
+              <option value="wechat">公众号</option>
+              <option value="zhihu">知乎</option>
+              <option value="bilibili">哔哩哔哩</option>
+              <option value="xiaohongshu">小红书</option>
+              <option value="github">GitHub</option>
+            </select>
+          </label>
+          <label>
+            分类
+            <select id="resourceTypeSelect">
+              <option value="all">全部</option>
+              <option value="official">官方规则</option>
+              <option value="tips">填写技巧</option>
+              <option value="case">优秀案例</option>
+              <option value="audit">审核与敏感词</option>
+              <option value="share">X 与 GitHub 分享</option>
+            </select>
+          </label>
+        </div>
+        <p id="resourceSummary" class="muted"></p>
+        <div id="resourceSensitivePanel" class="resource-sensitive"></div>
+        <div id="resourceCards" class="resource-cards"></div>
+      </section>
+
+      <section class="card reveal">
+        <h2>11) 全局项目索引与技能自动化</h2>
+        <p class="muted no-top">每次新项目交付后执行一次，可自动写入全局索引，后续可快速检索。</p>
+        <textarea id="automationCmdOutput" class="result-text" rows="9" readonly></textarea>
+        <div class="action-row">
+          <button id="copyAutomationCmdBtn" class="btn btn-secondary">复制索引命令</button>
+          <button id="copySkillPromptBtn" class="btn btn-secondary">复制技能触发词</button>
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <h2>12) XCreators 近 30 天补充信号</h2>
+        <p class="muted no-top">用于补充文章策略中的最新官方方向（来源见每条末尾链接）。</p>
+        <ul id="recentSignalsOutput" class="output-list"></ul>
+      </section>
     </main>
 
     <footer class="footer">
@@ -173,6 +255,6 @@
       </p>
     </footer>
 
-    <script src="/app.js" defer></script>
+    <script src="/app.js?v=20260221-2" defer></script>
   </body>
 </html>
