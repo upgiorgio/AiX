@@ -309,6 +309,14 @@ const xCreatorsRecentSignals = [
     sourceType: "官方 X"
   },
   {
+    date: "2026-02 中旬（抓取日：2026-02-21）",
+    title: "$1M Video Contest 启动",
+    action: "可把“文章主内容 + 视频二次分发”加入统一发布流程，扩大触达入口。",
+    source: "https://x.com/XCreators/status/2023505771573616938",
+    sourceType: "镜像转引",
+    note: "来自 twstalker 抓取，建议登录 X 复核原帖。"
+  },
+  {
     date: "2026-02 上旬（抓取日：2026-02-21）",
     title: "$1M Grok Ad Contest 公布赢家",
     action: "官方持续用高额激励拉动优质创作，建议保留“活动制内容产线”。",
@@ -338,6 +346,14 @@ const xCreatorsRecentSignals = [
     action: "X 长文已是基础能力，建议默认采用“长文 + Thread”双轨发布。",
     source: "https://x.com/XCreators/status/2012306734568849653",
     sourceType: "官方 X"
+  },
+  {
+    date: "2026-01 下旬（抓取日：2026-02-21）",
+    title: "Creator Studio 入口进入侧边栏",
+    action: "将资格检查、内容管理和分发复盘固定在 Creator Studio 入口，减少漏操作。",
+    source: "https://x.com/XCreators/status/2023118522394687998",
+    sourceType: "镜像转引",
+    note: "来自 twstalker 抓取，建议登录 X 复核原帖。"
   },
   {
     date: "2026-01 下旬",
