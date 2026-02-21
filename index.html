@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1b2a" />
+    <meta
+      name="description"
+      content="X Articles 实战工具：选题、写作、拆分 Thread、72 小时分发、订阅变现与发布前自检。"
+    />
+    <title>X Articles Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb bg-orb-a"></div>
+    <div class="bg-orb bg-orb-b"></div>
+    <div class="bg-grid"></div>
+
+    <header class="hero">
+      <p class="eyebrow">X CREATOR WORKBENCH</p>
+      <h1>X Articles Studio</h1>
+      <p class="subtitle">
+        把选题、写作、分发、订阅变现和发布动作放进一个页面。适配手机与桌面，可安装为 PWA。
+      </p>
+      <div class="hero-actions">
+        <button id="saveDraftBtn" class="btn btn-secondary">保存草稿</button>
+        <button id="loadDraftBtn" class="btn btn-secondary">读取草稿</button>
+        <button id="exportMarkdownBtn" class="btn btn-primary">导出 Markdown</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card card-inputs reveal">
+        <h2>1) 创作输入</h2>
+        <div class="field-grid">
+          <label>
+            主题
+            <input id="topic" placeholder="例：AI 工具如何提升自由职业者收入" />
+          </label>
+          <label>
+            目标人群
+            <input id="audience" placeholder="例：正在做副业的内容创作者" />
+          </label>
+          <label>
+            核心观点
+            <input id="thesis" placeholder="例：用流程化写作比灵感写作更容易放大收益" />
+          </label>
+          <label>
+            读后动作
+            <input id="ctaGoal" placeholder="例：收藏本文并按清单发布第一篇文章" />
+          </label>
+          <label>
+            语气风格
+            <select id="tone">
+              <option value="理性拆解">理性拆解</option>
+              <option value="犀利观点">犀利观点</option>
+              <option value="朋友对话">朋友对话</option>
+              <option value="故事叙事">故事叙事</option>
+            </select>
+          </label>
+          <label>
+            X 用户名（用于订阅链接）
+            <input id="username" placeholder="例：yourusername（不带@）" />
+          </label>
+        </div>
+
+        <label class="full-width">
+          证据素材（每行一条：数据 / 案例 / 亲历 / 对比）
+          <textarea
+            id="evidence"
+            rows="5"
+            placeholder="例：\n- 过去 30 天发 8 篇长文，主页曝光增长 220%\n- 某篇通过 Thread 回流带来 34 个订阅"
+          ></textarea>
+        </label>
+
+        <div class="action-row">
+          <button id="generateBtn" class="btn btn-primary">生成整套内容</button>
+          <button id="resetBtn" class="btn btn-ghost">清空</button>
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <h2>2) 标题与开头钩子</h2>
+        <div class="split">
+          <article>
+            <h3>标题候选</h3>
+            <ol id="titlesOutput" class="output-list"></ol>
+          </article>
+          <article>
+            <h3>开头钩子</h3>
+            <ul id="hooksOutput" class="output-list"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <h2>3) 文章草稿（可扫读结构）</h2>
+        <textarea id="articleOutput" class="result-text" rows="24"></textarea>
+        <div class="action-row">
+          <button id="copyArticleBtn" class="btn btn-secondary">复制文章</button>
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <h2>4) Thread 拆分（5-12 条）</h2>
+        <div id="threadOutput" class="thread-list"></div>
+        <div class="action-row">
+          <button id="copyThreadBtn" class="btn btn-secondary">复制 Thread</button>
+          <button id="openThreadIntentBtn" class="btn btn-primary">打开 X 发首条 Thread</button>
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <h2>5) 72 小时分发与订阅变现</h2>
+        <div class="split">
+          <article>
+            <h3>72 小时动作清单</h3>
+            <ul id="planOutput" class="output-list"></ul>
+          </article>
+          <article>
+            <h3>订阅变现模块</h3>
+            <textarea id="monetizeOutput" class="result-text" rows="11"></textarea>
+          </article>
+        </div>
+        <div class="action-row">
+          <button id="openTeaserIntentBtn" class="btn btn-secondary">打开 X 发预热帖</button>
+          <button id="openSubIntentBtn" class="btn btn-secondary">打开 X 发订阅引导帖</button>
+        </div>
+      </section>
+
+      <section class="card reveal">
+        <h2>6) 发布前 3 分钟自检（v2）</h2>
+        <div id="checklistContainer" class="checklist-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Build once, publish everywhere. 建议每次发布后记录 24h 与 72h 的表现，迭代标题与开头策略。
+      </p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

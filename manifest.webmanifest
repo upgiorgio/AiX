@@ -1,0 +1,21 @@
+{
+  "name": "X Articles Studio",
+  "short_name": "X Studio",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06121d",
+  "theme_color": "#0d1b2a",
+  "description": "X Articles 创作、分发、订阅变现一体化工具",
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
