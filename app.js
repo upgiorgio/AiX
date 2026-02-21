@@ -9,6 +9,24 @@ const HOT_WINDOWS = {
   "7d": "最近一周"
 };
 
+const sectionIconMap = {
+  "module-inputs": "i-compose",
+  "module-title-hook": "i-bulb",
+  "module-article": "i-document",
+  "module-thread": "i-thread",
+  "module-plan": "i-timeline",
+  "module-quality": "i-gauge",
+  "module-checklist": "i-check",
+  "module-history": "i-clock",
+  "module-platforms": "i-layers",
+  "module-rules": "i-shield",
+  "module-automation": "i-automation",
+  "module-signals": "i-signal",
+  "module-hot": "i-fire",
+  "module-audit": "i-chart",
+  "module-model": "i-beaker"
+};
+
 const state = {
   titles: [],
   hooks: [],
@@ -631,6 +649,24 @@ function safeParse(raw, fallback) {
   } catch {
     return fallback;
   }
+}
+
+function decorateSectionHeadings() {
+  document.querySelectorAll("main section.card > h2").forEach((heading) => {
+    if (heading.dataset.iconized === "1") return;
+    const section = heading.closest("section");
+    if (!section) return;
+    const iconId = sectionIconMap[section.id];
+    if (!iconId) return;
+
+    const original = heading.innerHTML;
+    heading.classList.add("card-title");
+    heading.innerHTML = `
+      <span class="title-icon"><svg aria-hidden="true"><use href="#${iconId}"></use></svg></span>
+      <span class="title-text">${original}</span>
+    `;
+    heading.dataset.iconized = "1";
+  });
 }
 
 function readInput() {
@@ -2238,6 +2274,7 @@ function initPwa() {
 }
 
 function init() {
+  decorateSectionHeadings();
   renderChecklist();
   renderHistory();
   renderQuality(null);
