@@ -17,7 +17,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="/styles.css?v=20260221-3" />
+    <link rel="stylesheet" href="/styles.css?v=20260221-5" />
   </head>
   <body>
     <div class="bg-orb bg-orb-a"></div>
@@ -36,10 +36,17 @@
         <button id="loadDraftBtn" class="btn btn-secondary">读取草稿</button>
         <button id="exportMarkdownBtn" class="btn btn-primary">导出 Markdown</button>
       </div>
+      <nav class="jump-nav">
+        <a href="#module-platforms">多平台改写</a>
+        <a href="#module-rules">规则速查</a>
+        <a href="#module-hot">热点雷达</a>
+        <a href="#module-audit">竞品审计</a>
+        <a href="#module-model">推演模型</a>
+      </nav>
     </header>
 
     <main class="layout">
-      <section class="card card-inputs reveal">
+      <section id="module-inputs" class="card card-inputs reveal">
         <h2>1) 创作输入</h2>
         <div class="field-grid">
           <label>
@@ -88,7 +95,7 @@
         </div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-title-hook" class="card reveal">
         <h2>2) 标题与开头钩子</h2>
         <div class="split">
           <article>
@@ -102,7 +109,7 @@
         </div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-article" class="card reveal">
         <h2>3) 文章草稿（可扫读结构）</h2>
         <textarea id="articleOutput" class="result-text" rows="24"></textarea>
         <div class="action-row">
@@ -110,7 +117,7 @@
         </div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-thread" class="card reveal">
         <h2>4) Thread 拆分（5-12 条）</h2>
         <div id="threadOutput" class="thread-list"></div>
         <div class="action-row">
@@ -119,7 +126,7 @@
         </div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-plan" class="card reveal">
         <h2>5) 72 小时分发与订阅变现</h2>
         <div class="split">
           <article>
@@ -137,7 +144,7 @@
         </div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-quality" class="card reveal">
         <h2>6) 内容质量评分（实时）</h2>
         <div class="score-head">
           <div class="score-number"><span id="qualityScore">0</span><small>/100</small></div>
@@ -151,12 +158,12 @@
         <ul id="qualityTips" class="output-list"></ul>
       </section>
 
-      <section class="card reveal">
+      <section id="module-checklist" class="card reveal">
         <h2>7) 发布前 3 分钟自检（v2）</h2>
         <div id="checklistContainer" class="checklist-grid"></div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-history" class="card reveal">
         <h2>8) 草稿历史版本</h2>
         <div class="history-row">
           <select id="historySelect"></select>
@@ -166,7 +173,7 @@
         <p id="historyMeta" class="muted"></p>
       </section>
 
-      <section class="card reveal">
+      <section id="module-platforms" class="card reveal">
         <h2>9) 多平台适配工作台（草稿共享）</h2>
         <p class="muted no-top">默认读取上方 X 草稿，可共享到各平台做二次优化，并输出对应审核提醒。</p>
         <div class="platform-chooser" id="platformChooser">
@@ -199,7 +206,7 @@
         <div id="platformCards" class="platform-cards"></div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-rules" class="card reveal">
         <h2>10) 官方规则与案例速查</h2>
         <p class="muted no-top">按平台 + 分类筛选官方规则、填写技巧、案例与审核提示。最终审核以平台实时提示为准。</p>
         <div class="resource-filters">
@@ -232,7 +239,7 @@
         <div id="resourceCards" class="resource-cards"></div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-automation" class="card reveal">
         <h2>11) 全局项目索引与技能自动化</h2>
         <p class="muted no-top">每次新项目交付后执行一次，可自动写入全局索引，后续可快速检索。</p>
         <textarea id="automationCmdOutput" class="result-text" rows="9" readonly></textarea>
@@ -242,13 +249,13 @@
         </div>
       </section>
 
-      <section class="card reveal">
+      <section id="module-signals" class="card reveal">
         <h2>12) XCreators 近 30 天补充信号</h2>
         <p class="muted no-top">用于补充文章策略中的最新官方方向（来源见每条末尾链接）。</p>
         <ul id="recentSignalsOutput" class="output-list"></ul>
       </section>
 
-      <section class="card reveal">
+      <section id="module-hot" class="card reveal">
         <h2>13) 热点话题雷达（Beta）</h2>
         <p class="muted no-top">支持“过去 48 小时 / 最近一周”窗口，默认拉取 X 中文话题、公众号热词、小红书热词（小红书需配置专用接口）。</p>
         <div class="hot-toolbar">
@@ -277,14 +284,81 @@
           </article>
         </div>
       </section>
+
+      <section id="module-audit" class="card reveal">
+        <h2>14) 竞品审计（5 个）</h2>
+        <p class="muted no-top">基于官方能力描述，聚焦“写作效率 / 多平台分发 / 协作审批 / 数据复盘 / 自动化”5 个维度。</p>
+        <div id="competitorCards" class="audit-grid"></div>
+      </section>
+
+      <section id="module-model" class="card reveal">
+        <h2>15) 用户操作流 + 规则推演模型</h2>
+        <div class="split">
+          <article>
+            <h3>高频操作流程（实操）</h3>
+            <ol id="opsWorkflowList" class="output-list"></ol>
+          </article>
+          <article class="model-panel">
+            <h3>规则推演输入</h3>
+            <div class="field-grid model-grid">
+              <label>
+                平台
+                <select id="modelPlatform">
+                  <option value="x">X</option>
+                  <option value="wechat">公众号</option>
+                  <option value="zhihu">知乎</option>
+                  <option value="bilibili">哔哩哔哩</option>
+                  <option value="xiaohongshu">小红书</option>
+                </select>
+              </label>
+              <label>
+                内容形态
+                <select id="modelFormat">
+                  <option value="article">长文</option>
+                  <option value="thread">短帖/Thread</option>
+                  <option value="video">视频脚本</option>
+                  <option value="carousel">图文清单/轮播</option>
+                </select>
+              </label>
+              <label>
+                变现方式
+                <select id="modelMonetize">
+                  <option value="none">无</option>
+                  <option value="subscription">订阅</option>
+                  <option value="affiliate">分销/导购</option>
+                  <option value="sponsored">广告合作</option>
+                </select>
+              </label>
+              <label>
+                站外导流
+                <select id="modelExternalLink">
+                  <option value="no">无</option>
+                  <option value="yes">有</option>
+                </select>
+              </label>
+            </div>
+            <div class="action-row">
+              <button id="runModelBtn" class="btn btn-primary">运行推演</button>
+            </div>
+          </article>
+        </div>
+        <div class="model-result">
+          <div id="modelScores" class="risk-metric-grid"></div>
+          <h3>模型建议</h3>
+          <ul id="modelSuggestions" class="output-list"></ul>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <p>
         Build once, publish everywhere. 建议每次发布后记录 24h 与 72h 的表现，迭代标题与开头策略。
       </p>
+      <p>
+        GitHub：<a href="https://github.com/upgiorgio/AiX" target="_blank" rel="noopener noreferrer">upgiorgio/AiX</a> ｜ Crafted by Giorgio
+      </p>
     </footer>
 
-    <script src="/app.js?v=20260221-3" defer></script>
+    <script src="/app.js?v=20260221-5" defer></script>
   </body>
 </html>

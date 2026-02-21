@@ -18,7 +18,8 @@ const state = {
   monetize: "",
   quality: null,
   platformPackages: {},
-  hotTopics: null
+  hotTopics: null,
+  modelResult: null
 };
 
 const platformProfiles = {
@@ -268,6 +269,27 @@ const resourceCatalog = [
     ]
   },
   {
+    title: "竞品能力调研（官方站点）",
+    type: "case",
+    platforms: ["x", "wechat", "zhihu", "bilibili", "xiaohongshu", "github"],
+    links: [
+      { label: "Typefully Features", url: "https://typefully.com/features/" },
+      { label: "Tweet Hunter 官网", url: "https://tweethunter.io/" },
+      { label: "Hypefury 官网", url: "https://hypefury.com/" },
+      { label: "Buffer Publishing", url: "https://buffer.com/publishing" },
+      { label: "Metricool Planner", url: "https://metricool.com/planner/" }
+    ]
+  },
+  {
+    title: "用户习惯研究（行业报告）",
+    type: "tips",
+    platforms: ["x", "wechat", "zhihu", "bilibili", "xiaohongshu"],
+    links: [
+      { label: "Sprout Social Index 2025", url: "https://sproutsocial.com/insights/data/" },
+      { label: "HubSpot Social Media Trends 2025", url: "https://blog.hubspot.com/marketing/hubspot-blog-social-media-marketing-report" }
+    ]
+  },
+  {
     title: "XCreators 最近动态（官方 + 镜像）",
     type: "case",
     platforms: ["x"],
@@ -283,25 +305,30 @@ const resourceCatalog = [
 const platformSensitiveRules = {
   x: [
     { regex: /100%|稳赚|保赚|包过|绝对/g, suggestion: "改成“有机会提升/在特定条件下有效”，避免绝对化承诺。" },
-    { regex: /互粉|互赞|刷量|代刷/g, suggestion: "删除诱导互刷表达，改为真实互动引导。" }
+    { regex: /互粉|互赞|刷量|代刷/g, suggestion: "删除诱导互刷表达，改为真实互动引导。" },
+    { regex: /内幕消息|保证收益|躺赚|暴富/g, suggestion: "降低承诺强度，补充风险边界和前提条件。" }
   ],
   wechat: [
     { regex: /100%|稳赚|包过|永久有效|唯一/g, suggestion: "替换为“可能/通常/在样本中观察到”，避免虚假或绝对化承诺。" },
     { regex: /加微信|vx|v信|私信领资料|拉群/g, suggestion: "避免违规导流，改为平台内合法关注和菜单引导。" },
-    { regex: /治愈|根治|无副作用|速效/g, suggestion: "医疗健康相关表述需审慎，删除功效承诺词。" }
+    { regex: /治愈|根治|无副作用|速效/g, suggestion: "医疗健康相关表述需审慎，删除功效承诺词。" },
+    { regex: /国家级|顶级机密|官方背书|唯一渠道/g, suggestion: "避免无依据权威背书表达，改为可验证出处。" }
   ],
   zhihu: [
     { regex: /绝对|必然|肯定|毫无疑问/g, suggestion: "结论降级并补充证据来源，区分事实与推断。" },
-    { regex: /内幕|黑幕|全网都在骗你/g, suggestion: "避免煽动性标题，改为可验证的问题式标题。" }
+    { regex: /内幕|黑幕|全网都在骗你/g, suggestion: "避免煽动性标题，改为可验证的问题式标题。" },
+    { regex: /秒懂|一招制胜|颠覆认知|吊打/g, suggestion: "减少情绪化词汇，突出证据链和适用边界。" }
   ],
   bilibili: [
     { regex: /互粉|互赞|刷播放|冲榜/g, suggestion: "删除异常增长导向文案，改为内容互动问题。" },
-    { regex: /搬运|未授权|盗版/g, suggestion: "涉及素材时补充版权来源或更换为自有素材。" }
+    { regex: /搬运|未授权|盗版/g, suggestion: "涉及素材时补充版权来源或更换为自有素材。" },
+    { regex: /抽奖保中|送现金|立刻私信领奖/g, suggestion: "活动与福利要按平台活动规则表达，避免诱导性承诺。" }
   ],
   xiaohongshu: [
     { regex: /最强|第一|无敌|必买|闭眼入/g, suggestion: "减少夸张种草词，改成体验条件和适用人群。" },
     { regex: /无副作用|立刻见效|7天见效|根治/g, suggestion: "删除功效承诺，改为个人体验并提示差异性。" },
-    { regex: /加微信|私信我发链接|站外下单/g, suggestion: "避免站外导流表达，改为平台内合规路径。" }
+    { regex: /加微信|私信我发链接|站外下单/g, suggestion: "避免站外导流表达，改为平台内合规路径。" },
+    { regex: /全网最低|保证正品|绝版抢购|最后一天/g, suggestion: "减少紧迫性和价格绝对化表述，补充客观依据。" }
   ]
 };
 
@@ -383,6 +410,148 @@ const xCreatorsRecentSignals = [
     sourceType: "官方 X"
   }
 ];
+
+const competitorBenchmarks = [
+  {
+    name: "Typefully",
+    position: "X 优先的长文/Thread 写作与排期工具",
+    strengths: [
+      "草稿、排期、Thread 编辑体验集中在一个工作流里",
+      "支持团队评论协作与审批",
+      "强调自动化与跨平台发布能力"
+    ],
+    gaps: ["中文平台原生适配弱", "本地化审核规则覆盖有限"],
+    scores: { writing: 95, distribution: 88, collaboration: 86, analytics: 80, automation: 92 },
+    links: [
+      { label: "Typefully Features", url: "https://typefully.com/features/" },
+      { label: "Typefully API", url: "https://docs.typefully.com/" }
+    ]
+  },
+  {
+    name: "Tweet Hunter",
+    position: "X 内容增长 + 线索转化导向工具",
+    strengths: ["提供写作辅助与内容复用", "强调增长与自动化流程", "偏向高频内容运营用户"],
+    gaps: ["品牌审校与多人审批较弱", "跨中文内容生态适配成本较高"],
+    scores: { writing: 90, distribution: 84, collaboration: 70, analytics: 82, automation: 90 },
+    links: [{ label: "Tweet Hunter 官网", url: "https://tweethunter.io/" }]
+  },
+  {
+    name: "Hypefury",
+    position: "自动化分发与内容再利用导向",
+    strengths: ["擅长回收旧内容做二次分发", "自动化动作配置相对直接", "适配创作者单兵场景"],
+    gaps: ["深度数据分析能力一般", "长文结构化编辑能力不突出"],
+    scores: { writing: 76, distribution: 89, collaboration: 66, analytics: 74, automation: 91 },
+    links: [{ label: "Hypefury 官网", url: "https://hypefury.com/" }]
+  },
+  {
+    name: "Buffer",
+    position: "跨平台发布排期与团队协作标准工具",
+    strengths: ["多平台排期、协作、审批链路成熟", "支持统一内容日历", "团队可见性与流程化管理强"],
+    gaps: ["X 长文深度创作能力不是核心", "针对创作者激励机制优化有限"],
+    scores: { writing: 72, distribution: 90, collaboration: 91, analytics: 83, automation: 80 },
+    links: [{ label: "Buffer Publishing", url: "https://buffer.com/publishing" }]
+  },
+  {
+    name: "Metricool",
+    position: "计划、分析、监控一体化运营平台",
+    strengths: ["内容计划与监控统一看板", "支持跨平台数据复盘", "适合团队周报/月报节奏"],
+    gaps: ["创作辅助偏弱", "中文创作规范与审核提示不够细粒度"],
+    scores: { writing: 68, distribution: 86, collaboration: 78, analytics: 88, automation: 82 },
+    links: [{ label: "Metricool Planner", url: "https://metricool.com/planner/" }]
+  }
+];
+
+const creatorOperationHabits = [
+  {
+    title: "先用短内容验证问题，再投入长文生产",
+    action: "发布前 2-6 小时做预热，先收评论问题，后写正文与开头。",
+    reason: "XCreators 指南强调预热与首波互动能显著提升分发效率。"
+  },
+  {
+    title: "发布后 1 小时集中回复评论",
+    action: "首波评论优先处理高质量问题，放大真实互动。",
+    reason: "XCreators 指南明确建议“reply to early readers”提升可见度。"
+  },
+  {
+    title: "长文拆 Thread 做回流",
+    action: "把长文拆成 5-12 条，首条钩子 + 末条回主文。",
+    reason: "XCreators、Typefully、Hypefury 都强调内容再利用。"
+  },
+  {
+    title: "周维度批量排期 + 日维度微调",
+    action: "周初定 5-10 个主题，日更时按热点微调标题和首段。",
+    reason: "Buffer/Metricool 主打的核心是计划先行，再做动态调整。"
+  },
+  {
+    title: "跨平台不是搬运，而是重写开头与结构",
+    action: "共享同一草稿素材，但按平台重写标题、开头和 CTA。",
+    reason: "HubSpot 2025 指出受众在不同平台期待不同表达语境。"
+  },
+  {
+    title: "审核前置到生产中，而不是发布前临时补救",
+    action: "在草稿阶段就扫描绝对化、导流、功效承诺等高风险表达。",
+    reason: "多平台审核都对敏感表达更严格，晚改成本更高。"
+  },
+  {
+    title: "用 24h/72h 复盘驱动下一轮选题",
+    action: "记录“标题点击/阅读深度/互动率/转化率”，只保留有效动作。",
+    reason: "Sprout Social Index 2025 继续强调内容要靠数据迭代。"
+  }
+];
+
+const modelDimensionLabels = {
+  writing: "写作匹配",
+  distribution: "分发潜力",
+  compliance: "合规安全",
+  conversion: "转化潜力",
+  efficiency: "执行效率",
+  collaboration: "协作能力",
+  analytics: "复盘能力",
+  automation: "自动化"
+};
+
+const platformModelProfiles = {
+  x: {
+    base: { writing: 80, distribution: 82, compliance: 72, conversion: 75, efficiency: 74 },
+    formatBoost: { article: 10, thread: 8, video: 3, carousel: 4 },
+    monetizeBoost: { none: 0, subscription: 12, affiliate: -5, sponsored: -2 },
+    externalPenalty: { distribution: 3, compliance: 8, conversion: 2, efficiency: 2 },
+    idealLength: { min: 1200, max: 4200 },
+    guardrails: ["保持长文 + Thread 双轨", "避免诱导互刷和夸张承诺", "首波评论 1 小时内优先回复"]
+  },
+  wechat: {
+    base: { writing: 78, distribution: 74, compliance: 70, conversion: 77, efficiency: 68 },
+    formatBoost: { article: 9, thread: 2, video: 3, carousel: 6 },
+    monetizeBoost: { none: 0, subscription: 6, affiliate: -8, sponsored: -4 },
+    externalPenalty: { distribution: 5, compliance: 9, conversion: 4, efficiency: 3 },
+    idealLength: { min: 1500, max: 3200 },
+    guardrails: ["避免违规导流词", "避免收益或功效绝对化", "封面与摘要在首屏明确价值"]
+  },
+  zhihu: {
+    base: { writing: 81, distribution: 72, compliance: 75, conversion: 70, efficiency: 70 },
+    formatBoost: { article: 8, thread: 4, video: 4, carousel: 5 },
+    monetizeBoost: { none: 0, subscription: 4, affiliate: -6, sponsored: -5 },
+    externalPenalty: { distribution: 4, compliance: 7, conversion: 4, efficiency: 2 },
+    idealLength: { min: 1000, max: 2600 },
+    guardrails: ["观点后立即补证据", "区分事实与推断", "标题问题化、结论先行"]
+  },
+  bilibili: {
+    base: { writing: 74, distribution: 76, compliance: 71, conversion: 74, efficiency: 64 },
+    formatBoost: { article: 3, thread: 1, video: 12, carousel: 7 },
+    monetizeBoost: { none: 0, subscription: 5, affiliate: -4, sponsored: -2 },
+    externalPenalty: { distribution: 4, compliance: 6, conversion: 3, efficiency: 4 },
+    idealLength: { min: 900, max: 1900 },
+    guardrails: ["脚本化分段，前 15 秒给冲突", "素材版权来源可追溯", "避免引战和低俗表达"]
+  },
+  xiaohongshu: {
+    base: { writing: 76, distribution: 79, compliance: 69, conversion: 78, efficiency: 72 },
+    formatBoost: { article: 4, thread: 1, video: 8, carousel: 10 },
+    monetizeBoost: { none: 0, subscription: 3, affiliate: -9, sponsored: -5 },
+    externalPenalty: { distribution: 6, compliance: 10, conversion: 6, efficiency: 3 },
+    idealLength: { min: 500, max: 1300 },
+    guardrails: ["场景化表达 + 清单化步骤", "减少夸张种草词", "避免站外导流与功效承诺"]
+  }
+};
 
 const SKILL_TRIGGER_PROMPT = `请使用 project-indexer 技能记录当前项目并更新全局索引；再用 x-articles-growth 技能生成 X 长文；最后用 multiplatform-content-ops 技能输出公众号/知乎/B站/小红书改写与合规提醒。`;
 
@@ -1086,6 +1255,201 @@ function renderRecentSignals() {
     .join("");
 }
 
+function renderCompetitorAudit() {
+  const container = $("competitorCards");
+  if (!container) return;
+
+  container.innerHTML = competitorBenchmarks
+    .map((item) => {
+      const metricRows = [
+        ["writing", item.scores.writing],
+        ["distribution", item.scores.distribution],
+        ["collaboration", item.scores.collaboration],
+        ["analytics", item.scores.analytics],
+        ["automation", item.scores.automation]
+      ];
+
+      return `
+      <article class="competitor-card">
+        <div class="competitor-head">
+          <h3>${escapeHtml(item.name)}</h3>
+          <span class="competitor-chip">${escapeHtml(item.position)}</span>
+        </div>
+        <div class="competitor-metrics">
+          ${metricRows
+            .map(
+              ([key, score]) => `
+              <div class="competitor-metric">
+                <span>${escapeHtml(modelDimensionLabels[key])}</span>
+                <strong>${score}</strong>
+                <i style="width:${Math.max(0, Math.min(100, Number(score) || 0))}%"></i>
+              </div>
+            `
+            )
+            .join("")}
+        </div>
+        <h4>可借鉴点</h4>
+        <ul class="output-list">${item.strengths.map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ul>
+        <h4>可超越机会</h4>
+        <ul class="output-list">${item.gaps.map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ul>
+        <p class="competitor-source">
+          来源：${item.links
+            .map(
+              (link) =>
+                `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`
+            )
+            .join(" · ")}
+        </p>
+      </article>
+    `;
+    })
+    .join("");
+}
+
+function renderOpsWorkflow() {
+  const el = $("opsWorkflowList");
+  if (!el) return;
+
+  el.innerHTML = creatorOperationHabits
+    .map(
+      (item) =>
+        `<li><strong>${escapeHtml(item.title)}</strong><br>${escapeHtml(item.action)}<br><span class="ops-note">依据：${escapeHtml(
+          item.reason
+        )}</span></li>`
+    )
+    .join("");
+}
+
+function clampScore(value) {
+  return Math.max(0, Math.min(100, Math.round(Number(value) || 0)));
+}
+
+function getLengthBonus(length, idealLength) {
+  if (!length || !idealLength) return 0;
+  if (length >= idealLength.min && length <= idealLength.max) return 6;
+  if (length < idealLength.min * 0.65 || length > idealLength.max * 1.35) return -7;
+  return -2;
+}
+
+function runRuleModel(showFlash = true) {
+  const platformKey = $("modelPlatform")?.value || "x";
+  const format = $("modelFormat")?.value || "article";
+  const monetize = $("modelMonetize")?.value || "none";
+  const hasExternal = ($("modelExternalLink")?.value || "no") === "yes";
+  const profile = platformModelProfiles[platformKey] || platformModelProfiles.x;
+
+  const input = readInput();
+  const draft = $("articleOutput").value.trim() || state.article || "";
+  const draftLength = stripMarkdown(draft).length;
+  const sensitiveHits = detectSensitiveTerms(platformKey, draft);
+  const lengthBonus = getLengthBonus(draftLength, profile.idealLength);
+  const hasList = /^\s*([-*]|\d+\.)\s+/m.test(draft);
+  const hasSubHeading = /^##\s+/m.test(draft);
+  const hasCta = /(行动|评论|收藏|转发|订阅|下一步)/.test(draft);
+  const inputCompleteness = [input.topic, input.audience, input.thesis, input.ctaGoal].filter(Boolean).length;
+
+  let writing = profile.base.writing + (profile.formatBoost[format] || 0) + lengthBonus + (hasSubHeading ? 3 : -2);
+  writing += hasList ? 2 : -1;
+
+  let distribution = profile.base.distribution + (profile.formatBoost[format] || 0) + (hasList ? 3 : 0);
+  if (hasExternal) distribution -= profile.externalPenalty.distribution;
+
+  let compliance = profile.base.compliance - sensitiveHits.length * 14 + (hasExternal ? -profile.externalPenalty.compliance : 0);
+  if (monetize === "affiliate") compliance -= 5;
+  if (monetize === "sponsored") compliance -= 3;
+
+  let conversion = profile.base.conversion + (profile.monetizeBoost[monetize] || 0) + (hasCta ? 6 : -4);
+  conversion += hasExternal ? -profile.externalPenalty.conversion : 2;
+
+  let efficiency = profile.base.efficiency;
+  if (format === "video") efficiency -= 6;
+  if (format === "carousel") efficiency -= 3;
+  if (monetize !== "none") efficiency -= 5;
+  if (hasExternal) efficiency -= profile.externalPenalty.efficiency;
+  if (inputCompleteness >= 3) efficiency += 4;
+
+  const scores = {
+    writing: clampScore(writing),
+    distribution: clampScore(distribution),
+    compliance: clampScore(compliance),
+    conversion: clampScore(conversion),
+    efficiency: clampScore(efficiency)
+  };
+
+  const total = clampScore(
+    (scores.writing + scores.distribution + scores.compliance + scores.conversion + scores.efficiency) / 5
+  );
+
+  const suggestions = [];
+  suggestions.push(...profile.guardrails.slice(0, 2).map((line) => `平台基线：${line}`));
+  if (scores.writing < 72) suggestions.push("写作匹配偏低：优先重写标题、首段与小标题结构，再进入分发。");
+  if (scores.distribution < 72) suggestions.push("分发潜力偏低：增加预热帖、首波回复和 24-72h 二次分发。");
+  if (scores.compliance < 72) suggestions.push("合规安全偏低：删减绝对化、导流、功效承诺表达，并复检平台规则。");
+  if (scores.conversion < 72) suggestions.push("转化潜力偏低：文末加入明确 CTA、下一期预告或订阅价值说明。");
+  if (scores.efficiency < 68) suggestions.push("执行效率偏低：先减少一个内容形态，保持单流程稳定输出。");
+  if (sensitiveHits.length) {
+    sensitiveHits.slice(0, 3).forEach((hit) => suggestions.push(`命中敏感表达「${hit.matched}」：${hit.suggestion}`));
+  }
+  if (!sensitiveHits.length && scores.compliance >= 78) {
+    suggestions.push("当前草稿未命中常见高风险词，建议发布前再用平台后台进行一次最终审核。");
+  }
+
+  state.modelResult = {
+    platformKey,
+    format,
+    monetize,
+    hasExternal,
+    scores,
+    total,
+    suggestions
+  };
+  renderModelResult(state.modelResult);
+  if (showFlash) flash(`推演完成：综合 ${total}/100`);
+}
+
+function renderModelResult(result) {
+  const scoreWrap = $("modelScores");
+  const suggestionWrap = $("modelSuggestions");
+  if (!scoreWrap || !suggestionWrap) return;
+  if (!result) {
+    scoreWrap.innerHTML = '<p class="muted">选择参数后点击“运行推演”，这里会显示多维评分。</p>';
+    suggestionWrap.innerHTML = "<li>建议先生成一版草稿，再运行模型获得更准确建议。</li>";
+    return;
+  }
+
+  const metricEntries = [
+    ["writing", result.scores.writing],
+    ["distribution", result.scores.distribution],
+    ["compliance", result.scores.compliance],
+    ["conversion", result.scores.conversion],
+    ["efficiency", result.scores.efficiency]
+  ];
+  const summaryClass = result.total >= 85 ? "good" : result.total >= 72 ? "mid" : "low";
+
+  scoreWrap.innerHTML = `
+    <article class="risk-summary ${summaryClass}">
+      <span>综合分</span>
+      <strong>${result.total}</strong>
+      <small>/100</small>
+    </article>
+    ${metricEntries
+      .map(
+        ([key, score]) => `
+      <article class="risk-card">
+        <header>
+          <span>${escapeHtml(modelDimensionLabels[key])}</span>
+          <strong>${score}</strong>
+        </header>
+        <div class="risk-bar"><i style="width:${score}%"></i></div>
+      </article>
+    `
+      )
+      .join("")}
+  `;
+
+  suggestionWrap.innerHTML = result.suggestions.map((line) => `<li>${escapeHtml(line)}</li>`).join("");
+}
+
 function getHotWindow() {
   const value = $("hotWindowSelect")?.value;
   return HOT_WINDOWS[value] ? value : "48h";
@@ -1439,6 +1803,7 @@ function generateAll() {
   $("monetizeOutput").value = state.monetize;
   updateQuality();
   generatePlatformPackages(false);
+  runRuleModel(false);
 }
 
 function escapeHtml(text) {
@@ -1647,6 +2012,7 @@ function applyDraft(data) {
   $("articleOutput").value = data.articleOutput || "";
   $("monetizeOutput").value = data.monetizeOutput || "";
   state.platformPackages = {};
+  state.modelResult = null;
 
   if (data.state) {
     state.titles = data.state.titles || [];
@@ -1664,6 +2030,7 @@ function applyDraft(data) {
   renderPlan(state.plan);
   renderPlatformCards(state.platformPackages);
   updateQuality();
+  runRuleModel(false);
 }
 
 function saveDraft() {
@@ -1739,6 +2106,10 @@ function resetAll() {
   $("resourcePlatformSelect").value = "all";
   $("resourceTypeSelect").value = "all";
   $("hotWindowSelect").value = "48h";
+  $("modelPlatform").value = "x";
+  $("modelFormat").value = "article";
+  $("modelMonetize").value = "none";
+  $("modelExternalLink").value = "no";
 
   state.titles = [];
   state.hooks = [];
@@ -1749,6 +2120,7 @@ function resetAll() {
   state.quality = null;
   state.platformPackages = {};
   state.hotTopics = null;
+  state.modelResult = null;
 
   renderTitles([]);
   renderHooks([]);
@@ -1756,6 +2128,7 @@ function resetAll() {
   renderPlan([]);
   renderPlatformCards({});
   renderQuality(null);
+  renderModelResult(null);
   renderAutomationCommands();
   renderResourceCards();
   refreshHotTopics(false);
@@ -1792,6 +2165,14 @@ function bindEvents() {
   $("resourceTypeSelect").addEventListener("change", renderResourceCards);
   $("refreshHotTopicsBtn").addEventListener("click", () => refreshHotTopics(true));
   $("hotWindowSelect").addEventListener("change", () => refreshHotTopics(false));
+  $("runModelBtn").addEventListener("click", () => runRuleModel(true));
+  ["modelPlatform", "modelFormat", "modelMonetize", "modelExternalLink"].forEach((id) => {
+    $(id).addEventListener("change", () => runRuleModel(false));
+  });
+  $("articleOutput").addEventListener("input", () => {
+    updateQuality();
+    runRuleModel(false);
+  });
 
   document.querySelector(".card-inputs").addEventListener("input", () => {
     renderAutomationCommands();
@@ -1860,7 +2241,10 @@ function init() {
   renderChecklist();
   renderHistory();
   renderQuality(null);
+  renderModelResult(null);
   renderPlatformCards({});
+  renderCompetitorAudit();
+  renderOpsWorkflow();
   renderResourceCards();
   renderAutomationCommands();
   renderRecentSignals();
