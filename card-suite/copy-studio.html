@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiX Card Suite · 文案工场</title>
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="branding">
+          <span class="brand-badge">✍️</span>
+          <div>
+            <h1>文案工场 Copy Studio</h1>
+            <p>输入主题，产出结构化文案草稿 + AI提示词</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="/card-suite/index.html">套件首页</a>
+          <a href="/card-suite/card-designer.html">下一步：卡片设计</a>
+          <a href="/">主控台</a>
+        </nav>
+      </header>
+
+      <main class="main-grid grid-2">
+        <section class="card stack">
+          <h3>输入区</h3>
+          <div class="form-grid">
+            <label>
+              场景模板
+              <select id="scenario">
+                <option value="xhs">小红书种草</option>
+                <option value="x-thread">X Thread</option>
+                <option value="wechat">公众号图文</option>
+                <option value="quote">金句卡片</option>
+                <option value="ad">产品广告</option>
+              </select>
+            </label>
+            <label>
+              输出平台
+              <select id="platform">
+                <option value="xiaohongshu">小红书</option>
+                <option value="x">X</option>
+                <option value="wechat">公众号</option>
+                <option value="zhihu">知乎</option>
+                <option value="bilibili">B站</option>
+              </select>
+            </label>
+            <label>
+              语气风格
+              <select id="tone">
+                <option value="专业理性">专业理性</option>
+                <option value="朋友对话">朋友对话</option>
+                <option value="结果导向">结果导向</option>
+                <option value="故事感">故事感</option>
+              </select>
+            </label>
+            <label>
+              长度目标
+              <select id="length">
+                <option value="短（80-120字）">短（80-120字）</option>
+                <option value="中（180-320字）" selected>中（180-320字）</option>
+                <option value="长（500字+）">长（500字+）</option>
+              </select>
+            </label>
+            <label>
+              主题
+              <input id="topic" placeholder="例：AI工作流如何让个人IP提效" />
+            </label>
+            <label>
+              目标受众
+              <input id="audience" placeholder="例：做自媒体的自由职业者" />
+            </label>
+          </div>
+          <label>
+            核心观点
+            <textarea id="thesis" placeholder="写1-2句最核心观点"></textarea>
+          </label>
+          <label>
+            行动引导（CTA）
+            <input id="cta" placeholder="例：收藏这套模板并今天发一条" />
+          </label>
+          <div class="actions">
+            <button class="btn btn-primary" id="generateBtn">生成草稿与提示词</button>
+            <button class="btn" id="importDraftBtn">导入现有X草稿</button>
+            <button class="btn" id="toCardBtn">发送到卡片设计器</button>
+          </div>
+        </section>
+
+        <section class="card stack">
+          <h3>输出区</h3>
+          <label>
+            文案草稿（可直接改）
+            <textarea id="draftOutput" rows="14"></textarea>
+          </label>
+          <div class="actions">
+            <button class="btn" id="copyDraftBtn">复制草稿</button>
+            <button class="btn" id="downloadDraftBtn">下载 Markdown</button>
+          </div>
+
+          <label>
+            AI 提示词（Claude/ChatGPT）
+            <textarea id="promptOutput" rows="14" readonly></textarea>
+          </label>
+          <div class="actions">
+            <button class="btn btn-warm" id="copyPromptBtn">复制提示词</button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">建议工作流：文案工场 → 卡片设计器 → 发布中心</footer>
+    </div>
+
+    <script src="/card-suite/common.js?v=20260222-1" defer></script>
+    <script src="/card-suite/copy-studio.js?v=20260222-2" defer></script>
+  </body>
+</html>

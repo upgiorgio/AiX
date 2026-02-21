@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiX Card Suite · 卡片设计器</title>
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-1" />
+    <style>
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        gap: 10px;
+      }
+
+      .mini-card {
+        border: 1px solid rgba(150, 206, 234, 0.3);
+        border-radius: 10px;
+        padding: 10px;
+        background: rgba(7, 18, 30, 0.68);
+      }
+
+      .mini-card p {
+        margin: 0;
+        font-size: 0.84rem;
+        line-height: 1.5;
+        color: #ddf0ff;
+        white-space: pre-wrap;
+      }
+
+      .mini-card .meta {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 0.74rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="branding">
+          <span class="brand-badge">🎨</span>
+          <div>
+            <h1>卡片设计引擎 Card Designer</h1>
+            <p>模板、尺寸、拆分、预览、导出</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="/card-suite/index.html">套件首页</a>
+          <a href="/card-suite/copy-studio.html">文案工场</a>
+          <a href="/card-suite/publish-hub.html">下一步：发布中心</a>
+        </nav>
+      </header>
+
+      <main class="main-grid grid-2">
+        <section class="card stack">
+          <h3>编辑控制</h3>
+          <div class="form-grid">
+            <label>
+              模板
+              <select id="template">
+                <option value="template-a">Aurora 蓝</option>
+                <option value="template-b">Night 深色</option>
+                <option value="template-c">Forest 绿</option>
+                <option value="template-d">Sunset 橙</option>
+                <option value="template-e">Rose 洋红</option>
+              </select>
+            </label>
+            <label>
+              平台尺寸
+              <select id="sizePreset">
+                <option value="xhs">小红书 1080×1440</option>
+                <option value="x">X 1200×675</option>
+                <option value="wechat">公众号封面 900×383</option>
+                <option value="square">朋友圈 1080×1080</option>
+              </select>
+            </label>
+            <label>
+              作者
+              <input id="author" placeholder="例：Giorgio" />
+            </label>
+            <label>
+              卡片标题
+              <input id="cardTitle" placeholder="例：为什么你的内容产出总是断档" />
+            </label>
+          </div>
+
+          <label>
+            卡片正文（支持粘贴长文，后续可自动拆分）
+            <textarea id="cardText" rows="14"></textarea>
+          </label>
+
+          <div class="actions">
+            <button class="btn" id="importDraftBtn">导入共享草稿</button>
+            <button class="btn btn-primary" id="splitBtn">自动拆分为多张</button>
+            <button class="btn" id="saveStateBtn">保存当前样式</button>
+            <button class="btn btn-warm" id="toPublishBtn">发送到发布中心</button>
+          </div>
+        </section>
+
+        <section class="card stack">
+          <h3>实时预览</h3>
+          <div class="preview-stage">
+            <article id="cardCanvas" class="card-canvas template-a">
+              <div>
+                <h4 id="previewTitle">卡片标题</h4>
+                <p id="previewText">正文内容会在这里展示。</p>
+              </div>
+              <div class="card-meta">
+                <span id="previewSize">1080 × 1440</span>
+                <span id="previewAuthor">@Giorgio</span>
+              </div>
+            </article>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" id="exportPngBtn">导出当前PNG</button>
+            <button class="btn" id="copyJsonBtn">复制批量JSON</button>
+            <button class="btn" id="downloadJsonBtn">下载批量JSON</button>
+          </div>
+
+          <h3>拆分结果</h3>
+          <p class="muted" id="splitMeta">暂无拆分结果。</p>
+          <div id="cardsGrid" class="cards-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer">建议：正文过长时先自动拆分，再到发布中心做平台分发。</footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
+    <script src="/card-suite/common.js?v=20260222-1" defer></script>
+    <script src="/card-suite/card-designer.js?v=20260222-2" defer></script>
+  </body>
+</html>

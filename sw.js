@@ -1,4 +1,4 @@
-const CACHE_NAME = "x-articles-studio-v9";
+const CACHE_NAME = "x-articles-studio-v11";
 const APP_SHELL = [
   "/",
   "/index.html",
@@ -8,6 +8,22 @@ const APP_SHELL = [
   "/md-lab/index.html",
   "/md-lab/styles.css?v=20260221-2",
   "/md-lab/app.js?v=20260221-3",
+  "/card-suite",
+  "/card-suite/index.html",
+  "/card-suite/copy-studio",
+  "/card-suite/copy-studio.html",
+  "/card-suite/card-designer",
+  "/card-suite/card-designer.html",
+  "/card-suite/publish-hub",
+  "/card-suite/publish-hub.html",
+  "/card-suite/strategy",
+  "/card-suite/strategy.html",
+  "/card-suite/common.css?v=20260222-1",
+  "/card-suite/common.js?v=20260222-1",
+  "/card-suite/copy-studio.js?v=20260222-2",
+  "/card-suite/card-designer.js?v=20260222-2",
+  "/card-suite/publish-hub.js?v=20260222-1",
+  "/card-suite/strategy.js?v=20260222-1",
   "/manifest.webmanifest",
   "/icon-192.svg",
   "/icon-512.svg"

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1f31" />
+    <meta name="description" content="AiX 文案卡片工具套件：文案工场、卡片设计、批量拆分、多平台发布与策略面板。" />
+    <title>AiX Card Suite</title>
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="branding">
+          <span class="brand-badge">🧩</span>
+          <div>
+            <h1>AiX Card Suite</h1>
+            <p>文案排版 + 卡片生成 + 发布工作台</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="/">返回主控台</a>
+          <a href="/md-lab">Markdown排版工坊</a>
+          <a href="/card-suite/copy-studio.html">文案工场</a>
+          <a href="/card-suite/card-designer.html">卡片设计</a>
+          <a href="/card-suite/publish-hub.html">发布中心</a>
+          <a href="/card-suite/strategy.html">策略面板</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h2>基于《文案卡片生成器调研报告》的多页面功能区</h2>
+        <p>
+          已将报告中的核心方案落地为 4 个工具页面，覆盖「AI文案生成 → 卡片设计拆分 → 多平台发布 → 路线图策略」。
+          并与现有 X 草稿和 Markdown 工坊共享内容，方便从长文直接进入卡片生产。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/card-suite/copy-studio.html">进入文案工场</a>
+          <a class="btn" href="/card-suite/card-designer.html">进入卡片设计器</a>
+          <a class="btn btn-warm" href="/card-suite/publish-hub.html">进入发布中心</a>
+        </div>
+      </section>
+
+      <main class="main-grid grid-2">
+        <article class="card">
+          <h3>模块地图（来自 4.2 功能规划）</h3>
+          <ul>
+            <li><strong>AI文案工场：</strong>场景模板 + 风格参数 + 提示词自动拼装</li>
+            <li><strong>卡片设计引擎：</strong>模板切换、尺寸预设、Markdown文本拆分</li>
+            <li><strong>批量生产线：</strong>多段内容自动分卡、JSON清单导出</li>
+            <li><strong>多平台发布中心：</strong>平台规格、发布文案、检查清单</li>
+            <li><strong>策略面板：</strong>竞品、痛点、定价、技术栈、MVP路线</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>高频用户路径（来自 3.1）</h3>
+          <ul>
+            <li><span class="badge">粘贴即用型</span> 文案已备好，3分钟内完成美化下载</li>
+            <li><span class="badge">AI生成+渲染型</span> Prompt 到卡片的一体化流程</li>
+            <li><span class="badge">批量自动化型</span> CSV/JSON 驱动批量生产</li>
+            <li><span class="badge">品牌定制型</span> 团队一致风格与品牌资产复用</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>痛点优先级（来自 3.2）</h3>
+          <div class="kv">
+            <div class="kv-item"><strong>★★★★★</strong><span>模板数量不足，审美疲劳快</span></div>
+            <div class="kv-item"><strong>★★★★★</strong><span>AI写作和卡片渲染分离，来回切工具</span></div>
+            <div class="kv-item"><strong>★★★★☆</strong><span>批量能力弱、手机端体验差</span></div>
+            <div class="kv-item"><strong>★★★☆☆</strong><span>品牌定制、高清导出、发布流程割裂</span></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>当前落地状态</h3>
+          <ul>
+            <li>已支持从 <code>x-articles-studio-draft</code> 读入草稿</li>
+            <li>已支持卡片主题与平台尺寸切换</li>
+            <li>已支持自动拆分多卡 + 发布文案生成</li>
+            <li>已内置 MVP 路线和技术栈建议，可直接用于开发排期</li>
+          </ul>
+        </article>
+      </main>
+
+      <footer class="footer">
+        Built from 调研报告（2025年2月） · Integrated into upgiorgio/AiX · Crafted by Giorgio
+      </footer>
+    </div>
+    <script src="/card-suite/common.js?v=20260222-1" defer></script>
+  </body>
+</html>

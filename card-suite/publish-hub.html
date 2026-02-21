@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiX Card Suite · 发布中心</title>
+    <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-1" />
+    <style>
+      .platform-grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      }
+
+      .platform-chip {
+        border: 1px solid rgba(150, 206, 234, 0.3);
+        border-radius: 10px;
+        padding: 8px 10px;
+        background: rgba(7, 18, 30, 0.64);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
+
+      .platform-chip input {
+        width: auto;
+      }
+
+      .output-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .output-card {
+        border: 1px solid rgba(150, 206, 234, 0.3);
+        border-radius: 12px;
+        background: rgba(7, 18, 30, 0.72);
+        padding: 10px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .output-card h4 {
+        margin: 0;
+        font-size: 0.96rem;
+      }
+
+      .checklist {
+        display: grid;
+        gap: 6px;
+        font-size: 0.88rem;
+      }
+
+      .checklist label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="branding">
+          <span class="brand-badge">🚀</span>
+          <div>
+            <h1>多平台发布中心 Publish Hub</h1>
+            <p>平台尺寸建议 + 发布文案 + 执行清单</p>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="/card-suite/index.html">套件首页</a>
+          <a href="/card-suite/card-designer.html">返回设计器</a>
+          <a href="/card-suite/strategy.html">查看策略面板</a>
+        </nav>
+      </header>
+
+      <main class="main-grid grid-2">
+        <section class="card stack">
+          <h3>发布参数</h3>
+          <div class="form-grid">
+            <label>
+              内容主题
+              <input id="topic" placeholder="例：提高内容产能的卡片工作流" />
+            </label>
+            <label>
+              行动引导
+              <input id="cta" placeholder="例：收藏+评论领取模板" />
+            </label>
+          </div>
+
+          <div class="platform-grid" id="platformGrid">
+            <label class="platform-chip"><input type="checkbox" value="x" checked />X（1200×675）</label>
+            <label class="platform-chip"><input type="checkbox" value="xiaohongshu" checked />小红书（1080×1440）</label>
+            <label class="platform-chip"><input type="checkbox" value="wechat" checked />公众号（封面900×383）</label>
+            <label class="platform-chip"><input type="checkbox" value="zhihu" checked />知乎（长图1080宽）</label>
+            <label class="platform-chip"><input type="checkbox" value="bilibili" checked />B站（封面16:9）</label>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" id="generateBtn">生成发布包</button>
+            <button class="btn" id="copyAllBtn">复制全部文案</button>
+            <button class="btn" id="downloadPlanBtn">下载执行清单</button>
+          </div>
+
+          <div class="output-box">
+            <pre id="batchMeta">正在读取设计器输出...</pre>
+          </div>
+        </section>
+
+        <section class="card stack">
+          <h3>平台输出</h3>
+          <div id="outputs" class="output-list"></div>
+
+          <h3>统一执行清单（72小时）</h3>
+          <div class="checklist">
+            <label><input type="checkbox" /> 发布前 2-6 小时发预热</label>
+            <label><input type="checkbox" /> 首波评论 1 小时内集中回复</label>
+            <label><input type="checkbox" /> 24h 内二次分发回流</label>
+            <label><input type="checkbox" /> 72h 复盘：阅读/互动/转化</label>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">目标：减少跨平台搬运损耗，让一套内容快速适配多渠道。</footer>
+    </div>
+
+    <script src="/card-suite/common.js?v=20260222-1" defer></script>
+    <script src="/card-suite/publish-hub.js?v=20260222-1" defer></script>
+  </body>
+</html>
