@@ -1,9 +1,9 @@
-const CACHE_NAME = "x-articles-studio-v3";
+const CACHE_NAME = "x-articles-studio-v4";
 const APP_SHELL = [
   "/",
   "/index.html",
-  "/styles.css?v=20260221-2",
-  "/app.js?v=20260221-2",
+  "/styles.css?v=20260221-3",
+  "/app.js?v=20260221-3",
   "/manifest.webmanifest",
   "/icon-192.svg",
   "/icon-512.svg"

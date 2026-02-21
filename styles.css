@@ -556,6 +556,48 @@ textarea {
   color: #8ce7ff;
 }
 
+.hot-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.hot-toolbar label {
+  min-width: 220px;
+}
+
+.hot-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hot-card {
+  border: 1px solid rgba(140, 231, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px;
+  background: rgba(4, 15, 24, 0.58);
+}
+
+.hot-card h3 {
+  margin-bottom: 8px;
+}
+
+.hot-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: #a6c9dd;
+}
+
+.hot-note.bad {
+  color: #ffc8c8;
+}
+
 .checklist-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -639,7 +681,8 @@ textarea {
   .metric-grid,
   .resource-filters,
   .resource-cards,
-  .platform-columns {
+  .platform-columns,
+  .hot-grid {
     grid-template-columns: 1fr;
   }
 

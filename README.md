@@ -17,6 +17,7 @@
 - 规则速查支持“平台 + 分类”筛选（官方规则 / 填写技巧 / 案例 / 审核敏感词 / X&GitHub 分享）
 - 全局项目索引技能命令面板（便于每个新项目自动入库）
 - XCreators 近 30 天策略补充信号面板（官方 X + 镜像来源分层标注）
+- 热点话题雷达（过去 48 小时 / 最近一周）：X 中文话题、公众号热门话题、小红书热门话题（可接自定义 API）
 
 ## 本地预览
 
@@ -65,15 +66,26 @@ vercel --prod
 5. 使用 `全局项目索引与技能自动化` 区域一键复制命令，维护项目总索引。
 6. 在 `官方规则与案例速查` 里按平台和分类筛选资料，并查看敏感表达速览。
 7. 在 `XCreators 近 30 天补充信号` 查看近期官方方向，更新你的发布策略。
-8. 在文章草稿区微调后复制或导出 Markdown。
-9. 使用 `打开 X 发预热帖 / Thread / 订阅引导帖` 快速进入发布流程。
-10. 发布前完成自检，发布后保存草稿，必要时从 `草稿历史版本` 回溯。
+8. 在 `热点话题雷达` 切换时间窗口并刷新，查看各平台 Top 10。
+9. 在文章草稿区微调后复制或导出 Markdown。
+10. 使用 `打开 X 发预热帖 / Thread / 订阅引导帖` 快速进入发布流程。
+11. 发布前完成自检，发布后保存草稿，必要时从 `草稿历史版本` 回溯。
 
 ## 技术说明
 
 - 纯前端静态站点（HTML/CSS/Vanilla JS）
+- 含 Vercel Serverless API（`/api/hot-topics`）用于热点聚合
 - PWA 支持（manifest + service worker）
 - 无后端依赖，适合快速部署与长期维护
+
+## 热点 API 可选环境变量
+
+> 默认可用：X（trends24 解析）、公众号（Sogou 热词快照）  
+> 小红书建议接入你自己的合规数据源
+
+- `HOT_X_ENDPOINT` / `HOT_X_TOKEN` / `HOT_X_AUTH_HEADER`
+- `HOT_WECHAT_ENDPOINT` / `HOT_WECHAT_TOKEN` / `HOT_WECHAT_AUTH_HEADER`
+- `HOT_XHS_ENDPOINT` / `HOT_XHS_TOKEN` / `HOT_XHS_AUTH_HEADER`
 
 ## 全局技能（Codex）
 

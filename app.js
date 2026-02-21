@@ -4,6 +4,10 @@ const DRAFT_KEY = "x-articles-studio-draft";
 const HISTORY_KEY = "x-articles-studio-history-v2";
 const CHECKLIST_KEY = "x-article-checklist";
 const MAX_HISTORY = 12;
+const HOT_WINDOWS = {
+  "48h": "过去 48 小时",
+  "7d": "最近一周"
+};
 
 const state = {
   titles: [],
@@ -13,7 +17,8 @@ const state = {
   plan: [],
   monetize: "",
   quality: null,
-  platformPackages: {}
+  platformPackages: {},
+  hotTopics: null
 };
 
 const platformProfiles = {
@@ -1081,6 +1086,100 @@ function renderRecentSignals() {
     .join("");
 }
 
+function getHotWindow() {
+  const value = $("hotWindowSelect")?.value;
+  return HOT_WINDOWS[value] ? value : "48h";
+}
+
+function formatHotTime(iso) {
+  if (!iso) return "未知时间";
+  const time = new Date(iso);
+  if (Number.isNaN(time.getTime())) return String(iso);
+  return time.toLocaleString("zh-CN", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+function renderHotList(listId, platformResult, fallbackText) {
+  const el = $(listId);
+  if (!el) return;
+
+  const items = (platformResult && Array.isArray(platformResult.items) ? platformResult.items : []).slice(0, 10);
+  const noteText = platformResult?.note ? `（${escapeHtml(platformResult.note)}）` : "";
+  if (!items.length) {
+    el.innerHTML = `<li class="muted">${escapeHtml(fallbackText)}${noteText}</li>`;
+    return;
+  }
+
+  let html = items
+    .map((item, index) => {
+      const title = escapeHtml(item.title || `话题 ${index + 1}`);
+      const url = String(item.url || "").trim();
+      const score = item.score !== null && item.score !== undefined && item.score !== "" ? ` · 热度 ${escapeHtml(String(item.score))}` : "";
+      const timeText = item.timestamp ? ` · ${formatHotTime(item.timestamp)}` : "";
+      const lineTail = `${score}${timeText}`;
+      if (!url) return `<li>${title}${lineTail}</li>`;
+      return `<li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${title}</a>${lineTail}</li>`;
+    })
+    .join("");
+
+  if (noteText) html += `<li class="muted">${noteText}</li>`;
+  el.innerHTML = html;
+}
+
+function renderHotTopics(data) {
+  const xResult = data?.platforms?.x || { status: "error", note: "暂无数据", items: [] };
+  const wechatResult = data?.platforms?.wechat || { status: "error", note: "暂无数据", items: [] };
+  const xhsResult = data?.platforms?.xiaohongshu || { status: "error", note: "暂无数据", items: [] };
+
+  renderHotList("hotXList", xResult, "当前窗口未抓到 X 中文话题");
+  renderHotList("hotWechatList", wechatResult, "当前窗口未抓到公众号热词");
+  renderHotList("hotXhsList", xhsResult, "小红书热词需要配置专用接口后可用");
+
+  const windowLabel = HOT_WINDOWS[data?.window] || HOT_WINDOWS[getHotWindow()];
+  const updated = formatHotTime(data?.updatedAt);
+  const statusBits = [
+    `X：${xResult.status || "unknown"}`,
+    `公众号：${wechatResult.status || "unknown"}`,
+    `小红书：${xhsResult.status || "unknown"}`
+  ].join(" ｜ ");
+  $("hotTopicsUpdated").textContent = `更新时间：${updated} ｜ 窗口：${windowLabel} ｜ 状态：${statusBits}`;
+}
+
+async function refreshHotTopics(showFlash = true) {
+  const btn = $("refreshHotTopicsBtn");
+  const windowKey = getHotWindow();
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = "刷新中...";
+  }
+
+  try {
+    const response = await fetch(`/api/hot-topics?window=${encodeURIComponent(windowKey)}&limit=10`, {
+      cache: "no-store"
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    if (!payload.ok) throw new Error(payload.error || "接口返回异常");
+
+    state.hotTopics = payload;
+    renderHotTopics(payload);
+    if (showFlash) flash("热点话题已刷新");
+  } catch (error) {
+    const message = `热点拉取失败：${error.message || "unknown"}`;
+    $("hotTopicsUpdated").textContent = message;
+    if (showFlash) flash(message);
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = "刷新热点";
+    }
+  }
+}
+
 function buildAutomationCommands() {
   const input = readInput();
   const selectedPlatforms = getSelectedPlatforms();
@@ -1639,6 +1738,7 @@ function resetAll() {
   $("tone").value = "理性拆解";
   $("resourcePlatformSelect").value = "all";
   $("resourceTypeSelect").value = "all";
+  $("hotWindowSelect").value = "48h";
 
   state.titles = [];
   state.hooks = [];
@@ -1648,6 +1748,7 @@ function resetAll() {
   state.monetize = "";
   state.quality = null;
   state.platformPackages = {};
+  state.hotTopics = null;
 
   renderTitles([]);
   renderHooks([]);
@@ -1657,6 +1758,7 @@ function resetAll() {
   renderQuality(null);
   renderAutomationCommands();
   renderResourceCards();
+  refreshHotTopics(false);
 }
 
 function bindEvents() {
@@ -1688,6 +1790,8 @@ function bindEvents() {
   });
   $("resourcePlatformSelect").addEventListener("change", renderResourceCards);
   $("resourceTypeSelect").addEventListener("change", renderResourceCards);
+  $("refreshHotTopicsBtn").addEventListener("click", () => refreshHotTopics(true));
+  $("hotWindowSelect").addEventListener("change", () => refreshHotTopics(false));
 
   document.querySelector(".card-inputs").addEventListener("input", () => {
     renderAutomationCommands();
@@ -1761,6 +1865,7 @@ function init() {
   renderAutomationCommands();
   renderRecentSignals();
   bindEvents();
+  refreshHotTopics(false);
   initPwa();
 }
 

@@ -17,7 +17,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="/styles.css?v=20260221-2" />
+    <link rel="stylesheet" href="/styles.css?v=20260221-3" />
   </head>
   <body>
     <div class="bg-orb bg-orb-a"></div>
@@ -247,6 +247,36 @@
         <p class="muted no-top">用于补充文章策略中的最新官方方向（来源见每条末尾链接）。</p>
         <ul id="recentSignalsOutput" class="output-list"></ul>
       </section>
+
+      <section class="card reveal">
+        <h2>13) 热点话题雷达（Beta）</h2>
+        <p class="muted no-top">支持“过去 48 小时 / 最近一周”窗口，默认拉取 X 中文话题、公众号热词、小红书热词（小红书需配置专用接口）。</p>
+        <div class="hot-toolbar">
+          <label>
+            时间窗口
+            <select id="hotWindowSelect">
+              <option value="48h" selected>过去 48 小时</option>
+              <option value="7d">最近一周</option>
+            </select>
+          </label>
+          <button id="refreshHotTopicsBtn" class="btn btn-primary">刷新热点</button>
+        </div>
+        <p id="hotTopicsUpdated" class="muted"></p>
+        <div class="hot-grid">
+          <article class="hot-card">
+            <h3>X 中文话题（Top 10）</h3>
+            <ul id="hotXList" class="output-list"></ul>
+          </article>
+          <article class="hot-card">
+            <h3>公众号热门话题（Top 10）</h3>
+            <ul id="hotWechatList" class="output-list"></ul>
+          </article>
+          <article class="hot-card">
+            <h3>小红书热门话题（Top 10）</h3>
+            <ul id="hotXhsList" class="output-list"></ul>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -255,6 +285,6 @@
       </p>
     </footer>
 
-    <script src="/app.js?v=20260221-2" defer></script>
+    <script src="/app.js?v=20260221-3" defer></script>
   </body>
 </html>
