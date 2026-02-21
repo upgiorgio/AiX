@@ -1,12 +1,18 @@
 const $ = (id) => document.getElementById(id);
 
+const DRAFT_KEY = "x-articles-studio-draft";
+const HISTORY_KEY = "x-articles-studio-history-v2";
+const CHECKLIST_KEY = "x-article-checklist";
+const MAX_HISTORY = 12;
+
 const state = {
   titles: [],
   hooks: [],
   article: "",
   thread: [],
   plan: [],
-  monetize: ""
+  monetize: "",
+  quality: null
 };
 
 const checklist = [
@@ -77,6 +83,15 @@ const checklist = [
     ]
   }
 ];
+
+function safeParse(raw, fallback) {
+  try {
+    const parsed = JSON.parse(raw);
+    return parsed ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
 
 function readInput() {
   return {
@@ -178,6 +193,55 @@ ${evidenceLines}
 你下一篇准备写什么主题？可以直接在评论区告诉我。`;
 }
 
+function splitPostAtBestPoint(text) {
+  if (!text || text.length < 120) return [text, ""];
+
+  const midpoint = Math.floor(text.length / 2);
+  const delimiters = ["\n", "。", "！", "？", "；", "，", " "];
+
+  let bestIndex = -1;
+  let bestDistance = Infinity;
+
+  for (let i = 0; i < text.length; i += 1) {
+    if (!delimiters.includes(text[i])) continue;
+    const distance = Math.abs(i - midpoint);
+    if (distance < bestDistance) {
+      bestDistance = distance;
+      bestIndex = i;
+    }
+  }
+
+  if (bestIndex < 30 || bestIndex > text.length - 30) {
+    bestIndex = midpoint;
+  }
+
+  const left = text.slice(0, bestIndex + 1).trim();
+  const right = text.slice(bestIndex + 1).trim();
+  return [left, right];
+}
+
+function enforceThreadCount(thread, minPosts = 5, maxPosts = 12) {
+  const posts = [...thread];
+  let guard = 0;
+
+  while (posts.length < minPosts && guard < 40) {
+    let maxIndex = 0;
+    for (let i = 1; i < posts.length; i += 1) {
+      if (posts[i].length > posts[maxIndex].length) {
+        maxIndex = i;
+      }
+    }
+
+    const [left, right] = splitPostAtBestPoint(posts[maxIndex]);
+    if (!right) break;
+
+    posts.splice(maxIndex, 1, left, right);
+    guard += 1;
+  }
+
+  return posts.slice(0, maxPosts);
+}
+
 function splitThread(article) {
   const paragraphs = article
     .replace(/^#\s+/m, "")
@@ -197,9 +261,9 @@ function splitThread(article) {
       current = next;
     }
   }
-  if (current) thread.push(current);
 
-  return thread.slice(0, 12);
+  if (current) thread.push(current);
+  return enforceThreadCount(thread, 5, 12);
 }
 
 function buildPlan(input) {
@@ -265,7 +329,138 @@ function renderThread(posts) {
 }
 
 function renderPlan(plan) {
-  $("planOutput").innerHTML = plan.map((item) => `<li>${escapeHtml(item)}</li>`).join("");
+  $("planOutput").innerHTML = plan
+    .map((item, i) => {
+      const matched = item.match(/^([^：:]+)[：:]\s*(.+)$/);
+      const time = matched ? matched[1] : `Step ${i + 1}`;
+      const text = matched ? matched[2] : item;
+      return `<li class="timeline-item"><span class="timeline-badge">${escapeHtml(time)}</span><p>${escapeHtml(
+        text
+      )}</p></li>`;
+    })
+    .join("");
+}
+
+function getChecklistStats() {
+  const all = document.querySelectorAll("input[type='checkbox'][data-key]");
+  if (!all.length) {
+    const total = checklist.reduce((sum, section) => sum + section.items.length, 0);
+    return { checked: 0, total, ratio: 0 };
+  }
+  const checked = document.querySelectorAll("input[type='checkbox'][data-key]:checked").length;
+  const total = all.length;
+  return { checked, total, ratio: checked / total };
+}
+
+function calculateQuality(input) {
+  const article = $("articleOutput").value.trim();
+  const paragraphs = article
+    .split(/\n\n+/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+
+  const shortParagraphs = paragraphs.filter((p) => p.split("\n").length <= 4 && p.length <= 220).length;
+  const subHeadingCount = (article.match(/^##\s+/gm) || []).length;
+  const bulletCount = (article.match(/^\s*[-*]\s+/gm) || []).length;
+  const checklistStats = getChecklistStats();
+
+  const positioningScore = Math.round(
+    [input.topic, input.audience, input.thesis, input.ctaGoal].filter((v) => Boolean(v && v.trim())).length * 3.75
+  ); // /15
+
+  const titleHookScore = Math.min(
+    15,
+    Math.round(
+      (Math.min(state.titles.length, 6) / 6) * 9 +
+        (Math.min(state.hooks.length, 3) / 3) * 4 +
+        ((state.titles[0] || "").length >= 16 && (state.titles[0] || "").length <= 65 ? 2 : 0)
+    )
+  );
+
+  const structureScore = Math.min(
+    20,
+    Math.round(
+      Math.min(subHeadingCount, 5) * 2.4 +
+        (paragraphs.length ? (shortParagraphs / paragraphs.length) * 8 : 0) +
+        (bulletCount >= 3 ? 4 : bulletCount > 0 ? 2 : 0)
+    )
+  );
+
+  const evidenceCount = input.evidence.length;
+  const evidenceScore = evidenceCount >= 3 ? 15 : evidenceCount === 2 ? 11 : evidenceCount === 1 ? 6 : 0;
+
+  let distributionScore = 0;
+  if (state.thread.length >= 5 && state.thread.length <= 12) distributionScore += 8;
+  else if (state.thread.length >= 3) distributionScore += 5;
+  if (state.plan.length >= 6) distributionScore += 5;
+  if ((state.thread[0] || "").length > 0 && (state.thread[0] || "").length <= 280) distributionScore += 2;
+  distributionScore = Math.min(15, distributionScore);
+
+  let monetizeScore = 0;
+  if (input.username && input.username.trim()) monetizeScore += 3;
+  if (state.monetize.includes("creator-subscriptions/subscribe")) monetizeScore += 4;
+  if (/(下一期|下周)/.test(state.monetize)) monetizeScore += 3;
+  monetizeScore = Math.min(10, monetizeScore);
+
+  const executionScore = Math.round(checklistStats.ratio * 10);
+
+  const metrics = [
+    { name: "定位", score: positioningScore, max: 15 },
+    { name: "标题钩子", score: titleHookScore, max: 15 },
+    { name: "结构扫读", score: structureScore, max: 20 },
+    { name: "证据力度", score: evidenceScore, max: 15 },
+    { name: "分发准备", score: distributionScore, max: 15 },
+    { name: "变现准备", score: monetizeScore, max: 10 },
+    { name: "执行准备", score: executionScore, max: 10 }
+  ];
+
+  const total = metrics.reduce((sum, metric) => sum + metric.score, 0);
+
+  const tips = [];
+  if (positioningScore < 12) tips.push("补全“主题-人群-核心观点-读后动作”四要素，减少跑题风险。");
+  if (titleHookScore < 11) tips.push("至少保留 5 个标题候选，并把首标题压到 16-65 字。");
+  if (structureScore < 15) tips.push("增加小标题与列表，把段落尽量压缩到 2-4 行。");
+  if (evidenceScore < 11) tips.push("至少准备 2-3 条可验证证据（数据、案例或前后对比）。");
+  if (distributionScore < 12) tips.push("将 Thread 调整到 5-12 条，并确保 72h 节奏完整。");
+  if (monetizeScore < 8) tips.push("补齐订阅链接、付费边界和下期预告。");
+  if (executionScore < 6) tips.push("发布前先完成自检清单，避免执行断层。");
+  if (!tips.length) tips.push("结构和执行已经达标，可以进入发布与复盘阶段。");
+
+  let tag = "待优化";
+  let level = "medium";
+  if (total >= 85) {
+    tag = "可直接发布";
+    level = "good";
+  } else if (total < 70) {
+    tag = "建议先修改";
+    level = "low";
+  }
+
+  return { total, metrics, tips, tag, level };
+}
+
+function renderQuality(quality) {
+  if (!quality) {
+    $("qualityScore").textContent = "0";
+    $("qualityTag").textContent = "待生成";
+    $("qualityTag").className = "score-tag";
+    $("qualityBar").style.width = "0%";
+    $("qualityMetrics").innerHTML = "";
+    $("qualityTips").innerHTML = '<li class="muted">生成内容后会给出评分与建议。</li>';
+    return;
+  }
+
+  $("qualityScore").textContent = String(quality.total);
+  $("qualityTag").textContent = quality.tag;
+  $("qualityTag").className = `score-tag ${quality.level}`;
+  $("qualityBar").style.width = `${quality.total}%`;
+  $("qualityMetrics").innerHTML = quality.metrics
+    .map(
+      (metric) =>
+        `<article class="metric-item"><span class="name">${escapeHtml(metric.name)}</span><span class="value">${metric.score}/${metric.max}</span></article>`
+    )
+    .join("");
+  $("qualityTips").innerHTML = quality.tips.map((tip) => `<li>${escapeHtml(tip)}</li>`).join("");
 }
 
 function renderChecklist() {
@@ -288,15 +483,22 @@ function renderChecklist() {
     )
     .join("");
 
-  const saved = JSON.parse(localStorage.getItem("x-article-checklist") || "{}");
+  const saved = safeParse(localStorage.getItem(CHECKLIST_KEY) || "{}", {});
   document.querySelectorAll("input[type='checkbox'][data-key]").forEach((cb) => {
     cb.checked = Boolean(saved[cb.dataset.key]);
     cb.addEventListener("change", () => {
-      const latest = JSON.parse(localStorage.getItem("x-article-checklist") || "{}");
+      const latest = safeParse(localStorage.getItem(CHECKLIST_KEY) || "{}", {});
       latest[cb.dataset.key] = cb.checked;
-      localStorage.setItem("x-article-checklist", JSON.stringify(latest));
+      localStorage.setItem(CHECKLIST_KEY, JSON.stringify(latest));
+      updateQuality();
     });
   });
+}
+
+function updateQuality() {
+  const quality = calculateQuality(readInput());
+  state.quality = quality;
+  renderQuality(quality);
 }
 
 function generateAll() {
@@ -314,10 +516,12 @@ function generateAll() {
   renderThread(state.thread);
   renderPlan(state.plan);
   $("monetizeOutput").value = state.monetize;
+  updateQuality();
 }
 
 function escapeHtml(text) {
-  return text
+  const value = String(text ?? "");
+  return value
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
@@ -354,8 +558,11 @@ function buildMarkdownExport() {
   const monetize = $("monetizeOutput").value.trim();
   const thread = state.thread.map((p, i) => `### Post ${i + 1}\n${p}`).join("\n\n");
   const plan = state.plan.map((p) => `- ${p}`).join("\n");
+  const qualitySummary = state.quality
+    ? `- 总分：${state.quality.total}/100\n- 标签：${state.quality.tag}\n`
+    : "- 尚未评分\n";
 
-  return `# X Articles Studio 导出\n\n## 文章草稿\n\n${article}\n\n## Thread\n\n${thread}\n\n## 72 小时分发\n\n${plan}\n\n## 订阅变现\n\n${monetize}\n`;
+  return `# X Articles Studio 导出\n\n## 内容质量评分\n\n${qualitySummary}\n## 文章草稿\n\n${article}\n\n## Thread\n\n${thread}\n\n## 72 小时分发\n\n${plan}\n\n## 订阅变现\n\n${monetize}\n`;
 }
 
 function downloadMarkdown() {
@@ -374,8 +581,20 @@ function openIntent(text) {
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
-function saveDraft() {
-  const payload = {
+function snapshotState() {
+  return {
+    titles: [...state.titles],
+    hooks: [...state.hooks],
+    article: state.article,
+    thread: [...state.thread],
+    plan: [...state.plan],
+    monetize: state.monetize,
+    quality: state.quality ? { ...state.quality, metrics: [...state.quality.metrics], tips: [...state.quality.tips] } : null
+  };
+}
+
+function createDraftPayload() {
+  return {
     topic: $("topic").value,
     audience: $("audience").value,
     thesis: $("thesis").value,
@@ -385,19 +604,94 @@ function saveDraft() {
     evidence: $("evidence").value,
     articleOutput: $("articleOutput").value,
     monetizeOutput: $("monetizeOutput").value,
-    state
+    state: snapshotState(),
+    savedAt: new Date().toISOString()
   };
-  localStorage.setItem("x-articles-studio-draft", JSON.stringify(payload));
-  flash("草稿已保存");
 }
 
-function loadDraft() {
-  const raw = localStorage.getItem("x-articles-studio-draft");
-  if (!raw) {
-    flash("没有可读取的草稿");
+function getHistory() {
+  return safeParse(localStorage.getItem(HISTORY_KEY) || "[]", []);
+}
+
+function setHistory(history) {
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+}
+
+function pushHistorySnapshot(payload) {
+  const history = getHistory();
+  const latest = history[0];
+
+  const isDuplicate =
+    latest &&
+    latest.payload &&
+    latest.payload.topic === payload.topic &&
+    latest.payload.articleOutput === payload.articleOutput &&
+    latest.payload.monetizeOutput === payload.monetizeOutput;
+
+  if (isDuplicate) return;
+
+  history.unshift({
+    id: String(Date.now()),
+    createdAt: new Date().toISOString(),
+    topic: payload.topic || "未命名主题",
+    audience: payload.audience || "",
+    payload
+  });
+
+  setHistory(history.slice(0, MAX_HISTORY));
+}
+
+function formatDateTime(iso) {
+  try {
+    return new Date(iso).toLocaleString("zh-CN", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+  } catch {
+    return iso;
+  }
+}
+
+function renderHistoryMeta(historyItem) {
+  if (!historyItem) {
+    $("historyMeta").textContent = "点击“保存草稿”后，会自动沉淀历史版本（最多 12 条）。";
     return;
   }
-  const data = JSON.parse(raw);
+
+  $("historyMeta").textContent = `保存时间：${formatDateTime(historyItem.createdAt)} ｜ 主题：${historyItem.topic || "未命名"} ｜ 受众：${
+    historyItem.audience || "未填写"
+  }`;
+}
+
+function renderHistory() {
+  const history = getHistory();
+  const select = $("historySelect");
+
+  if (!history.length) {
+    select.innerHTML = '<option value="">暂无历史版本</option>';
+    renderHistoryMeta(null);
+    return;
+  }
+
+  select.innerHTML = history
+    .map((item) => {
+      const label = `${formatDateTime(item.createdAt)} · ${(item.topic || "未命名主题").slice(0, 28)}`;
+      return `<option value="${escapeHtml(item.id)}">${escapeHtml(label)}</option>`;
+    })
+    .join("");
+
+  if (!history.some((item) => item.id === select.value)) {
+    select.value = history[0].id;
+  }
+
+  const current = history.find((item) => item.id === select.value) || history[0];
+  renderHistoryMeta(current);
+}
+
+function applyDraft(data) {
   $("topic").value = data.topic || "";
   $("audience").value = data.audience || "";
   $("thesis").value = data.thesis || "";
@@ -411,42 +705,122 @@ function loadDraft() {
   if (data.state) {
     state.titles = data.state.titles || [];
     state.hooks = data.state.hooks || [];
+    state.article = data.state.article || data.articleOutput || "";
     state.thread = data.state.thread || [];
     state.plan = data.state.plan || [];
-    renderTitles(state.titles);
-    renderHooks(state.hooks);
-    renderThread(state.thread);
-    renderPlan(state.plan);
+    state.monetize = data.state.monetize || data.monetizeOutput || "";
   }
+
+  renderTitles(state.titles);
+  renderHooks(state.hooks);
+  renderThread(state.thread);
+  renderPlan(state.plan);
+  updateQuality();
+}
+
+function saveDraft() {
+  const payload = createDraftPayload();
+  localStorage.setItem(DRAFT_KEY, JSON.stringify(payload));
+  pushHistorySnapshot(payload);
+  renderHistory();
+  flash("草稿已保存并加入历史版本");
+}
+
+function loadDraft() {
+  const raw = localStorage.getItem(DRAFT_KEY);
+  if (!raw) {
+    flash("没有可读取的草稿");
+    return;
+  }
+  const data = safeParse(raw, null);
+  if (!data) {
+    flash("草稿读取失败");
+    return;
+  }
+  applyDraft(data);
   flash("草稿已读取");
 }
 
-function resetAll() {
-  ["topic", "audience", "thesis", "ctaGoal", "username", "evidence", "articleOutput", "monetizeOutput"].forEach(
-    (id) => {
-      $(id).value = "";
-    }
-  );
+function loadHistoryVersion() {
+  const selectedId = $("historySelect").value;
+  const history = getHistory();
+  const item = history.find((entry) => entry.id === selectedId);
+  if (!item) {
+    flash("请选择一个历史版本");
+    return;
+  }
+
+  applyDraft(item.payload);
+  renderHistoryMeta(item);
+  flash("已加载历史版本");
+}
+
+function deleteHistoryVersion() {
+  const selectedId = $("historySelect").value;
+  const history = getHistory();
+  const next = history.filter((item) => item.id !== selectedId);
+
+  if (next.length === history.length) {
+    flash("没有可删除的版本");
+    return;
+  }
+
+  setHistory(next);
+  renderHistory();
+  flash("历史版本已删除");
+}
+
+function fillSample() {
+  $("topic").value = "用 AI 流程化写作拿下 X 长文增长";
+  $("audience").value = "想做 X 自媒体增长的个人创作者";
+  $("thesis").value = "把写作拆成模板与复盘闭环，比凭感觉更新更快起量";
+  $("ctaGoal").value = "按清单发布你的第一篇 X Article 并拆成 Thread";
   $("tone").value = "理性拆解";
+  $("username").value = "demo_creator";
+  $("evidence").value =
+    "- 连续 4 周每周 2 篇长文，主页点击率提升 2.1 倍\n- 一篇长文拆成 8 条 Thread，回流阅读占比 37%\n- 文末加订阅预告后，订阅转化率从 0.6% 提升到 1.4%";
+  generateAll();
+  flash("示例内容已填充");
+}
+
+function resetAll() {
+  ["topic", "audience", "thesis", "ctaGoal", "username", "evidence", "articleOutput", "monetizeOutput"].forEach((id) => {
+    $(id).value = "";
+  });
+  $("tone").value = "理性拆解";
+
   state.titles = [];
   state.hooks = [];
   state.article = "";
   state.thread = [];
   state.plan = [];
   state.monetize = "";
+  state.quality = null;
+
   renderTitles([]);
   renderHooks([]);
   renderThread([]);
   renderPlan([]);
+  renderQuality(null);
 }
 
 function bindEvents() {
   $("generateBtn").addEventListener("click", generateAll);
   $("resetBtn").addEventListener("click", resetAll);
+  $("fillSampleBtn").addEventListener("click", fillSample);
+
   $("copyArticleBtn").addEventListener("click", () => copyText($("articleOutput").value, "文章已复制"));
   $("copyThreadBtn").addEventListener("click", () => copyText(state.thread.join("\n\n---\n\n"), "Thread 已复制"));
   $("saveDraftBtn").addEventListener("click", saveDraft);
   $("loadDraftBtn").addEventListener("click", loadDraft);
+  $("loadHistoryBtn").addEventListener("click", loadHistoryVersion);
+  $("deleteHistoryBtn").addEventListener("click", deleteHistoryVersion);
+  $("historySelect").addEventListener("change", () => {
+    const history = getHistory();
+    const item = history.find((entry) => entry.id === $("historySelect").value);
+    renderHistoryMeta(item || null);
+  });
+
   $("exportMarkdownBtn").addEventListener("click", downloadMarkdown);
 
   $("openTeaserIntentBtn").addEventListener("click", () => {
@@ -467,6 +841,21 @@ function bindEvents() {
 
     openIntent(`如果你想看我每周的深度拆解和下一篇提前版，可以订阅我：${link}`);
   });
+
+  document.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+    const hasMeta = event.metaKey || event.ctrlKey;
+
+    if (hasMeta && key === "s") {
+      event.preventDefault();
+      saveDraft();
+    }
+
+    if (hasMeta && event.key === "Enter") {
+      event.preventDefault();
+      generateAll();
+    }
+  });
 }
 
 function initPwa() {
@@ -477,6 +866,8 @@ function initPwa() {
 
 function init() {
   renderChecklist();
+  renderHistory();
+  renderQuality(null);
   bindEvents();
   initPwa();
 }
