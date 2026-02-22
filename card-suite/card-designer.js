@@ -530,3 +530,69 @@ window.addEventListener("DOMContentLoaded", () => {
     renderSplitCards();
   }
 });
+
+/* ── AI Assistant ── */
+async function aiGenerateCardText() {
+  const statusEl = document.getElementById('aiCardStatus');
+  const topic = (document.getElementById('aiTopic')?.value || '').trim();
+  if (!topic) { showToast('请先输入主题或关键词'); return; }
+  const platform = $('sizePreset')?.value || 'xhs';
+  const maxChars = sizeMap[platform]?.maxChars || 100;
+  if (statusEl) statusEl.textContent = '⏳ AI 生成中…';
+  const prompt = `请为以下主题生成精美的内容卡片文案，适合${platform}平台，控制在${maxChars}字以内。
+主题：${topic}
+要求：
+- 开头有吸引力，制造情绪共鸣或好奇心
+- 使用 Markdown 格式（**粗体** *斜体* - 列表项 > 引用块）
+- 结尾有价值主张或行动引导
+只输出卡片正文，不要任何前缀或解释。`;
+  const textarea = $('cardText');
+  if (!textarea) return;
+  textarea.value = '';
+  let full = '';
+  await window.AiGateway.stream(prompt, {
+    onChunk(chunk) {
+      full += chunk;
+      textarea.value = full + '▋';
+      textarea.dispatchEvent(new Event('input'));
+    },
+    onDone() {
+      textarea.value = full;
+      textarea.dispatchEvent(new Event('input'));
+      if (statusEl) { statusEl.textContent = '✅ 生成完成'; setTimeout(() => statusEl.textContent = '', 2500); }
+    },
+    onError(e) {
+      if (statusEl) statusEl.textContent = '❌ 失败: ' + e.message;
+    }
+  });
+}
+
+async function aiImportCardUrl() {
+  const urlInput = document.getElementById('aiCardUrl');
+  const statusEl = document.getElementById('aiCardStatus');
+  const url = urlInput?.value.trim();
+  if (!url) { showToast('请输入文章链接'); return; }
+  if (statusEl) statusEl.textContent = '⏳ 提取内容中…';
+  try {
+    const data = await window.AiGateway.extractUrl(url);
+    if (data?.title) {
+      const titleEl = $('cardTitle');
+      if (titleEl) { titleEl.value = data.title; titleEl.dispatchEvent(new Event('input')); }
+    }
+    const text = data?.summary || (data?.points?.length ? data.points.map(p => `- ${p}`).join('\n') : '');
+    if (text) {
+      const ta = $('cardText');
+      if (ta) { ta.value = text; ta.dispatchEvent(new Event('input')); }
+    }
+    if (statusEl) { statusEl.textContent = '✅ 导入完成'; setTimeout(() => statusEl.textContent = '', 2500); }
+  } catch(e) {
+    if (statusEl) statusEl.textContent = '❌ 导入失败: ' + e.message;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const genBtn = document.getElementById('aiCardGenerateBtn');
+  const urlBtn = document.getElementById('aiCardUrlBtn');
+  if (genBtn) genBtn.addEventListener('click', aiGenerateCardText);
+  if (urlBtn) urlBtn.addEventListener('click', aiImportCardUrl);
+});

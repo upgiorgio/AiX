@@ -102,6 +102,18 @@
             <label class="platform-chip"><input type="checkbox" value="bilibili" checked />B站（封面16:9）</label>
           </div>
 
+          <div class="ai-panel" style="margin-top:8px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <span class="ai-label-badge">AI</span>
+              <span style="font-size:0.88rem;color:var(--muted);">AI 分析各平台内容适配度</span>
+            </div>
+            <div id="aiScores"></div>
+            <div class="actions" style="margin-top:8px;margin-bottom:0;">
+              <button class="btn btn-primary" id="aiAnalyzeBtn">🤖 AI 平台适配分析</button>
+            </div>
+            <div id="aiAnalyzeStatus" style="font-size:0.82rem;color:var(--accent);margin-top:4px;min-height:18px;"></div>
+          </div>
+
           <div class="actions">
             <button class="btn btn-primary" id="generateBtn">生成各平台发布内容</button>
             <button class="btn" id="copyAllBtn">复制全部文案</button>
@@ -143,6 +155,7 @@
     </div>
 
     <script src="/card-suite/common.js?v=20260222-1" defer></script>
-    <script src="/card-suite/publish-hub.js?v=20260222-1" defer></script>
+    <script src="/card-suite/ai-gateway.js?v=20260222-1" defer></script>
+    <script src="/card-suite/publish-hub.js?v=20260222-2" defer></script>
   </body>
 </html>

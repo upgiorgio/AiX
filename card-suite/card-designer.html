@@ -191,6 +191,22 @@
             </label>
           </div>
 
+          <!-- ── AI 助手 ── -->
+          <h3 class="section-sub-title">🤖 AI 助手</h3>
+          <div class="ai-panel">
+            <div class="url-import-row">
+              <input id="aiCardUrl" type="url" placeholder="粘贴文章链接，AI提取观点→自动填充卡片" />
+              <button class="btn" id="aiCardUrlBtn">🔗 链接生成</button>
+            </div>
+            <label>主题关键词
+              <input id="aiTopic" placeholder="例：高效内容创作的 3 个核心方法" />
+            </label>
+            <div class="actions" style="margin:0;flex-wrap:wrap;">
+              <button class="btn btn-primary" id="aiCardGenerateBtn">✨ AI 生成卡片文案</button>
+            </div>
+            <div id="aiCardStatus" style="font-size:0.82rem;color:var(--accent);min-height:18px;margin-top:4px;"></div>
+          </div>
+
           <div class="actions">
             <button class="btn" id="importDraftBtn">导入文案工场草稿</button>
             <button class="btn btn-primary" id="splitBtn">自动拆分为多张卡片</button>
@@ -244,6 +260,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
     <script src="/card-suite/common.js?v=20260222-1" defer></script>
-    <script src="/card-suite/card-designer.js?v=20260222-5" defer></script>
+    <script src="/card-suite/ai-gateway.js?v=20260222-1" defer></script>
+    <script src="/card-suite/card-designer.js?v=20260222-6" defer></script>
   </body>
 </html>

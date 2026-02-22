@@ -169,7 +169,32 @@
               <tbody id="ossRows"></tbody>
             </table>
           </div>
-          <p class=”muted”>优先方向：打通 AI 写作与卡片设计流程，再建设模板市场与自动化生态。</p>
+          <p class="muted">优先方向：打通 AI 写作与卡片设计流程，再建设模板市场与自动化生态。</p>
+        </section>
+
+        <section class="card stack" style="grid-column:1/-1;">
+          <h3>🤖 AI 内容矩阵生成器</h3>
+          <div class="form-grid">
+            <label>账号定位 / 垂类
+              <input id="aiNiche" placeholder="例：AI效率工具推广者，面向职场人群" />
+            </label>
+            <label>本周核心话题
+              <input id="aiWeekTopic" placeholder="例：AI如何让内容创作效率提升10倍" />
+            </label>
+            <label>发布频率
+              <select id="aiFreq">
+                <option value="每天1条">每天1条</option>
+                <option value="每天2条" selected>每天2条</option>
+                <option value="每周5条">每周5条</option>
+                <option value="每周3条">每周3条</option>
+              </select>
+            </label>
+          </div>
+          <div class="actions">
+            <button class="btn btn-primary" id="aiMatrixBtn">🗓 AI 生成30天内容矩阵</button>
+          </div>
+          <div id="aiMatrixStatus" style="font-size:0.82rem;color:var(--accent);margin-top:4px;min-height:18px;"></div>
+          <div id="aiMatrixOutput" style="margin-top:12px;"></div>
         </section>
       </main>
 
@@ -189,6 +214,7 @@
     </div>
 
     <script src="/card-suite/common.js?v=20260222-1" defer></script>
-    <script src="/card-suite/strategy.js?v=20260222-1" defer></script>
+    <script src="/card-suite/ai-gateway.js?v=20260222-1" defer></script>
+    <script src="/card-suite/strategy.js?v=20260222-2" defer></script>
   </body>
 </html>

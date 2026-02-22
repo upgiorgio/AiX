@@ -49,7 +49,7 @@ function readBatch() {
 
 function renderBatchMeta(batch) {
   if (!batch) {
-    $("batchMeta").textContent = "未检测到卡片拆分数据，请先去卡片设计器执行“自动拆分为多张”。";
+    $("batchMeta").textContent = "未检测到卡片拆分数据，请先去卡片设计器执行"自动拆分为多张"。";
     return;
   }
 
@@ -97,10 +97,15 @@ function renderOutputs() {
       <textarea rows="8">${text}</textarea>
       <div class="actions">
         <button class="btn" data-copy="1">复制${profile.label}文案</button>
+        <button class="btn btn-warm" data-ai-rewrite="1">✨ AI重写</button>
       </div>
     `;
     node.querySelector("button[data-copy='1']").addEventListener("click", () => {
       copyText(node.querySelector("textarea").value, `${profile.label} 文案已复制`);
+    });
+    node.querySelector('[data-ai-rewrite="1"]').addEventListener('click', () => {
+      const ta = node.querySelector('textarea');
+      aiGeneratePlatformCopy(platform, ta);
     });
     container.appendChild(node);
   });
@@ -136,6 +141,62 @@ function downloadPlan() {
   downloadFile(`publish-pack-${nowTag()}.md`, `${allText}\n\n## 执行清单\n${checklist}`, "text/markdown;charset=utf-8");
 }
 
+async function aiAnalyzePlatformFit() {
+  const statusEl = $('aiAnalyzeStatus');
+  const scoresEl = $('aiScores');
+  const topic = $('topic').value.trim() || '内容创作';
+  const selected = getSelectedPlatforms();
+  if (!selected.length) { showToast('请至少选择一个平台'); return; }
+  if (statusEl) statusEl.textContent = '⏳ 分析中…';
+  scoresEl.innerHTML = '';
+  const platformNames = selected.map(p => platformProfiles[p]?.label || p).join('、');
+  const prompt = `你是内容运营专家。请分析主题"${topic}"在以下平台的内容适配度评分（0-100）并给出一句话优化建议。
+平台：${platformNames}
+以JSON格式返回，key使用英文平台标识（${selected.join(',')}），例如：
+{"x":{"score":82,"tip":"适合简短有力的Hook开头"},"xiaohongshu":{"score":91,"tip":"加入生活场景感和话题标签"}}
+只返回JSON，不要任何解释。`;
+  try {
+    const raw = await window.AiGateway.generate(prompt, { model: 'fast' });
+    const jsonStr = raw.match(/\{[\s\S]*\}/)?.[0];
+    const data = JSON.parse(jsonStr || '{}');
+    scoresEl.innerHTML = selected.map(p => {
+      const d = data[p] || { score: 70, tip: '内容质量适中' };
+      const profile = platformProfiles[p];
+      return `<div style="margin-bottom:10px;">
+        <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px;">
+          <span style="font-size:0.85rem;font-weight:600;">${profile?.label || p}</span>
+          <span style="font-size:0.85rem;color:var(--accent);font-weight:700;">${d.score}分</span>
+        </div>
+        <div class="ai-score-wrap"><div class="ai-score-bar"><div class="ai-score-fill" style="width:${d.score}%"></div></div></div>
+        <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">${d.tip}</div>
+      </div>`;
+    }).join('');
+    if (statusEl) { statusEl.textContent = '✅ 分析完成'; setTimeout(() => statusEl.textContent = '', 2000); }
+  } catch(e) {
+    if (statusEl) statusEl.textContent = '❌ 分析失败: ' + e.message;
+    console.error(e);
+  }
+}
+
+async function aiGeneratePlatformCopy(platform, textarea) {
+  const profile = platformProfiles[platform];
+  const topic = $('topic').value.trim() || '内容创作';
+  const cta = $('cta').value.trim() || '收藏并分享';
+  const prompt = `请为以下主题生成${profile.label}平台的发布文案。
+主题：${topic}
+CTA：${cta}
+表达结构：${profile.format}
+要求：字数200字以内，包含2-3个相关话题标签。只输出文案正文，不要任何前缀。`;
+  const original = textarea.value;
+  textarea.value = '✨ AI生成中…';
+  let full = '';
+  await window.AiGateway.stream(prompt, {
+    onChunk(chunk) { full += chunk; textarea.value = full + '▋'; },
+    onDone() { textarea.value = full; },
+    onError() { textarea.value = original; showToast('AI生成失败，已恢复原文'); }
+  });
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   const batch = readBatch();
   renderBatchMeta(batch);
@@ -144,6 +205,7 @@ window.addEventListener("DOMContentLoaded", () => {
   $("generateBtn").addEventListener("click", renderOutputs);
   $("copyAllBtn").addEventListener("click", copyAll);
   $("downloadPlanBtn").addEventListener("click", downloadPlan);
+  $('aiAnalyzeBtn').addEventListener('click', aiAnalyzePlatformFit);
 
   ["topic", "cta"].forEach((id) => {
     $(id).addEventListener("input", renderOutputs);

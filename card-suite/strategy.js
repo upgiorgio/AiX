@@ -90,3 +90,80 @@ function render() {
 }
 
 window.addEventListener("DOMContentLoaded", render);
+
+/* ── AI Content Matrix ── */
+async function aiGenerateContentMatrix() {
+  const niche = document.getElementById('aiNiche')?.value.trim() || 'AI工具创作者';
+  const weekTopic = document.getElementById('aiWeekTopic')?.value.trim() || 'AI内容创作';
+  const freq = document.getElementById('aiFreq')?.value || '每天2条';
+  const statusEl = document.getElementById('aiMatrixStatus');
+  const outputEl = document.getElementById('aiMatrixOutput');
+  if (!outputEl) return;
+  if (statusEl) statusEl.textContent = '⏳ AI 生成内容矩阵中（约15秒）…';
+  outputEl.innerHTML = '';
+  const prompt = `你是内容运营专家。请为以下账号生成30天内容矩阵计划。
+账号定位：${niche}
+本周核心话题：${weekTopic}
+发布频率：${freq}
+请以每天为单位列出30天计划，每天一行，格式固定为：
+第N天 | 内容标题 | 类型 | 平台
+类型只能是：干货/观点/故事/互动/宣传
+平台建议如：小红书/X/视频号/B站/公众号
+共30行，只输出内容，不要任何前缀或解释。`;
+  let full = '';
+  await window.AiGateway.stream(prompt, {
+    onChunk(chunk) {
+      full += chunk;
+      const count = full.split('\n').filter(l => l.trim()).length;
+      if (statusEl) statusEl.textContent = `⏳ 生成中… ${count}/30天`;
+    },
+    onDone() {
+      if (statusEl) { statusEl.textContent = '✅ 30天矩阵已生成'; setTimeout(() => statusEl.textContent = '', 2500); }
+      renderMatrixCalendar(full, outputEl);
+    },
+    onError(e) {
+      if (statusEl) statusEl.textContent = '❌ 生成失败: ' + e.message;
+    }
+  });
+}
+
+function renderMatrixCalendar(rawText, container) {
+  const lines = rawText.split('\n').filter(l => l.trim());
+  const typeColors = {
+    '干货': '#2cb5e9', '观点': '#f59e5b', '故事': '#a78bfa',
+    '互动': '#34d399', '宣传': '#fb7185'
+  };
+  container.innerHTML = `<div class="cal-grid">${
+    lines.slice(0, 30).map((line, i) => {
+      const parts = line.split('|').map(s => s.trim());
+      const day = parts[0] || `第${i+1}天`;
+      const title = parts[1] || line;
+      const type = parts[2] || '干货';
+      const platform = parts[3] || '';
+      const color = typeColors[type] || '#64748b';
+      return `<div class="cal-cell" style="border-top:3px solid ${color};">
+        <div style="font-size:0.72rem;color:var(--muted);margin-bottom:3px;">${day}</div>
+        <div style="font-size:0.82rem;font-weight:600;line-height:1.35;margin-bottom:4px;">${title}</div>
+        <div style="font-size:0.72rem;">
+          <span style="background:${color}22;color:${color};padding:1px 5px;border-radius:4px;">${type}</span>
+          ${platform ? `<span style="margin-left:4px;color:var(--muted);">${platform}</span>` : ''}
+        </div>
+      </div>`;
+    }).join('')
+  }</div>`;
+  const exportBtn = document.createElement('button');
+  exportBtn.className = 'btn';
+  exportBtn.style.marginTop = '10px';
+  exportBtn.textContent = '📥 下载内容矩阵 Markdown';
+  exportBtn.onclick = () => {
+    const niche = document.getElementById('aiNiche')?.value || '';
+    const md = `# 30天内容矩阵\n\n**账号定位：** ${niche}\n\n${rawText}`;
+    downloadFile(`content-matrix-${nowTag()}.md`, md, 'text/markdown;charset=utf-8');
+  };
+  container.appendChild(exportBtn);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('aiMatrixBtn');
+  if (btn) btn.addEventListener('click', aiGenerateContentMatrix);
+});
