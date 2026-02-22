@@ -391,11 +391,30 @@ textarea {
   gap: 14px;
   color: #fff;
   box-shadow: 0 22px 42px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+}
+
+.card-deco {
+  width: 44px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
 }
 
 .card-canvas h4 {
   margin: 0;
   font-size: 1.24rem;
+  font-weight: 700;
   line-height: 1.32;
 }
 
@@ -403,6 +422,7 @@ textarea {
   margin: 0;
   line-height: 1.58;
   white-space: pre-wrap;
+  font-size: 0.95rem;
 }
 
 .card-meta {
@@ -411,27 +431,238 @@ textarea {
   align-items: center;
   gap: 10px;
   font-size: 0.82rem;
-  opacity: 0.92;
+  opacity: 0.88;
+  flex-shrink: 0;
 }
 
+/* ═══════════════════════════════════════════
+   CARD TEMPLATES — 18 designs
+   ═══════════════════════════════════════════ */
+
+/* ── COLD PALETTE ── */
+
+/* template-a | Aurora 极光蓝 */
 .template-a {
-  background: linear-gradient(145deg, #17699f 0%, #2390c5 48%, #59b4db 100%);
+  background: linear-gradient(155deg, #0d4f80 0%, #1677b8 38%, #2ea7e0 72%, #59c4ff 100%);
+}
+.template-a .card-deco {
+  background: rgba(255, 255, 255, 0.65);
+  width: 52px;
 }
 
+/* template-b | Void 深空 */
 .template-b {
-  background: linear-gradient(145deg, #3d4561 0%, #1a223c 45%, #0e1427 100%);
+  background:
+    radial-gradient(circle 1px at 22% 28%, rgba(255,255,255,0.55) 0%, transparent 1px),
+    radial-gradient(circle 1px at 68% 14%, rgba(255,255,255,0.4) 0%, transparent 1px),
+    radial-gradient(circle 1px at 45% 55%, rgba(255,255,255,0.3) 0%, transparent 1px),
+    radial-gradient(circle 1px at 83% 72%, rgba(255,255,255,0.5) 0%, transparent 1px),
+    radial-gradient(circle 1px at 11% 82%, rgba(255,255,255,0.35) 0%, transparent 1px),
+    radial-gradient(circle 1px at 55% 38%, rgba(255,255,255,0.25) 0%, transparent 1px),
+    linear-gradient(155deg, #090e1c 0%, #141c35 42%, #1e2a4a 78%, #2a3660 100%);
+}
+.template-b .card-deco {
+  background: rgba(100, 149, 237, 0.72);
+  width: 36px;
 }
 
-.template-c {
-  background: linear-gradient(145deg, #20553f 0%, #328f6c 48%, #68bf98 100%);
+/* template-h | Abyss 深渊 */
+.template-h {
+  background: linear-gradient(155deg, #020810 0%, #060f1c 42%, #0a1628 78%, #0e2040 100%);
+}
+.template-h .card-deco {
+  background: linear-gradient(90deg, #00d4ff, rgba(0, 212, 255, 0));
+  width: 64px;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
 }
 
+/* template-m | Aqua 海洋 */
+.template-m {
+  background: linear-gradient(155deg, #063845 0%, #0c5c70 42%, #147d96 78%, #28a8c0 100%);
+}
+.template-m .card-deco {
+  background: rgba(160, 235, 250, 0.68);
+  width: 48px;
+}
+
+/* template-p | Midnight 子夜 */
+.template-p {
+  background: radial-gradient(ellipse at 25% 20%, #2a1f5a 0%, #1a1048 40%, #0e0828 68%, #08051a 100%);
+}
+.template-p .card-deco {
+  background: linear-gradient(90deg, #6366f1, rgba(99, 102, 241, 0));
+  width: 56px;
+}
+
+/* template-r | Storm 风暴 */
+.template-r {
+  background: linear-gradient(155deg, #1a1e26 0%, #2a3040 40%, #384055 75%, #465268 100%);
+}
+.template-r .card-deco {
+  background: linear-gradient(90deg, #e2e8f0, rgba(226, 232, 240, 0));
+  width: 62px;
+}
+
+/* ── WARM PALETTE ── */
+
+/* template-d | Ember 琥珀橙 */
 .template-d {
-  background: linear-gradient(145deg, #7c4a25 0%, #b56e36 46%, #dd9c5e 100%);
+  background: linear-gradient(155deg, #7a3a12 0%, #bf6626 38%, #e08a40 72%, #f5b470 100%);
+}
+.template-d .card-deco {
+  background: rgba(255, 236, 180, 0.65);
+  width: 40px;
 }
 
+/* template-e | Blossom 樱花 */
 .template-e {
-  background: linear-gradient(150deg, #6a285f 0%, #97346f 50%, #ca568f 100%);
+  background: linear-gradient(155deg, #66194f 0%, #9b2a71 38%, #c84090 72%, #ef70b5 100%);
+}
+.template-e .card-deco {
+  background: rgba(255, 200, 230, 0.65);
+  width: 44px;
+}
+
+/* template-i | Dusk 暮色 */
+.template-i {
+  background: linear-gradient(155deg, #7c2d52 0%, #c0445c 35%, #e8765e 68%, #f5a57a 100%);
+}
+.template-i .card-deco {
+  background: rgba(255, 240, 220, 0.6);
+  width: 40px;
+}
+
+/* template-o | Coral 珊瑚红 */
+.template-o {
+  background: linear-gradient(155deg, #8a1f1f 0%, #c23535 38%, #e55c5c 72%, #f08888 100%);
+}
+.template-o .card-deco {
+  background: rgba(255, 220, 220, 0.6);
+  width: 44px;
+}
+
+/* ── NATURE PALETTE ── */
+
+/* template-c | Sage 苍翠 */
+.template-c {
+  background: linear-gradient(155deg, #12432f 0%, #1a6344 38%, #279462 72%, #52c58a 100%);
+}
+.template-c .card-deco {
+  background: rgba(180, 255, 210, 0.62);
+  width: 44px;
+}
+
+/* template-f | Nebula 星云紫 */
+.template-f {
+  background: radial-gradient(ellipse at 30% 28%, #5a3a8a 0%, #3a2264 48%, #1e1040 100%);
+}
+.template-f .card-deco {
+  background: linear-gradient(90deg, #c084fc, #818cf8, rgba(129, 140, 248, 0));
+  width: 56px;
+  height: 4px;
+}
+
+/* template-q | Matcha 抹茶 */
+.template-q {
+  background: linear-gradient(155deg, #2e4a2e 0%, #3d6e3d 40%, #5a8f4a 75%, #7aac5e 100%);
+}
+.template-q .card-deco {
+  background: rgba(200, 240, 180, 0.58);
+  width: 40px;
+}
+.template-q h4 {
+  font-family: "Noto Serif SC", "Noto Sans SC", serif;
+  letter-spacing: 0.04em;
+}
+
+/* ── PROFESSIONAL PALETTE ── */
+
+/* template-j | Cyber 赛博 */
+.template-j {
+  background:
+    repeating-linear-gradient(0deg, rgba(0,255,157,0.025) 0px, rgba(0,255,157,0.025) 1px, transparent 1px, transparent 22px),
+    repeating-linear-gradient(90deg, rgba(0,255,157,0.025) 0px, rgba(0,255,157,0.025) 1px, transparent 1px, transparent 22px),
+    linear-gradient(155deg, #030a0e 0%, #061520 42%, #0c2535 78%, #0f3040 100%);
+}
+.template-j .card-deco {
+  background: #00ff9d;
+  width: 56px;
+  box-shadow: 0 0 10px #00ff9d, 0 0 20px rgba(0, 255, 157, 0.4);
+}
+.template-j h4 {
+  color: #00ff9d;
+  font-family: "Sora", sans-serif;
+  letter-spacing: 0.02em;
+}
+.template-j .card-meta {
+  color: rgba(0, 255, 157, 0.7);
+}
+
+/* template-l | Noir 碳黑 */
+.template-l {
+  background: linear-gradient(155deg, #000000 0%, #0d0d0d 48%, #1a1a1a 100%);
+}
+.template-l .card-deco {
+  background: #ffffff;
+  width: 30px;
+  height: 3px;
+}
+.template-l h4 {
+  font-family: "Sora", sans-serif;
+  font-size: 1.36rem;
+  letter-spacing: -0.01em;
+}
+
+/* template-n | Gold 烫金 */
+.template-n {
+  background: linear-gradient(155deg, #1a1208 0%, #2c1e08 42%, #3d2b0c 78%, #503a10 100%);
+}
+.template-n .card-deco {
+  background: linear-gradient(90deg, #f5c842, #e8a820, rgba(232, 168, 32, 0));
+  width: 60px;
+  height: 3px;
+}
+.template-n h4 {
+  color: #f5c842;
+  font-family: "Sora", sans-serif;
+}
+.template-n .card-meta {
+  color: rgba(245, 200, 66, 0.75);
+}
+
+/* ── LIGHT PALETTE ── */
+
+/* template-g | Paper 稿纸  (dark text) */
+.template-g {
+  background:
+    repeating-linear-gradient(transparent, transparent 27px, rgba(100,130,160,0.1) 27px, rgba(100,130,160,0.1) 28px),
+    linear-gradient(155deg, #f8f9fa 0%, #edf1f5 58%, #dde4ec 100%);
+  color: #1e293b;
+}
+.template-g .card-deco {
+  background: #1e293b;
+  width: 32px;
+  height: 3px;
+}
+.template-g .card-meta {
+  color: #64748b;
+}
+
+/* template-k | Latte 拿铁  (dark text) */
+.template-k {
+  background: linear-gradient(155deg, #f5ede0 0%, #ede0cc 48%, #e4d0b8 100%);
+  color: #3d2b1f;
+}
+.template-k .card-deco {
+  background: #7a5c44;
+  width: 36px;
+  height: 3px;
+}
+.template-k .card-meta {
+  color: #7a5c44;
+}
+.template-k h4 {
+  font-family: "Noto Serif SC", "Noto Sans SC", serif;
 }
 
 .output-box {

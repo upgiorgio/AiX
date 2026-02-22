@@ -62,11 +62,34 @@
             <label>
               模板
               <select id="template">
-                <option value="template-a">Aurora 蓝</option>
-                <option value="template-b">Night 深色</option>
-                <option value="template-c">Forest 绿</option>
-                <option value="template-d">Sunset 橙</option>
-                <option value="template-e">Rose 洋红</option>
+                <optgroup label="── 冷色系 ──">
+                  <option value="template-a">Aurora 极光蓝</option>
+                  <option value="template-b">Void 深空</option>
+                  <option value="template-h">Abyss 深渊</option>
+                  <option value="template-m">Aqua 海洋</option>
+                  <option value="template-p">Midnight 子夜</option>
+                  <option value="template-r">Storm 风暴</option>
+                </optgroup>
+                <optgroup label="── 暖色系 ──">
+                  <option value="template-d">Ember 琥珀橙</option>
+                  <option value="template-e">Blossom 樱花</option>
+                  <option value="template-i">Dusk 暮色</option>
+                  <option value="template-o">Coral 珊瑚红</option>
+                </optgroup>
+                <optgroup label="── 自然系 ──">
+                  <option value="template-c">Sage 苍翠</option>
+                  <option value="template-f">Nebula 星云紫</option>
+                  <option value="template-q">Matcha 抹茶</option>
+                </optgroup>
+                <optgroup label="── 专业系 ──">
+                  <option value="template-j">Cyber 赛博</option>
+                  <option value="template-l">Noir 碳黑</option>
+                  <option value="template-n">Gold 烫金</option>
+                </optgroup>
+                <optgroup label="── 浅色系 ──">
+                  <option value="template-g">Paper 稿纸</option>
+                  <option value="template-k">Latte 拿铁</option>
+                </optgroup>
               </select>
             </label>
             <label>
@@ -105,7 +128,8 @@
           <h3>实时预览</h3>
           <div class="preview-stage">
             <article id="cardCanvas" class="card-canvas template-a">
-              <div>
+              <div class="card-body">
+                <div class="card-deco"></div>
                 <h4 id="previewTitle">卡片标题</h4>
                 <p id="previewText">正文内容会在这里展示。</p>
               </div>
@@ -144,6 +168,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
     <script src="/card-suite/common.js?v=20260222-1" defer></script>
-    <script src="/card-suite/card-designer.js?v=20260222-2" defer></script>
+    <script src="/card-suite/card-designer.js?v=20260222-3" defer></script>
   </body>
 </html>

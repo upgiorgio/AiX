@@ -116,8 +116,14 @@ function syncPreview() {
   const text = cleanText(state.cardText || "").slice(0, size.maxChars + 20) || "正文内容会在这里展示。";
   const author = state.author || "Giorgio";
 
+  const ALL_TEMPLATE_CLASSES = [
+    "template-a","template-b","template-c","template-d","template-e",
+    "template-f","template-g","template-h","template-i","template-j",
+    "template-k","template-l","template-m","template-n","template-o",
+    "template-p","template-q","template-r"
+  ];
   const canvas = $("cardCanvas");
-  canvas.classList.remove("template-a", "template-b", "template-c", "template-d", "template-e");
+  canvas.classList.remove(...ALL_TEMPLATE_CLASSES);
   canvas.classList.add(state.template);
   canvas.style.aspectRatio = size.ratio;
 
