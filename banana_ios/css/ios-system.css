@@ -35,6 +35,7 @@
   --ios-bg-tertiary: #FFFFFF;
   --ios-bg-grouped: #F2F2F7;
   --ios-bg-grouped-secondary: #FFFFFF;
+  --ios-bg-elevated: #FFFFFF;
 
   --ios-label: #000000;
   --ios-label-secondary: #3C3C4399;
@@ -139,6 +140,7 @@
   --ios-bg-tertiary: #2C2C2E;
   --ios-bg-grouped: #000000;
   --ios-bg-grouped-secondary: #1C1C1E;
+  --ios-bg-elevated: #1C1C1E;
 
   --ios-label: #FFFFFF;
   --ios-label-secondary: #EBEBF599;
