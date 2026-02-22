@@ -20,13 +20,85 @@ const ALL_TEMPLATE_CLASSES = [
   "template-a","template-b","template-c","template-d","template-e",
   "template-f","template-g","template-h","template-i","template-j",
   "template-k","template-l","template-m","template-n","template-o",
-  "template-p","template-q","template-r"
+  "template-p","template-q","template-r",
+  "template-s","template-t","template-u","template-v","template-w",
+  "template-x","template-y","template-z",
+  "template-aa","template-ab","template-ac","template-ad"
 ];
 
 let splitCards = [];
 
 function $(id) {
   return document.getElementById(id);
+}
+
+/* ── Markdown rendering ── */
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function inlineMarkdown(str) {
+  let s = escHtml(str);
+  s = s.replace(/\*\*\*(.+?)\*\*\*/g,  "<strong><em>$1</em></strong>");
+  s = s.replace(/\*\*(.+?)\*\*/g,      "<strong>$1</strong>");
+  s = s.replace(/\*(.+?)\*/g,          "<em>$1</em>");
+  s = s.replace(/`(.+?)`/g,            "<code>$1</code>");
+  s = s.replace(/\[(.+?)\]\(.+?\)/g,   "$1");
+  return s;
+}
+
+function renderMarkdown(text) {
+  if (!text) return "";
+  const raw = String(text)
+    .replace(/```[\s\S]*?```/g, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
+  const lines = raw.split("\n");
+  const out = [];
+
+  for (const line of lines) {
+    if (line.trim() === "") {
+      out.push('<span class="md-blank"> </span>');
+      continue;
+    }
+    if (/^###\s/.test(line)) {
+      out.push(`<span class="md-h3">${inlineMarkdown(line.replace(/^###\s+/, ""))}</span>`);
+    } else if (/^##\s/.test(line)) {
+      out.push(`<span class="md-h2">${inlineMarkdown(line.replace(/^##\s+/, ""))}</span>`);
+    } else if (/^#\s/.test(line)) {
+      out.push(`<span class="md-h1">${inlineMarkdown(line.replace(/^#\s+/, ""))}</span>`);
+    } else if (/^[-*+]\s/.test(line)) {
+      out.push(`<span class="md-li">·&thinsp;${inlineMarkdown(line.replace(/^[-*+]\s+/, ""))}</span>`);
+    } else if (/^>\s?/.test(line)) {
+      out.push(`<span class="md-quote">${inlineMarkdown(line.replace(/^>\s?/, ""))}</span>`);
+    } else {
+      out.push(`<span class="md-p">${inlineMarkdown(line)}</span>`);
+    }
+  }
+
+  return out.join("\n");
+}
+
+/* ── Background override ── */
+
+function applyBgOverride(bg) {
+  const canvas = $("cardCanvas");
+  if (!canvas) return;
+  if (bg) {
+    canvas.style.background = bg;
+  } else {
+    canvas.style.background = "";
+  }
+}
+
+function readBgOverride() {
+  return $("cardCanvas")?.style.background || "";
 }
 
 /* ── Core state ── */
@@ -88,7 +160,8 @@ function readState() {
     author:     $("author").value.trim(),
     cardTitle:  $("cardTitle").value.trim(),
     cardText:   $("cardText").value,
-    typography: readTypography()
+    typography: readTypography(),
+    bgOverride: readBgOverride()
   };
 }
 
@@ -102,6 +175,9 @@ function applyState(state) {
   if (state.typography) {
     setTypoUI(state.typography);
     applyTypography(state.typography);
+  }
+  if (typeof state.bgOverride !== "undefined") {
+    applyBgOverride(state.bgOverride);
   }
 }
 
@@ -190,16 +266,27 @@ function syncPreview() {
   const state = readState();
   const size = sizeMap[state.sizePreset] || sizeMap.xhs;
   const title = state.cardTitle || "卡片标题";
-  const text = cleanText(state.cardText || "").slice(0, size.maxChars + 20) || "正文内容会在这里展示。";
+  const rawText = state.cardText || "";
   const author = state.author || "Giorgio";
 
   const canvas = $("cardCanvas");
   canvas.classList.remove(...ALL_TEMPLATE_CLASSES);
   canvas.classList.add(state.template);
   canvas.style.aspectRatio = size.ratio;
+  /* 模板切换后保留自定义背景 */
+  if (state.bgOverride) {
+    canvas.style.background = state.bgOverride;
+  }
 
   $("previewTitle").textContent = title;
-  $("previewText").textContent = text;
+
+  /* Markdown 渲染正文 */
+  const textEl = $("previewText");
+  const displayText = rawText.trim()
+    ? rawText.slice(0, size.maxChars * 3)   // 宽松截取给 MD 处理
+    : "正文内容会在这里展示。";
+  textEl.innerHTML = renderMarkdown(displayText);
+
   $("previewSize").textContent = size.label;
   $("previewAuthor").textContent = `@${author}`;
 
@@ -279,6 +366,42 @@ async function exportCurrentPng() {
   }
 }
 
+/* ── Copy image to clipboard ── */
+
+async function copyImageToClipboard() {
+  const target = $("cardCanvas");
+  if (!window.html2canvas) {
+    showToast("导出组件加载中，请稍后重试");
+    return;
+  }
+  const sizeEl = $("previewSize");
+  if (sizeEl) sizeEl.style.visibility = "hidden";
+
+  try {
+    const canvas = await window.html2canvas(target, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true
+    });
+    canvas.toBlob(async (blob) => {
+      if (!blob) { showToast("生成图片失败"); return; }
+      try {
+        await navigator.clipboard.write([
+          new ClipboardItem({ "image/png": blob })
+        ]);
+        showToast("图片已复制到剪贴板 ✓");
+      } catch {
+        /* 降级：弹出图片 */
+        const url = URL.createObjectURL(blob);
+        window.open(url, "_blank");
+        showToast("已在新标签打开，请手动右键复制");
+      }
+    }, "image/png");
+  } finally {
+    if (sizeEl) sizeEl.style.visibility = "";
+  }
+}
+
 /* ── Publish hub ── */
 
 function toPublishHub() {
@@ -298,6 +421,12 @@ function toPublishHub() {
 
 window.addEventListener("DOMContentLoaded", () => {
   loadState();
+
+  /* ── URL preset override (from platform navigation) ── */
+  const urlPreset = new URLSearchParams(location.search).get("preset");
+  if (urlPreset && sizeMap[urlPreset]) {
+    $("sizePreset").value = urlPreset;
+  }
 
   if (!$("author").value.trim()) {
     $("author").value = "Giorgio";
@@ -355,6 +484,10 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   $("exportPngBtn").addEventListener("click", exportCurrentPng);
+
+  const copyImgBtn = $("copyImageBtn");
+  if (copyImgBtn) copyImgBtn.addEventListener("click", copyImageToClipboard);
+
   $("copyJsonBtn").addEventListener("click", () => {
     const payload = { updatedAt: Date.now(), source: readState(), cards: splitCards };
     copyText(JSON.stringify(payload, null, 2), "批量JSON已复制");
@@ -365,6 +498,31 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   $("toPublishBtn").addEventListener("click", toPublishHub);
+
+  /* ── 背景自定义 ── */
+  document.querySelectorAll(".bg-swatch[data-bg]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      applyBgOverride(btn.dataset.bg);
+      saveState();
+    });
+  });
+
+  const bgResetBtn = $("bgResetBtn");
+  if (bgResetBtn) {
+    bgResetBtn.addEventListener("click", () => {
+      applyBgOverride("");
+      saveState();
+      showToast("已恢复模板背景");
+    });
+  }
+
+  const bgColorPicker = $("bgColorPicker");
+  if (bgColorPicker) {
+    bgColorPicker.addEventListener("input", () => {
+      applyBgOverride(bgColorPicker.value);
+      saveState();
+    });
+  }
 
   const cachedBatch = readJsonStorage(CARD_BATCH_KEY);
   if (cachedBatch?.cards?.length) {

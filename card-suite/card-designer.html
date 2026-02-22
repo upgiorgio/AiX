@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-4" />
+    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-5" />
     <style>
       .cards-grid {
         display: grid;
@@ -69,26 +69,40 @@
                   <option value="template-m">Aqua 海洋</option>
                   <option value="template-p">Midnight 子夜</option>
                   <option value="template-r">Storm 风暴</option>
+                  <option value="template-s">Crystal 水晶</option>
+                  <option value="template-u">Arctic 极地</option>
+                  <option value="template-z">Cobalt 钴蓝</option>
                 </optgroup>
                 <optgroup label="── 暖色系 ──">
                   <option value="template-d">Ember 琥珀橙</option>
                   <option value="template-e">Blossom 樱花</option>
                   <option value="template-i">Dusk 暮色</option>
                   <option value="template-o">Coral 珊瑚红</option>
+                  <option value="template-t">Volcano 熔岩</option>
+                  <option value="template-ac">Vivid 橘霞</option>
                 </optgroup>
                 <optgroup label="── 自然系 ──">
                   <option value="template-c">Sage 苍翠</option>
                   <option value="template-f">Nebula 星云紫</option>
                   <option value="template-q">Matcha 抹茶</option>
+                  <option value="template-v">Olive 橄榄</option>
+                  <option value="template-ad">Mint 薄荷</option>
                 </optgroup>
                 <optgroup label="── 专业系 ──">
                   <option value="template-j">Cyber 赛博</option>
                   <option value="template-l">Noir 碳黑</option>
                   <option value="template-n">Gold 烫金</option>
+                  <option value="template-y">Neon 霓虹</option>
+                  <option value="template-ab">Ink 水墨</option>
                 </optgroup>
                 <optgroup label="── 浅色系 ──">
                   <option value="template-g">Paper 稿纸</option>
                   <option value="template-k">Latte 拿铁</option>
+                  <option value="template-aa">Parchment 羊皮</option>
+                </optgroup>
+                <optgroup label="── 特色系 ──">
+                  <option value="template-w">Sakura Night 暗樱</option>
+                  <option value="template-x">Sand 沙漠</option>
                 </optgroup>
               </select>
             </label>
@@ -112,7 +126,8 @@
           </div>
 
           <label>
-            卡片正文（支持粘贴长文，后续可自动拆分）
+            卡片正文
+            <span class="md-hint">支持 <code>**粗体**</code> <code>*斜体*</code> <code>- 列表</code> <code>&gt; 引用</code> · 可粘贴长文自动拆分</span>
             <textarea id="cardText" rows="10"></textarea>
           </label>
 
@@ -154,6 +169,28 @@
             <button class="btn btn-primary" data-typo-preset="hero">超大标题</button>
           </div>
 
+          <!-- ── 自定义背景 ── -->
+          <h3 class="section-sub-title">自定义背景</h3>
+          <div class="bg-custom-row">
+            <div class="bg-swatches" id="bgSwatches">
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#0ea5e9,#1e40af)" data-bg="linear-gradient(135deg,#0ea5e9,#1e40af)" title="天蓝"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#f97316,#7c3aed)" data-bg="linear-gradient(135deg,#f97316,#7c3aed)" title="橙紫"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#06b6d4,#10b981)" data-bg="linear-gradient(135deg,#06b6d4,#10b981)" title="青绿"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#ec4899,#7c3aed)" data-bg="linear-gradient(135deg,#ec4899,#7c3aed)" title="粉紫"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#f43f5e,#fb923c)" data-bg="linear-gradient(135deg,#f43f5e,#fb923c)" title="糖果红"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#1e1b4b,#312e81)" data-bg="linear-gradient(135deg,#1e1b4b,#312e81)" title="深紫夜"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#16a34a,#14532d)" data-bg="linear-gradient(135deg,#16a34a,#14532d)" title="深森绿"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#92400e,#d97706)" data-bg="linear-gradient(135deg,#92400e,#d97706)" title="焦糖"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#be185d,#d97706)" data-bg="linear-gradient(135deg,#be185d,#d97706)" title="玫瑰金"></button>
+              <button class="bg-swatch" style="background:linear-gradient(135deg,#1f2937,#4b5563)" data-bg="linear-gradient(135deg,#1f2937,#4b5563)" title="石墨"></button>
+              <button class="bg-swatch bg-swatch-reset" id="bgResetBtn" title="重置为模板">↺</button>
+            </div>
+            <label class="bg-color-label" title="纯色背景">
+              <input type="color" id="bgColorPicker" value="#0d1526" />
+              <span>纯色</span>
+            </label>
+          </div>
+
           <div class="actions">
             <button class="btn" id="importDraftBtn">导入文案工场草稿</button>
             <button class="btn btn-primary" id="splitBtn">自动拆分为多张卡片</button>
@@ -169,7 +206,7 @@
               <div class="card-body">
                 <div class="card-deco"></div>
                 <h4 id="previewTitle">卡片标题</h4>
-                <p id="previewText">正文内容会在这里展示。</p>
+                <div id="previewText" class="md-render">正文内容会在这里展示。</div>
               </div>
               <div class="card-meta">
                 <span id="previewSize">1080 × 1440</span>
@@ -178,9 +215,10 @@
             </article>
           </div>
           <div class="actions">
-            <button class="btn btn-primary" id="exportPngBtn">导出当前PNG</button>
-            <button class="btn" id="copyJsonBtn">复制卡片数据</button>
-            <button class="btn" id="downloadJsonBtn">下载卡片数据</button>
+            <button class="btn btn-primary" id="exportPngBtn">⬇ 导出 PNG</button>
+            <button class="btn btn-ok" id="copyImageBtn">📋 复制图片</button>
+            <button class="btn" id="copyJsonBtn">复制数据</button>
+            <button class="btn" id="downloadJsonBtn">下载数据</button>
           </div>
 
           <h3>拆分结果</h3>
@@ -206,6 +244,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
     <script src="/card-suite/common.js?v=20260222-1" defer></script>
-    <script src="/card-suite/card-designer.js?v=20260222-4" defer></script>
+    <script src="/card-suite/card-designer.js?v=20260222-5" defer></script>
   </body>
 </html>
