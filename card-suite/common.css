@@ -436,233 +436,493 @@ textarea {
 }
 
 /* ═══════════════════════════════════════════
-   CARD TEMPLATES — 18 designs
+   CARD TEMPLATES — 18 designs (rich multi-layer)
    ═══════════════════════════════════════════ */
 
 /* ── COLD PALETTE ── */
 
-/* template-a | Aurora 极光蓝 */
+/* template-a | Aurora 极光蓝 — aurora borealis curtains */
 .template-a {
-  background: linear-gradient(155deg, #0d4f80 0%, #1677b8 38%, #2ea7e0 72%, #59c4ff 100%);
+  background:
+    radial-gradient(ellipse 120% 40% at 20% 0%, rgba(0, 255, 180, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 35% at 75% 5%, rgba(83, 192, 255, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(0, 220, 255, 0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 30% at 85% 30%, rgba(120, 80, 255, 0.2) 0%, transparent 50%),
+    linear-gradient(180deg, #020d1a 0%, #041526 30%, #071e38 60%, #0b2a50 100%);
 }
 .template-a .card-deco {
-  background: rgba(255, 255, 255, 0.65);
-  width: 52px;
+  background: linear-gradient(90deg, rgba(0, 255, 180, 0.9), rgba(83, 192, 255, 0.7), transparent);
+  width: 60px;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.5);
 }
 
-/* template-b | Void 深空 */
+/* template-b | Void 深空 — star field + nebula glow */
 .template-b {
   background:
-    radial-gradient(circle 1px at 22% 28%, rgba(255,255,255,0.55) 0%, transparent 1px),
-    radial-gradient(circle 1px at 68% 14%, rgba(255,255,255,0.4) 0%, transparent 1px),
-    radial-gradient(circle 1px at 45% 55%, rgba(255,255,255,0.3) 0%, transparent 1px),
-    radial-gradient(circle 1px at 83% 72%, rgba(255,255,255,0.5) 0%, transparent 1px),
-    radial-gradient(circle 1px at 11% 82%, rgba(255,255,255,0.35) 0%, transparent 1px),
-    radial-gradient(circle 1px at 55% 38%, rgba(255,255,255,0.25) 0%, transparent 1px),
-    linear-gradient(155deg, #090e1c 0%, #141c35 42%, #1e2a4a 78%, #2a3660 100%);
+    radial-gradient(circle 1.2px at 8%  9%,  rgba(255,255,255,0.9) 0%, transparent 1.2px),
+    radial-gradient(circle 1px  at 18% 22%,  rgba(255,255,255,0.6) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 31% 6%,  rgba(255,255,255,0.8) 0%, transparent 1.5px),
+    radial-gradient(circle 1px  at 42% 38%,  rgba(255,255,255,0.5) 0%, transparent 1px),
+    radial-gradient(circle 1px  at 55% 15%,  rgba(255,255,255,0.7) 0%, transparent 1px),
+    radial-gradient(circle 1.2px at 63% 52%,  rgba(255,255,255,0.6) 0%, transparent 1.2px),
+    radial-gradient(circle 1px  at 72% 28%,  rgba(255,255,255,0.45) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 80% 8%,  rgba(255,255,255,0.85) 0%, transparent 1.5px),
+    radial-gradient(circle 1px  at 88% 43%,  rgba(255,255,255,0.5) 0%, transparent 1px),
+    radial-gradient(circle 1px  at 94% 72%,  rgba(255,255,255,0.6) 0%, transparent 1px),
+    radial-gradient(circle 1px  at 12% 66%,  rgba(255,255,255,0.4) 0%, transparent 1px),
+    radial-gradient(circle 1.2px at 25% 80%,  rgba(255,255,255,0.7) 0%, transparent 1.2px),
+    radial-gradient(circle 1px  at 48% 70%,  rgba(255,255,255,0.35) 0%, transparent 1px),
+    radial-gradient(circle 1px  at 67% 85%,  rgba(255,255,255,0.55) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 92% 18%,  rgba(255,255,255,0.75) 0%, transparent 1.5px),
+    radial-gradient(ellipse 55% 40% at 30% 55%, rgba(40, 80, 180, 0.22) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 75% 25%, rgba(80, 30, 150, 0.16) 0%, transparent 60%),
+    linear-gradient(155deg, #030610 0%, #080e20 35%, #0e1635 65%, #141e48 100%);
 }
 .template-b .card-deco {
-  background: rgba(100, 149, 237, 0.72);
+  background: rgba(100, 149, 237, 0.75);
   width: 36px;
+  box-shadow: 0 0 8px rgba(100, 149, 237, 0.5);
 }
 
-/* template-h | Abyss 深渊 */
+/* template-h | Abyss 深渊 — bioluminescent deep ocean */
 .template-h {
-  background: linear-gradient(155deg, #020810 0%, #060f1c 42%, #0a1628 78%, #0e2040 100%);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0, 200, 255, 0.14) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 60% at 15% 40%, rgba(0, 160, 220, 0.09) 0%, transparent 55%),
+    radial-gradient(ellipse 30% 30% at 85% 20%, rgba(0, 180, 240, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 60% 80%, rgba(0, 140, 200, 0.08) 0%, transparent 55%),
+    linear-gradient(200deg, #000c18 0%, #010f22 30%, #020f1f 55%, #030e1c 80%, #040d18 100%);
 }
 .template-h .card-deco {
-  background: linear-gradient(90deg, #00d4ff, rgba(0, 212, 255, 0));
-  width: 64px;
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+  background: linear-gradient(90deg, #00e5ff, rgba(0, 229, 255, 0.3), transparent);
+  width: 72px;
+  height: 3px;
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.7), 0 0 28px rgba(0, 229, 255, 0.3);
 }
 
-/* template-m | Aqua 海洋 */
+/* template-m | Aqua 海洋 — ocean surface caustics */
 .template-m {
-  background: linear-gradient(155deg, #063845 0%, #0c5c70 42%, #147d96 78%, #28a8c0 100%);
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(160, 240, 255, 0.04) 0px, rgba(160, 240, 255, 0.04) 1px,
+      transparent 1px, transparent 18px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(120, 220, 255, 0.03) 0px, rgba(120, 220, 255, 0.03) 1px,
+      transparent 1px, transparent 24px
+    ),
+    radial-gradient(ellipse 70% 50% at 30% 20%, rgba(100, 220, 255, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 60%, rgba(40, 180, 220, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 90% 60% at 50% 100%, rgba(6, 60, 80, 0.5) 0%, transparent 55%),
+    linear-gradient(170deg, #062a38 0%, #094055 30%, #0e5c72 60%, #159ab4 90%, #22b8d0 100%);
 }
 .template-m .card-deco {
-  background: rgba(160, 235, 250, 0.68);
-  width: 48px;
+  background: linear-gradient(90deg, rgba(160, 240, 255, 0.9), rgba(100, 210, 240, 0.5), transparent);
+  width: 54px;
+  box-shadow: 0 0 10px rgba(100, 220, 255, 0.45);
 }
 
-/* template-p | Midnight 子夜 */
+/* template-p | Midnight 子夜 — indigo bokeh night */
 .template-p {
-  background: radial-gradient(ellipse at 25% 20%, #2a1f5a 0%, #1a1048 40%, #0e0828 68%, #08051a 100%);
+  background:
+    radial-gradient(circle 2px at 15% 10%, rgba(200, 180, 255, 0.8) 0%, transparent 2px),
+    radial-gradient(circle 1.5px at 38% 8%, rgba(180, 160, 255, 0.6) 0%, transparent 1.5px),
+    radial-gradient(circle 2px at 60% 15%, rgba(220, 200, 255, 0.7) 0%, transparent 2px),
+    radial-gradient(circle 1px at 82% 5%, rgba(200, 180, 255, 0.5) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 90% 30%, rgba(160, 140, 230, 0.65) 0%, transparent 1.5px),
+    radial-gradient(ellipse 70% 45% at 20% 25%, rgba(80, 50, 180, 0.3) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 55% at 80% 60%, rgba(50, 30, 140, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 60% at 50% 100%, rgba(20, 10, 60, 0.6) 0%, transparent 50%),
+    linear-gradient(165deg, #06031a 0%, #0c0628 35%, #120a38 65%, #1c1050 100%);
 }
 .template-p .card-deco {
-  background: linear-gradient(90deg, #6366f1, rgba(99, 102, 241, 0));
-  width: 56px;
+  background: linear-gradient(90deg, #818cf8, rgba(99, 102, 241, 0.4), transparent);
+  width: 60px;
+  box-shadow: 0 0 10px rgba(129, 140, 248, 0.5);
 }
 
-/* template-r | Storm 风暴 */
+/* template-r | Storm 风暴 — thunderstorm with lightning */
 .template-r {
-  background: linear-gradient(155deg, #1a1e26 0%, #2a3040 40%, #384055 75%, #465268 100%);
+  background:
+    radial-gradient(ellipse 30% 80% at 70% 10%, rgba(220, 235, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(180, 210, 240, 0.07) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 50% at 20% 60%, rgba(140, 170, 210, 0.06) 0%, transparent 50%),
+    linear-gradient(170deg,
+      #0e1420 0%,
+      #16202e 20%,
+      #1e2c3e 40%,
+      #26364e 60%,
+      #2e4060 80%,
+      #354a6e 100%
+    );
 }
 .template-r .card-deco {
-  background: linear-gradient(90deg, #e2e8f0, rgba(226, 232, 240, 0));
-  width: 62px;
+  background: linear-gradient(90deg, rgba(200, 220, 255, 0.9), rgba(180, 200, 240, 0.4), transparent);
+  width: 68px;
+  box-shadow: 0 0 8px rgba(200, 220, 255, 0.35);
 }
 
 /* ── WARM PALETTE ── */
 
-/* template-d | Ember 琥珀橙 */
+/* template-d | Ember 琥珀橙 — multi-point fire glow */
 .template-d {
-  background: linear-gradient(155deg, #7a3a12 0%, #bf6626 38%, #e08a40 72%, #f5b470 100%);
+  background:
+    radial-gradient(ellipse 60% 40% at 25% 30%, rgba(255, 160, 40, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 80% 70%, rgba(220, 80, 20, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 35% at 60% 10%, rgba(255, 200, 80, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 30% at 40% 90%, rgba(180, 50, 10, 0.3) 0%, transparent 50%),
+    linear-gradient(165deg, #3a1505 0%, #6a2a0c 25%, #a84820 50%, #d06a28 75%, #e88c42 100%);
 }
 .template-d .card-deco {
-  background: rgba(255, 236, 180, 0.65);
-  width: 40px;
+  background: linear-gradient(90deg, rgba(255, 230, 160, 0.9), rgba(255, 180, 80, 0.5), transparent);
+  width: 48px;
+  box-shadow: 0 0 10px rgba(255, 160, 40, 0.5);
 }
 
-/* template-e | Blossom 樱花 */
+/* template-e | Blossom 樱花 — petal light scatter */
 .template-e {
-  background: linear-gradient(155deg, #66194f 0%, #9b2a71 38%, #c84090 72%, #ef70b5 100%);
+  background:
+    radial-gradient(ellipse 55% 45% at 75% 20%, rgba(255, 160, 220, 0.32) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 20% 70%, rgba(240, 100, 180, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 35% at 50% 5%, rgba(255, 200, 240, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 45% 40% at 85% 75%, rgba(200, 60, 140, 0.22) 0%, transparent 50%),
+    linear-gradient(165deg, #3d0c30 0%, #6a1550 25%, #9e2878 50%, #c84498 75%, #e870b8 100%);
 }
 .template-e .card-deco {
-  background: rgba(255, 200, 230, 0.65);
-  width: 44px;
+  background: linear-gradient(90deg, rgba(255, 210, 240, 0.9), rgba(240, 160, 210, 0.5), transparent);
+  width: 50px;
+  box-shadow: 0 0 10px rgba(255, 160, 220, 0.5);
 }
 
-/* template-i | Dusk 暮色 */
+/* template-i | Dusk 暮色 — dramatic sunset layers */
 .template-i {
-  background: linear-gradient(155deg, #7c2d52 0%, #c0445c 35%, #e8765e 68%, #f5a57a 100%);
+  background:
+    radial-gradient(ellipse 80% 40% at 50% 0%, rgba(255, 220, 120, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(255, 140, 60, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 60% at 15% 60%, rgba(180, 40, 80, 0.22) 0%, transparent 55%),
+    linear-gradient(170deg,
+      #2a0a30 0%,
+      #5a1540 18%,
+      #9a2855 32%,
+      #c84860 46%,
+      #d8705e 58%,
+      #e89068 70%,
+      #f2a878 82%,
+      #f8be90 95%
+    );
 }
 .template-i .card-deco {
-  background: rgba(255, 240, 220, 0.6);
-  width: 40px;
+  background: linear-gradient(90deg, rgba(255, 235, 200, 0.9), rgba(255, 200, 140, 0.5), transparent);
+  width: 48px;
+  box-shadow: 0 0 10px rgba(255, 180, 80, 0.4);
 }
 
-/* template-o | Coral 珊瑚红 */
+/* template-o | Coral 珊瑚红 — scattered warm light */
 .template-o {
-  background: linear-gradient(155deg, #8a1f1f 0%, #c23535 38%, #e55c5c 72%, #f08888 100%);
+  background:
+    radial-gradient(ellipse 55% 45% at 30% 25%, rgba(255, 120, 100, 0.32) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 50% at 75% 70%, rgba(220, 60, 60, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 30% at 60% 5%, rgba(255, 160, 120, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 45% at 85% 30%, rgba(200, 40, 40, 0.2) 0%, transparent 50%),
+    linear-gradient(165deg, #4a0808 0%, #8a1818 25%, #c03030 50%, #e05050 75%, #f07878 100%);
 }
 .template-o .card-deco {
-  background: rgba(255, 220, 220, 0.6);
-  width: 44px;
+  background: linear-gradient(90deg, rgba(255, 210, 200, 0.9), rgba(255, 160, 140, 0.5), transparent);
+  width: 50px;
+  box-shadow: 0 0 10px rgba(255, 120, 100, 0.45);
 }
 
 /* ── NATURE PALETTE ── */
 
-/* template-c | Sage 苍翠 */
+/* template-c | Sage 苍翠 — dappled forest light */
 .template-c {
-  background: linear-gradient(155deg, #12432f 0%, #1a6344 38%, #279462 72%, #52c58a 100%);
+  background:
+    radial-gradient(ellipse 50% 40% at 25% 15%, rgba(100, 240, 160, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 75% 30%, rgba(60, 200, 120, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 35% at 50% 85%, rgba(20, 120, 70, 0.28) 0%, transparent 55%),
+    radial-gradient(ellipse 35% 45% at 90% 70%, rgba(80, 180, 100, 0.15) 0%, transparent 50%),
+    linear-gradient(165deg, #081f12 0%, #10341c 25%, #185030 50%, #246644 75%, #328a5a 100%);
 }
 .template-c .card-deco {
-  background: rgba(180, 255, 210, 0.62);
-  width: 44px;
+  background: linear-gradient(90deg, rgba(160, 255, 200, 0.9), rgba(100, 220, 150, 0.5), transparent);
+  width: 50px;
+  box-shadow: 0 0 10px rgba(80, 220, 140, 0.4);
 }
 
-/* template-f | Nebula 星云紫 */
+/* template-f | Nebula 星云紫 — cosmic gas cloud */
 .template-f {
-  background: radial-gradient(ellipse at 30% 28%, #5a3a8a 0%, #3a2264 48%, #1e1040 100%);
+  background:
+    radial-gradient(circle 1.5px at 20% 12%, rgba(255,255,255,0.85) 0%, transparent 1.5px),
+    radial-gradient(circle 1px  at 55% 8%,  rgba(255,255,255,0.6) 0%, transparent 1px),
+    radial-gradient(circle 2px  at 78% 22%, rgba(255,255,255,0.8) 0%, transparent 2px),
+    radial-gradient(circle 1px  at 40% 35%, rgba(255,255,255,0.4) 0%, transparent 1px),
+    radial-gradient(circle 1.5px at 88% 55%, rgba(255,255,255,0.7) 0%, transparent 1.5px),
+    radial-gradient(circle 1px  at 10% 70%, rgba(255,255,255,0.5) 0%, transparent 1px),
+    radial-gradient(ellipse 70% 55% at 35% 40%, rgba(180, 80, 255, 0.32) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 45% at 75% 30%, rgba(80, 120, 255, 0.28) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 50% at 60% 75%, rgba(220, 80, 180, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 15% 65%, rgba(100, 60, 200, 0.25) 0%, transparent 60%),
+    linear-gradient(165deg, #0a0520 0%, #160a38 30%, #200e50 60%, #2a1268 100%);
 }
 .template-f .card-deco {
-  background: linear-gradient(90deg, #c084fc, #818cf8, rgba(129, 140, 248, 0));
-  width: 56px;
+  background: linear-gradient(90deg, #e040fb, #a78bfa, rgba(167, 139, 250, 0));
+  width: 60px;
   height: 4px;
+  box-shadow: 0 0 10px rgba(192, 80, 255, 0.5);
 }
 
-/* template-q | Matcha 抹茶 */
+/* template-q | Matcha 抹茶 — washi paper with vertical rules */
 .template-q {
-  background: linear-gradient(155deg, #2e4a2e 0%, #3d6e3d 40%, #5a8f4a 75%, #7aac5e 100%);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px, transparent 39px,
+      rgba(100, 160, 80, 0.06) 39px, rgba(100, 160, 80, 0.06) 40px
+    ),
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(140, 220, 100, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 85% 80%, rgba(60, 120, 40, 0.18) 0%, transparent 55%),
+    linear-gradient(165deg, #1a3018 0%, #2a4a28 28%, #3a6434 55%, #4e8040 78%, #609850 100%);
 }
 .template-q .card-deco {
-  background: rgba(200, 240, 180, 0.58);
-  width: 40px;
+  background: linear-gradient(90deg, rgba(200, 240, 160, 0.88), rgba(160, 210, 120, 0.4), transparent);
+  width: 44px;
+  box-shadow: 0 0 8px rgba(160, 220, 100, 0.35);
 }
 .template-q h4 {
   font-family: "Noto Serif SC", "Noto Sans SC", serif;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
 }
 
 /* ── PROFESSIONAL PALETTE ── */
 
-/* template-j | Cyber 赛博 */
+/* template-j | Cyber 赛博 — neon grid terminal */
 .template-j {
   background:
-    repeating-linear-gradient(0deg, rgba(0,255,157,0.025) 0px, rgba(0,255,157,0.025) 1px, transparent 1px, transparent 22px),
-    repeating-linear-gradient(90deg, rgba(0,255,157,0.025) 0px, rgba(0,255,157,0.025) 1px, transparent 1px, transparent 22px),
-    linear-gradient(155deg, #030a0e 0%, #061520 42%, #0c2535 78%, #0f3040 100%);
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 157, 0.04) 0px, rgba(0, 255, 157, 0.04) 1px,
+      transparent 1px, transparent 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 255, 157, 0.04) 0px, rgba(0, 255, 157, 0.04) 1px,
+      transparent 1px, transparent 20px
+    ),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(0, 255, 100, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(0, 200, 120, 0.06) 0%, transparent 55%),
+    linear-gradient(160deg, #010608 0%, #030e14 30%, #061a22 60%, #081e28 80%, #0a2230 100%);
 }
 .template-j .card-deco {
   background: #00ff9d;
-  width: 56px;
-  box-shadow: 0 0 10px #00ff9d, 0 0 20px rgba(0, 255, 157, 0.4);
+  width: 60px;
+  box-shadow: 0 0 12px #00ff9d, 0 0 28px rgba(0, 255, 157, 0.45), 0 0 50px rgba(0, 255, 157, 0.2);
 }
 .template-j h4 {
   color: #00ff9d;
   font-family: "Sora", sans-serif;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 20px rgba(0, 255, 157, 0.5);
 }
 .template-j .card-meta {
-  color: rgba(0, 255, 157, 0.7);
+  color: rgba(0, 255, 157, 0.65);
 }
 
-/* template-l | Noir 碳黑 */
+/* template-l | Noir 碳黑 — velvet deep vignette */
 .template-l {
-  background: linear-gradient(155deg, #000000 0%, #0d0d0d 48%, #1a1a1a 100%);
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 50%, rgba(40, 40, 40, 0.6) 0%, transparent 70%),
+    radial-gradient(ellipse 100% 80% at 0% 0%, rgba(20, 20, 20, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 80% at 100% 100%, rgba(20, 20, 20, 0.5) 0%, transparent 55%),
+    linear-gradient(165deg, #050505 0%, #0a0a0a 30%, #111111 65%, #181818 100%);
 }
 .template-l .card-deco {
   background: #ffffff;
-  width: 30px;
-  height: 3px;
+  width: 32px;
+  height: 2px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 .template-l h4 {
   font-family: "Sora", sans-serif;
-  font-size: 1.36rem;
   letter-spacing: -0.01em;
 }
 
-/* template-n | Gold 烫金 */
+/* template-n | Gold 烫金 — metallic shimmer foil */
 .template-n {
-  background: linear-gradient(155deg, #1a1208 0%, #2c1e08 42%, #3d2b0c 78%, #503a10 100%);
+  background:
+    repeating-linear-gradient(
+      112deg,
+      transparent 0px, transparent 12px,
+      rgba(245, 200, 66, 0.04) 12px, rgba(245, 200, 66, 0.04) 13px
+    ),
+    radial-gradient(ellipse 55% 40% at 30% 25%, rgba(255, 210, 80, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 80% 65%, rgba(200, 140, 20, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 35% at 60% 5%, rgba(255, 230, 120, 0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(180, 110, 10, 0.18) 0%, transparent 50%),
+    linear-gradient(165deg, #0e0a04 0%, #1e1608 25%, #2e2010 50%, #3e2c14 75%, #4e381a 100%);
 }
 .template-n .card-deco {
-  background: linear-gradient(90deg, #f5c842, #e8a820, rgba(232, 168, 32, 0));
-  width: 60px;
+  background: linear-gradient(90deg, #f5c842, #fad95a, #e8a820, rgba(232, 168, 32, 0));
+  width: 64px;
   height: 3px;
+  box-shadow: 0 0 10px rgba(245, 200, 66, 0.55);
 }
 .template-n h4 {
   color: #f5c842;
   font-family: "Sora", sans-serif;
+  text-shadow: 0 0 20px rgba(245, 200, 66, 0.4);
 }
 .template-n .card-meta {
-  color: rgba(245, 200, 66, 0.75);
+  color: rgba(245, 200, 66, 0.7);
 }
 
 /* ── LIGHT PALETTE ── */
 
-/* template-g | Paper 稿纸  (dark text) */
+/* template-g | Paper 稿纸 — notebook ruled lines + margin */
 .template-g {
   background:
-    repeating-linear-gradient(transparent, transparent 27px, rgba(100,130,160,0.1) 27px, rgba(100,130,160,0.1) 28px),
-    linear-gradient(155deg, #f8f9fa 0%, #edf1f5 58%, #dde4ec 100%);
+    linear-gradient(
+      90deg,
+      rgba(200, 80, 60, 0.22) 40px, rgba(200, 80, 60, 0.22) 41px,
+      transparent 41px
+    ),
+    repeating-linear-gradient(
+      transparent 0px, transparent 27px,
+      rgba(120, 160, 200, 0.18) 27px, rgba(120, 160, 200, 0.18) 28px
+    ),
+    linear-gradient(160deg, #fafbfc 0%, #f0f4f8 45%, #e6ecf2 100%);
   color: #1e293b;
 }
 .template-g .card-deco {
-  background: #1e293b;
-  width: 32px;
+  background: #334155;
+  width: 34px;
   height: 3px;
+}
+.template-g h4 {
+  color: #1e293b;
+}
+.template-g p {
+  color: #334155;
 }
 .template-g .card-meta {
   color: #64748b;
 }
 
-/* template-k | Latte 拿铁  (dark text) */
+/* template-k | Latte 拿铁 — warm cream with coffee grain */
 .template-k {
-  background: linear-gradient(155deg, #f5ede0 0%, #ede0cc 48%, #e4d0b8 100%);
+  background:
+    radial-gradient(ellipse 60% 45% at 75% 25%, rgba(180, 120, 60, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 55% at 20% 75%, rgba(160, 100, 50, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 35% at 50% 0%, rgba(220, 180, 120, 0.12) 0%, transparent 50%),
+    linear-gradient(165deg, #f9f1e7 0%, #f0e4d0 35%, #e8d4b8 65%, #dfc8a4 100%);
   color: #3d2b1f;
 }
 .template-k .card-deco {
   background: #7a5c44;
-  width: 36px;
+  width: 38px;
   height: 3px;
+  box-shadow: 0 0 6px rgba(122, 92, 68, 0.3);
+}
+.template-k h4 {
+  font-family: "Noto Serif SC", "Noto Sans SC", serif;
+  color: #2a1c12;
+}
+.template-k p {
+  color: #4a3828;
 }
 .template-k .card-meta {
   color: #7a5c44;
 }
-.template-k h4 {
-  font-family: "Noto Serif SC", "Noto Sans SC", serif;
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY CONTROLS
+   ═══════════════════════════════════════════ */
+
+.section-sub-title {
+  margin: 6px 0 2px;
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.typo-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.typo-label-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  line-height: 1;
+}
+
+.typo-label-row small {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.val-badge {
+  font-family: "Sora", monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brand);
+  min-width: 22px;
+  display: inline-block;
+}
+
+.typo-presets {
+  margin: 0;
+}
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(83, 192, 255, 0.22);
+  border: none;
+  border-radius: 999px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--brand);
+  cursor: pointer;
+  border: 2px solid rgba(6, 15, 25, 0.9);
+  box-shadow: 0 0 6px rgba(83, 192, 255, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 12px rgba(83, 192, 255, 0.7);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--brand);
+  cursor: pointer;
+  border: 2px solid rgba(6, 15, 25, 0.9);
+  box-shadow: 0 0 6px rgba(83, 192, 255, 0.55);
 }
 
 .output-box {

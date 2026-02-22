@@ -9,19 +9,86 @@ const sizeMap = {
   square: { label: "1080 × 1080", ratio: "1 / 1", maxChars: 100 }
 };
 
+/* ── Typography presets ── */
+const TYPO_PRESETS = {
+  default: { titleSize: 24, bodySize: 15, paddingH: 24, paddingV: 24, lineHeight: 1.6, textAlign: "left" },
+  large:   { titleSize: 42, bodySize: 18, paddingH: 28, paddingV: 28, lineHeight: 1.65, textAlign: "left" },
+  hero:    { titleSize: 76, bodySize: 15, paddingH: 32, paddingV: 36, lineHeight: 1.1,  textAlign: "center" }
+};
+
+const ALL_TEMPLATE_CLASSES = [
+  "template-a","template-b","template-c","template-d","template-e",
+  "template-f","template-g","template-h","template-i","template-j",
+  "template-k","template-l","template-m","template-n","template-o",
+  "template-p","template-q","template-r"
+];
+
 let splitCards = [];
 
 function $(id) {
   return document.getElementById(id);
 }
 
+/* ── Core state ── */
+
+function readTypography() {
+  return {
+    titleSize:  parseInt($("titleSize")?.value)    || TYPO_PRESETS.default.titleSize,
+    bodySize:   parseInt($("bodySize")?.value)     || TYPO_PRESETS.default.bodySize,
+    paddingH:   parseInt($("paddingH")?.value)     || TYPO_PRESETS.default.paddingH,
+    paddingV:   parseInt($("paddingV")?.value)     || TYPO_PRESETS.default.paddingV,
+    lineHeight: parseFloat($("lineHeight")?.value) || TYPO_PRESETS.default.lineHeight,
+    textAlign:  $("textAlign")?.value              || TYPO_PRESETS.default.textAlign
+  };
+}
+
+function setTypoUI(t) {
+  if (!t) return;
+  const set = (id, val, dispId) => {
+    const el = $(id); if (!el) return;
+    el.value = val;
+    const disp = $(dispId); if (disp) disp.textContent = val;
+  };
+  set("titleSize",  t.titleSize,  "titleSizeVal");
+  set("bodySize",   t.bodySize,   "bodySizeVal");
+  set("paddingH",   t.paddingH,   "paddingHVal");
+  set("paddingV",   t.paddingV,   "paddingVVal");
+  set("lineHeight", t.lineHeight, "lineHeightVal");
+  if ($("textAlign")) $("textAlign").value = t.textAlign;
+}
+
+function applyTypography(t) {
+  if (!t) return;
+  const canvas = $("cardCanvas"); if (!canvas) return;
+
+  canvas.style.paddingLeft   = t.paddingH + "px";
+  canvas.style.paddingRight  = t.paddingH + "px";
+  canvas.style.paddingTop    = t.paddingV + "px";
+  canvas.style.paddingBottom = t.paddingV + "px";
+
+  const titleEl = $("previewTitle");
+  if (titleEl) {
+    titleEl.style.fontSize   = t.titleSize + "px";
+    titleEl.style.textAlign  = t.textAlign;
+    titleEl.style.lineHeight = t.titleSize > 50 ? "1.1" : "1.3";
+  }
+
+  const textEl = $("previewText");
+  if (textEl) {
+    textEl.style.fontSize   = t.bodySize + "px";
+    textEl.style.lineHeight = String(t.lineHeight);
+    textEl.style.textAlign  = t.textAlign;
+  }
+}
+
 function readState() {
   return {
-    template: $("template").value,
+    template:   $("template").value,
     sizePreset: $("sizePreset").value,
-    author: $("author").value.trim(),
-    cardTitle: $("cardTitle").value.trim(),
-    cardText: $("cardText").value
+    author:     $("author").value.trim(),
+    cardTitle:  $("cardTitle").value.trim(),
+    cardText:   $("cardText").value,
+    typography: readTypography()
   };
 }
 
@@ -32,6 +99,10 @@ function applyState(state) {
       $(key).value = state[key];
     }
   });
+  if (state.typography) {
+    setTypoUI(state.typography);
+    applyTypography(state.typography);
+  }
 }
 
 function saveState() {
@@ -41,6 +112,8 @@ function saveState() {
 function loadState() {
   applyState(readJsonStorage(DESIGNER_STATE_KEY));
 }
+
+/* ── Draft import ── */
 
 function importDraft() {
   const incoming = readJsonStorage(DESIGNER_INPUT_KEY);
@@ -65,6 +138,8 @@ function importDraft() {
   syncPreview();
   saveState();
 }
+
+/* ── Text helpers ── */
 
 function cleanText(text) {
   return String(text || "")
@@ -109,6 +184,8 @@ function splitIntoCards(text, maxChars) {
   return chunks;
 }
 
+/* ── Preview ── */
+
 function syncPreview() {
   const state = readState();
   const size = sizeMap[state.sizePreset] || sizeMap.xhs;
@@ -116,12 +193,6 @@ function syncPreview() {
   const text = cleanText(state.cardText || "").slice(0, size.maxChars + 20) || "正文内容会在这里展示。";
   const author = state.author || "Giorgio";
 
-  const ALL_TEMPLATE_CLASSES = [
-    "template-a","template-b","template-c","template-d","template-e",
-    "template-f","template-g","template-h","template-i","template-j",
-    "template-k","template-l","template-m","template-n","template-o",
-    "template-p","template-q","template-r"
-  ];
   const canvas = $("cardCanvas");
   canvas.classList.remove(...ALL_TEMPLATE_CLASSES);
   canvas.classList.add(state.template);
@@ -131,7 +202,11 @@ function syncPreview() {
   $("previewText").textContent = text;
   $("previewSize").textContent = size.label;
   $("previewAuthor").textContent = `@${author}`;
+
+  applyTypography(readTypography());
 }
+
+/* ── Split cards ── */
 
 function renderSplitCards() {
   const grid = $("cardsGrid");
@@ -175,23 +250,36 @@ function splitCardsAction() {
   showToast(`已拆分 ${splitCards.length} 张`);
 }
 
+/* ── PNG Export (hides size label) ── */
+
 async function exportCurrentPng() {
   const target = $("cardCanvas");
   if (!window.html2canvas) {
     showToast("导出组件加载中，请稍后重试");
     return;
   }
-  const canvas = await window.html2canvas(target, {
-    backgroundColor: null,
-    scale: 2
-  });
-  const url = canvas.toDataURL("image/png");
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `aix-card-${nowTag()}.png`;
-  a.click();
-  showToast("PNG 已导出");
+  /* 导出时隐藏尺寸标签，保留作者水印 */
+  const sizeEl = $("previewSize");
+  if (sizeEl) sizeEl.style.visibility = "hidden";
+
+  try {
+    const canvas = await window.html2canvas(target, {
+      backgroundColor: null,
+      scale: 2,
+      useCORS: true
+    });
+    const url = canvas.toDataURL("image/png");
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `aix-card-${nowTag()}.png`;
+    a.click();
+    showToast("PNG 已导出");
+  } finally {
+    if (sizeEl) sizeEl.style.visibility = "";
+  }
 }
+
+/* ── Publish hub ── */
 
 function toPublishHub() {
   const state = readState();
@@ -206,6 +294,8 @@ function toPublishHub() {
   window.location.href = "/card-suite/publish-hub.html";
 }
 
+/* ── Boot ── */
+
 window.addEventListener("DOMContentLoaded", () => {
   loadState();
 
@@ -218,17 +308,45 @@ window.addEventListener("DOMContentLoaded", () => {
 
   syncPreview();
 
+  /* Main controls */
   ["template", "sizePreset", "author", "cardTitle", "cardText"].forEach((id) => {
-    $(id).addEventListener("input", () => {
-      syncPreview();
-      saveState();
-    });
-    $(id).addEventListener("change", () => {
-      syncPreview();
+    $(id).addEventListener("input",  () => { syncPreview(); saveState(); });
+    $(id).addEventListener("change", () => { syncPreview(); saveState(); });
+  });
+
+  /* Typography sliders */
+  ["titleSize", "bodySize", "paddingH", "paddingV", "lineHeight"].forEach((id) => {
+    const el = $(id); if (!el) return;
+    el.addEventListener("input", () => {
+      const disp = $(id + "Val"); if (disp) disp.textContent = el.value;
+      applyTypography(readTypography());
       saveState();
     });
   });
 
+  /* Text align */
+  const alignEl = $("textAlign");
+  if (alignEl) {
+    alignEl.addEventListener("change", () => {
+      applyTypography(readTypography());
+      saveState();
+    });
+  }
+
+  /* Preset buttons */
+  document.querySelectorAll("[data-typo-preset]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const preset = TYPO_PRESETS[btn.dataset.typoPreset];
+      if (preset) {
+        setTypoUI(preset);
+        applyTypography(preset);
+        saveState();
+        showToast("排版已切换：" + (btn.textContent || btn.dataset.typoPreset));
+      }
+    });
+  });
+
+  /* Action buttons */
   $("importDraftBtn").addEventListener("click", importDraft);
   $("splitBtn").addEventListener("click", splitCardsAction);
   $("saveStateBtn").addEventListener("click", () => {
@@ -238,19 +356,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
   $("exportPngBtn").addEventListener("click", exportCurrentPng);
   $("copyJsonBtn").addEventListener("click", () => {
-    const payload = {
-      updatedAt: Date.now(),
-      source: readState(),
-      cards: splitCards
-    };
+    const payload = { updatedAt: Date.now(), source: readState(), cards: splitCards };
     copyText(JSON.stringify(payload, null, 2), "批量JSON已复制");
   });
   $("downloadJsonBtn").addEventListener("click", () => {
-    const payload = {
-      updatedAt: Date.now(),
-      source: readState(),
-      cards: splitCards
-    };
+    const payload = { updatedAt: Date.now(), source: readState(), cards: splitCards };
     downloadFile(`aix-card-batch-${nowTag()}.json`, JSON.stringify(payload, null, 2), "application/json;charset=utf-8");
   });
 

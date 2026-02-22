@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-2" />
+    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-4" />
     <style>
       .cards-grid {
         display: grid;
@@ -113,8 +113,46 @@
 
           <label>
             卡片正文（支持粘贴长文，后续可自动拆分）
-            <textarea id="cardText" rows="14"></textarea>
+            <textarea id="cardText" rows="10"></textarea>
           </label>
+
+          <!-- ── 排版微调 ── -->
+          <h3 class="section-sub-title">排版微调</h3>
+          <div class="form-grid typo-grid">
+            <label>
+              <span class="typo-label-row">标题字号 <span id="titleSizeVal" class="val-badge">24</span><small> px</small></span>
+              <input type="range" id="titleSize" min="20" max="96" value="24" step="2" />
+            </label>
+            <label>
+              <span class="typo-label-row">正文字号 <span id="bodySizeVal" class="val-badge">15</span><small> px</small></span>
+              <input type="range" id="bodySize" min="12" max="28" value="15" step="1" />
+            </label>
+            <label>
+              <span class="typo-label-row">左右内边距 <span id="paddingHVal" class="val-badge">24</span><small> px</small></span>
+              <input type="range" id="paddingH" min="10" max="64" value="24" step="2" />
+            </label>
+            <label>
+              <span class="typo-label-row">上下内边距 <span id="paddingVVal" class="val-badge">24</span><small> px</small></span>
+              <input type="range" id="paddingV" min="10" max="64" value="24" step="2" />
+            </label>
+            <label>
+              <span class="typo-label-row">行间距 <span id="lineHeightVal" class="val-badge">1.6</span></span>
+              <input type="range" id="lineHeight" min="1.1" max="2.4" value="1.6" step="0.1" />
+            </label>
+            <label>
+              文字对齐
+              <select id="textAlign">
+                <option value="left">← 左对齐</option>
+                <option value="center">居中对齐</option>
+                <option value="right">右对齐 →</option>
+              </select>
+            </label>
+          </div>
+          <div class="actions typo-presets">
+            <button class="btn" data-typo-preset="default">标准排版</button>
+            <button class="btn" data-typo-preset="large">大字模式</button>
+            <button class="btn btn-primary" data-typo-preset="hero">超大标题</button>
+          </div>
 
           <div class="actions">
             <button class="btn" id="importDraftBtn">导入文案工场草稿</button>
@@ -168,6 +206,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js" defer></script>
     <script src="/card-suite/common.js?v=20260222-1" defer></script>
-    <script src="/card-suite/card-designer.js?v=20260222-3" defer></script>
+    <script src="/card-suite/card-designer.js?v=20260222-4" defer></script>
   </body>
 </html>
