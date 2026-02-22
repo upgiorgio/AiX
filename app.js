@@ -10,6 +10,7 @@ const HOT_WINDOWS = {
 };
 
 const sectionIconMap = {
+  "module-directory": "i-layers",
   "module-inputs": "i-compose",
   "module-title-hook": "i-bulb",
   "module-article": "i-document",

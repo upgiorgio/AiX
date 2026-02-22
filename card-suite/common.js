@@ -68,3 +68,16 @@ function nowTag() {
   const mi = `${d.getMinutes()}`.padStart(2, "0");
   return `${d.getFullYear()}${mm}${dd}-${hh}${mi}`;
 }
+
+// Auto-mark current page in nav-links
+(function () {
+  const cur = location.pathname.replace(/\.html$/, "").replace(/\/$/, "");
+  document.querySelectorAll(".nav-links a[href]").forEach(a => {
+    try {
+      const linkPath = new URL(a.href, location.origin).pathname.replace(/\.html$/, "").replace(/\/$/, "");
+      if (linkPath && linkPath === cur) {
+        a.classList.add("active");
+      }
+    } catch (_) {}
+  });
+})();

@@ -17,7 +17,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="/styles.css?v=20260221-6" />
+    <link rel="stylesheet" href="/styles.css?v=20260222-1" />
   </head>
   <body>
     <div class="bg-orb bg-orb-a"></div>
@@ -93,11 +93,34 @@
     </svg>
 
     <header class="hero">
-      <p class="eyebrow">X CREATOR WORKBENCH</p>
-      <h1>X Articles Studio</h1>
-      <p class="subtitle">
-        把选题、写作、分发、订阅变现和发布动作放进一个页面。适配手机与桌面，可安装为 PWA。
-      </p>
+      <div class="hero-main">
+        <div class="hero-intro">
+          <p class="eyebrow">X CREATOR WORKBENCH</p>
+          <h1>X Articles Studio</h1>
+          <p class="subtitle">
+            把选题、写作、分发、订阅变现和发布动作整合成一套可复用工作流。适配手机与桌面，可安装为 PWA。
+          </p>
+          <div class="hero-badges">
+            <span class="hero-badge">15 个模块闭环</span>
+            <span class="hero-badge">草稿共享到多平台</span>
+            <span class="hero-badge">支持自动化索引</span>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <h2>发布飞轮</h2>
+          <ul>
+            <li>输入定位与证据素材</li>
+            <li>生成标题、长文、Thread 与 72h 分发</li>
+            <li>同步改写到公众号 / 知乎 / B 站 / 小红书</li>
+            <li>审核、热点、复盘与项目索引自动沉淀</li>
+          </ul>
+          <div class="hero-kpis">
+            <article><strong>72h</strong><span>分发窗口</span></article>
+            <article><strong>5+</strong><span>平台联动</span></article>
+            <article><strong>PWA</strong><span>随时使用</span></article>
+          </div>
+        </aside>
+      </div>
       <div class="hero-actions">
         <button id="fillSampleBtn" class="btn btn-ghost">
           <span class="btn-inner"><svg class="btn-icon"><use href="#i-spark"></use></svg><span>填充示例</span></span>
@@ -119,6 +142,7 @@
         </button>
       </div>
       <nav class="jump-nav">
+        <a href="#module-directory"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>工作目录</span></a>
         <a href="/md-lab"><svg class="nav-icon"><use href="#i-document"></use></svg><span>排版工坊</span></a>
         <a href="/card-suite/index.html"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>文案卡片套件</span></a>
         <a href="#module-platforms"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>多平台改写</span></a>
@@ -130,6 +154,41 @@
     </header>
 
     <main class="layout">
+      <section id="module-directory" class="card card-directory reveal">
+        <h2>0) 专业工作目录</h2>
+        <p class="muted no-top">把创作到发布拆成 4 个阶段，避免页面信息过载并保证执行顺序一致。</p>
+        <div class="directory-grid">
+          <article class="directory-item">
+            <h3>创作核心</h3>
+            <a href="#module-inputs">1. 创作输入</a>
+            <a href="#module-title-hook">2. 标题与钩子</a>
+            <a href="#module-article">3. 文章草稿</a>
+            <a href="#module-thread">4. Thread 拆分</a>
+          </article>
+          <article class="directory-item">
+            <h3>分发与变现</h3>
+            <a href="#module-plan">5. 72 小时分发</a>
+            <a href="#module-quality">6. 内容评分</a>
+            <a href="#module-checklist">7. 发布前自检</a>
+            <a href="#module-history">8. 历史版本</a>
+          </article>
+          <article class="directory-item">
+            <h3>多平台运营</h3>
+            <a href="#module-platforms">9. 多平台改写</a>
+            <a href="#module-rules">10. 规则与案例</a>
+            <a href="#module-automation">11. 自动化索引</a>
+            <a href="#module-signals">12. X 官方信号</a>
+          </article>
+          <article class="directory-item">
+            <h3>增长决策</h3>
+            <a href="#module-hot">13. 热点雷达</a>
+            <a href="#module-audit">14. 竞品审计</a>
+            <a href="#module-model">15. 推演模型</a>
+            <a href="/md-lab">扩展：Markdown 工坊</a>
+          </article>
+        </div>
+      </section>
+
       <section id="module-inputs" class="card card-inputs reveal">
         <h2>1) 创作输入</h2>
         <div class="field-grid">
@@ -435,15 +494,19 @@
     </main>
 
     <footer class="footer">
-      <p>
-        Build once, publish everywhere. 建议每次发布后记录 24h 与 72h 的表现，迭代标题与开头策略。
-      </p>
-      <p>
-        <svg class="footer-icon"><use href="#i-github"></use></svg>
-        GitHub：<a href="https://github.com/upgiorgio/AiX" target="_blank" rel="noopener noreferrer">upgiorgio/AiX</a> ｜ Crafted by Giorgio
+      <nav class="footer-nav">
+        <a href="/">主站工作台</a>
+        <a href="/md-lab">排版工坊</a>
+        <a href="/card-suite/">文案卡片套件</a>
+      </nav>
+      <p class="footer-copy">
+        <svg class="footer-icon" aria-hidden="true"><use href="#i-github"></use></svg>
+        <a href="https://github.com/upgiorgio/AiX" target="_blank" rel="noopener noreferrer">upgiorgio/AiX</a>
+        <span class="footer-dot">·</span>
+        <span>© 2026 X Articles Studio &nbsp;·&nbsp; Crafted by Giorgio</span>
       </p>
     </footer>
 
-    <script src="/app.js?v=20260221-6" defer></script>
+    <script src="/app.js?v=20260222-1" defer></script>
   </body>
 </html>
