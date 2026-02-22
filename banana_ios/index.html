@@ -106,7 +106,7 @@
             </button>
             <button class="quick-action-item" data-action="quick-schedule">
               <span class="quick-action-icon">&#x26A1;</span>
-              <span class="quick-action-label">快速发布</span>
+              <span class="quick-action-label">发布管理</span>
             </button>
             <button class="quick-action-item" data-action="quick-template">
               <span class="quick-action-icon">&#x1F4C4;</span>
@@ -125,8 +125,8 @@
             <!-- Populated by JS -->
             <div class="empty-state" id="draftsEmptyState">
               <span class="empty-icon">&#x1F4AD;</span>
-              <p class="empty-text">暂无草稿</p>
-              <p class="empty-hint">点击"开始创作"来写下第一篇内容</p>
+              <p class="empty-text">还没有草稿</p>
+              <p class="empty-hint">点击下方"创作"开始写第一篇内容</p>
             </div>
           </div>
         </section>
@@ -134,7 +134,7 @@
         <!-- Hot Topics -->
         <section class="section">
           <div class="section-header-row">
-            <h3 class="section-header">&#x1F525; 热门话题</h3>
+            <h3 class="section-header">热门话题</h3>
             <button class="section-action-btn" data-action="refresh-topics">刷新</button>
           </div>
           <div class="topics-list" id="hot-topics">
@@ -259,7 +259,7 @@
               </button>
             </div>
             <div class="editor-area" id="editor-content" contenteditable="true"
-                 data-placeholder="在这里写下你的内容..."></div>
+                 data-placeholder="写点什么..."></div>
             <div class="editor-footer">
               <span class="char-count">
                 <span id="char-count">0</span> / <span id="char-limit">280</span> 字
@@ -790,7 +790,7 @@
           <div class="ai-chat-messages" id="ai-chat-messages"></div>
           <div class="ai-chat-input-container">
             <input type="text" class="ai-chat-input" id="ai-input"
-                   placeholder="或者直接告诉 AI 你想怎么改...">
+                   placeholder="告诉 AI 你想怎么改...">
             <button class="ai-chat-send-btn" id="aiChatSendBtn" data-action="send-ai-message" aria-label="发送">
               &#x27A4;
             </button>

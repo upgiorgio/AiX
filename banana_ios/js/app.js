@@ -1152,7 +1152,7 @@ ${this._escapeHtml(tpl.content)}
 
         const statusMap = {
           draft:     { label: '草稿',   color: '#8E8E93' },
-          scheduled: { label: '已排期', color: '#FF9500' },
+          scheduled: { label: '待发布', color: '#FF9500' },
           published: { label: '已发布', color: '#34C759' },
           failed:    { label: '失败',   color: '#FF3B30' }
         };
@@ -1282,7 +1282,7 @@ ${this._escapeHtml(tpl.content)}
         </div>
         <div class="stat-item">
           <div class="stat-number">${scheduledCount}</div>
-          <div class="stat-label">排期中</div>
+          <div class="stat-label">待发布</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">${publishedCount}</div>
