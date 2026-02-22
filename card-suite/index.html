@@ -11,6 +11,175 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/card-suite/common.css?v=20260222-6" />
+    <style>
+/* ─── Index Page Specific Styles ─── */
+
+/* Hero 区块增强 */
+.index-hero {
+  padding: 64px 24px 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.index-hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 500px;
+  background: radial-gradient(ellipse at center, rgba(83,192,255,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.index-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand);
+  background: rgba(83,192,255,0.1);
+  border: 1px solid rgba(83,192,255,0.25);
+  border-radius: 99px;
+  padding: 4px 14px;
+  margin-bottom: 20px;
+}
+.index-hero-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #9ae4ff 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.index-hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  max-width: 520px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.index-hero-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.index-hero-pill {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 99px;
+  padding: 4px 12px;
+}
+
+/* AI 工具套件区块 */
+.index-ai-section {
+  position: relative;
+}
+.index-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.index-section-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--brand);
+  background: rgba(83,192,255,0.12);
+  border: 1px solid rgba(83,192,255,0.3);
+  border-radius: 6px;
+  padding: 3px 10px;
+  margin-top: 3px;
+}
+.index-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: rgba(255,255,255,0.92);
+}
+.index-section-desc {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.42);
+  margin: 0;
+}
+
+/* AI 工具卡片增强 */
+.ai-platform-card {
+  position: relative;
+  overflow: hidden;
+}
+.ai-platform-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(83,192,255,0.05) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.ai-platform-card:hover::after {
+  opacity: 1;
+}
+
+/* NEW 标签动画 */
+@keyframes newPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(52,211,153,0.4); }
+  50% { box-shadow: 0 0 0 4px rgba(52,211,153,0); }
+}
+.platform-tag-new {
+  animation: newPulse 2s ease-in-out infinite;
+}
+
+/* 平台区块 */
+.index-platform-section {
+  position: relative;
+}
+
+/* 底部信息卡片增强 */
+.info-card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.info-list li {
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.info-list li:last-child { border-bottom: none; }
+.info-list li::before {
+  content: '›';
+  color: var(--brand);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+    </style>
   </head>
   <body>
     <div class="app-shell">
@@ -35,74 +204,99 @@
         </nav>
       </header>
 
-      <section class="hero">
-        <h2>全平台自媒体创作者一站式工具</h2>
-        <p>
-          无论你发 X、小红书、公众号、知乎还是视频号，选好平台即可获取专属工具流程。<br>
-          AI文案生成 → 卡片设计 → 一键拆分 → 多平台发布，3 分钟完成全流程。
+      <section class="index-hero">
+        <div class="index-hero-eyebrow">🤖 AI 驱动 · 全平台内容创作工具</div>
+        <h2 class="index-hero-title">用 AI 加速你的<br>全平台内容创作</h2>
+        <p class="index-hero-sub">
+          AI文案生成 → 卡片设计 → 视频脚本 → 多平台发布<br>
+          7 款专业工具，3 分钟完成完整创作流程
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="/card-suite/copy-studio.html">✨ 进入文案工场</a>
+          <a class="btn btn-primary" href="/card-suite/copy-studio.html">✨ 进入 AI 文案工场</a>
           <a class="btn" href="/card-suite/card-designer.html">🎨 卡片设计器</a>
-          <a class="btn btn-warm" href="/card-suite/publish-hub.html">🚀 发布中心</a>
+          <a class="btn btn-warm" href="/card-suite/video-script.html">🎬 视频脚本</a>
+        </div>
+        <div class="index-hero-pills">
+          <span class="index-hero-pill">🛠 7 款专业工具</span>
+          <span class="index-hero-pill">⚡ 全部免费使用</span>
+          <span class="index-hero-pill">🤖 CF Workers AI</span>
+          <span class="index-hero-pill">📱 全平台适配</span>
+          <span class="index-hero-pill">💾 本地存储草稿</span>
         </div>
       </section>
 
       <!-- ── AI 智能工具套件 ── -->
-      <section class="card stack">
-        <h3>🤖 AI 智能工具套件</h3>
-        <p class="muted" style="margin:-4px 0 12px;font-size:0.85rem;">全面 AI 升级 · 从创意到发布一键提速</p>
-        <nav class="platform-nav" style="grid-template-columns:repeat(auto-fill,minmax(155px,1fr));">
+      <section class="card stack index-ai-section">
+        <div class="index-section-header">
+          <span class="index-section-badge">🤖 AI 核心工具</span>
+          <div>
+            <h3 class="index-section-title" style="border:none;padding:0;margin-left:0;">AI 智能创作套件</h3>
+            <p class="index-section-desc">全面 AI 升级 · 从创意到发布一键提速 · 免费使用</p>
+          </div>
+        </div>
+        <nav class="platform-nav" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr));">
 
-          <a class="platform-card" href="/card-suite/copy-studio.html">
+          <a class="platform-card ai-platform-card" href="/card-suite/copy-studio.html">
             <div class="platform-icon">✍️</div>
             <div class="platform-name">AI 文案工场</div>
-            <div class="platform-sub">流式生成 · 3稿对比</div>
+            <div class="platform-sub">流式生成 · 3稿对比 · 迭代优化</div>
             <span class="platform-tag">AI 升级</span>
           </a>
 
-          <a class="platform-card" href="/card-suite/card-designer.html">
+          <a class="platform-card ai-platform-card" href="/card-suite/card-designer.html">
             <div class="platform-icon">🎨</div>
             <div class="platform-name">AI 卡片设计</div>
             <div class="platform-sub">主题→卡片 · 链接→卡片</div>
             <span class="platform-tag">AI 升级</span>
           </a>
 
-          <a class="platform-card" href="/card-suite/publish-hub.html">
+          <a class="platform-card ai-platform-card" href="/card-suite/publish-hub.html">
             <div class="platform-icon">🚀</div>
             <div class="platform-name">AI 发布中心</div>
             <div class="platform-sub">适配度分析 · 智能改写</div>
             <span class="platform-tag">AI 升级</span>
           </a>
 
-          <a class="platform-card" href="/card-suite/video-script.html">
+          <a class="platform-card ai-platform-card" href="/card-suite/strategy.html">
+            <div class="platform-icon">📊</div>
+            <div class="platform-name">AI 策略面板</div>
+            <div class="platform-sub">30天内容矩阵 · 日历可视化</div>
+            <span class="platform-tag">AI 升级</span>
+          </a>
+
+          <a class="platform-card ai-platform-card" href="/card-suite/video-script.html">
             <div class="platform-icon">🎬</div>
             <div class="platform-name">视频脚本工场</div>
-            <div class="platform-sub">15s/30s/60s/3min</div>
-            <span class="platform-tag" style="background:rgba(52,211,153,0.18);color:#34d399;border-color:rgba(52,211,153,0.4);">全新</span>
+            <div class="platform-sub">15s/30s/60s/3min · 全平台</div>
+            <span class="platform-tag platform-tag-new" style="background:rgba(52,211,153,0.18);color:#34d399;border-color:rgba(52,211,153,0.4);">🆕 全新</span>
           </a>
 
-          <a class="platform-card" href="/card-suite/content-calendar.html">
+          <a class="platform-card ai-platform-card" href="/card-suite/content-calendar.html">
             <div class="platform-icon">🗓</div>
             <div class="platform-name">30天内容日历</div>
-            <div class="platform-sub">AI规划 · 可视化</div>
-            <span class="platform-tag" style="background:rgba(52,211,153,0.18);color:#34d399;border-color:rgba(52,211,153,0.4);">全新</span>
+            <div class="platform-sub">AI规划 · 可视化 · 一键导出</div>
+            <span class="platform-tag platform-tag-new" style="background:rgba(52,211,153,0.18);color:#34d399;border-color:rgba(52,211,153,0.4);">🆕 全新</span>
           </a>
 
-          <a class="platform-card" href="/card-suite/prompt-lab.html">
+          <a class="platform-card ai-platform-card" href="/card-suite/prompt-lab.html">
             <div class="platform-icon">🧪</div>
             <div class="platform-name">Prompt 实验室</div>
-            <div class="platform-sub">精选提示词 · 在线测试</div>
-            <span class="platform-tag" style="background:rgba(52,211,153,0.18);color:#34d399;border-color:rgba(52,211,153,0.4);">全新</span>
+            <div class="platform-sub">精选提示词库 · 在线测试</div>
+            <span class="platform-tag platform-tag-new" style="background:rgba(52,211,153,0.18);color:#34d399;border-color:rgba(52,211,153,0.4);">🆕 全新</span>
           </a>
 
         </nav>
       </section>
 
       <!-- ── 平台快速入口 ── -->
-      <section class="card stack">
-        <h3>🌐 选择你的发布平台</h3>
-        <p class="muted" style="margin: -4px 0 6px; font-size:0.85rem;">直接点击对应平台，获取专属工具与尺寸配置</p>
+      <section class="card stack index-platform-section">
+        <div class="index-section-header">
+          <span class="index-section-badge" style="background:rgba(255,180,106,0.12);color:var(--warm);border-color:rgba(255,180,106,0.3);">🌐 发布平台</span>
+          <div>
+            <h3 class="index-section-title" style="border:none;padding:0;margin-left:0;">选择你的发布平台</h3>
+            <p class="index-section-desc">点击对应平台，获取专属工具与尺寸配置</p>
+          </div>
+        </div>
         <nav class="platform-nav">
 
           <!-- X / Twitter -->
@@ -206,9 +400,10 @@
 
       <main class="main-grid grid-2">
         <article class="card">
-          <h3>🛠 功能模块</h3>
-          <ul>
-            <li><strong>AI 文案工场：</strong>场景模板 + 风格参数 + AI 提示词一键生成</li>
+          <div class="info-card-icon">🛠</div>
+          <h3>功能模块</h3>
+          <ul class="info-list">
+            <li><strong>AI 文案工场：</strong>场景模板 + 风格参数 + 流式生成</li>
             <li><strong>卡片设计器：</strong>30+ 模板、平台尺寸自适应、Markdown 渲染</li>
             <li><strong>排版微调：</strong>字号/行距/内边距/对齐 + 自定义背景色</li>
             <li><strong>批量拆分：</strong>长文自动按字数拆分为多卡</li>
@@ -217,8 +412,9 @@
         </article>
 
         <article class="card">
-          <h3>⚡ 典型使用场景</h3>
-          <ul>
+          <div class="info-card-icon">⚡</div>
+          <h3>典型使用场景</h3>
+          <ul class="info-list">
             <li><span class="badge">3 分钟快速美化</span> 文案粘贴进来，选模板、导出</li>
             <li><span class="badge">AI 一体化流程</span> 从 AI 提示词到卡片的完整链路</li>
             <li><span class="badge">全平台适配</span> 一套文案，自动匹配各平台尺寸</li>
@@ -227,7 +423,8 @@
         </article>
 
         <article class="card">
-          <h3>📊 解决的核心痛点</h3>
+          <div class="info-card-icon">📊</div>
+          <h3>解决的核心痛点</h3>
           <div class="kv">
             <div class="kv-item"><strong>★★★★★</strong><span>模板太少，选来选去都一样</span></div>
             <div class="kv-item"><strong>★★★★★</strong><span>AI 写作与卡片渲染分离，来回切工具</span></div>
@@ -237,8 +434,9 @@
         </article>
 
         <article class="card">
-          <h3>✅ 当前能力</h3>
-          <ul>
+          <div class="info-card-icon">✅</div>
+          <h3>当前能力</h3>
+          <ul class="info-list">
             <li>30 套精选卡片模板（冷色/暖色/自然/专业/浅色/特色）</li>
             <li><strong>✨ AI文案生成：</strong>流式输出 · 3稿对比 · 迭代优化</li>
             <li><strong>✨ AI卡片生成：</strong>输入主题或链接，AI直接填充卡片</li>

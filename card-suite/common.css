@@ -96,10 +96,10 @@ a {
   content: "";
   position: absolute;
   top: 0;
-  left: 14px;
-  right: 14px;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(153, 220, 255, 0.12) 0%, rgba(153, 220, 255, 0.82) 44%, rgba(255, 180, 106, 0.56) 100%);
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #53c0ff, #a78bfa, #ffb46a);
 }
 
 .branding {
@@ -142,6 +142,20 @@ a {
   flex-wrap: wrap;
 }
 
+@media (max-width: 960px) {
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    gap: 4px;
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .nav-links a {
   text-decoration: none;
   border: 1px solid rgba(153, 220, 255, 0.36);
@@ -170,14 +184,24 @@ a {
   border: 1px solid var(--line);
   border-radius: 20px;
   background: linear-gradient(160deg, var(--surface) 0%, var(--surface-strong) 100%);
-  padding: 18px;
+  padding: 56px 24px 48px;
   box-shadow: var(--shadow-lg);
+}
+
+.hero > * {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero h2 {
   margin: 0 0 10px;
   font-family: "Sora", "Noto Sans SC", sans-serif;
-  font-size: clamp(1.24rem, 2.5vw, 1.82rem);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  background: linear-gradient(135deg, #9ae4ff 0%, #53c0ff 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero p {
@@ -187,9 +211,9 @@ a {
 }
 
 .hero-actions {
-  margin-top: 14px;
+  margin-top: 28px;
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -211,7 +235,7 @@ a {
   border-radius: 18px;
   background: linear-gradient(160deg, var(--surface) 0%, var(--surface-strong) 100%);
   box-shadow: var(--shadow-sm);
-  padding: 14px;
+  padding: 22px;
   position: relative;
   overflow: hidden;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
@@ -237,7 +261,10 @@ a {
 .card h3 {
   margin: 0 0 10px;
   font-family: "Sora", "Noto Sans SC", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  border-left: 3px solid var(--brand);
+  padding-left: 10px;
+  margin-left: -10px;
 }
 
 .card p {
@@ -307,6 +334,10 @@ textarea {
   gap: 10px;
 }
 
+.stack > * + * {
+  margin-top: 20px;
+}
+
 .actions {
   display: flex;
   gap: 9px;
@@ -315,10 +346,12 @@ textarea {
 
 .btn {
   border: 1px solid rgba(153, 220, 255, 0.42);
-  border-radius: 11px;
+  border-radius: 10px;
   background: rgba(8, 20, 34, 0.82);
   color: #e8f4ff;
-  padding: 9px 12px;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
@@ -336,6 +369,11 @@ textarea {
   color: #06243c;
   background: linear-gradient(130deg, #9ae4ff 0%, #53c0ff 45%, #37ace8 100%);
   border-color: rgba(153, 220, 255, 0.68);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 4px 20px rgba(83, 192, 255, 0.35);
+  transform: translateY(-1px);
 }
 
 .btn-warm {
@@ -1056,8 +1094,8 @@ input[type="range"]::-moz-range-thumb {
   align-items: center;
   border: 1px solid rgba(157, 203, 233, 0.42);
   border-radius: 999px;
-  padding: 3px 9px;
-  font-size: 0.75rem;
+  padding: 3px 10px;
+  font-size: 0.78rem;
   color: #d8edff;
 }
 
@@ -1222,14 +1260,14 @@ input[type="range"]::-moz-range-thumb {
   border: 1px solid rgba(152, 199, 231, 0.26);
   border-radius: 14px;
   background: rgba(8, 20, 34, 0.72);
-  padding: 14px 12px;
+  padding: 18px 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   text-decoration: none;
   cursor: pointer;
-  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1248,8 +1286,8 @@ input[type="range"]::-moz-range-thumb {
 .platform-card:hover {
   border-color: rgba(153, 220, 255, 0.56);
   background: rgba(14, 33, 56, 0.92);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(2, 10, 20, 0.32);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(83, 192, 255, 0.15);
 }
 
 .platform-card.coming-soon {
@@ -1269,7 +1307,7 @@ input[type="range"]::-moz-range-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   background: rgba(255, 255, 255, 0.07);
   flex-shrink: 0;
 }
@@ -1289,8 +1327,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .platform-tag {
-  font-size: 0.66rem;
-  padding: 2px 7px;
+  font-size: 0.72rem;
+  padding: 3px 10px;
   border-radius: 999px;
   background: rgba(83, 192, 255, 0.18);
   color: var(--brand);
@@ -1722,5 +1760,11 @@ input[type="range"]::-moz-range-thumb {
 
   .cal-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 0 4px;
   }
 }
