@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <!-- iOS Web App Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="自媒体发布">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+
+  <!-- iOS Splash Screens -->
+  <meta name="apple-mobile-web-app-orientations" content="portrait">
+  <link rel="apple-touch-startup-image" href="assets/images/splash.png">
+
+  <!-- App Icons -->
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="assets/icons/icon-167.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/icon-16.png">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <title>自媒体发布工具 - 香蕉学院</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/ios-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- APP SHELL                                    -->
+  <!-- ============================================ -->
+  <div id="app" class="app-container">
+
+    <!-- ========================================== -->
+    <!-- iOS STATUS BAR SPACER                      -->
+    <!-- ========================================== -->
+    <div class="status-bar-spacer"></div>
+
+    <!-- ========================================== -->
+    <!-- NAVIGATION BAR                             -->
+    <!-- ========================================== -->
+    <header class="nav-bar" id="navBar">
+      <div class="nav-bar-inner">
+        <button class="nav-btn nav-btn-left" id="navBackBtn" style="display:none;" aria-label="返回">
+          <span class="nav-back-icon">&#8249;</span>
+          <span class="nav-back-text">返回</span>
+        </button>
+        <h1 class="nav-title" id="navTitle">自媒体发布工具</h1>
+        <button class="nav-btn nav-btn-right" id="navActionBtn" style="display:none;" aria-label="操作">
+          <span class="nav-action-icon">&#8226;&#8226;&#8226;</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- MAIN CONTENT AREA                          -->
+    <!-- ========================================== -->
+    <main class="content-area" id="contentArea">
+
+      <!-- ======================================== -->
+      <!-- PAGE: HOME (首页)                        -->
+      <!-- ======================================== -->
+      <section class="page" id="page-home" data-page="home">
+
+        <!-- Hero Welcome Card -->
+        <div class="hero-card">
+          <div class="hero-gradient">
+            <div class="hero-content">
+              <h2 class="hero-title">欢迎回来</h2>
+              <p class="hero-subtitle">开始创作优质内容，一键发布到全平台</p>
+              <button class="hero-btn" data-action="navigate" data-target="create">
+                开始创作
+              </button>
+            </div>
+            <div class="hero-decoration" aria-hidden="true">
+              <span class="hero-emoji">&#x1F680;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <section class="section">
+          <h3 class="section-header">快捷操作</h3>
+          <div class="quick-actions-grid">
+            <button class="quick-action-item" data-action="quick-create">
+              <span class="quick-action-icon">&#x1F4DD;</span>
+              <span class="quick-action-label">新建文案</span>
+            </button>
+            <button class="quick-action-item" data-action="ai-assist">
+              <span class="quick-action-icon">&#x1F916;</span>
+              <span class="quick-action-label">AI助手</span>
+            </button>
+            <button class="quick-action-item" data-action="quick-schedule">
+              <span class="quick-action-icon">&#x26A1;</span>
+              <span class="quick-action-label">快速发布</span>
+            </button>
+            <button class="quick-action-item" data-action="quick-template">
+              <span class="quick-action-icon">&#x1F4C4;</span>
+              <span class="quick-action-label">我的模板</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Recent Drafts -->
+        <section class="section">
+          <div class="section-header-row">
+            <h3 class="section-header">最近草稿</h3>
+            <button class="section-action-btn" data-action="view-all-drafts">查看全部</button>
+          </div>
+          <div class="drafts-list" id="recent-drafts">
+            <!-- Populated by JS -->
+            <div class="empty-state" id="draftsEmptyState">
+              <span class="empty-icon">&#x1F4AD;</span>
+              <p class="empty-text">暂无草稿</p>
+              <p class="empty-hint">点击"开始创作"来写下第一篇内容</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hot Topics -->
+        <section class="section">
+          <div class="section-header-row">
+            <h3 class="section-header">&#x1F525; 热门话题</h3>
+            <button class="section-action-btn" data-action="refresh-topics">刷新</button>
+          </div>
+          <div class="topics-list" id="hot-topics">
+            <!-- Populated by JS -->
+            <div class="empty-state" id="topicsEmptyState">
+              <span class="empty-icon">&#x1F4E1;</span>
+              <p class="empty-text">正在获取热门话题...</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Platform Stats -->
+        <section class="section">
+          <h3 class="section-header">平台数据</h3>
+          <div class="stats-cards" id="platformStats">
+            <div class="stat-card">
+              <span class="stat-platform-icon">&#x1D54F;</span>
+              <div class="stat-info">
+                <span class="stat-label">X / Twitter</span>
+                <span class="stat-value" data-stat="x-posts">0</span>
+                <span class="stat-unit">篇已发布</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-platform-icon" style="color:#07C160;">&#x1F4AC;</span>
+              <div class="stat-info">
+                <span class="stat-label">微信公众号</span>
+                <span class="stat-value" data-stat="wechat-posts">0</span>
+                <span class="stat-unit">篇已发布</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-platform-icon" style="color:#FE2C55;">&#x1F4D5;</span>
+              <div class="stat-info">
+                <span class="stat-label">小红书</span>
+                <span class="stat-value" data-stat="xiaohongshu-posts">0</span>
+                <span class="stat-unit">篇已发布</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-platform-icon" style="color:#000000;">&#x1F3B5;</span>
+              <div class="stat-info">
+                <span class="stat-label">抖音</span>
+                <span class="stat-value" data-stat="douyin-posts">0</span>
+                <span class="stat-unit">篇已发布</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <span class="stat-platform-icon" style="color:#00A1D6;">&#x1F4FA;</span>
+              <div class="stat-info">
+                <span class="stat-label">B站</span>
+                <span class="stat-value" data-stat="bilibili-posts">0</span>
+                <span class="stat-unit">篇已发布</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- ======================================== -->
+      <!-- PAGE: CREATE (创作)                      -->
+      <!-- ======================================== -->
+      <section class="page" id="page-create" data-page="create" style="display:none;">
+
+        <!-- Platform Selector -->
+        <section class="section">
+          <h3 class="section-header">选择平台</h3>
+          <div class="platform-selector" id="platformSelector">
+            <button class="platform-chip active" data-action="select-platform" data-value="x">
+              <span class="platform-chip-icon">&#x1D54F;</span>
+              <span class="platform-chip-label">X</span>
+            </button>
+            <button class="platform-chip" data-action="select-platform" data-value="wechat">
+              <span class="platform-chip-icon">&#x1F4AC;</span>
+              <span class="platform-chip-label">微信</span>
+            </button>
+            <button class="platform-chip" data-action="select-platform" data-value="xiaohongshu">
+              <span class="platform-chip-icon">&#x1F4D5;</span>
+              <span class="platform-chip-label">小红书</span>
+            </button>
+            <button class="platform-chip" data-action="select-platform" data-value="douyin">
+              <span class="platform-chip-icon">&#x1F3B5;</span>
+              <span class="platform-chip-label">抖音</span>
+            </button>
+            <button class="platform-chip" data-action="select-platform" data-value="bilibili">
+              <span class="platform-chip-icon">&#x1F4FA;</span>
+              <span class="platform-chip-label">B站</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Title Input -->
+        <section class="section">
+          <div class="input-group">
+            <input type="text" class="ios-input" id="postTitle" placeholder="输入标题（可选）" maxlength="100">
+            <span class="input-counter"><span id="titleCharCount">0</span>/100</span>
+          </div>
+        </section>
+
+        <!-- Rich Text Editor -->
+        <section class="section">
+          <div class="editor-container">
+            <div class="editor-toolbar" id="editorToolbar">
+              <button class="toolbar-btn" data-format="bold" title="粗体">
+                <strong>B</strong>
+              </button>
+              <button class="toolbar-btn" data-format="italic" title="斜体">
+                <em>I</em>
+              </button>
+              <button class="toolbar-btn" data-format="link" title="链接">
+                &#x1F517;
+              </button>
+              <button class="toolbar-btn" data-format="emoji" title="表情">
+                &#x1F600;
+              </button>
+              <button class="toolbar-btn" data-format="hashtag" title="话题">
+                #
+              </button>
+              <button class="toolbar-btn" data-format="mention" title="@用户">
+                @
+              </button>
+            </div>
+            <div class="editor-area" id="editor-content" contenteditable="true"
+                 data-placeholder="在这里写下你的内容..."></div>
+            <div class="editor-footer">
+              <span class="char-count">
+                <span id="char-count">0</span> / <span id="char-limit">280</span> 字
+              </span>
+              <span class="platform-hint" id="platformHint">X 平台限制280字</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- AI Assistant Button -->
+        <section class="section">
+          <button class="ai-assist-btn" id="aiAssistBtn" data-action="open-ai">
+            <span class="ai-icon">&#x2728;</span>
+            <span class="ai-label">AI 智能助手</span>
+            <span class="ai-hint">润色 / 扩写 / 翻译 / 生成标签</span>
+          </button>
+        </section>
+
+        <!-- Image Upload -->
+        <section class="section">
+          <h3 class="section-header">添加图片</h3>
+          <div class="image-upload-area" id="imageUploadArea">
+            <div class="upload-grid" id="uploadGrid">
+              <!-- Uploaded images will appear here -->
+            </div>
+            <button class="upload-add-btn" id="uploadAddBtn">
+              <span class="upload-add-icon">&#x2795;</span>
+              <span class="upload-add-text">添加图片</span>
+            </button>
+            <input type="file" id="imageInput" accept="image/*" multiple hidden>
+          </div>
+          <p class="upload-hint">最多可添加9张图片，支持 JPG/PNG/GIF</p>
+        </section>
+
+        <!-- Preview Section -->
+        <section class="section">
+          <div class="section-header-row">
+            <h3 class="section-header">预览</h3>
+            <button class="section-action-btn" id="togglePreviewBtn" data-action="toggle-preview">展开</button>
+          </div>
+          <div class="preview-container" id="previewContainer" style="display:none;">
+            <div class="preview-card" id="previewCard">
+              <div class="preview-platform-bar" id="previewPlatformBar">
+                <span class="preview-platform-name">X</span>
+              </div>
+              <div class="preview-content" id="previewContent">
+                <p class="preview-placeholder">编辑内容后在此预览...</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Action Buttons -->
+        <section class="section create-actions">
+          <button class="ios-btn ios-btn-secondary" id="saveDraftBtn">
+            存为草稿
+          </button>
+          <button class="ios-btn ios-btn-primary" id="publishBtn" data-action="navigate" data-target="publish">
+            去发布
+          </button>
+        </section>
+
+      </section>
+
+      <!-- ======================================== -->
+      <!-- PAGE: TEMPLATES (模板)                   -->
+      <!-- ======================================== -->
+      <section class="page" id="page-templates" data-page="templates" style="display:none;">
+
+        <!-- Search Bar -->
+        <div class="search-bar-container">
+          <div class="ios-search-bar">
+            <span class="search-icon">&#x1F50D;</span>
+            <input type="search" class="search-input" id="templateSearch" placeholder="搜索模板">
+            <button class="search-cancel-btn" id="searchCancelBtn" style="display:none;">取消</button>
+          </div>
+        </div>
+
+        <!-- Category Filter Chips -->
+        <section class="section">
+          <div class="filter-chips" id="templateFilters">
+            <button class="filter-chip active" data-action="filter-template" data-value="all">全部</button>
+            <button class="filter-chip" data-action="filter-template" data-value="种草">种草</button>
+            <button class="filter-chip" data-action="filter-template" data-value="营销">营销</button>
+            <button class="filter-chip" data-action="filter-template" data-value="教育">教育</button>
+            <button class="filter-chip" data-action="filter-template" data-value="生活">生活</button>
+            <button class="filter-chip" data-action="filter-template" data-value="情感">情感</button>
+          </div>
+        </section>
+
+        <!-- Template Grid -->
+        <section class="section">
+          <div class="template-grid" id="templates-grid">
+            <!-- Populated by JS, placeholder structure below -->
+            <div class="template-card" data-template-id="t001" data-category="daily">
+              <div class="template-preview">
+                <div class="template-preview-placeholder">
+                  <span>&#x2600;&#xFE0F;</span>
+                </div>
+              </div>
+              <div class="template-info">
+                <h4 class="template-title">每日分享</h4>
+                <div class="template-meta">
+                  <span class="template-category-badge">日常</span>
+                  <span class="template-usage">&#x1F525; 2.3k 次使用</span>
+                </div>
+              </div>
+            </div>
+            <div class="template-card" data-template-id="t002" data-category="marketing">
+              <div class="template-preview">
+                <div class="template-preview-placeholder">
+                  <span>&#x1F4B0;</span>
+                </div>
+              </div>
+              <div class="template-info">
+                <h4 class="template-title">产品推广</h4>
+                <div class="template-meta">
+                  <span class="template-category-badge">营销</span>
+                  <span class="template-usage">&#x1F525; 1.8k 次使用</span>
+                </div>
+              </div>
+            </div>
+            <div class="template-card" data-template-id="t003" data-category="education">
+              <div class="template-preview">
+                <div class="template-preview-placeholder">
+                  <span>&#x1F4DA;</span>
+                </div>
+              </div>
+              <div class="template-info">
+                <h4 class="template-title">知识科普</h4>
+                <div class="template-meta">
+                  <span class="template-category-badge">教育</span>
+                  <span class="template-usage">&#x1F525; 3.1k 次使用</span>
+                </div>
+              </div>
+            </div>
+            <div class="template-card" data-template-id="t004" data-category="tech">
+              <div class="template-preview">
+                <div class="template-preview-placeholder">
+                  <span>&#x1F4BB;</span>
+                </div>
+              </div>
+              <div class="template-info">
+                <h4 class="template-title">技术评测</h4>
+                <div class="template-meta">
+                  <span class="template-category-badge">科技</span>
+                  <span class="template-usage">&#x1F525; 980 次使用</span>
+                </div>
+              </div>
+            </div>
+            <div class="template-card" data-template-id="t005" data-category="emotion">
+              <div class="template-preview">
+                <div class="template-preview-placeholder">
+                  <span>&#x1F496;</span>
+                </div>
+              </div>
+              <div class="template-info">
+                <h4 class="template-title">情感共鸣</h4>
+                <div class="template-meta">
+                  <span class="template-category-badge">情感</span>
+                  <span class="template-usage">&#x1F525; 4.5k 次使用</span>
+                </div>
+              </div>
+            </div>
+            <div class="template-card" data-template-id="t006" data-category="daily">
+              <div class="template-preview">
+                <div class="template-preview-placeholder">
+                  <span>&#x1F4F8;</span>
+                </div>
+              </div>
+              <div class="template-info">
+                <h4 class="template-title">美食打卡</h4>
+                <div class="template-meta">
+                  <span class="template-category-badge">日常</span>
+                  <span class="template-usage">&#x1F525; 1.5k 次使用</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- ======================================== -->
+      <!-- PAGE: PUBLISH (发布)                     -->
+      <!-- ======================================== -->
+      <section class="page" id="page-publish" data-page="publish" style="display:none;">
+
+        <!-- View Toggle -->
+        <section class="section">
+          <div class="segmented-control" id="publishViewToggle">
+            <button class="segment active" data-action="toggle-publish-view">
+              <span>&#x1F4CB;</span> 列表
+            </button>
+            <button class="segment" data-action="toggle-publish-view">
+              <span>&#x1F4C5;</span> 日历
+            </button>
+          </div>
+        </section>
+
+        <!-- Platform Filter -->
+        <section class="section">
+          <div class="filter-chips" id="publishPlatformFilter">
+            <button class="filter-chip active" data-action="filter-publish-platform" data-value="all">全部平台</button>
+            <button class="filter-chip" data-action="filter-publish-platform" data-value="x">X</button>
+            <button class="filter-chip" data-action="filter-publish-platform" data-value="wechat">微信</button>
+            <button class="filter-chip" data-action="filter-publish-platform" data-value="xiaohongshu">小红书</button>
+            <button class="filter-chip" data-action="filter-publish-platform" data-value="douyin">抖音</button>
+            <button class="filter-chip" data-action="filter-publish-platform" data-value="bilibili">B站</button>
+          </div>
+        </section>
+
+        <!-- Status Filter -->
+        <section class="section">
+          <div class="status-filter" id="publishStatusFilter">
+            <button class="status-filter-btn active" data-action="filter-publish-status" data-value="all">
+              全部 <span class="status-count" id="countAll">0</span>
+            </button>
+            <button class="status-filter-btn" data-action="filter-publish-status" data-value="scheduled">
+              待发布 <span class="status-count" id="countScheduled">0</span>
+            </button>
+            <button class="status-filter-btn" data-action="filter-publish-status" data-value="published">
+              已发布 <span class="status-count" id="countPublished">0</span>
+            </button>
+            <button class="status-filter-btn" data-action="filter-publish-status" data-value="draft">
+              草稿 <span class="status-count" id="countDraft">0</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- List View -->
+        <section class="section" id="publishListView">
+          <div class="publish-list" id="scheduled-list">
+            <!-- Populated by JS, placeholder items below -->
+            <div class="publish-item">
+              <div class="publish-item-header">
+                <span class="publish-platform-badge" data-platform="x">&#x1D54F; X</span>
+                <span class="publish-status-badge publish-status-scheduled">待发布</span>
+              </div>
+              <h4 class="publish-item-title">示例：今日技术分享</h4>
+              <p class="publish-item-excerpt">这是一条示例内容预览，点击查看详情...</p>
+              <div class="publish-item-footer">
+                <span class="publish-time">&#x1F552; 2026-02-24 10:00</span>
+                <div class="publish-item-actions">
+                  <button class="publish-action-btn" data-action="edit" title="编辑">&#x270F;&#xFE0F;</button>
+                  <button class="publish-action-btn" data-action="delete" title="删除">&#x1F5D1;&#xFE0F;</button>
+                </div>
+              </div>
+            </div>
+            <div class="publish-item">
+              <div class="publish-item-header">
+                <span class="publish-platform-badge" data-platform="xiaohongshu">&#x1F4D5; 小红书</span>
+                <span class="publish-status-badge publish-status-published">已发布</span>
+              </div>
+              <h4 class="publish-item-title">好物推荐｜超好用的效率工具</h4>
+              <p class="publish-item-excerpt">今天给大家安利几款超级好用的效率工具...</p>
+              <div class="publish-item-footer">
+                <span class="publish-time">&#x1F552; 2026-02-22 15:30</span>
+                <div class="publish-item-actions">
+                  <button class="publish-action-btn" data-action="view" title="查看">&#x1F440;</button>
+                  <button class="publish-action-btn" data-action="analytics" title="数据">&#x1F4CA;</button>
+                </div>
+              </div>
+            </div>
+            <div class="publish-item">
+              <div class="publish-item-header">
+                <span class="publish-platform-badge" data-platform="wechat">&#x1F4AC; 微信</span>
+                <span class="publish-status-badge publish-status-draft">草稿</span>
+              </div>
+              <h4 class="publish-item-title">周末活动预告</h4>
+              <p class="publish-item-excerpt">本周末我们将举办线下交流活动...</p>
+              <div class="publish-item-footer">
+                <span class="publish-time">&#x1F552; 保存于 2026-02-21</span>
+                <div class="publish-item-actions">
+                  <button class="publish-action-btn" data-action="edit" title="编辑">&#x270F;&#xFE0F;</button>
+                  <button class="publish-action-btn" data-action="delete" title="删除">&#x1F5D1;&#xFE0F;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-state" id="publishEmptyState" style="display:none;">
+            <span class="empty-icon">&#x1F4E4;</span>
+            <p class="empty-text">暂无发布记录</p>
+            <p class="empty-hint">创作内容后可在此管理发布计划</p>
+            <button class="ios-btn ios-btn-primary" data-action="navigate" data-target="create">
+              去创作
+            </button>
+          </div>
+        </section>
+
+        <!-- Calendar View (hidden by default) -->
+        <section class="section" id="publishCalendarView" style="display:none;">
+          <div class="calendar-container" id="calendarContainer">
+            <div class="calendar-header">
+              <button class="calendar-nav-btn" id="calendarPrev" aria-label="上个月">&#x25C0;</button>
+              <h3 class="calendar-month" id="calendarMonth">2026年2月</h3>
+              <button class="calendar-nav-btn" id="calendarNext" aria-label="下个月">&#x25B6;</button>
+            </div>
+            <div class="calendar-weekdays">
+              <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- ======================================== -->
+      <!-- PAGE: PROFILE (我的)                     -->
+      <!-- ======================================== -->
+      <section class="page" id="page-profile" data-page="profile" style="display:none;">
+
+        <!-- User Card -->
+        <section class="section">
+          <div class="profile-card">
+            <div class="profile-avatar" id="profileAvatar">
+              <span class="avatar-placeholder">&#x1F9D1;&#x200D;&#x1F4BB;</span>
+            </div>
+            <div class="profile-info">
+              <h2 class="profile-name" id="profileName">用户</h2>
+              <p class="profile-bio" id="profileBio">点击编辑个人简介</p>
+            </div>
+            <button class="profile-edit-btn" id="profileEditBtn" aria-label="编辑资料">
+              &#x270F;&#xFE0F;
+            </button>
+          </div>
+        </section>
+
+        <!-- Stats Row -->
+        <section class="section">
+          <div class="profile-stats" id="profile-stats">
+            <div class="profile-stat-item">
+              <span class="profile-stat-value" id="statPosts">0</span>
+              <span class="profile-stat-label">已发布</span>
+            </div>
+            <div class="profile-stat-divider"></div>
+            <div class="profile-stat-item">
+              <span class="profile-stat-value" id="statTemplates">6</span>
+              <span class="profile-stat-label">模板</span>
+            </div>
+            <div class="profile-stat-divider"></div>
+            <div class="profile-stat-item">
+              <span class="profile-stat-value" id="statFollowers">0</span>
+              <span class="profile-stat-label">关注者</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Settings List (iOS Grouped Style) -->
+        <section class="section">
+          <h3 class="section-header">设置</h3>
+          <div class="ios-list-group">
+            <button class="ios-list-item" data-action="account-settings">
+              <span class="list-item-icon">&#x1F464;</span>
+              <span class="list-item-text">账号设置</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+            <button class="ios-list-item" data-action="platform-connect">
+              <span class="list-item-icon">&#x1F517;</span>
+              <span class="list-item-text">平台绑定</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+            <button class="ios-list-item" data-action="notification-settings">
+              <span class="list-item-icon">&#x1F514;</span>
+              <span class="list-item-text">通知设置</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+            <button class="ios-list-item" data-action="storage-manage">
+              <span class="list-item-icon">&#x1F4BE;</span>
+              <span class="list-item-text">存储管理</span>
+              <span class="list-item-detail">12.3 MB</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Appearance -->
+        <section class="section">
+          <h3 class="section-header">外观</h3>
+          <div class="ios-list-group">
+            <div class="ios-list-item" data-action="toggle-theme">
+              <span class="list-item-icon">&#x1F319;</span>
+              <span class="list-item-text">深色模式</span>
+              <label class="ios-toggle">
+                <input type="checkbox" id="theme-toggle">
+                <span class="ios-toggle-slider"></span>
+              </label>
+            </div>
+            <button class="ios-list-item" data-action="font-size">
+              <span class="list-item-icon">&#x1F524;</span>
+              <span class="list-item-text">字体大小</span>
+              <span class="list-item-detail">标准</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- About & Support -->
+        <section class="section">
+          <h3 class="section-header">关于</h3>
+          <div class="ios-list-group">
+            <button class="ios-list-item" data-action="show-about">
+              <span class="list-item-icon">&#x2139;&#xFE0F;</span>
+              <span class="list-item-text">关于我们</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+            <button class="ios-list-item" data-action="help">
+              <span class="list-item-icon">&#x2753;</span>
+              <span class="list-item-text">帮助与反馈</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+            <button class="ios-list-item" data-action="privacy">
+              <span class="list-item-icon">&#x1F512;</span>
+              <span class="list-item-text">隐私政策</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+            <button class="ios-list-item" data-action="terms">
+              <span class="list-item-icon">&#x1F4C3;</span>
+              <span class="list-item-text">用户协议</span>
+              <span class="list-item-arrow">&#x203A;</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Version Info -->
+        <section class="section">
+          <div class="version-info">
+            <p class="version-app-name">自媒体发布工具</p>
+            <p class="version-by">by 香蕉学院 Banana School</p>
+            <p class="version-number">Version 1.0.0</p>
+          </div>
+        </section>
+
+      </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- TAB BAR                                    -->
+    <!-- ========================================== -->
+    <nav class="tab-bar" id="tabBar">
+      <div class="tab-bar-inner">
+        <button class="tab-item active" data-tab="home" aria-label="首页">
+          <span class="tab-icon">&#x1F3E0;</span>
+          <span class="tab-label">首页</span>
+        </button>
+        <button class="tab-item" data-tab="create" aria-label="创作">
+          <span class="tab-icon">&#x270D;&#xFE0F;</span>
+          <span class="tab-label">创作</span>
+        </button>
+        <button class="tab-item" data-tab="templates" aria-label="模板">
+          <span class="tab-icon">&#x1F4CB;</span>
+          <span class="tab-label">模板</span>
+        </button>
+        <button class="tab-item" data-tab="publish" aria-label="发布">
+          <span class="tab-icon">&#x1F4E4;</span>
+          <span class="tab-label">发布</span>
+        </button>
+        <button class="tab-item" data-tab="profile" aria-label="我的">
+          <span class="tab-icon">&#x1F464;</span>
+          <span class="tab-label">我的</span>
+        </button>
+      </div>
+      <!-- Safe area spacer for iPhones with home indicator -->
+      <div class="tab-bar-safe-area"></div>
+    </nav>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- TOAST / NOTIFICATION OVERLAY                 -->
+  <!-- ============================================ -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- ============================================ -->
+  <!-- MODAL / ACTION SHEET CONTAINER               -->
+  <!-- ============================================ -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none;">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content" id="modalContent">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- AI ASSISTANT PANEL                           -->
+  <!-- ============================================ -->
+  <div class="ai-panel-overlay" id="aiPanelOverlay" style="display:none;">
+    <div class="ai-panel-backdrop" id="aiPanelBackdrop" data-action="close-ai"></div>
+    <div class="ai-panel" id="aiPanel">
+      <div class="ai-panel-header">
+        <div class="ai-panel-handle"></div>
+        <h3 class="ai-panel-title">&#x2728; AI 智能助手</h3>
+        <button class="ai-panel-close" id="aiPanelClose" data-action="close-ai" aria-label="关闭">&#x2715;</button>
+      </div>
+      <div class="ai-panel-body">
+        <div class="ai-action-grid">
+          <button class="ai-action-item" data-ai-action="polish">
+            <span class="ai-action-icon">&#x1F48E;</span>
+            <span class="ai-action-label">润色优化</span>
+          </button>
+          <button class="ai-action-item" data-ai-action="expand">
+            <span class="ai-action-icon">&#x1F4D6;</span>
+            <span class="ai-action-label">扩写内容</span>
+          </button>
+          <button class="ai-action-item" data-ai-action="shorten">
+            <span class="ai-action-icon">&#x2702;&#xFE0F;</span>
+            <span class="ai-action-label">精简缩写</span>
+          </button>
+          <button class="ai-action-item" data-ai-action="translate">
+            <span class="ai-action-icon">&#x1F310;</span>
+            <span class="ai-action-label">翻译</span>
+          </button>
+          <button class="ai-action-item" data-ai-action="tags">
+            <span class="ai-action-icon">&#x1F3F7;&#xFE0F;</span>
+            <span class="ai-action-label">生成标签</span>
+          </button>
+          <button class="ai-action-item" data-ai-action="rewrite">
+            <span class="ai-action-icon">&#x1F504;</span>
+            <span class="ai-action-label">换个说法</span>
+          </button>
+        </div>
+        <div class="ai-chat-area" id="aiChatArea">
+          <div class="ai-chat-messages" id="ai-chat-messages"></div>
+          <div class="ai-chat-input-container">
+            <input type="text" class="ai-chat-input" id="ai-input"
+                   placeholder="或者直接告诉 AI 你想怎么改...">
+            <button class="ai-chat-send-btn" id="aiChatSendBtn" data-action="send-ai-message" aria-label="发送">
+              &#x27A4;
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- LOADING OVERLAY                              -->
+  <!-- ============================================ -->
+  <div class="loading-overlay" id="loadingOverlay" style="display:none;">
+    <div class="loading-spinner">
+      <div class="spinner-ring"></div>
+      <p class="loading-text" id="loadingText">加载中...</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SCRIPTS                                      -->
+  <!-- ============================================ -->
+  <script src="js/store.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

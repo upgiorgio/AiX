@@ -1,0 +1,88 @@
+{
+  "name": "自媒体发布工具",
+  "short_name": "发布工具",
+  "description": "自媒体创作者的全能发布工具 - 香蕉学院出品",
+  "start_url": "/banana_ios/",
+  "scope": "/banana_ios/",
+  "display": "standalone",
+  "theme_color": "#FF9F0A",
+  "background_color": "#F2F2F7",
+  "orientation": "portrait",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "categories": ["productivity", "social"],
+  "icons": [
+    {
+      "src": "icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "新建帖子",
+      "short_name": "新建",
+      "description": "快速创建新的社媒帖子",
+      "url": "/banana_ios/?page=create",
+      "icons": [
+        {
+          "src": "icons/shortcut-create.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "模板库",
+      "short_name": "模板",
+      "description": "浏览热门内容模板",
+      "url": "/banana_ios/?page=templates",
+      "icons": [
+        {
+          "src": "icons/shortcut-templates.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

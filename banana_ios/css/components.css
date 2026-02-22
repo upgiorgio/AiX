@@ -1,0 +1,1109 @@
+/* ============================================
+   iOS Component Library - 自媒体发布工具
+   完整的iOS原生风格组件库
+   ============================================ */
+
+/* ================================
+   1. NAVIGATION BAR
+   ================================ */
+.ios-nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 428px;
+  z-index: 100;
+  background: var(--ios-glass-bg);
+  backdrop-filter: var(--ios-glass-blur);
+  -webkit-backdrop-filter: var(--ios-glass-blur);
+  border-bottom: 0.5px solid var(--ios-separator);
+  padding-top: var(--ios-safe-top);
+}
+
+.ios-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--ios-nav-height);
+  padding: 0 var(--ios-spacing-md);
+}
+
+.ios-nav-title {
+  font: var(--ios-headline);
+  color: var(--ios-label);
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ios-nav-large-title {
+  font: var(--ios-large-title);
+  color: var(--ios-label);
+  padding: 0 var(--ios-spacing-md);
+  padding-bottom: 8px;
+}
+
+.ios-nav-btn {
+  font: var(--ios-body);
+  color: var(--ios-blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 60px;
+  transition: opacity var(--ios-duration-fast);
+}
+
+.ios-nav-btn:active { opacity: 0.5; }
+.ios-nav-btn-left { justify-content: flex-start; }
+.ios-nav-btn-right { justify-content: flex-end; }
+
+.ios-nav-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Large Title Scroll Behavior */
+.ios-nav-large {
+  padding-top: calc(var(--ios-safe-top) + var(--ios-nav-height));
+}
+
+.ios-nav-large .ios-nav-large-title {
+  transition: all var(--ios-duration-fast) var(--ios-easing);
+}
+
+.ios-nav-large.scrolled .ios-nav-large-title {
+  font-size: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ================================
+   2. TAB BAR
+   ================================ */
+.ios-tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 428px;
+  z-index: 100;
+  background: var(--ios-tab-bg);
+  backdrop-filter: var(--ios-glass-blur);
+  -webkit-backdrop-filter: var(--ios-glass-blur);
+  border-top: 0.5px solid var(--ios-separator);
+  padding-bottom: var(--ios-safe-bottom);
+}
+
+.ios-tab-bar-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 49px;
+  padding: 0 4px;
+}
+
+.ios-tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 0;
+  flex: 1;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.1s;
+}
+
+.ios-tab-item:active {
+  transform: scale(0.9);
+}
+
+.ios-tab-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--ios-tab-inactive);
+  transition: color var(--ios-duration-fast);
+}
+
+.ios-tab-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.ios-tab-label {
+  font: var(--ios-caption2);
+  color: var(--ios-tab-inactive);
+  transition: color var(--ios-duration-fast);
+}
+
+.ios-tab-item.active .ios-tab-icon,
+.ios-tab-item.active .ios-tab-label {
+  color: var(--ios-tab-active);
+}
+
+.ios-tab-badge {
+  position: absolute;
+  top: -2px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  background: var(--ios-red);
+  color: #fff;
+  font: var(--ios-caption2);
+  font-weight: 600;
+  border-radius: var(--ios-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+/* ================================
+   3. LIST / TABLE VIEW
+   ================================ */
+.ios-list {
+  background: var(--ios-bg-grouped-secondary);
+  border-radius: var(--ios-radius-md);
+  overflow: hidden;
+  margin: 0 var(--ios-spacing-md);
+}
+
+.ios-list-inset {
+  margin: var(--ios-spacing-sm) var(--ios-spacing-md);
+}
+
+.ios-list-header {
+  font: var(--ios-footnote);
+  color: var(--ios-label-secondary);
+  text-transform: uppercase;
+  padding: var(--ios-spacing-sm) var(--ios-spacing-md);
+  padding-top: var(--ios-spacing-lg);
+  letter-spacing: 0.02em;
+}
+
+.ios-list-footer {
+  font: var(--ios-footnote);
+  color: var(--ios-label-secondary);
+  padding: var(--ios-spacing-sm) var(--ios-spacing-md);
+  padding-bottom: var(--ios-spacing-lg);
+}
+
+.ios-list-item {
+  display: flex;
+  align-items: center;
+  padding: 11px var(--ios-spacing-md);
+  min-height: 44px;
+  background: var(--ios-bg-grouped-secondary);
+  cursor: pointer;
+  transition: background var(--ios-duration-fast);
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ios-list-item:active {
+  background: var(--ios-fill-tertiary);
+}
+
+.ios-list-item + .ios-list-item {
+  border-top: 0.5px solid var(--ios-separator);
+  margin-left: var(--ios-spacing-md);
+  padding-left: 0;
+}
+
+.ios-list-item-icon {
+  width: 29px;
+  height: 29px;
+  border-radius: var(--ios-radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.ios-list-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.ios-list-item-title {
+  font: var(--ios-body);
+  color: var(--ios-label);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ios-list-item-subtitle {
+  font: var(--ios-footnote);
+  color: var(--ios-label-secondary);
+  margin-top: 2px;
+}
+
+.ios-list-item-value {
+  font: var(--ios-body);
+  color: var(--ios-label-secondary);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+.ios-list-item-chevron::after {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--ios-gray3);
+  border-bottom: 2px solid var(--ios-gray3);
+  transform: rotate(-45deg);
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+/* ================================
+   4. BUTTONS
+   ================================ */
+.ios-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  font: var(--ios-body);
+  font-weight: 600;
+  border-radius: var(--ios-radius-md);
+  padding: 12px 20px;
+  transition: all var(--ios-duration-fast) var(--ios-easing);
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ios-btn:active {
+  transform: scale(0.97);
+  opacity: 0.8;
+}
+
+.ios-btn-primary {
+  background: var(--ios-blue);
+  color: #FFFFFF;
+}
+
+.ios-btn-accent {
+  background: var(--app-accent-gradient);
+  color: #000;
+}
+
+.ios-btn-secondary {
+  background: var(--ios-fill);
+  color: var(--ios-blue);
+}
+
+.ios-btn-destructive {
+  background: var(--ios-fill);
+  color: var(--ios-red);
+}
+
+.ios-btn-ghost {
+  background: transparent;
+  color: var(--ios-blue);
+  padding: 8px 12px;
+}
+
+.ios-btn-full {
+  width: 100%;
+}
+
+.ios-btn-sm {
+  font: var(--ios-subheadline);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--ios-radius-sm);
+}
+
+.ios-btn-lg {
+  padding: 16px 28px;
+  font-size: 18px;
+  border-radius: var(--ios-radius-lg);
+}
+
+.ios-btn-pill {
+  border-radius: var(--ios-radius-full);
+}
+
+.ios-btn:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ================================
+   5. CARDS
+   ================================ */
+.ios-card {
+  background: var(--ios-bg-grouped-secondary);
+  border-radius: var(--ios-radius-lg);
+  padding: var(--ios-spacing-md);
+  margin: var(--ios-spacing-sm) var(--ios-spacing-md);
+  box-shadow: var(--ios-shadow-card);
+}
+
+.ios-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.ios-card-title {
+  font: var(--ios-headline);
+  color: var(--ios-label);
+}
+
+.ios-card-body {
+  font: var(--ios-body);
+  color: var(--ios-label-secondary);
+}
+
+.ios-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 0.5px solid var(--ios-separator);
+}
+
+.ios-card-hero {
+  margin: var(--ios-spacing-sm) var(--ios-spacing-md);
+  border-radius: var(--ios-radius-xl);
+  overflow: hidden;
+  background: var(--app-accent-gradient);
+  padding: var(--ios-spacing-xl);
+  color: #000;
+}
+
+/* ================================
+   6. FORM ELEMENTS
+   ================================ */
+.ios-input {
+  width: 100%;
+  font: var(--ios-body);
+  color: var(--ios-label);
+  background: var(--ios-bg-grouped-secondary);
+  border: none;
+  border-radius: var(--ios-radius-md);
+  padding: 12px var(--ios-spacing-md);
+  outline: none;
+  transition: box-shadow var(--ios-duration-fast);
+  caret-color: var(--ios-blue);
+}
+
+.ios-input:focus {
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+
+.ios-input::placeholder {
+  color: var(--ios-label-tertiary);
+}
+
+.ios-textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+.ios-input-group {
+  background: var(--ios-bg-grouped-secondary);
+  border-radius: var(--ios-radius-md);
+  overflow: hidden;
+  margin: var(--ios-spacing-sm) var(--ios-spacing-md);
+}
+
+.ios-input-row {
+  display: flex;
+  align-items: center;
+  padding: 11px var(--ios-spacing-md);
+  min-height: 44px;
+}
+
+.ios-input-row + .ios-input-row {
+  border-top: 0.5px solid var(--ios-separator);
+}
+
+.ios-input-label {
+  font: var(--ios-body);
+  color: var(--ios-label);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.ios-input-row input,
+.ios-input-row select {
+  flex: 1;
+  font: var(--ios-body);
+  color: var(--ios-label);
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: right;
+  caret-color: var(--ios-blue);
+}
+
+/* Toggle Switch */
+.ios-toggle {
+  position: relative;
+  width: 51px;
+  height: 31px;
+  flex-shrink: 0;
+}
+
+.ios-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.ios-toggle-track {
+  position: absolute;
+  inset: 0;
+  background: var(--ios-fill);
+  border-radius: 16px;
+  transition: background var(--ios-duration-fast);
+  cursor: pointer;
+}
+
+.ios-toggle-track::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 27px;
+  height: 27px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  transition: transform var(--ios-duration-fast) var(--ios-spring);
+}
+
+.ios-toggle input:checked + .ios-toggle-track {
+  background: var(--ios-green);
+}
+
+.ios-toggle input:checked + .ios-toggle-track::after {
+  transform: translateX(20px);
+}
+
+/* Segmented Control */
+.ios-segment {
+  display: flex;
+  background: var(--ios-fill-tertiary);
+  border-radius: var(--ios-radius-sm);
+  padding: 2px;
+  margin: var(--ios-spacing-sm) var(--ios-spacing-md);
+}
+
+.ios-segment-item {
+  flex: 1;
+  padding: 7px 12px;
+  text-align: center;
+  font: var(--ios-subheadline);
+  font-weight: 500;
+  color: var(--ios-label);
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all var(--ios-duration-fast) var(--ios-easing);
+  border: none;
+  background: transparent;
+}
+
+.ios-segment-item.active {
+  background: var(--ios-bg-grouped-secondary);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 0 1px rgba(0,0,0,0.04);
+  font-weight: 600;
+}
+
+/* ================================
+   7. SEARCH BAR
+   ================================ */
+.ios-search {
+  padding: 8px var(--ios-spacing-md);
+}
+
+.ios-search-inner {
+  display: flex;
+  align-items: center;
+  background: var(--ios-fill-tertiary);
+  border-radius: var(--ios-radius-md);
+  padding: 8px 12px;
+  gap: 6px;
+}
+
+.ios-search-icon {
+  color: var(--ios-gray);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.ios-search-input {
+  flex: 1;
+  font: var(--ios-body);
+  color: var(--ios-label);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.ios-search-input::placeholder {
+  color: var(--ios-label-tertiary);
+}
+
+.ios-search-cancel {
+  font: var(--ios-body);
+  color: var(--ios-blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  display: none;
+}
+
+.ios-search.active .ios-search-cancel {
+  display: block;
+}
+
+/* ================================
+   8. SHEET / MODAL
+   ================================ */
+.ios-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--ios-duration-normal);
+}
+
+.ios-sheet-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ios-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  width: 100%;
+  max-width: 428px;
+  max-height: 90vh;
+  background: var(--ios-bg-primary);
+  border-radius: var(--ios-radius-xl) var(--ios-radius-xl) 0 0;
+  z-index: 201;
+  transition: transform var(--ios-duration-normal) var(--ios-easing);
+  overflow-y: auto;
+  padding-bottom: var(--ios-safe-bottom);
+}
+
+.ios-sheet.active {
+  transform: translateX(-50%) translateY(0);
+}
+
+.ios-sheet-handle {
+  width: 36px;
+  height: 5px;
+  background: var(--ios-gray4);
+  border-radius: 3px;
+  margin: 8px auto;
+}
+
+.ios-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px var(--ios-spacing-md);
+  border-bottom: 0.5px solid var(--ios-separator);
+}
+
+.ios-sheet-title {
+  font: var(--ios-headline);
+  color: var(--ios-label);
+}
+
+.ios-sheet-close {
+  width: 30px;
+  height: 30px;
+  background: var(--ios-fill-tertiary);
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ios-gray);
+  font-size: 16px;
+}
+
+.ios-sheet-body {
+  padding: var(--ios-spacing-md);
+}
+
+/* ================================
+   9. ALERT DIALOG
+   ================================ */
+.ios-alert-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--ios-duration-fast);
+}
+
+.ios-alert-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ios-alert {
+  width: 270px;
+  background: var(--ios-glass-bg);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 14px;
+  text-align: center;
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: transform var(--ios-duration-fast) var(--ios-spring);
+}
+
+.ios-alert-overlay.active .ios-alert {
+  transform: scale(1);
+}
+
+.ios-alert-content {
+  padding: 20px 16px;
+}
+
+.ios-alert-title {
+  font: var(--ios-headline);
+  color: var(--ios-label);
+  margin-bottom: 4px;
+}
+
+.ios-alert-message {
+  font: var(--ios-footnote);
+  color: var(--ios-label-secondary);
+  margin-top: 4px;
+}
+
+.ios-alert-actions {
+  border-top: 0.5px solid var(--ios-separator);
+  display: flex;
+}
+
+.ios-alert-actions.vertical {
+  flex-direction: column;
+}
+
+.ios-alert-btn {
+  flex: 1;
+  padding: 11px 8px;
+  font: var(--ios-body);
+  color: var(--ios-blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background var(--ios-duration-fast);
+}
+
+.ios-alert-btn:active {
+  background: var(--ios-fill-tertiary);
+}
+
+.ios-alert-btn + .ios-alert-btn {
+  border-left: 0.5px solid var(--ios-separator);
+}
+
+.ios-alert-actions.vertical .ios-alert-btn + .ios-alert-btn {
+  border-left: none;
+  border-top: 0.5px solid var(--ios-separator);
+}
+
+.ios-alert-btn-bold {
+  font-weight: 600;
+}
+
+.ios-alert-btn-destructive {
+  color: var(--ios-red);
+}
+
+/* ================================
+   10. TOAST / NOTIFICATION
+   ================================ */
+.ios-toast {
+  position: fixed;
+  top: calc(var(--ios-safe-top) + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-120%);
+  max-width: 360px;
+  width: calc(100% - 32px);
+  background: var(--ios-bg-primary);
+  border-radius: var(--ios-radius-xl);
+  box-shadow: var(--ios-shadow-lg);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 400;
+  transition: transform var(--ios-duration-normal) var(--ios-spring);
+}
+
+.ios-toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+.ios-toast-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.ios-toast-success .ios-toast-icon { background: var(--ios-green); color: #fff; }
+.ios-toast-error .ios-toast-icon { background: var(--ios-red); color: #fff; }
+.ios-toast-info .ios-toast-icon { background: var(--ios-blue); color: #fff; }
+
+.ios-toast-text {
+  flex: 1;
+  font: var(--ios-subheadline);
+  font-weight: 500;
+  color: var(--ios-label);
+}
+
+/* ================================
+   11. BADGE & TAG
+   ================================ */
+.ios-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  font: var(--ios-caption2);
+  font-weight: 600;
+  color: #fff;
+  background: var(--ios-red);
+  border-radius: 10px;
+}
+
+.ios-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font: var(--ios-caption1);
+  font-weight: 500;
+  border-radius: var(--ios-radius-full);
+  background: var(--ios-fill-tertiary);
+  color: var(--ios-label-secondary);
+}
+
+.ios-tag-blue { background: rgba(0,122,255,0.12); color: var(--ios-blue); }
+.ios-tag-green { background: rgba(52,199,89,0.12); color: var(--ios-green); }
+.ios-tag-orange { background: rgba(255,149,0,0.12); color: var(--ios-orange); }
+.ios-tag-red { background: rgba(255,59,48,0.12); color: var(--ios-red); }
+.ios-tag-purple { background: rgba(175,82,222,0.12); color: var(--ios-purple); }
+
+/* ================================
+   12. PROGRESS
+   ================================ */
+.ios-progress {
+  width: 100%;
+  height: 4px;
+  background: var(--ios-fill-tertiary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ios-progress-bar {
+  height: 100%;
+  background: var(--ios-blue);
+  border-radius: 2px;
+  transition: width var(--ios-duration-normal) var(--ios-easing);
+}
+
+.ios-progress-accent .ios-progress-bar {
+  background: var(--app-accent-gradient);
+}
+
+/* ================================
+   13. SKELETON LOADING
+   ================================ */
+@keyframes ios-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.ios-skeleton {
+  background: linear-gradient(90deg, var(--ios-fill-tertiary) 25%, var(--ios-fill-quaternary) 50%, var(--ios-fill-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: ios-shimmer 1.5s infinite;
+  border-radius: var(--ios-radius-sm);
+}
+
+.ios-skeleton-text {
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.ios-skeleton-title {
+  height: 22px;
+  width: 60%;
+  margin-bottom: 12px;
+}
+
+.ios-skeleton-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.ios-skeleton-card {
+  height: 120px;
+  border-radius: var(--ios-radius-lg);
+  margin: var(--ios-spacing-sm) var(--ios-spacing-md);
+}
+
+/* ================================
+   14. EMPTY STATE
+   ================================ */
+.ios-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--ios-spacing-3xl) var(--ios-spacing-xl);
+  text-align: center;
+}
+
+.ios-empty-icon {
+  font-size: 64px;
+  margin-bottom: var(--ios-spacing-md);
+  opacity: 0.4;
+}
+
+.ios-empty-title {
+  font: var(--ios-title3);
+  color: var(--ios-label);
+  margin-bottom: 8px;
+}
+
+.ios-empty-text {
+  font: var(--ios-body);
+  color: var(--ios-label-secondary);
+  max-width: 280px;
+}
+
+/* ================================
+   15. AVATAR
+   ================================ */
+.ios-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--ios-fill-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--ios-headline);
+  color: var(--ios-label-secondary);
+  flex-shrink: 0;
+}
+
+.ios-avatar-sm { width: 28px; height: 28px; font-size: 13px; }
+.ios-avatar-lg { width: 56px; height: 56px; font-size: 24px; }
+.ios-avatar-xl { width: 80px; height: 80px; font-size: 32px; }
+
+/* ================================
+   16. CHIP / FILTER
+   ================================ */
+.ios-chip-group {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px var(--ios-spacing-md);
+  -webkit-overflow-scrolling: touch;
+}
+
+.ios-chip-group::-webkit-scrollbar { display: none; }
+
+.ios-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  font: var(--ios-subheadline);
+  font-weight: 500;
+  color: var(--ios-label);
+  background: var(--ios-fill-tertiary);
+  border-radius: var(--ios-radius-full);
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--ios-duration-fast);
+  flex-shrink: 0;
+}
+
+.ios-chip.active {
+  background: var(--ios-blue);
+  color: #fff;
+}
+
+.ios-chip-accent.active {
+  background: var(--app-accent);
+  color: #000;
+}
+
+/* ================================
+   17. DIVIDER
+   ================================ */
+.ios-divider {
+  height: 0.5px;
+  background: var(--ios-separator);
+  margin: 0 var(--ios-spacing-md);
+}
+
+.ios-divider-full {
+  margin: 0;
+}
+
+/* ================================
+   18. SCROLL AREA
+   ================================ */
+.ios-scroll-x {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  gap: 12px;
+  padding: 0 var(--ios-spacing-md);
+}
+
+.ios-scroll-x::-webkit-scrollbar { display: none; }
+
+.ios-scroll-x > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* ================================
+   19. FLOATING ACTION
+   ================================ */
+.ios-fab {
+  position: fixed;
+  bottom: calc(var(--ios-tab-height) + 16px);
+  right: calc(50% - 214px + 16px);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--ios-blue);
+  color: #fff;
+  border: none;
+  box-shadow: var(--ios-shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 50;
+  transition: all var(--ios-duration-fast) var(--ios-spring);
+}
+
+.ios-fab:active {
+  transform: scale(0.9);
+}
+
+.ios-fab-accent {
+  background: var(--app-accent-gradient);
+  color: #000;
+}
+
+@media (max-width: 428px) {
+  .ios-fab {
+    right: 16px;
+  }
+}
+
+/* ================================
+   20. UTILITIES
+   ================================ */
+.ios-text-blue { color: var(--ios-blue); }
+.ios-text-green { color: var(--ios-green); }
+.ios-text-red { color: var(--ios-red); }
+.ios-text-orange { color: var(--ios-orange); }
+.ios-text-purple { color: var(--ios-purple); }
+.ios-text-secondary { color: var(--ios-label-secondary); }
+.ios-text-tertiary { color: var(--ios-label-tertiary); }
+
+.ios-bg-blue { background: var(--ios-blue); }
+.ios-bg-green { background: var(--ios-green); }
+.ios-bg-red { background: var(--ios-red); }
+.ios-bg-orange { background: var(--ios-orange); }
+.ios-bg-purple { background: var(--ios-purple); }
+.ios-bg-accent { background: var(--app-accent); }
+
+.ios-mt-0 { margin-top: 0; }
+.ios-mt-1 { margin-top: var(--ios-spacing-xs); }
+.ios-mt-2 { margin-top: var(--ios-spacing-sm); }
+.ios-mt-3 { margin-top: var(--ios-spacing-md); }
+.ios-mt-4 { margin-top: var(--ios-spacing-lg); }
+.ios-mb-0 { margin-bottom: 0; }
+.ios-mb-2 { margin-bottom: var(--ios-spacing-sm); }
+.ios-mb-3 { margin-bottom: var(--ios-spacing-md); }
+.ios-p-3 { padding: var(--ios-spacing-md); }
+.ios-px-3 { padding-left: var(--ios-spacing-md); padding-right: var(--ios-spacing-md); }
+
+.ios-flex { display: flex; }
+.ios-flex-col { flex-direction: column; }
+.ios-items-center { align-items: center; }
+.ios-justify-between { justify-content: space-between; }
+.ios-gap-2 { gap: var(--ios-spacing-sm); }
+.ios-gap-3 { gap: var(--ios-spacing-md); }
+
+.ios-hidden { display: none !important; }
+.ios-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
