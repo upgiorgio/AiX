@@ -1768,3 +1768,796 @@ input[type="range"]::-moz-range-thumb {
     padding: 0 4px;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   平台品牌变量 & 仿真发帖窗口系统  Platform Brand Tokens & Mock Windows
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── 平台品牌色 Brand Color Tokens ── */
+:root {
+  --x-bg: #000000;
+  --x-border: #2f3336;
+  --x-text: #e7e9ea;
+  --x-muted: #71767b;
+  --x-blue: #1d9bf0;
+  --x-post-btn: #1d9bf0;
+
+  --xhs-bg: #ffffff;
+  --xhs-border: #f0f0f0;
+  --xhs-text: #333333;
+  --xhs-muted: #999999;
+  --xhs-red: #ff2442;
+  --xhs-tag-bg: #fff0f2;
+
+  --wechat-bg: #f7f7f7;
+  --wechat-border: #e5e5e5;
+  --wechat-text: #191919;
+  --wechat-green: #07c160;
+  --wechat-header-bg: #ededed;
+
+  --zhihu-bg: #ffffff;
+  --zhihu-border: #ebebeb;
+  --zhihu-text: #1a1a1b;
+  --zhihu-blue: #0084ff;
+  --zhihu-header-bg: #0084ff;
+
+  --bili-bg: #f5f5f5;
+  --bili-border: #e3e5e7;
+  --bili-text: #18191c;
+  --bili-pink: #fb7299;
+  --bili-blue: #00a1d6;
+
+  --li-bg: #ffffff;
+  --li-border: #e0e0e0;
+  --li-text: #000000;
+  --li-blue: #0a66c2;
+  --li-muted: #666666;
+}
+
+/* ── 平台选项卡导航栏 Platform Tab Bar ── */
+.ptab-bar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.ptab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(150, 206, 234, 0.2);
+  background: rgba(7, 18, 30, 0.5);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.ptab:hover {
+  border-color: rgba(150, 206, 234, 0.45);
+  color: var(--fg);
+}
+
+.ptab-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* 各平台激活态颜色 */
+.ptab.active[data-p="x"]           { border-color: #1d9bf0; background: rgba(29,155,240,0.12); color: #1d9bf0; }
+.ptab.active[data-p="xiaohongshu"] { border-color: #ff2442; background: rgba(255,36,66,0.1);  color: #ff2442; }
+.ptab.active[data-p="wechat"]      { border-color: #07c160; background: rgba(7,193,96,0.1);   color: #07c160; }
+.ptab.active[data-p="zhihu"]       { border-color: #0084ff; background: rgba(0,132,255,0.1);  color: #0084ff; }
+.ptab.active[data-p="bilibili"]    { border-color: #fb7299; background: rgba(251,114,153,0.1);color: #fb7299; }
+.ptab.active[data-p="linkedin"]    { border-color: #0a66c2; background: rgba(10,102,194,0.1); color: #0a66c2; }
+
+/* ── 平台仿真窗口外框 Platform Mock Window ── */
+.platform-mock-window {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(150, 206, 234, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s;
+  margin-top: 6px;
+  min-height: 320px;
+}
+
+/* ── X / Twitter 风格 ── */
+.pmw-x {
+  background: var(--x-bg);
+  border-color: var(--x-border);
+}
+
+.pmw-x-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px 0;
+  background: var(--x-bg);
+}
+
+.pmw-x-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d9bf0 0%, #0d6bac 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pmw-x-textarea-wrap {
+  flex: 1;
+  padding: 8px 0;
+}
+
+.pmw-x-textarea-wrap textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--x-text);
+  font-size: 1.05rem;
+  resize: none;
+  outline: none;
+  min-height: 120px;
+}
+
+.pmw-x-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px 12px;
+  border-top: 1px solid var(--x-border);
+  background: var(--x-bg);
+}
+
+.pmw-x-icons {
+  display: flex;
+  gap: 4px;
+  color: var(--x-blue);
+  font-size: 1.05rem;
+}
+
+.pmw-x-icons span {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.15s;
+}
+
+.pmw-x-icons span:hover { background: rgba(29,155,240,0.1); }
+
+.pmw-x-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pmw-char-ring {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #2f3336;
+  font-size: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--x-muted);
+  transition: all 0.2s;
+}
+.pmw-char-ring.warning { border-color: #ffd400; color: #ffd400; }
+.pmw-char-ring.danger  { border-color: #f4212e; color: #f4212e; font-size: 0.7rem; }
+
+.pmw-post-btn-x {
+  background: var(--x-post-btn);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pmw-x-audience {
+  padding: 4px 14px 6px;
+  background: var(--x-bg);
+  font-size: 0.78rem;
+  color: var(--x-blue);
+  font-weight: 600;
+}
+
+/* ── 小红书 风格 ── */
+.pmw-xhs {
+  background: var(--xhs-bg);
+  border-color: var(--xhs-border);
+}
+
+.pmw-xhs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #fff;
+  border-bottom: 1px solid var(--xhs-border);
+}
+
+.pmw-xhs-header-left {
+  font-size: 0.82rem;
+  color: #999;
+}
+
+.pmw-xhs-header-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--xhs-text);
+}
+
+.pmw-xhs-publish-btn {
+  background: var(--xhs-red);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pmw-xhs-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 10px 14px;
+  background: #fff;
+}
+
+.pmw-xhs-photo {
+  aspect-ratio: 1;
+  background: #f5f5f5;
+  border-radius: 8px;
+  border: 1.5px dashed #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+.pmw-xhs-photo.main-photo {
+  font-size: 1.8rem;
+  background: #fafafa;
+}
+
+.pmw-xhs-title-input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--xhs-border);
+  background: #fff;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--xhs-text);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pmw-xhs-title-input::placeholder { color: #ccc; }
+
+.pmw-xhs-textarea-wrap {
+  padding: 8px 14px;
+  background: #fff;
+}
+
+.pmw-xhs-textarea-wrap textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--xhs-text);
+  font-size: 0.9rem;
+  resize: none;
+  outline: none;
+  min-height: 100px;
+}
+
+.pmw-xhs-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #fff;
+  border-top: 1px solid var(--xhs-border);
+  flex-wrap: wrap;
+}
+
+.pmw-xhs-tag {
+  background: var(--xhs-tag-bg);
+  color: var(--xhs-red);
+  border-radius: 12px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.pmw-xhs-charcount {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+/* ── 微信公众号 风格 ── */
+.pmw-wechat {
+  background: var(--wechat-bg);
+  border-color: var(--wechat-border);
+}
+
+.pmw-wechat-titlebar {
+  background: var(--wechat-header-bg);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--wechat-border);
+}
+
+.pmw-wechat-backbtn {
+  font-size: 0.85rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.pmw-wechat-pagetitle {
+  flex: 1;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.pmw-wechat-publishbtn {
+  background: var(--wechat-green);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.pmw-wechat-body {
+  padding: 12px 14px;
+  background: #fff;
+  flex: 1;
+}
+
+.pmw-wechat-articletitle {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--wechat-green);
+  background: transparent;
+  padding: 6px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--wechat-text);
+  outline: none;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.pmw-wechat-toolbar {
+  display: flex;
+  gap: 6px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--wechat-border);
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.pmw-wechat-toolbtn {
+  font-size: 0.82rem;
+  color: #555;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.pmw-wechat-body textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--wechat-text);
+  font-size: 0.9rem;
+  resize: none;
+  outline: none;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+.pmw-wechat-footer {
+  padding: 8px 14px;
+  background: var(--wechat-header-bg);
+  font-size: 0.75rem;
+  color: #999;
+  text-align: right;
+  border-top: 1px solid var(--wechat-border);
+}
+
+/* ── 知乎 风格 ── */
+.pmw-zhihu {
+  background: var(--zhihu-bg);
+  border-color: var(--zhihu-border);
+}
+
+.pmw-zhihu-header {
+  background: var(--zhihu-header-bg);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pmw-zhihu-logo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.03em;
+}
+
+.pmw-zhihu-publishbtn {
+  background: #fff;
+  color: var(--zhihu-blue);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pmw-zhihu-type-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--zhihu-border);
+  background: #fff;
+}
+
+.pmw-zhihu-type-tab {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: #999;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+}
+
+.pmw-zhihu-type-tab.active {
+  color: var(--zhihu-blue);
+  border-bottom-color: var(--zhihu-blue);
+  font-weight: 600;
+}
+
+.pmw-zhihu-body {
+  padding: 12px 14px;
+  background: #fff;
+  flex: 1;
+}
+
+.pmw-zhihu-question {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--zhihu-border);
+  background: transparent;
+  padding: 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--zhihu-text);
+  outline: none;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.pmw-zhihu-body textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--zhihu-text);
+  font-size: 0.9rem;
+  resize: none;
+  outline: none;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+.pmw-zhihu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: #f6f6f6;
+  border-top: 1px solid var(--zhihu-border);
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* ── B站 / Bilibili 风格 ── */
+.pmw-bilibili {
+  background: var(--bili-bg);
+  border-color: var(--bili-border);
+}
+
+.pmw-bili-header {
+  background: #fff;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--bili-border);
+}
+
+.pmw-bili-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--bili-pink);
+}
+
+.pmw-bili-submitbtn {
+  background: var(--bili-pink);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pmw-bili-type-row {
+  display: flex;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #fff;
+  border-bottom: 1px solid var(--bili-border);
+}
+
+.pmw-bili-type-chip {
+  background: #f4f4f4;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.pmw-bili-type-chip.active {
+  background: rgba(251,114,153,0.12);
+  color: var(--bili-pink);
+  font-weight: 600;
+}
+
+.pmw-bili-cover {
+  padding: 8px 14px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--bili-border);
+}
+
+.pmw-bili-cover-thumb {
+  width: 60px;
+  height: 40px;
+  background: #efefef;
+  border-radius: 6px;
+  border: 1.5px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #ccc;
+  flex-shrink: 0;
+}
+
+.pmw-bili-cover-hint {
+  font-size: 0.78rem;
+  color: #999;
+}
+
+.pmw-bili-body {
+  padding: 12px 14px;
+  background: #fff;
+  flex: 1;
+}
+
+.pmw-bili-title-input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--bili-border);
+  background: transparent;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--bili-text);
+  outline: none;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.pmw-bili-body textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--bili-text);
+  font-size: 0.88rem;
+  resize: none;
+  outline: none;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+.pmw-bili-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: #fff;
+  border-top: 1px solid var(--bili-border);
+  font-size: 0.75rem;
+  color: #999;
+}
+
+/* ── LinkedIn 风格 ── */
+.pmw-linkedin {
+  background: var(--li-bg);
+  border-color: var(--li-border);
+}
+
+.pmw-li-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--li-border);
+  background: #fff;
+}
+
+.pmw-li-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--li-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.pmw-li-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pmw-li-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--li-text);
+}
+
+.pmw-li-audience-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.pmw-li-body {
+  padding: 12px 14px;
+  background: #fff;
+  flex: 1;
+}
+
+.pmw-li-body textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--li-text);
+  font-size: 0.93rem;
+  resize: none;
+  outline: none;
+  min-height: 130px;
+  box-sizing: border-box;
+}
+
+.pmw-li-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-top: 1px solid var(--li-border);
+  background: #fff;
+}
+
+.pmw-li-tool {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  transition: background 0.15s;
+}
+
+.pmw-li-tool:hover { background: #f3f2ef; }
+
+.pmw-li-post-btn {
+  margin-left: auto;
+  background: var(--li-blue);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pmw-li-charcount {
+  font-size: 0.75rem;
+  color: #999;
+  margin-right: 6px;
+}
+
+/* ── 通用 Mock 窗口内 textarea 样式 ── */
+.platform-mock-window textarea {
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+/* ── 平台品牌卡片升级（首页用） ── */
+.platform-card[data-brand="x"]           { border-left: 3px solid #1d9bf0; }
+.platform-card[data-brand="xiaohongshu"] { border-left: 3px solid #ff2442; }
+.platform-card[data-brand="wechat"]      { border-left: 3px solid #07c160; }
+.platform-card[data-brand="zhihu"]       { border-left: 3px solid #0084ff; }
+.platform-card[data-brand="bilibili"]    { border-left: 3px solid #fb7299; }
+.platform-card[data-brand="linkedin"]    { border-left: 3px solid #0a66c2; }
+.platform-card[data-brand="instagram"]   { border-left: 3px solid #e1306c; }
+.platform-card[data-brand="youtube"]     { border-left: 3px solid #ff0000; }
+.platform-card[data-brand="tiktok"]      { border-left: 3px solid #010101; }
+.platform-card[data-brand="weibo"]       { border-left: 3px solid #e6162d; }
+.platform-card[data-brand="douyin"]      { border-left: 3px solid #161823; }
+.platform-card[data-brand="kuaishou"]    { border-left: 3px solid #ff5500; }
+
+.platform-card:hover[data-brand="x"]           { box-shadow: 0 8px 30px rgba(29,155,240,0.2); }
+.platform-card:hover[data-brand="xiaohongshu"] { box-shadow: 0 8px 30px rgba(255,36,66,0.2); }
+.platform-card:hover[data-brand="wechat"]      { box-shadow: 0 8px 30px rgba(7,193,96,0.2); }
+.platform-card:hover[data-brand="zhihu"]       { box-shadow: 0 8px 30px rgba(0,132,255,0.2); }
+.platform-card:hover[data-brand="bilibili"]    { box-shadow: 0 8px 30px rgba(251,114,153,0.2); }
+.platform-card:hover[data-brand="linkedin"]    { box-shadow: 0 8px 30px rgba(10,102,194,0.2); }

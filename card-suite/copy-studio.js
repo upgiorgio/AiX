@@ -3,6 +3,151 @@
  * 全面接入 AI 生成 + 流式输出 + URL 摘要 + 多版本
  */
 
+/* ── Platform Mock Window Configs ── */
+const platformMockConfigs = {
+  x: {
+    windowClass: "pmw-x",
+    charLimit: 280,
+    topChrome: (platform) => `
+      <div class="pmw-x-avatar">G</div>
+      <div class="pmw-x-textarea-wrap">
+        <textarea id="draftOutput" rows="6" placeholder="有什么新鲜事？" style="color:#e7e9ea;"></textarea>
+      </div>`,
+    midChrome: () => `<div class="pmw-x-audience">🌐 所有人</div>`,
+    bottomChrome: () => `
+      <div class="pmw-x-icons">
+        <span title="图片">🖼</span><span title="GIF">GIF</span>
+        <span title="投票">📊</span><span title="表情">😊</span>
+      </div>
+      <div class="pmw-x-right">
+        <div class="pmw-char-ring" id="pmwCharCount">280</div>
+        <button class="pmw-post-btn-x">Post</button>
+      </div>`,
+    topClass: "pmw-x-header",
+    bottomClass: "pmw-x-toolbar",
+  },
+  xiaohongshu: {
+    windowClass: "pmw-xhs",
+    charLimit: 1000,
+    topChrome: () => `
+      <span class="pmw-xhs-header-left">← 返回</span>
+      <span class="pmw-xhs-header-title">发布笔记</span>
+      <button class="pmw-xhs-publish-btn">发布</button>`,
+    midChrome: () => `
+      <div class="pmw-xhs-photo-grid">
+        <div class="pmw-xhs-photo main-photo">＋</div>
+        <div class="pmw-xhs-photo">＋</div>
+        <div class="pmw-xhs-photo">＋</div>
+      </div>
+      <input class="pmw-xhs-title-input" placeholder="填写标题会有更多赞哦～" />
+      <div class="pmw-xhs-textarea-wrap">
+        <textarea id="draftOutput" rows="5" placeholder="添加正文…" style="color:#333;"></textarea>
+      </div>`,
+    bottomChrome: () => `
+      <span class="pmw-xhs-tag">#话题</span>
+      <span class="pmw-xhs-tag">@提及</span>
+      <span class="pmw-xhs-tag">📍位置</span>
+      <span class="pmw-xhs-charcount" id="pmwCharCount">0/1000</span>`,
+    topClass: "pmw-xhs-header",
+    bottomClass: "pmw-xhs-footer",
+  },
+  wechat: {
+    windowClass: "pmw-wechat",
+    charLimit: 2000,
+    topChrome: () => `
+      <span class="pmw-wechat-backbtn">‹ 草稿箱</span>
+      <span class="pmw-wechat-pagetitle">新建图文</span>
+      <button class="pmw-wechat-publishbtn">发表</button>`,
+    midChrome: () => `
+      <div class="pmw-wechat-body">
+        <input class="pmw-wechat-articletitle" placeholder="请输入标题" />
+        <div class="pmw-wechat-toolbar">
+          <button class="pmw-wechat-toolbtn">B</button>
+          <button class="pmw-wechat-toolbtn">I</button>
+          <button class="pmw-wechat-toolbtn">H1</button>
+          <button class="pmw-wechat-toolbtn">H2</button>
+          <button class="pmw-wechat-toolbtn">🔗</button>
+          <button class="pmw-wechat-toolbtn">🖼</button>
+        </div>
+        <textarea id="draftOutput" rows="7" placeholder="在此处输入正文内容…" style="color:#191919;"></textarea>
+      </div>`,
+    bottomChrome: () => `<span>字数：<span id="pmwCharCount">0</span>/2000</span>`,
+    topClass: "pmw-wechat-titlebar",
+    bottomClass: "pmw-wechat-footer",
+  },
+  zhihu: {
+    windowClass: "pmw-zhihu",
+    charLimit: 5000,
+    topChrome: () => `
+      <span class="pmw-zhihu-logo">知乎</span>
+      <button class="pmw-zhihu-publishbtn">发布</button>`,
+    midChrome: () => `
+      <div class="pmw-zhihu-type-tabs">
+        <div class="pmw-zhihu-type-tab active">回答</div>
+        <div class="pmw-zhihu-type-tab">文章</div>
+        <div class="pmw-zhihu-type-tab">想法</div>
+      </div>
+      <div class="pmw-zhihu-body">
+        <input class="pmw-zhihu-question" placeholder="问题标题或文章标题" />
+        <textarea id="draftOutput" rows="7" placeholder="写下你的回答或文章…" style="color:#1a1a1b;"></textarea>
+      </div>`,
+    bottomChrome: () => `
+      <span>已输入 <span id="pmwCharCount">0</span> 字</span>
+      <span>💡 结论先行，有数据有案例</span>`,
+    topClass: "pmw-zhihu-header",
+    bottomClass: "pmw-zhihu-footer",
+  },
+  bilibili: {
+    windowClass: "pmw-bilibili",
+    charLimit: 2000,
+    topChrome: () => `
+      <span class="pmw-bili-logo">bilibili</span>
+      <button class="pmw-bili-submitbtn">投稿</button>`,
+    midChrome: () => `
+      <div class="pmw-bili-type-row">
+        <span class="pmw-bili-type-chip active">动态</span>
+        <span class="pmw-bili-type-chip">视频</span>
+        <span class="pmw-bili-type-chip">专栏</span>
+      </div>
+      <div class="pmw-bili-cover">
+        <div class="pmw-bili-cover-thumb">🖼</div>
+        <div class="pmw-bili-cover-hint">点击上传封面 推荐 16:9</div>
+      </div>
+      <div class="pmw-bili-body">
+        <input class="pmw-bili-title-input" placeholder="视频标题（最多80字）" />
+        <textarea id="draftOutput" rows="5" placeholder="添加简介，让更多人发现你的内容～" style="color:#18191c;"></textarea>
+      </div>`,
+    bottomChrome: () => `
+      <span>💬 弹幕互动</span>
+      <span><span id="pmwCharCount">0</span>/2000</span>`,
+    topClass: "pmw-bili-header",
+    bottomClass: "pmw-bili-footer",
+  },
+  linkedin: {
+    windowClass: "pmw-linkedin",
+    charLimit: 3000,
+    topChrome: () => `
+      <div class="pmw-li-avatar">G</div>
+      <div class="pmw-li-meta">
+        <span class="pmw-li-name">Giorgio</span>
+        <span class="pmw-li-audience-badge">🌐 对所有人可见 ▾</span>
+      </div>`,
+    midChrome: () => `
+      <div class="pmw-li-body">
+        <textarea id="draftOutput" rows="8" placeholder="分享一些想法…" style="color:#000;"></textarea>
+      </div>`,
+    bottomChrome: () => `
+      <button class="pmw-li-tool" title="图片">🖼</button>
+      <button class="pmw-li-tool" title="视频">🎥</button>
+      <button class="pmw-li-tool" title="文档">📄</button>
+      <button class="pmw-li-tool" title="表情">😊</button>
+      <span class="pmw-li-charcount" id="pmwCharCount"></span>
+      <button class="pmw-li-post-btn">发布</button>`,
+    topClass: "pmw-li-header",
+    bottomClass: "pmw-li-toolbar",
+  },
+};
+
 const COPY_STATE_KEY   = "aix-card-suite-copy-v1";
 const DESIGNER_INPUT_KEY = "aix-card-suite-designer-input";
 const VERSIONS_KEY     = "aix-copy-versions-v1";
@@ -24,6 +169,59 @@ const platformTone = {
 };
 
 function $(id) { return document.getElementById(id); }
+
+/* ── Platform Mock Window ── */
+function updatePlatformMock(platform) {
+  const config = platformMockConfigs[platform];
+  if (!config) return;
+
+  const mockWin = document.getElementById("platformMockWindow");
+  if (!mockWin) return;
+
+  // 更新窗口外框class
+  mockWin.className = "platform-mock-window " + config.windowClass;
+
+  // 重建内部结构（保留draftOutput文本）
+  const prevText = (document.getElementById("draftOutput") || {}).value || "";
+
+  let inner = "";
+  // top chrome
+  inner += `<div id="pmwChromeTop" class="${config.topClass}">${config.topChrome(platform)}</div>`;
+  // mid chrome (contains draftOutput)
+  if (config.midChrome) inner += `<div id="pmwChromeMid">${config.midChrome(platform)}</div>`;
+  // bottom chrome
+  inner += `<div id="pmwChromeBottom" class="${config.bottomClass}">${config.bottomChrome(platform)}</div>`;
+
+  mockWin.innerHTML = inner;
+
+  // 还原文本内容
+  const ta = document.getElementById("draftOutput");
+  if (ta) {
+    ta.value = prevText;
+    // 重新绑定 input 事件
+    ta.addEventListener("input", () => {
+      saveState();
+      updateCharCount(platform, config.charLimit);
+    });
+    ta.addEventListener("scroll", () => {});
+  }
+
+  updateCharCount(platform, config.charLimit);
+}
+
+function updateCharCount(platform, limit) {
+  const ta = document.getElementById("draftOutput");
+  const el = document.getElementById("pmwCharCount");
+  if (!ta || !el) return;
+  const len = ta.value.length;
+  if (platform === "x") {
+    const rem = limit - len;
+    el.textContent = rem;
+    el.className = "pmw-char-ring" + (rem < 20 ? " danger" : rem < 60 ? " warning" : "");
+  } else {
+    el.textContent = len > 0 ? `${len}/${limit}` : "";
+  }
+}
 
 /* ── State ── */
 function getState() {
@@ -238,6 +436,31 @@ function sendToDesigner() {
 window.addEventListener("DOMContentLoaded", () => {
   loadState();
   loadVersions();
+
+  // 平台选项卡切换
+  const ptabBar = document.getElementById("ptabBar");
+  if (ptabBar) {
+    ptabBar.querySelectorAll(".ptab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        ptabBar.querySelectorAll(".ptab").forEach(t => t.classList.remove("active"));
+        tab.classList.add("active");
+        const p = tab.dataset.p;
+        const sel = document.getElementById("platform");
+        if (sel) sel.value = p;
+        updatePlatformMock(p);
+        saveState();
+      });
+    });
+    // 初始化仿真窗口
+    const initPlatform = document.getElementById("platform")?.value || "x";
+    const initTab = ptabBar.querySelector(`[data-p="${initPlatform}"]`);
+    if (initTab) {
+      ptabBar.querySelectorAll(".ptab").forEach(t => t.classList.remove("active"));
+      initTab.classList.add("active");
+    }
+    updatePlatformMock(initPlatform);
+  }
+
   if (!$("draftOutput").value.trim()) generateStatic();
 
   // Main AI button

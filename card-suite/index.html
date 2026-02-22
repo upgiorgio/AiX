@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/card-suite/common.css?v=20260222-6" />
+    <link rel="stylesheet" href="/card-suite/common.css?v=20260223-1" />
     <style>
 /* ─── Index Page Specific Styles ─── */
 
@@ -152,7 +152,87 @@
   position: relative;
 }
 
-/* 底部信息卡片增强 */
+/* ─── 平台品牌色系统 ─── */
+.platform-card[data-brand] .platform-icon {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+/* 品牌色变量 */
+[data-brand="x"]           { --brand-color: #1d9bf0; }
+[data-brand="xiaohongshu"] { --brand-color: #ff2442; }
+[data-brand="wechat"]      { --brand-color: #07c160; }
+[data-brand="wechat-moments"] { --brand-color: #07c160; }
+[data-brand="zhihu"]       { --brand-color: #0084ff; }
+[data-brand="bilibili"]    { --brand-color: #fb7299; }
+[data-brand="linkedin"]    { --brand-color: #0a66c2; }
+[data-brand="instagram"]   { --brand-color: #e1306c; }
+[data-brand="youtube"]     { --brand-color: #ff0000; }
+[data-brand="tiktok"]      { --brand-color: #010101; }
+[data-brand="weibo"]       { --brand-color: #e6162d; }
+[data-brand="douyin"]      { --brand-color: #161823; }
+[data-brand="kuaishou"]    { --brand-color: #ff5500; }
+
+/* 品牌色图标背景 */
+.platform-card[data-brand] .platform-icon {
+  background: rgba(var(--brand-rgb, 83, 192, 255), 0.14);
+  color: var(--brand-color, var(--brand));
+  border: 1px solid rgba(var(--brand-rgb, 83, 192, 255), 0.22);
+}
+
+/* 逐一设置 rgb 变量（用于 rgba 背景） */
+[data-brand="x"]           .platform-icon { --brand-rgb: 29,155,240; }
+[data-brand="xiaohongshu"] .platform-icon { --brand-rgb: 255,36,66; }
+[data-brand="wechat"]      .platform-icon { --brand-rgb: 7,193,96; }
+[data-brand="wechat-moments"] .platform-icon { --brand-rgb: 7,193,96; }
+[data-brand="zhihu"]       .platform-icon { --brand-rgb: 0,132,255; }
+[data-brand="bilibili"]    .platform-icon { --brand-rgb: 251,114,153; }
+[data-brand="linkedin"]    .platform-icon { --brand-rgb: 10,102,194; }
+[data-brand="instagram"]   .platform-icon { --brand-rgb: 225,48,108; }
+[data-brand="youtube"]     .platform-icon { --brand-rgb: 255,0,0; }
+[data-brand="tiktok"]      .platform-icon { --brand-rgb: 80,80,80; }
+[data-brand="weibo"]       .platform-icon { --brand-rgb: 230,22,45; }
+[data-brand="douyin"]      .platform-icon { --brand-rgb: 80,80,80; }
+[data-brand="kuaishou"]    .platform-icon { --brand-rgb: 255,85,0; }
+
+/* 品牌色卡片背景渐变 */
+[data-brand="x"]           { background: linear-gradient(135deg, rgba(29,155,240,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="xiaohongshu"] { background: linear-gradient(135deg, rgba(255,36,66,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="wechat"]      { background: linear-gradient(135deg, rgba(7,193,96,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="wechat-moments"] { background: linear-gradient(135deg, rgba(7,193,96,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="zhihu"]       { background: linear-gradient(135deg, rgba(0,132,255,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="bilibili"]    { background: linear-gradient(135deg, rgba(251,114,153,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="linkedin"]    { background: linear-gradient(135deg, rgba(10,102,194,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="instagram"]   { background: linear-gradient(135deg, rgba(225,48,108,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="youtube"]     { background: linear-gradient(135deg, rgba(255,0,0,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="tiktok"]      { background: linear-gradient(135deg, rgba(22,24,35,0.5) 0%, rgba(7,18,30,0.8) 100%); }
+[data-brand="weibo"]       { background: linear-gradient(135deg, rgba(230,22,45,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+[data-brand="douyin"]      { background: linear-gradient(135deg, rgba(22,24,35,0.5) 0%, rgba(7,18,30,0.8) 100%); }
+[data-brand="kuaishou"]    { background: linear-gradient(135deg, rgba(255,85,0,0.08) 0%, rgba(7,18,30,0.6) 100%); }
+
+/* hover 时品牌色边框增强 */
+.platform-card[data-brand]:hover {
+  border-color: rgba(var(--brand-rgb, 83,192,255), 0.45);
+  box-shadow: 0 0 0 1px rgba(var(--brand-rgb, 83,192,255), 0.2), 0 8px 24px rgba(0,0,0,0.4);
+}
+/* TikTok/抖音文字在黑色背景上白色处理 */
+[data-brand="tiktok"] .platform-icon,
+[data-brand="douyin"] .platform-icon {
+  color: #e0e0e0;
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* ─── 底部信息卡片增强 ─── */
 .info-card-icon {
   font-size: 1.4rem;
   margin-bottom: 6px;
@@ -300,7 +380,7 @@
         <nav class="platform-nav">
 
           <!-- X / Twitter -->
-          <a class="platform-card" href="/card-suite/card-designer.html?preset=x">
+          <a class="platform-card" data-brand="x" href="/card-suite/card-designer.html?preset=x">
             <div class="platform-icon">𝕏</div>
             <div class="platform-name">X / Twitter</div>
             <div class="platform-sub">1200 × 675</div>
@@ -308,88 +388,88 @@
           </a>
 
           <!-- 小红书 -->
-          <a class="platform-card" href="/card-suite/card-designer.html?preset=xhs">
-            <div class="platform-icon">📕</div>
+          <a class="platform-card" data-brand="xiaohongshu" href="/card-suite/card-designer.html?preset=xhs">
+            <div class="platform-icon">小红书</div>
             <div class="platform-name">小红书</div>
             <div class="platform-sub">1080 × 1440</div>
             <span class="platform-tag">已支持</span>
           </a>
 
           <!-- 微信公众号 -->
-          <a class="platform-card" href="/card-suite/card-designer.html?preset=wechat">
-            <div class="platform-icon">💚</div>
+          <a class="platform-card" data-brand="wechat" href="/card-suite/card-designer.html?preset=wechat">
+            <div class="platform-icon">公众号</div>
             <div class="platform-name">公众号</div>
             <div class="platform-sub">900 × 383</div>
             <span class="platform-tag">已支持</span>
           </a>
 
           <!-- 朋友圈 / 视频号 -->
-          <a class="platform-card" href="/card-suite/card-designer.html?preset=square">
-            <div class="platform-icon">🎬</div>
+          <a class="platform-card" data-brand="wechat-moments" href="/card-suite/card-designer.html?preset=square">
+            <div class="platform-icon">视频号</div>
             <div class="platform-name">朋友圈 / 视频号</div>
             <div class="platform-sub">1080 × 1080</div>
             <span class="platform-tag">已支持</span>
           </a>
 
           <!-- 知乎 -->
-          <a class="platform-card" href="/card-suite/copy-studio.html">
-            <div class="platform-icon">🔵</div>
+          <a class="platform-card" data-brand="zhihu" href="/card-suite/copy-studio.html">
+            <div class="platform-icon">知乎</div>
             <div class="platform-name">知乎</div>
             <div class="platform-sub">长文 / 想法卡片</div>
             <span class="platform-tag">已支持</span>
           </a>
 
           <!-- 微博 -->
-          <a class="platform-card coming-soon" href="#">
-            <div class="platform-icon">🟠</div>
+          <a class="platform-card coming-soon" data-brand="weibo" href="#">
+            <div class="platform-icon">微博</div>
             <div class="platform-name">微博</div>
             <div class="platform-sub">图文 / 话题卡片</div>
             <span class="platform-tag tag-soon">即将上线</span>
           </a>
 
           <!-- 抖音 -->
-          <a class="platform-card coming-soon" href="#">
-            <div class="platform-icon">🎵</div>
+          <a class="platform-card coming-soon" data-brand="douyin" href="#">
+            <div class="platform-icon">抖音</div>
             <div class="platform-name">抖音</div>
             <div class="platform-sub">竖版封面 9:16</div>
             <span class="platform-tag tag-soon">即将上线</span>
           </a>
 
           <!-- Bilibili -->
-          <a class="platform-card coming-soon" href="#">
-            <div class="platform-icon">📺</div>
+          <a class="platform-card coming-soon" data-brand="bilibili" href="#">
+            <div class="platform-icon">bilibili</div>
             <div class="platform-name">B站</div>
             <div class="platform-sub">封面 / 专栏配图</div>
             <span class="platform-tag tag-soon">即将上线</span>
           </a>
 
           <!-- LinkedIn -->
-          <a class="platform-card coming-soon" href="#">
-            <div class="platform-icon">💼</div>
+          <a class="platform-card coming-soon" data-brand="linkedin" href="#">
+            <div class="platform-icon">in</div>
             <div class="platform-name">LinkedIn</div>
             <div class="platform-sub">1200 × 627</div>
             <span class="platform-tag tag-soon">即将上线</span>
           </a>
 
           <!-- Instagram -->
-          <a class="platform-card coming-soon" href="#">
-            <div class="platform-icon">📸</div>
+          <a class="platform-card coming-soon" data-brand="instagram" href="#">
+            <div class="platform-icon">IG</div>
             <div class="platform-name">Instagram</div>
             <div class="platform-sub">1080 × 1080 / Story</div>
             <span class="platform-tag tag-soon">即将上线</span>
           </a>
 
           <!-- YouTube -->
-          <a class="platform-card coming-soon" href="#">
-            <div class="platform-icon">▶️</div>
+          <a class="platform-card coming-soon" data-brand="youtube" href="#">
+            <div class="platform-icon">▶</div>
             <div class="platform-name">YouTube</div>
             <div class="platform-sub">封面 1280 × 720</div>
             <span class="platform-tag tag-soon">即将上线</span>
           </a>
 
           <!-- TikTok -->
-          <a class="platform-card coming-soon" href="#">
-            <div class="platform-icon">🎶</div>
+          <a class="platform-card coming-soon" data-brand="tiktok" href="#">
+            <div class="platform-icon">TikTok</div>
             <div class="platform-name">TikTok</div>
             <div class="platform-sub">竖版视频封面</div>
             <span class="platform-tag tag-soon">即将上线</span>
