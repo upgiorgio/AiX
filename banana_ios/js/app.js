@@ -841,7 +841,7 @@ ${this._escapeHtml(previewContent)}
      * 插入图片（占位逻辑）
      */
     _insertImage() {
-      this.showToast('图片功能即将上线', 'info');
+      this.showToast('图片功能开发中，敬请期待', 'info');
       this._haptic('light');
     }
 
@@ -988,7 +988,7 @@ ${this._escapeHtml(previewContent)}
             <span style="font-weight: 600; font-size: 17px;">模板预览</span>
             <button data-action="close-sheet" data-value="template-preview-sheet"
                     style="background: none; border: none; font-size: 16px; color: var(--ios-blue, #007AFF); cursor: pointer;">
-              关闭
+              完成
             </button>
           </div>
           <div style="width: 36px; height: 5px; background: var(--ios-label-quaternary, #3C3C432E); border-radius: 3px; margin: 8px auto 0;"></div>
@@ -1365,9 +1365,9 @@ ${this._escapeHtml(tpl.content)}
      */
     _showAbout() {
       this.showAlert({
-        title: '关于 卡片发帖套件',
-        message: '版本 1.0.0\n\n一站式社交媒体内容创作与管理工具。\n支持小红书、抖音、微信公众号、B站、X等主流平台。\n\n内置 AI 助手、15+ 专业模板、定时发布等功能。',
-        confirmText: '好的',
+        title: '关于 自媒体发布工具',
+        message: '版本 1.0.0\n\n一站式社交媒体内容创作与管理工具。\n支持小红书、抖音、微信公众号、B站、X 等主流平台。\n\n内置 AI 助手、15+ 专业模板、定时发布等功能。',
+        confirmText: '确定',
         showCancel: false
       });
     }
@@ -1399,7 +1399,7 @@ ${this._escapeHtml(tpl.content)}
      */
     _shareApp() {
       const shareData = {
-        title: '卡片发帖套件',
+        title: '自媒体发布工具',
         text: '一站式社交媒体内容创作工具，支持多平台发布、AI 辅助写作',
         url: window.location.href
       };
