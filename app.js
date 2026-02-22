@@ -2274,6 +2274,26 @@ function initPwa() {
   }
 }
 
+function initStaggerReveal() {
+  const reveals = document.querySelectorAll(".layout .reveal");
+  reveals.forEach((el, i) => {
+    el.style.animationDelay = `${i * 0.05}s`;
+  });
+}
+
+function initWordCount() {
+  const evidence = $("evidence");
+  const counter = $("evidenceWordCount");
+  if (!evidence || !counter) return;
+  const update = () => {
+    const text = evidence.value.trim();
+    const count = text ? text.replace(/\s+/g, "").length : 0;
+    counter.textContent = `${count} 字`;
+  };
+  evidence.addEventListener("input", update);
+  update();
+}
+
 function init() {
   decorateSectionHeadings();
   renderChecklist();
@@ -2288,6 +2308,8 @@ function init() {
   renderRecentSignals();
   bindEvents();
   refreshHotTopics(false);
+  initStaggerReveal();
+  initWordCount();
   initPwa();
 }
 

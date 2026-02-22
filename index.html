@@ -95,24 +95,24 @@
     <header class="hero">
       <div class="hero-main">
         <div class="hero-intro">
-          <p class="eyebrow">X CREATOR WORKBENCH</p>
+          <p class="eyebrow">X 创作者工作台</p>
           <h1>X Articles Studio</h1>
           <p class="subtitle">
-            把选题、写作、分发、订阅变现和发布动作整合成一套可复用工作流。适配手机与桌面，可安装为 PWA。
+            30 秒生成完整内容方案，从选题到发布一站搞定。适配手机与桌面，可安装为 <span title="渐进式网页应用：可以安装到手机桌面、像 App 一样使用的网页">PWA</span>。
           </p>
           <div class="hero-badges">
-            <span class="hero-badge">15 个模块闭环</span>
-            <span class="hero-badge">草稿共享到多平台</span>
-            <span class="hero-badge">支持自动化索引</span>
+            <span class="hero-badge">免费使用</span>
+            <span class="hero-badge">无需注册</span>
+            <span class="hero-badge">支持 5+ 内容平台</span>
           </div>
         </div>
         <aside class="hero-panel">
-          <h2>发布飞轮</h2>
+          <h2>发布流程一览</h2>
           <ul>
-            <li>输入定位与证据素材</li>
-            <li>生成标题、长文、Thread 与 72h 分发</li>
+            <li>填写主题、受众与证据素材</li>
+            <li>生成标题、长文、<span title="话题串：将一篇长文拆成多条连续推文发布">Thread</span> 与 <span title="发布后 72 小时内的系统化推广节奏">72h 分发</span>计划</li>
             <li>同步改写到公众号 / 知乎 / B 站 / 小红书</li>
-            <li>审核、热点、复盘与项目索引自动沉淀</li>
+            <li>审核检查、热点追踪、复盘记录自动归档</li>
           </ul>
           <div class="hero-kpis">
             <article><strong>72h</strong><span>分发窗口</span></article>
@@ -122,6 +122,9 @@
         </aside>
       </div>
       <div class="hero-actions">
+        <a href="#module-inputs" class="btn btn-cta">
+          <span class="btn-inner"><svg class="btn-icon"><use href="#i-spark"></use></svg><span>立即开始创作 &rarr;</span></span>
+        </a>
         <button id="fillSampleBtn" class="btn btn-ghost">
           <span class="btn-inner"><svg class="btn-icon"><use href="#i-spark"></use></svg><span>填充示例</span></span>
         </button>
@@ -154,33 +157,56 @@
     </header>
 
     <main class="layout">
+      <section class="quick-start-guide reveal">
+        <h2 class="quick-start-title">3 步快速开始</h2>
+        <div class="quick-start-steps">
+          <article class="quick-step">
+            <span class="step-number">1</span>
+            <h3>填写主题</h3>
+            <p>输入你想写的主题、目标人群和核心观点</p>
+          </article>
+          <span class="step-arrow">&rarr;</span>
+          <article class="quick-step">
+            <span class="step-number">2</span>
+            <h3>生成内容</h3>
+            <p>一键生成标题、文章、Thread 与分发计划</p>
+          </article>
+          <span class="step-arrow">&rarr;</span>
+          <article class="quick-step">
+            <span class="step-number">3</span>
+            <h3>发布到平台</h3>
+            <p>改写为各平台版本，检查后直接发布</p>
+          </article>
+        </div>
+      </section>
+
       <section id="module-directory" class="card card-directory reveal">
-        <h2>0) 专业工作目录</h2>
-        <p class="muted no-top">把创作到发布拆成 4 个阶段，避免页面信息过载并保证执行顺序一致。</p>
+        <h2>功能导航</h2>
+        <p class="muted no-top">按「创作 - 分发 - 运营 - 决策」四阶段组织，快速找到你需要的功能。</p>
         <div class="directory-grid">
           <article class="directory-item">
-            <h3>创作核心</h3>
+            <h3>创作核心 <span class="tier-badge tier-core">必用</span></h3>
             <a href="#module-inputs">1. 创作输入</a>
             <a href="#module-title-hook">2. 标题与钩子</a>
             <a href="#module-article">3. 文章草稿</a>
             <a href="#module-thread">4. Thread 拆分</a>
           </article>
           <article class="directory-item">
-            <h3>分发与变现</h3>
+            <h3>分发与变现 <span class="tier-badge tier-pro">进阶</span></h3>
             <a href="#module-plan">5. 72 小时分发</a>
             <a href="#module-quality">6. 内容评分</a>
             <a href="#module-checklist">7. 发布前自检</a>
             <a href="#module-history">8. 历史版本</a>
           </article>
           <article class="directory-item">
-            <h3>多平台运营</h3>
+            <h3>多平台运营 <span class="tier-badge tier-pro">进阶</span></h3>
             <a href="#module-platforms">9. 多平台改写</a>
             <a href="#module-rules">10. 规则与案例</a>
             <a href="#module-automation">11. 自动化索引</a>
             <a href="#module-signals">12. X 官方信号</a>
           </article>
           <article class="directory-item">
-            <h3>增长决策</h3>
+            <h3>增长决策 <span class="tier-badge tier-expert">专业</span></h3>
             <a href="#module-hot">13. 热点雷达</a>
             <a href="#module-audit">14. 竞品审计</a>
             <a href="#module-model">15. 推演模型</a>
@@ -189,24 +215,24 @@
         </div>
       </section>
 
-      <section id="module-inputs" class="card card-inputs reveal">
+      <section id="module-inputs" class="card card-inputs card-featured reveal">
         <h2>1) 创作输入</h2>
         <div class="field-grid">
           <label>
             主题
-            <input id="topic" placeholder="例：AI 工具如何提升自由职业者收入" />
+            <input id="topic" placeholder="填写你要写的主题，如：AI 工具如何提升自由职业者收入" />
           </label>
           <label>
             目标人群
-            <input id="audience" placeholder="例：正在做副业的内容创作者" />
+            <input id="audience" placeholder="这篇文章写给谁看？如：正在做副业的内容创作者" />
           </label>
           <label>
             核心观点
-            <input id="thesis" placeholder="例：用流程化写作比灵感写作更容易放大收益" />
+            <input id="thesis" placeholder="你最想传达的一个观点，如：流程化写作比灵感写作更容易放大收益" />
           </label>
           <label>
-            读后动作
-            <input id="ctaGoal" placeholder="例：收藏本文并按清单发布第一篇文章" />
+            希望读者做什么
+            <input id="ctaGoal" placeholder="读完后你希望读者做什么？如：收藏本文并发布第一篇文章" />
           </label>
           <label>
             语气风格
@@ -219,17 +245,18 @@
           </label>
           <label>
             X 用户名（用于订阅链接）
-            <input id="username" placeholder="例：yourusername（不带@）" />
+            <input id="username" placeholder="你的 X 用户名（不带 @），用于生成订阅链接" />
           </label>
         </div>
 
         <label class="full-width">
-          证据素材（每行一条：数据 / 案例 / 亲历 / 对比）
+          证据素材（每行一条，如数据、案例、亲身经历或前后对比）
           <textarea
             id="evidence"
             rows="5"
             placeholder="例：\n- 过去 30 天发 8 篇长文，主页曝光增长 220%\n- 某篇通过 Thread 回流带来 34 个订阅"
           ></textarea>
+          <span id="evidenceWordCount" class="input-meta">0 字</span>
         </label>
 
         <div class="action-row">
@@ -238,34 +265,34 @@
         </div>
       </section>
 
-      <section id="module-title-hook" class="card reveal">
-        <h2>2) 标题与开头钩子</h2>
+      <section id="module-title-hook" class="card card-featured reveal">
+        <h2>2) 标题与开篇引语</h2>
         <div class="split">
           <article>
             <h3>标题候选</h3>
             <ol id="titlesOutput" class="output-list"></ol>
           </article>
           <article>
-            <h3>开头钩子</h3>
+            <h3>开篇引语<small title="开篇引语（Hook）：文章开头用来抓住读者注意力的第一句话" style="cursor:help;opacity:.6"> (?)</small></h3>
             <ul id="hooksOutput" class="output-list"></ul>
           </article>
         </div>
       </section>
 
-      <section id="module-article" class="card reveal">
-        <h2>3) 文章草稿（可扫读结构）</h2>
-        <textarea id="articleOutput" class="result-text" rows="24"></textarea>
+      <section id="module-article" class="card card-featured reveal">
+        <h2>3) 文章草稿</h2>
+        <textarea id="articleOutput" class="result-text" rows="24" placeholder="填写上方「创作输入」信息后，点击「生成整套内容」，完整文章草稿将显示在这里。"></textarea>
         <div class="action-row">
           <button id="copyArticleBtn" class="btn btn-secondary">复制文章</button>
         </div>
       </section>
 
       <section id="module-thread" class="card reveal">
-        <h2>4) Thread 拆分（5-12 条）</h2>
+        <h2>4) <span title="话题串：在 X 上将一篇长文拆成多条连续推文发布">Thread</span> 拆分（5-12 条推文）</h2>
         <div id="threadOutput" class="thread-list"></div>
         <div class="action-row">
           <button id="copyThreadBtn" class="btn btn-secondary">复制 Thread</button>
-          <button id="openThreadIntentBtn" class="btn btn-primary">打开 X 发首条 Thread</button>
+          <button id="openThreadIntentBtn" class="btn btn-primary">去 X 发布首条推文</button>
         </div>
       </section>
 
@@ -282,8 +309,8 @@
           </article>
         </div>
         <div class="action-row">
-          <button id="openTeaserIntentBtn" class="btn btn-secondary">打开 X 发预热帖</button>
-          <button id="openSubIntentBtn" class="btn btn-secondary">打开 X 发订阅引导帖</button>
+          <button id="openTeaserIntentBtn" class="btn btn-secondary">去 X 发布预热帖</button>
+          <button id="openSubIntentBtn" class="btn btn-secondary">去 X 发布订阅引导</button>
         </div>
       </section>
 
@@ -291,7 +318,7 @@
         <h2>6) 内容质量评分（实时）</h2>
         <div class="score-head">
           <div class="score-number"><span id="qualityScore">0</span><small>/100</small></div>
-          <span id="qualityTag" class="score-tag">待生成</span>
+          <span id="qualityTag" class="score-tag">请先生成内容</span>
         </div>
         <div class="score-bar">
           <span id="qualityBar"></span>
@@ -317,8 +344,8 @@
       </section>
 
       <section id="module-platforms" class="card reveal">
-        <h2>9) 多平台适配工作台（草稿共享）</h2>
-        <p class="muted no-top">默认读取上方 X 草稿，可共享到各平台做二次优化，并输出对应审核提醒。</p>
+        <h2>9) 多平台内容改写</h2>
+        <p class="muted no-top">基于上方 X 草稿，自动改写为各平台适合的版本，并给出对应的审核提醒。</p>
         <div class="platform-chooser" id="platformChooser">
           <label class="chip-option">
             <input type="checkbox" value="x" checked />
@@ -342,7 +369,7 @@
           </label>
         </div>
         <div class="action-row">
-          <button id="generatePlatformsBtn" class="btn btn-primary">基于当前草稿生成所选平台版本</button>
+          <button id="generatePlatformsBtn" class="btn btn-primary">生成所选平台版本</button>
           <button id="copyPlatformsBtn" class="btn btn-secondary">复制全部平台建议</button>
           <button id="clearPlatformsBtn" class="btn btn-ghost">清空平台输出</button>
         </div>
@@ -383,8 +410,8 @@
       </section>
 
       <section id="module-automation" class="card reveal">
-        <h2>11) 全局项目索引与技能自动化</h2>
-        <p class="muted no-top">每次新项目交付后执行一次，可自动写入全局索引，后续可快速检索。</p>
+        <h2>11) 项目归档与自动化</h2>
+        <p class="muted no-top">项目完成后自动归档记录，方便日后快速查找与复用。</p>
         <textarea id="automationCmdOutput" class="result-text" rows="9" readonly></textarea>
         <div class="action-row">
           <button id="copyAutomationCmdBtn" class="btn btn-secondary">复制索引命令</button>
@@ -393,14 +420,14 @@
       </section>
 
       <section id="module-signals" class="card reveal">
-        <h2>12) XCreators 近 30 天补充信号</h2>
-        <p class="muted no-top">用于补充文章策略中的最新官方方向（来源见每条末尾链接）。</p>
+        <h2>12) X 官方近 30 天动态</h2>
+        <p class="muted no-top">汇总 X 官方最新创作者政策与活动，帮助调整你的发布策略（来源见每条末尾链接）。</p>
         <ul id="recentSignalsOutput" class="output-list"></ul>
       </section>
 
       <section id="module-hot" class="card reveal">
-        <h2>13) 热点话题雷达（Beta）</h2>
-        <p class="muted no-top">支持“过去 48 小时 / 最近一周”窗口，默认拉取 X 中文话题、公众号热词、小红书热词（小红书需配置专用接口）。</p>
+        <h2>13) 热点话题追踪</h2>
+        <p class=”muted no-top”>查看过去 48 小时或最近一周的热门话题，覆盖 X 中文话题、公众号热词和小红书热词。</p>
         <div class="hot-toolbar">
           <label>
             时间窗口
@@ -435,7 +462,7 @@
       </section>
 
       <section id="module-model" class="card reveal">
-        <h2>15) 用户操作流 + 规则推演模型</h2>
+        <h2>15) 操作指南与规则模拟</h2>
         <div class="split">
           <article>
             <h3>高频操作流程（实操）</h3>
@@ -506,6 +533,29 @@
         <span>© 2026 X Articles Studio &nbsp;·&nbsp; Crafted by Giorgio</span>
       </p>
     </footer>
+
+    <nav class="mobile-dock">
+      <a href="#module-inputs" class="dock-item">
+        <svg class="dock-icon"><use href="#i-compose"></use></svg>
+        <span>创作</span>
+      </a>
+      <a href="#module-thread" class="dock-item">
+        <svg class="dock-icon"><use href="#i-thread"></use></svg>
+        <span>Thread</span>
+      </a>
+      <a href="#module-platforms" class="dock-item">
+        <svg class="dock-icon"><use href="#i-layers"></use></svg>
+        <span>平台</span>
+      </a>
+      <a href="/md-lab" class="dock-item">
+        <svg class="dock-icon"><use href="#i-document"></use></svg>
+        <span>排版</span>
+      </a>
+      <a href="#module-directory" class="dock-item">
+        <svg class="dock-icon"><use href="#i-layers"></use></svg>
+        <span>导航</span>
+      </a>
+    </nav>
 
     <script src="/app.js?v=20260222-1" defer></script>
   </body>

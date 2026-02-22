@@ -66,20 +66,19 @@
     <header class="hero">
       <a class="back-link" href="/">
         <svg><use href="#i-back"></use></svg>
-        <span>返回主控台</span>
+        <span>返回主页</span>
       </a>
       <h1>
         <svg class="title-icon"><use href="#i-md"></use></svg>
         <span>AiX Markdown 排版工坊</span>
       </h1>
       <p>
-        参考 <a href="https://github.com/doocs/md" target="_blank" rel="noopener noreferrer">doocs/md</a>
-        的思路进行二次创作，专注「长文排版 + 多平台适配 + 二创优化」。
+        专注长文排版与多平台适配的 <span title="一种轻量级标记语言，用简单符号来格式化文本">Markdown</span> 编辑工具，支持一键改写优化。
       </p>
       <div class="hero-actions">
         <button id="importMainDraftBtn" class="btn btn-secondary">
           <svg><use href="#i-article"></use></svg>
-          <span>读取主工具草稿</span>
+          <span>导入主页草稿</span>
         </button>
         <a class="btn btn-secondary" href="/card-suite/index.html">
           <svg><use href="#i-remix"></use></svg>
@@ -96,7 +95,7 @@
     <main class="workspace">
       <section class="panel panel-editor">
         <h2><svg><use href="#i-article"></use></svg><span>Markdown 编辑区</span></h2>
-        <textarea id="markdownInput" spellcheck="false" placeholder="在这里粘贴你的长文 Markdown...\n\n支持标题、列表、引用、代码块、表格等常见语法。"></textarea>
+        <textarea id="markdownInput" spellcheck="false" placeholder="在这里粘贴或编写 Markdown 长文。支持标题、列表、引用、代码块、表格等语法。"></textarea>
         <div class="editor-meta">
           <span id="wordStats">字数 0 · 预计阅读 0 分钟</span>
           <span id="headingStats">标题 0 · 段落 0</span>
@@ -104,7 +103,7 @@
       </section>
 
       <aside class="panel panel-controls">
-        <h2><svg><use href="#i-setting"></use></svg><span>排版控制台</span></h2>
+        <h2><svg><use href="#i-setting"></use></svg><span>排版设置</span></h2>
 
         <div class="control-grid">
           <label>
@@ -147,7 +146,7 @@
         <div class="toggles">
           <label class="toggle-item">
             <input id="wechatFootnoteToggle" type="checkbox" checked />
-            <span>公众号外链转底部引用</span>
+            <span>自动将外链转为底部参考链接（适合公众号）</span>
           </label>
           <label class="toggle-item">
             <input id="imageCardToggle" type="checkbox" checked />
@@ -175,9 +174,9 @@
         </div>
 
         <div class="remix-box">
-          <h3><svg><use href="#i-remix"></use></svg><span>二次创作提示词</span></h3>
+          <h3><svg><use href="#i-remix"></use></svg><span>AI 改写提示词</span></h3>
           <label>
-            二创方向
+            改写方向
             <select id="remixModeSelect">
               <option value="structure">结构强化（逻辑更清楚）</option>
               <option value="story">故事化叙事（更有代入感）</option>
@@ -187,7 +186,7 @@
             </select>
           </label>
           <textarea id="remixPromptOutput" rows="8" readonly></textarea>
-          <button id="copyRemixPromptBtn" class="btn btn-ghost">复制二创提示词</button>
+          <button id="copyRemixPromptBtn" class="btn btn-ghost">复制 AI 改写提示词</button>
         </div>
       </aside>
 

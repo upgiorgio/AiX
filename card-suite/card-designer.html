@@ -45,7 +45,7 @@
           <span class="brand-badge">🎨</span>
           <div>
             <h1>卡片设计引擎 Card Designer</h1>
-            <p>模板、尺寸、拆分、预览、导出</p>
+            <p>选择模板与尺寸，拆分长文为多张卡片</p>
           </div>
         </div>
         <nav class="nav-links">
@@ -80,11 +80,11 @@
             </label>
             <label>
               作者
-              <input id="author" placeholder="例：Giorgio" />
+              <input id="author" placeholder="卡片上显示的作者名" />
             </label>
             <label>
               卡片标题
-              <input id="cardTitle" placeholder="例：为什么你的内容产出总是断档" />
+              <input id="cardTitle" placeholder="卡片大标题，如：为什么你的内容产出总是断档" />
             </label>
           </div>
 
@@ -94,10 +94,10 @@
           </label>
 
           <div class="actions">
-            <button class="btn" id="importDraftBtn">导入共享草稿</button>
-            <button class="btn btn-primary" id="splitBtn">自动拆分为多张</button>
-            <button class="btn" id="saveStateBtn">保存当前样式</button>
-            <button class="btn btn-warm" id="toPublishBtn">发送到发布中心</button>
+            <button class="btn" id="importDraftBtn">导入文案工场草稿</button>
+            <button class="btn btn-primary" id="splitBtn">自动拆分为多张卡片</button>
+            <button class="btn" id="saveStateBtn">保存样式到本地</button>
+            <button class="btn btn-warm" id="toPublishBtn">进入发布中心</button>
           </div>
         </section>
 
@@ -117,12 +117,12 @@
           </div>
           <div class="actions">
             <button class="btn btn-primary" id="exportPngBtn">导出当前PNG</button>
-            <button class="btn" id="copyJsonBtn">复制批量JSON</button>
-            <button class="btn" id="downloadJsonBtn">下载批量JSON</button>
+            <button class="btn" id="copyJsonBtn">复制卡片数据</button>
+            <button class="btn" id="downloadJsonBtn">下载卡片数据</button>
           </div>
 
           <h3>拆分结果</h3>
-          <p class="muted" id="splitMeta">暂无拆分结果。</p>
+          <p class="muted" id="splitMeta">拆分后的卡片将显示在这里</p>
           <div id="cardsGrid" class="cards-grid"></div>
         </section>
       </main>
