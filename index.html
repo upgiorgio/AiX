@@ -17,7 +17,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="/icon-192.svg" />
     <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="/styles.css?v=20260222-1" />
+    <link rel="stylesheet" href="/styles.css?v=20260225-2" />
   </head>
   <body>
     <div class="bg-orb bg-orb-a"></div>
@@ -144,17 +144,48 @@
           <span class="btn-inner"><svg class="btn-icon"><use href="#i-download"></use></svg><span>导出 Markdown</span></span>
         </button>
       </div>
-      <nav class="jump-nav">
-        <a href="#module-directory"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>工作目录</span></a>
-        <a href="/md-lab"><svg class="nav-icon"><use href="#i-document"></use></svg><span>排版工坊</span></a>
-        <a href="/card-suite/index.html"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>文案卡片套件</span></a>
-        <a href="#module-platforms"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>多平台改写</span></a>
-        <a href="#module-rules"><svg class="nav-icon"><use href="#i-shield"></use></svg><span>规则速查</span></a>
-        <a href="#module-hot"><svg class="nav-icon"><use href="#i-fire"></use></svg><span>热点雷达</span></a>
-        <a href="#module-audit"><svg class="nav-icon"><use href="#i-chart"></use></svg><span>竞品审计</span></a>
-        <a href="#module-model"><svg class="nav-icon"><use href="#i-beaker"></use></svg><span>推演模型</span></a>
-      </nav>
     </header>
+
+    <nav class="jump-nav" id="jumpNav">
+      <a href="#module-inputs"><svg class="nav-icon"><use href="#i-compose"></use></svg><span>创作输入</span></a>
+      <a href="#module-directory"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>工作目录</span></a>
+      <a href="#module-platforms"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>多平台改写</span></a>
+      <a href="#module-rules"><svg class="nav-icon"><use href="#i-shield"></use></svg><span>规则速查</span></a>
+      <a href="#module-hot"><svg class="nav-icon"><use href="#i-fire"></use></svg><span>热点雷达</span></a>
+      <a href="#module-audit"><svg class="nav-icon"><use href="#i-chart"></use></svg><span>竞品审计</span></a>
+      <a href="#module-model"><svg class="nav-icon"><use href="#i-beaker"></use></svg><span>推演模型</span></a>
+      <a href="/md-lab"><svg class="nav-icon"><use href="#i-document"></use></svg><span>排版工坊</span></a>
+      <a href="/card-suite/index.html"><svg class="nav-icon"><use href="#i-layers"></use></svg><span>卡片套件</span></a>
+    </nav>
+
+    <div class="wizard-bar" id="wizardBar">
+      <div class="wizard-steps">
+        <div class="wizard-step is-current" data-step="1">
+          <div class="wizard-dot"><span class="wizard-dot-inner">1</span></div>
+          <span class="wizard-label">填写主题</span>
+        </div>
+        <div class="wizard-connector"></div>
+        <div class="wizard-step is-future" data-step="2">
+          <div class="wizard-dot"><span class="wizard-dot-inner">2</span></div>
+          <span class="wizard-label">生成内容</span>
+        </div>
+        <div class="wizard-connector"></div>
+        <div class="wizard-step is-future" data-step="3">
+          <div class="wizard-dot"><span class="wizard-dot-inner">3</span></div>
+          <span class="wizard-label">审阅编辑</span>
+        </div>
+        <div class="wizard-connector"></div>
+        <div class="wizard-step is-future" data-step="4">
+          <div class="wizard-dot"><span class="wizard-dot-inner">4</span></div>
+          <span class="wizard-label">平台改写</span>
+        </div>
+        <div class="wizard-connector"></div>
+        <div class="wizard-step is-future" data-step="5">
+          <div class="wizard-dot"><span class="wizard-dot-inner">5</span></div>
+          <span class="wizard-label">归档发布</span>
+        </div>
+      </div>
+    </div>
 
     <main class="layout">
       <section class="quick-start-guide reveal">
@@ -260,7 +291,7 @@
         </label>
 
         <div class="action-row">
-          <button id="generateBtn" class="btn btn-primary">生成整套内容</button>
+          <button id="generateBtn" class="btn btn-primary" title="快捷键: Ctrl+Enter / Cmd+Enter">生成整套内容 <kbd class="btn-kbd" id="shortcutHint">⌘↵</kbd></button>
           <button id="resetBtn" class="btn btn-ghost">清空</button>
         </div>
       </section>
@@ -281,6 +312,12 @@
 
       <section id="module-article" class="card card-featured reveal">
         <h2>3) 文章草稿</h2>
+        <div class="version-tabs" id="versionTabs">
+          <button class="version-tab is-active" data-version="A">A</button>
+          <button class="version-tab" data-version="B">B</button>
+          <button class="version-tab" data-version="C">C</button>
+          <button id="regenArticleBtn" class="btn btn-xs btn-secondary" title="重新生成当前版本">重新生成</button>
+        </div>
         <textarea id="articleOutput" class="result-text" rows="24" placeholder="填写上方「创作输入」信息后，点击「生成整套内容」，完整文章草稿将显示在这里。"></textarea>
         <div class="action-row">
           <button id="copyArticleBtn" class="btn btn-secondary">复制文章</button>
@@ -346,25 +383,28 @@
       <section id="module-platforms" class="card reveal">
         <h2>9) 多平台内容改写</h2>
         <p class="muted no-top">基于上方 X 草稿，自动改写为各平台适合的版本，并给出对应的审核提醒。</p>
+        <div class="platform-select-all">
+          <button id="platformToggleAll" class="btn btn-xs btn-ghost">全选</button>
+        </div>
         <div class="platform-chooser" id="platformChooser">
           <label class="chip-option">
             <input type="checkbox" value="x" checked />
             <span>X</span>
           </label>
           <label class="chip-option">
-            <input type="checkbox" value="wechat" checked />
+            <input type="checkbox" value="wechat" />
             <span>公众号</span>
           </label>
           <label class="chip-option">
-            <input type="checkbox" value="zhihu" checked />
+            <input type="checkbox" value="zhihu" />
             <span>知乎</span>
           </label>
           <label class="chip-option">
-            <input type="checkbox" value="bilibili" checked />
+            <input type="checkbox" value="bilibili" />
             <span>哔哩哔哩</span>
           </label>
           <label class="chip-option">
-            <input type="checkbox" value="xiaohongshu" checked />
+            <input type="checkbox" value="xiaohongshu" />
             <span>小红书</span>
           </label>
         </div>
@@ -557,6 +597,7 @@
       </a>
     </nav>
 
-    <script src="/app.js?v=20260222-1" defer></script>
+    <script src="/card-suite/ai-gateway.js?v=20260225-2" defer></script>
+    <script src="/app.js?v=20260225-2" defer></script>
   </body>
 </html>

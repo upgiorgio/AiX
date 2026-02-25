@@ -301,12 +301,25 @@ h1 {
 }
 
 .jump-nav {
-  margin-top: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 10px 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 9px;
-  position: relative;
-  z-index: 1;
+  background: rgba(7, 14, 26, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(89, 196, 255, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.jump-nav.is-stuck {
+  box-shadow: 0 4px 24px rgba(2, 10, 20, 0.55);
+  border-bottom-color: rgba(89, 196, 255, 0.18);
 }
 
 .jump-nav a {
@@ -327,6 +340,12 @@ h1 {
   border-color: rgba(160, 211, 246, 0.62);
   background: rgba(17, 43, 70, 0.84);
   transform: translateY(-1px);
+}
+
+.jump-nav a.is-active {
+  border-color: var(--brand);
+  background: rgba(89, 196, 255, 0.14);
+  color: var(--brand);
 }
 
 .jump-nav .nav-icon {
@@ -1573,4 +1592,520 @@ textarea {
   background: rgba(255, 184, 100, 0.12);
   color: var(--accent-warm);
   border: 1px solid rgba(255, 184, 100, 0.25);
+}
+
+/* ─── Phase 1: Collapse Empty Modules ────────────────── */
+.module-collapsed {
+  max-height: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  border-color: transparent !important;
+  overflow: hidden !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height 0.45s ease, padding 0.3s ease, opacity 0.35s ease, margin-top 0.3s ease, border-color 0.3s ease;
+}
+
+.module-collapsed::before {
+  display: none;
+}
+
+.module-expanded {
+  opacity: 1;
+  transition: max-height 0.55s ease, padding 0.3s ease, opacity 0.4s ease 0.08s;
+}
+
+/* ─── Phase 1: Button Loading Spinner ────────────────── */
+.btn-loading {
+  pointer-events: none;
+  opacity: 0.72;
+  position: relative;
+}
+
+.btn-loading .btn-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: btn-spin 0.6s linear infinite;
+  margin-right: 6px;
+  vertical-align: middle;
+  flex: none;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+.btn-kbd {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 5px;
+  font-size: 0.7em;
+  font-family: inherit;
+  opacity: 0.5;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+/* ─── Phase 1: Form Validation ───────────────────────── */
+.field-invalid {
+  border-color: var(--danger) !important;
+  box-shadow: 0 0 0 3px rgba(255, 138, 138, 0.22) !important;
+  animation: field-shake 0.4s ease;
+}
+
+@keyframes field-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(2px); }
+}
+
+.field-invalid-hint {
+  color: var(--danger);
+  font-size: 0.8rem;
+  margin-top: 3px;
+  opacity: 0.92;
+}
+
+/* ─── Phase 1: Toast Notification Upgrade ────────────── */
+.toast {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  background: rgba(14, 45, 66, 0.96);
+  color: #eaf6ff;
+  padding: 11px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(140, 231, 255, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  font-size: 0.88rem;
+  backdrop-filter: blur(10px);
+  animation: toast-in 0.3s ease, toast-out 0.3s ease 2.2s forwards;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toast-success { border-color: rgba(113, 217, 171, 0.45); }
+.toast-error { border-color: rgba(255, 138, 138, 0.45); color: #ffd1d1; }
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes toast-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+/* ─── Phase 1: Next Step CTA Banner ─────────────────── */
+.next-step-banner {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border: 1px solid rgba(113, 217, 171, 0.32);
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(14, 50, 40, 0.6) 0%, rgba(10, 30, 45, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.next-step-banner .next-step-text {
+  font-size: 0.9rem;
+  color: #c6ffe4;
+}
+
+.next-step-banner .btn {
+  flex: none;
+}
+
+/* ─── Phase 1: Disabled btn styling ──────────────────── */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ─── Phase 2: Wizard Progress Bar ──────────────────── */
+.wizard-bar {
+  max-width: 1240px;
+  margin: 10px auto 0;
+  padding: 12px 24px;
+  background: rgba(7, 14, 26, 0.88);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+}
+
+.wizard-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.wizard-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+  min-width: 72px;
+}
+
+.wizard-step.is-future {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.wizard-step.is-completed {
+  cursor: pointer;
+}
+
+.wizard-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(160, 211, 246, 0.3);
+  background: rgba(7, 18, 31, 0.7);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+.wizard-dot-inner {
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.wizard-step.is-current .wizard-dot {
+  border-color: var(--brand);
+  background: rgba(89, 196, 255, 0.15);
+  transform: scale(1.1);
+}
+
+.wizard-step.is-current .wizard-dot-inner {
+  color: var(--brand);
+}
+
+.wizard-step.is-completed .wizard-dot {
+  border-color: var(--ok);
+  background: rgba(113, 217, 171, 0.15);
+}
+
+.wizard-step.is-completed .wizard-dot-inner {
+  color: var(--ok);
+}
+
+.wizard-label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.wizard-step.is-current .wizard-label {
+  color: var(--brand);
+  font-weight: 500;
+}
+
+.wizard-step.is-completed .wizard-label {
+  color: var(--ok);
+}
+
+.wizard-connector {
+  flex: 1;
+  max-width: 80px;
+  min-width: 24px;
+  height: 2px;
+  background: rgba(160, 211, 246, 0.18);
+  border-radius: 2px;
+  margin: 0 4px;
+  margin-bottom: 20px;
+  transition: background 0.4s ease;
+}
+
+.wizard-connector.is-active {
+  background: linear-gradient(90deg, var(--ok), rgba(89, 196, 255, 0.6));
+}
+
+/* ─── Phase 2: Version Tabs ─────────────────────────── */
+.version-tabs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.version-tab {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid rgba(160, 211, 246, 0.28);
+  background: rgba(7, 18, 31, 0.6);
+  color: var(--muted);
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.version-tab:hover {
+  border-color: rgba(160, 211, 246, 0.5);
+  background: rgba(14, 37, 58, 0.7);
+  transform: translateY(-1px);
+}
+
+.version-tab.is-active {
+  border-color: var(--brand);
+  background: rgba(89, 196, 255, 0.14);
+  color: var(--brand);
+}
+
+.version-tab.has-content {
+  border-color: rgba(113, 217, 171, 0.4);
+  position: relative;
+}
+
+.version-tab.has-content::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ok);
+}
+
+/* ─── Phase 2: Generation Summary Card ──────────────── */
+.gen-summary {
+  border: 1px solid rgba(113, 217, 171, 0.3);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(155deg, rgba(14, 50, 40, 0.5) 0%, rgba(10, 25, 40, 0.75) 100%);
+  box-shadow: var(--shadow-md);
+  padding: 18px;
+  margin-bottom: 14px;
+  animation: rise 0.45s ease forwards;
+}
+
+.gen-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.gen-summary-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #c6ffe4;
+}
+
+.gen-summary-dismiss {
+  border: 1px solid rgba(160, 211, 246, 0.25);
+  border-radius: 8px;
+  background: rgba(7, 18, 31, 0.5);
+  color: var(--muted);
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.gen-summary-dismiss:hover {
+  border-color: rgba(160, 211, 246, 0.5);
+  color: var(--text);
+}
+
+.gen-summary-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.gen-stat {
+  border: 1px solid rgba(156, 202, 232, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(4, 14, 25, 0.5);
+  text-align: center;
+}
+
+.gen-stat-value {
+  display: block;
+  font-family: "Space Grotesk", "Noto Sans SC", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #b5e2ff;
+  line-height: 1;
+}
+
+.gen-stat-value small {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.gen-stat-label {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.gen-summary-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.gen-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border: 1px solid rgba(160, 211, 246, 0.28);
+  border-radius: 999px;
+  background: rgba(7, 19, 34, 0.6);
+  color: #dcf2ff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.gen-pill:hover {
+  border-color: rgba(160, 211, 246, 0.55);
+  background: rgba(17, 43, 70, 0.7);
+  transform: translateY(-1px);
+}
+
+/* ─── Phase 2: Stop Button ──────────────────────────── */
+.btn-stop {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee4444 100%) !important;
+  border-color: rgba(255, 138, 138, 0.6) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 24px rgba(238, 68, 68, 0.25);
+}
+
+.btn-stop:hover {
+  box-shadow: 0 12px 28px rgba(238, 68, 68, 0.35);
+}
+
+.btn-stop-icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 2px;
+  margin-right: 7px;
+  flex: none;
+}
+
+/* ─── Phase 2: Platform Select All ──────────────────── */
+.platform-select-all {
+  margin-bottom: 6px;
+}
+
+.btn-xs {
+  padding: 5px 10px;
+  font-size: 0.78rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 980px) {
+  .gen-summary-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .wizard-bar {
+    margin: 8px 14px 0;
+    padding: 10px 14px;
+  }
+
+  .wizard-step {
+    min-width: 56px;
+  }
+
+  .wizard-label {
+    font-size: 0.66rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .btn-kbd { display: none; }
+
+  .jump-nav {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .toast {
+    right: 12px;
+    bottom: 80px;
+    left: 12px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .wizard-bar {
+    margin: 6px 8px 0;
+    padding: 8px 10px;
+    border-radius: var(--radius-md);
+  }
+
+  .wizard-dot {
+    width: 26px;
+    height: 26px;
+  }
+
+  .wizard-dot-inner {
+    font-size: 0.72rem;
+  }
+
+  .wizard-label {
+    font-size: 0.62rem;
+  }
+
+  .wizard-connector {
+    min-width: 12px;
+  }
+
+  .gen-summary-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .version-tab {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
 }

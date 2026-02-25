@@ -36,16 +36,17 @@ async function aiGenerate(prompt, { system = "", fast = false } = {}) {
 }
 
 /* ── Core: stream (SSE) ── */
-async function aiStream(prompt, { system = "", onChunk, onDone, onError, fast = false } = {}) {
+async function aiStream(prompt, { system = "", onChunk, onDone, onError, fast = false, signal } = {}) {
   const s = getAISettings();
   if (s.provider === "openai" && s.openaiKey) {
-    return streamOpenAI(prompt, { system, key: s.openaiKey, model: s.model || "gpt-4o-mini", onChunk, onDone, onError });
+    return streamOpenAI(prompt, { system, key: s.openaiKey, model: s.model || "gpt-4o-mini", onChunk, onDone, onError, signal });
   }
   try {
     const res = await fetch(`${AI_WORKER}/ai/stream`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt, system, fast }),
+      signal,
     });
     if (!res.ok) { onError?.("连接失败 " + res.status); return; }
     const reader = res.body.getReader();
@@ -100,7 +101,7 @@ async function callOpenAI(prompt, { system, key, model }) {
   return data.choices[0]?.message?.content || "";
 }
 
-async function streamOpenAI(prompt, { system, key, model, onChunk, onDone, onError }) {
+async function streamOpenAI(prompt, { system, key, model, onChunk, onDone, onError, signal }) {
   const messages = [];
   if (system) messages.push({ role: "system", content: system });
   messages.push({ role: "user", content: prompt });
@@ -109,6 +110,7 @@ async function streamOpenAI(prompt, { system, key, model, onChunk, onDone, onErr
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
       body: JSON.stringify({ model, messages, max_tokens: 2048, stream: true }),
+      signal,
     });
     if (!res.ok) { onError?.("OpenAI error " + res.status); return; }
     const reader = res.body.getReader();

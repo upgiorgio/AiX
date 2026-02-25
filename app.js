@@ -38,7 +38,10 @@ const state = {
   quality: null,
   platformPackages: {},
   hotTopics: null,
-  modelResult: null
+  modelResult: null,
+  articleVersions: { A: "", B: "", C: "" },
+  activeVersion: "A",
+  wizardStep: 1
 };
 
 const platformProfiles = {
@@ -1634,6 +1637,7 @@ function generatePlatformPackages(showFlash = true) {
   state.platformPackages = output;
   renderPlatformCards(state.platformPackages);
   if (showFlash) flash("平台版本已生成");
+  if (showFlash && Object.keys(output).length && state.wizardStep < 5) updateWizardStep(5);
 }
 
 function copyPlatformPackages() {
@@ -1823,24 +1827,491 @@ function updateQuality() {
   renderQuality(quality);
 }
 
-function generateAll() {
+/* ─── Phase 1: Collapse / Expand Output Modules ────── */
+const OUTPUT_MODULE_IDS = [
+  "module-title-hook", "module-article", "module-thread",
+  "module-plan", "module-quality", "module-checklist"
+];
+
+function collapseOutputModules() {
+  OUTPUT_MODULE_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.add("module-collapsed");
+      el.classList.remove("module-expanded");
+    }
+  });
+}
+
+function expandOutputModules() {
+  OUTPUT_MODULE_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.remove("module-collapsed");
+      el.classList.add("module-expanded");
+    }
+  });
+  setTimeout(() => {
+    document.getElementById("module-title-hook")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 120);
+}
+
+/* ─── Phase 1: Button Loading State ────────────────── */
+function setGenerateBtnLoading(isLoading) {
+  const btn = $("generateBtn");
+  if (isLoading) {
+    btn.disabled = true;
+    btn.classList.add("btn-loading");
+    btn._origHTML = btn.innerHTML;
+    btn.innerHTML = '<span class="btn-spinner"></span>生成中...';
+  } else {
+    btn.disabled = false;
+    btn.classList.remove("btn-loading");
+    if (btn._origHTML) btn.innerHTML = btn._origHTML;
+  }
+}
+
+/* ─── Phase 1: Form Validation ─────────────────────── */
+function validateRequiredFields() {
+  const topicEl = $("topic");
+  const value = topicEl.value.trim();
+
+  topicEl.classList.remove("field-invalid");
+  const oldHint = topicEl.parentElement.querySelector(".field-invalid-hint");
+  if (oldHint) oldHint.remove();
+
+  if (!value) {
+    topicEl.classList.add("field-invalid");
+    const hint = document.createElement("span");
+    hint.className = "field-invalid-hint";
+    hint.textContent = "请填写主题后再生成";
+    topicEl.parentElement.appendChild(hint);
+    topicEl.focus();
+    setTimeout(() => {
+      topicEl.classList.remove("field-invalid");
+      if (hint.parentElement) hint.remove();
+    }, 3500);
+    return false;
+  }
+  return true;
+}
+
+/* ─── Phase 1: AI Article Prompt Builder ───────────── */
+function buildArticlePrompt(input) {
+  const evidenceLines = input.evidence.length
+    ? input.evidence.map((e, i) => `${i + 1}. ${e}`).join("\n")
+    : "暂无证据素材";
+
+  return `请为以下选题写一篇完整的 X 长文（1500-3000 字），使用 Markdown 格式：
+
+主题：${input.topic}
+目标读者：${input.audience}
+核心观点：${input.thesis}
+读后动作：${input.ctaGoal}
+语气风格：${input.tone}
+证据素材：
+${evidenceLines}
+
+要求：
+1. 标题使用 # 一级标题
+2. 用 ## 分 4-6 个段落小标题
+3. 首段给出结论或冲突，不写背景
+4. 每段 2-4 行，高密度信息用列表
+5. 每个核心观点至少配一个证据
+6. 结尾给明确的行动建议
+7. 直接输出文章内容，不要加任何解释`;
+}
+
+/* ─── Phase 1: Next Step Banner ────────────────────── */
+function showNextStepBanner() {
+  const existing = document.getElementById("nextStepBanner");
+  if (existing) existing.remove();
+
+  const banner = document.createElement("div");
+  banner.id = "nextStepBanner";
+  banner.className = "next-step-banner";
+  banner.innerHTML = `
+    <span class="next-step-text">内容已生成完毕，接下来你可以：</span>
+    <a href="#module-platforms" class="btn btn-secondary" style="font-size:0.84rem">多平台改写</a>
+    <a href="/md-lab" class="btn btn-secondary" style="font-size:0.84rem">去排版工坊</a>
+    <a href="/card-suite/copy-studio.html" class="btn btn-primary" style="font-size:0.84rem">做文案卡片</a>
+  `;
+
+  const checklistSection = document.getElementById("module-checklist");
+  if (checklistSection) {
+    checklistSection.after(banner);
+  }
+}
+
+/* ─── Phase 2: AI Cancel + Timeout ─────────────────── */
+let generateAbortController = null;
+let generateTimeoutId = null;
+const GENERATE_TIMEOUT_MS = 30000;
+
+function setGenerateBtnStop(isStreaming) {
+  const btn = $("generateBtn");
+  if (isStreaming) {
+    btn._origHTML = btn._origHTML || btn.innerHTML;
+    btn.disabled = false;
+    btn.classList.remove("btn-loading", "btn-primary");
+    btn.classList.add("btn-stop");
+    btn.innerHTML = '<span class="btn-stop-icon"></span>停止生成';
+    btn._isStop = true;
+  } else {
+    btn.classList.remove("btn-stop");
+    btn.classList.add("btn-primary");
+    btn._isStop = false;
+    if (btn._origHTML) btn.innerHTML = btn._origHTML;
+    btn.disabled = false;
+  }
+}
+
+function cancelGeneration(reason) {
+  if (generateAbortController) {
+    generateAbortController.abort();
+    generateAbortController = null;
+  }
+  if (generateTimeoutId) {
+    clearTimeout(generateTimeoutId);
+    generateTimeoutId = null;
+  }
+  const articleEl = $("articleOutput");
+  const partialText = (articleEl.value || "").replace(/ ▋$/, "");
+  articleEl.value = partialText;
+  state.article = partialText;
+  state.articleVersions[state.activeVersion] = partialText;
+
+  setGenerateBtnStop(false);
+  setGenerateBtnLoading(false);
+
+  if (reason === "timeout") {
+    flash("生成超时（30 秒），已保留已生成内容", "error");
+  } else {
+    flash("已停止生成，保留已有内容");
+  }
+  if (partialText.length > 50) {
+    state.thread = splitThread(partialText);
+    renderThread(state.thread);
+    updateQuality();
+    updateWizardStep(3);
+  }
+}
+
+/* ─── Phase 2: A/B/C Version Tabs ──────────────────── */
+function initVersionTabs() {
+  const tabs = document.getElementById("versionTabs");
+  if (!tabs) return;
+  tabs.addEventListener("click", (e) => {
+    const tab = e.target.closest(".version-tab");
+    if (!tab) return;
+    switchVersion(tab.dataset.version);
+  });
+}
+
+function switchVersion(version) {
+  state.articleVersions[state.activeVersion] = $("articleOutput").value;
+  state.activeVersion = version;
+  $("articleOutput").value = state.articleVersions[version] || "";
+  state.article = state.articleVersions[version] || "";
+
+  document.querySelectorAll(".version-tab").forEach(t => {
+    t.classList.toggle("is-active", t.dataset.version === version);
+    const v = t.dataset.version;
+    t.classList.toggle("has-content", v !== version && (state.articleVersions[v] || "").trim().length > 0);
+  });
+  updateQuality();
+}
+
+async function regenCurrentVersion() {
   const input = readInput();
+  if (!input.topic.trim() || input.topic === "你的主题") {
+    flash("请先填写主题", "error");
+    return;
+  }
+  const btn = $("regenArticleBtn");
+  btn.disabled = true;
+  btn.classList.add("btn-loading");
+  const origHTML = btn.innerHTML;
+  btn.innerHTML = '<span class="btn-spinner"></span>生成中...';
+
+  if (window.AiGateway) {
+    const articleEl = $("articleOutput");
+    articleEl.value = "";
+    const prompt = buildArticlePrompt(input);
+    const system = "你是专业的 X 平台长文创作者，擅长结构化写作。直接输出 Markdown 格式的文章，不加任何解释。";
+    let full = "";
+    try {
+      await window.AiGateway.stream(prompt, {
+        system,
+        onChunk(chunk) {
+          full += chunk;
+          articleEl.value = full + " ▋";
+          articleEl.scrollTop = articleEl.scrollHeight;
+        },
+        onDone() {
+          articleEl.value = full;
+          state.articleVersions[state.activeVersion] = full;
+          state.article = full;
+          state.thread = splitThread(full);
+          renderThread(state.thread);
+          updateQuality();
+          btn.disabled = false;
+          btn.classList.remove("btn-loading");
+          btn.innerHTML = origHTML;
+          flash(`版本 ${state.activeVersion} 已重新生成`, "success");
+        },
+        onError() {
+          const fb = buildArticle(input, state.titles, state.hooks);
+          articleEl.value = fb;
+          state.articleVersions[state.activeVersion] = fb;
+          state.article = fb;
+          btn.disabled = false;
+          btn.classList.remove("btn-loading");
+          btn.innerHTML = origHTML;
+          flash("AI 连接失败，使用本地模板", "error");
+        }
+      });
+    } catch (_) {
+      const fb = buildArticle(input, state.titles, state.hooks);
+      $("articleOutput").value = fb;
+      state.articleVersions[state.activeVersion] = fb;
+      state.article = fb;
+      btn.disabled = false;
+      btn.classList.remove("btn-loading");
+      btn.innerHTML = origHTML;
+    }
+  } else {
+    const fb = buildArticle(input, state.titles, state.hooks);
+    $("articleOutput").value = fb;
+    state.articleVersions[state.activeVersion] = fb;
+    state.article = fb;
+    btn.disabled = false;
+    btn.classList.remove("btn-loading");
+    btn.innerHTML = origHTML;
+  }
+}
+
+/* ─── Phase 2: Smart Platform Defaults ─────────────── */
+const PLATFORM_PREF_KEY = "aix-platform-selection-v1";
+
+function savePlatformSelection() {
+  const cbs = document.querySelectorAll("#platformChooser input[type='checkbox']");
+  const selected = Array.from(cbs).filter(cb => cb.checked).map(cb => cb.value);
+  localStorage.setItem(PLATFORM_PREF_KEY, JSON.stringify(selected));
+}
+
+function restorePlatformSelection() {
+  const raw = localStorage.getItem(PLATFORM_PREF_KEY);
+  if (!raw) return;
+  const saved = safeParse(raw, null);
+  if (!saved) return;
+  const cbs = document.querySelectorAll("#platformChooser input[type='checkbox']");
+  cbs.forEach(cb => { cb.checked = saved.includes(cb.value); });
+}
+
+function toggleAllPlatforms() {
+  const cbs = document.querySelectorAll("#platformChooser input[type='checkbox']");
+  const allChecked = Array.from(cbs).every(cb => cb.checked);
+  cbs.forEach(cb => { cb.checked = !allChecked; });
+  updateToggleAllLabel();
+  savePlatformSelection();
+}
+
+function updateToggleAllLabel() {
+  const cbs = document.querySelectorAll("#platformChooser input[type='checkbox']");
+  const allChecked = Array.from(cbs).every(cb => cb.checked);
+  const btn = $("platformToggleAll");
+  if (btn) btn.textContent = allChecked ? "取消全选" : "全选";
+}
+
+/* ─── Phase 2: Generation Summary Card ─────────────── */
+function showGenerationSummary() {
+  const existing = document.getElementById("genSummary");
+  if (existing) existing.remove();
+
+  const article = state.article || "";
+  const wordCount = article.replace(/\s+/g, "").length;
+  const threadCount = state.thread.length;
+  const qualityScore = state.quality ? state.quality.total : 0;
+  const qualityTag = state.quality ? state.quality.tag : "—";
+
+  const card = document.createElement("section");
+  card.id = "genSummary";
+  card.className = "gen-summary";
+  card.innerHTML = `
+    <div class="gen-summary-header">
+      <span class="gen-summary-title">
+        <svg style="width:18px;height:18px;color:var(--ok)"><use href="#i-check"></use></svg>
+        生成完成
+      </span>
+      <button class="gen-summary-dismiss" id="genSummaryDismiss">收起</button>
+    </div>
+    <div class="gen-summary-stats">
+      <div class="gen-stat"><span class="gen-stat-value">${wordCount}</span><span class="gen-stat-label">文章字数</span></div>
+      <div class="gen-stat"><span class="gen-stat-value">${threadCount}</span><span class="gen-stat-label">Thread 条数</span></div>
+      <div class="gen-stat"><span class="gen-stat-value">${qualityScore}<small>/100</small></span><span class="gen-stat-label">质量评分</span></div>
+      <div class="gen-stat"><span class="gen-stat-value">${qualityTag}</span><span class="gen-stat-label">评级</span></div>
+    </div>
+    <div class="gen-summary-pills">
+      <a href="#module-title-hook" class="gen-pill">标题与钩子</a>
+      <a href="#module-article" class="gen-pill">文章草稿</a>
+      <a href="#module-thread" class="gen-pill">Thread</a>
+      <a href="#module-plan" class="gen-pill">72h 分发</a>
+      <a href="#module-quality" class="gen-pill">内容评分</a>
+      <a href="#module-platforms" class="gen-pill">多平台改写</a>
+    </div>`;
+
+  const inputsSection = document.getElementById("module-inputs");
+  if (inputsSection) inputsSection.after(card);
+
+  document.getElementById("genSummaryDismiss")?.addEventListener("click", () => card.remove());
+}
+
+/* ─── Phase 2: Wizard Progress Bar ─────────────────── */
+const WIZARD_SCROLL_TARGETS = {
+  1: "module-inputs",
+  2: "module-title-hook",
+  3: "module-plan",
+  4: "module-platforms",
+  5: "module-automation"
+};
+
+function updateWizardStep(newStep) {
+  state.wizardStep = newStep;
+  const steps = document.querySelectorAll(".wizard-step");
+  const connectors = document.querySelectorAll(".wizard-connector");
+
+  steps.forEach(el => {
+    const s = parseInt(el.dataset.step, 10);
+    el.classList.remove("is-current", "is-completed", "is-future");
+    const dotInner = el.querySelector(".wizard-dot-inner");
+    if (s < newStep) {
+      el.classList.add("is-completed");
+      if (dotInner) dotInner.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24"><path d="m5 13 4 4 10-10" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    } else if (s === newStep) {
+      el.classList.add("is-current");
+      if (dotInner) dotInner.textContent = String(s);
+    } else {
+      el.classList.add("is-future");
+      if (dotInner) dotInner.textContent = String(s);
+    }
+  });
+  connectors.forEach((c, i) => {
+    c.classList.toggle("is-active", i < newStep - 1);
+  });
+}
+
+function initWizard() {
+  updateWizardStep(1);
+  document.querySelectorAll(".wizard-step").forEach(el => {
+    el.addEventListener("click", () => {
+      const step = parseInt(el.dataset.step, 10);
+      if (step > state.wizardStep) return;
+      const target = WIZARD_SCROLL_TARGETS[step];
+      if (target) document.getElementById(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+/* ─── Phase 2: Rewritten generateAll with cancel/timeout + versions ── */
+async function generateAll() {
+  if ($("generateBtn")._isStop) {
+    cancelGeneration("user");
+    return;
+  }
+  if (!validateRequiredFields()) return;
+
+  setGenerateBtnLoading(true);
+  const input = readInput();
+
   state.titles = buildTitles(input);
   state.hooks = buildHooks(input);
-  state.article = buildArticle(input, state.titles, state.hooks);
-  state.thread = splitThread(state.article);
   state.plan = buildPlan(input);
   state.monetize = buildMonetize(input);
 
   renderTitles(state.titles);
   renderHooks(state.hooks);
-  $("articleOutput").value = state.article;
-  renderThread(state.thread);
   renderPlan(state.plan);
   $("monetizeOutput").value = state.monetize;
+  expandOutputModules();
+  updateWizardStep(2);
+
+  if (window.AiGateway) {
+    generateAbortController = new AbortController();
+    const signal = generateAbortController.signal;
+
+    setGenerateBtnLoading(false);
+    setGenerateBtnStop(true);
+
+    generateTimeoutId = setTimeout(() => cancelGeneration("timeout"), GENERATE_TIMEOUT_MS);
+
+    const articleEl = $("articleOutput");
+    articleEl.value = "";
+    const prompt = buildArticlePrompt(input);
+    const system = "你是专业的 X 平台长文创作者，擅长结构化写作。直接输出 Markdown 格式的文章，不加任何解释。";
+    let full = "";
+
+    try {
+      await window.AiGateway.stream(prompt, {
+        system,
+        signal,
+        onChunk(chunk) {
+          if (signal.aborted) return;
+          full += chunk;
+          articleEl.value = full + " ▋";
+          articleEl.scrollTop = articleEl.scrollHeight;
+        },
+        onDone() {
+          if (signal.aborted) return;
+          clearTimeout(generateTimeoutId);
+          generateAbortController = null;
+          articleEl.value = full;
+          state.article = full;
+          state.articleVersions[state.activeVersion] = full;
+          setGenerateBtnStop(false);
+          finishGeneration();
+        },
+        onError(msg) {
+          if (signal.aborted) return;
+          clearTimeout(generateTimeoutId);
+          generateAbortController = null;
+          flash("AI 连接失败，使用本地模板", "error");
+          state.article = buildArticle(input, state.titles, state.hooks);
+          articleEl.value = state.article;
+          state.articleVersions[state.activeVersion] = state.article;
+          setGenerateBtnStop(false);
+          finishGeneration();
+        },
+      });
+    } catch (err) {
+      if (err.name === "AbortError") return;
+      clearTimeout(generateTimeoutId);
+      generateAbortController = null;
+      state.article = buildArticle(input, state.titles, state.hooks);
+      $("articleOutput").value = state.article;
+      state.articleVersions[state.activeVersion] = state.article;
+      setGenerateBtnStop(false);
+      finishGeneration();
+    }
+  } else {
+    state.article = buildArticle(input, state.titles, state.hooks);
+    $("articleOutput").value = state.article;
+    state.articleVersions[state.activeVersion] = state.article;
+    finishGeneration();
+  }
+}
+
+function finishGeneration() {
+  state.thread = splitThread(state.article);
+  renderThread(state.thread);
   updateQuality();
   generatePlatformPackages(false);
   runRuleModel(false);
+  setGenerateBtnLoading(false);
+  showNextStepBanner();
+  showGenerationSummary();
+  updateWizardStep(3);
+  flash("内容生成完成", "success");
 }
 
 function escapeHtml(text) {
@@ -1860,21 +2331,12 @@ function copyText(text, successMessage = "已复制") {
   });
 }
 
-function flash(message) {
-  const tip = document.createElement("div");
-  tip.textContent = message;
-  tip.style.position = "fixed";
-  tip.style.right = "16px";
-  tip.style.bottom = "16px";
-  tip.style.background = "#0e2d42";
-  tip.style.color = "#eaf6ff";
-  tip.style.padding = "10px 14px";
-  tip.style.borderRadius = "10px";
-  tip.style.border = "1px solid rgba(140,231,255,.35)";
-  tip.style.zIndex = "9999";
-  tip.style.boxShadow = "0 10px 25px rgba(0,0,0,.35)";
-  document.body.appendChild(tip);
-  setTimeout(() => tip.remove(), 1300);
+function flash(message, type = "info") {
+  const toast = document.createElement("div");
+  toast.className = `toast${type === "success" ? " toast-success" : type === "error" ? " toast-error" : ""}`;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  setTimeout(() => toast.remove(), 2600);
 }
 
 function buildMarkdownExport() {
@@ -1936,7 +2398,9 @@ function snapshotState() {
     plan: [...state.plan],
     monetize: state.monetize,
     quality: state.quality ? { ...state.quality, metrics: [...state.quality.metrics], tips: [...state.quality.tips] } : null,
-    platformPackages
+    platformPackages,
+    articleVersions: { ...state.articleVersions },
+    activeVersion: state.activeVersion
   };
 }
 
@@ -2059,6 +2523,14 @@ function applyDraft(data) {
     state.plan = data.state.plan || [];
     state.monetize = data.state.monetize || data.monetizeOutput || "";
     state.platformPackages = data.state.platformPackages || {};
+    // Phase 2: restore version data
+    if (data.state.articleVersions) {
+      state.articleVersions = { A: "", B: "", C: "", ...data.state.articleVersions };
+      state.activeVersion = data.state.activeVersion || "A";
+    } else {
+      state.articleVersions = { A: state.article, B: "", C: "" };
+      state.activeVersion = "A";
+    }
   }
 
   renderTitles(state.titles);
@@ -2068,6 +2540,18 @@ function applyDraft(data) {
   renderPlatformCards(state.platformPackages);
   updateQuality();
   runRuleModel(false);
+
+  // Phase 2: restore version tabs UI
+  document.querySelectorAll(".version-tab").forEach(t => {
+    const v = t.dataset.version;
+    t.classList.toggle("is-active", v === state.activeVersion);
+    t.classList.toggle("has-content", v !== state.activeVersion && (state.articleVersions[v] || "").trim().length > 0);
+  });
+
+  // Expand output modules if there's content to show
+  if (state.article || state.titles.length) {
+    expandOutputModules();
+  }
 }
 
 function saveDraft() {
@@ -2110,13 +2594,19 @@ function loadHistoryVersion() {
 function deleteHistoryVersion() {
   const selectedId = $("historySelect").value;
   const history = getHistory();
-  const next = history.filter((item) => item.id !== selectedId);
+  const item = history.find((entry) => entry.id === selectedId);
 
-  if (next.length === history.length) {
+  if (!item) {
     flash("没有可删除的版本");
     return;
   }
 
+  const label = item.topic || item.payload?.state?.topic || "未命名主题";
+  if (!confirm(`确定要删除「${label}」这个历史版本吗？此操作无法撤销。`)) {
+    return;
+  }
+
+  const next = history.filter((entry) => entry.id !== selectedId);
   setHistory(next);
   renderHistory();
   flash("历史版本已删除");
@@ -2132,7 +2622,6 @@ function fillSample() {
   $("evidence").value =
     "- 连续 4 周每周 2 篇长文，主页点击率提升 2.1 倍\n- 一篇长文拆成 8 条 Thread，回流阅读占比 37%\n- 文末加订阅预告后，订阅转化率从 0.6% 提升到 1.4%";
   generateAll();
-  flash("示例内容已填充");
 }
 
 function resetAll() {
@@ -2158,6 +2647,11 @@ function resetAll() {
   state.platformPackages = {};
   state.hotTopics = null;
   state.modelResult = null;
+  state.articleVersions = { A: "", B: "", C: "" };
+  state.activeVersion = "A";
+
+  // Cancel any in-flight AI generation
+  if (generateAbortController) cancelGeneration("user");
 
   renderTitles([]);
   renderHooks([]);
@@ -2169,6 +2663,16 @@ function resetAll() {
   renderAutomationCommands();
   renderResourceCards();
   refreshHotTopics(false);
+  collapseOutputModules();
+  document.getElementById("nextStepBanner")?.remove();
+  document.getElementById("genSummary")?.remove();
+  updateWizardStep(1);
+
+  // Reset version tabs
+  document.querySelectorAll(".version-tab").forEach(t => {
+    t.classList.remove("is-active", "has-content");
+    if (t.dataset.version === "A") t.classList.add("is-active");
+  });
 }
 
 function bindEvents() {
@@ -2192,7 +2696,15 @@ function bindEvents() {
   $("platformChooser").addEventListener("change", () => {
     if (Object.keys(state.platformPackages || {}).length) generatePlatformPackages(false);
     renderAutomationCommands();
+    savePlatformSelection();
+    updateToggleAllLabel();
   });
+  // Phase 2: Platform toggle all
+  const ptaBtn = $("platformToggleAll");
+  if (ptaBtn) ptaBtn.addEventListener("click", toggleAllPlatforms);
+  // Phase 2: Regen article version
+  const regenBtn = $("regenArticleBtn");
+  if (regenBtn) regenBtn.addEventListener("click", regenCurrentVersion);
   $("historySelect").addEventListener("change", () => {
     const history = getHistory();
     const item = history.find((entry) => entry.id === $("historySelect").value);
@@ -2207,8 +2719,18 @@ function bindEvents() {
     $(id).addEventListener("change", () => runRuleModel(false));
   });
   $("articleOutput").addEventListener("input", () => {
+    state.articleVersions[state.activeVersion] = $("articleOutput").value;
+    state.article = $("articleOutput").value;
     updateQuality();
     runRuleModel(false);
+  });
+
+  // Clear validation state on topic input + wizard step
+  $("topic").addEventListener("input", () => {
+    $("topic").classList.remove("field-invalid");
+    const hint = $("topic").parentElement.querySelector(".field-invalid-hint");
+    if (hint) hint.remove();
+    // Wizard step 2 is triggered by generateAll(), not by typing
   });
 
   document.querySelector(".card-inputs").addEventListener("input", () => {
@@ -2294,6 +2816,41 @@ function initWordCount() {
   update();
 }
 
+/* ─── Phase 1: Sticky Navigation with Active Tracking ─ */
+function initStickyNav() {
+  const nav = document.getElementById("jumpNav");
+  if (!nav) return;
+
+  // Stuck shadow detection
+  const sentinel = document.createElement("div");
+  sentinel.style.height = "1px";
+  sentinel.style.width = "100%";
+  sentinel.style.pointerEvents = "none";
+  nav.parentNode.insertBefore(sentinel, nav);
+
+  const stuckObserver = new IntersectionObserver(
+    ([entry]) => nav.classList.toggle("is-stuck", !entry.isIntersecting),
+    { threshold: 0 }
+  );
+  stuckObserver.observe(sentinel);
+
+  // Active section tracking
+  const navLinks = nav.querySelectorAll('a[href^="#"]');
+  const sectionIds = Array.from(navLinks).map(a => a.getAttribute("href").slice(1)).filter(Boolean);
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        const link = nav.querySelector(`a[href="#${entry.target.id}"]`);
+        if (link) link.classList.toggle("is-active", entry.isIntersecting);
+      });
+    },
+    { rootMargin: "-15% 0px -65% 0px", threshold: 0 }
+  );
+  sections.forEach(section => sectionObserver.observe(section));
+}
+
 function init() {
   decorateSectionHeadings();
   renderChecklist();
@@ -2310,6 +2867,18 @@ function init() {
   refreshHotTopics(false);
   initStaggerReveal();
   initWordCount();
+  collapseOutputModules();
+  initStickyNav();
+  // Phase 2: init new features
+  restorePlatformSelection();
+  updateToggleAllLabel();
+  initVersionTabs();
+  initWizard();
+  // Platform-aware shortcut hint
+  const kbdEl = document.getElementById("shortcutHint");
+  if (kbdEl && !/Mac|iPhone|iPad/.test(navigator.userAgent)) {
+    kbdEl.textContent = "Ctrl↵";
+  }
   initPwa();
 }
 
