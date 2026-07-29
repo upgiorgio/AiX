@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="自动化写作、排版设计、选题结构与文章采集系统的 2026 可执行升级研究">
+  <title>内容自动化升级研究 · 2026</title>
+  <style>
+    :root {
+      --paper: #f7f1e7;
+      --paper-2: #fffaf2;
+      --ink: #231d18;
+      --muted: #756b61;
+      --line: #d9cdbf;
+      --orange: #e7601f;
+      --orange-deep: #9e3511;
+      --amber: #f1a72d;
+      --green: #2f684e;
+      --blue: #2f5f85;
+      --red: #a43a2d;
+      --shadow: 0 22px 60px rgba(71, 46, 26, .10);
+      --serif: "Noto Serif SC", "Songti SC", "STSong", Georgia, serif;
+      --sans: "Avenir Next", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      --mono: "SFMono-Regular", "Cascadia Code", Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 84% 8%, rgba(231, 96, 31, .12), transparent 24rem),
+        linear-gradient(90deg, rgba(117, 107, 97, .045) 1px, transparent 1px),
+        var(--paper);
+      background-size: auto, 22px 22px, auto;
+      font: 16px/1.72 var(--sans);
+    }
+    a { color: var(--orange-deep); text-underline-offset: 3px; }
+    a:hover { color: var(--orange); }
+    button, input { font: inherit; }
+    button:focus-visible, input:focus-visible, a:focus-visible {
+      outline: 3px solid rgba(231, 96, 31, .35);
+      outline-offset: 3px;
+    }
+    .skip-link {
+      position: fixed; left: 1rem; top: -4rem; z-index: 99;
+      padding: .7rem 1rem; color: #fff; background: var(--ink);
+    }
+    .skip-link:focus { top: 1rem; }
+    .shell { display: grid; grid-template-columns: 270px minmax(0, 1fr); min-height: 100vh; }
+    aside {
+      position: sticky; top: 0; height: 100vh; overflow: auto;
+      padding: 30px 22px; border-right: 1px solid var(--line);
+      background: rgba(247, 241, 231, .92); backdrop-filter: blur(16px);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 30px; }
+    .brand-mark {
+      width: 42px; height: 42px; display: grid; place-items: center;
+      color: #fff; background: var(--orange); border-radius: 50% 50% 14% 50%;
+      box-shadow: 5px 6px 0 var(--ink); font: 700 18px var(--serif);
+    }
+    .brand strong { display: block; font: 700 15px var(--serif); letter-spacing: .04em; }
+    .brand small { color: var(--muted); font: 11px var(--mono); }
+    nav a {
+      display: grid; grid-template-columns: 30px 1fr; align-items: center;
+      padding: 8px 10px; margin: 3px 0; color: var(--muted); text-decoration: none;
+      border-radius: 8px; transition: .2s ease;
+    }
+    nav a span { color: #a89a8c; font: 11px var(--mono); }
+    nav a:hover, nav a.active { color: var(--ink); background: var(--paper-2); }
+    nav a.active { box-shadow: inset 3px 0 0 var(--orange); }
+    .aside-actions { margin-top: 28px; display: grid; gap: 8px; }
+    .btn {
+      border: 1px solid var(--line); background: var(--paper-2); color: var(--ink);
+      padding: 9px 12px; border-radius: 8px; cursor: pointer; transition: .2s ease;
+    }
+    .btn:hover { border-color: var(--orange); transform: translateY(-1px); }
+    .btn.primary { color: #fff; border-color: var(--orange); background: var(--orange); }
+    .stamp { margin-top: 28px; color: var(--muted); font: 10px/1.6 var(--mono); }
+    main { min-width: 0; }
+    .page { width: min(1220px, calc(100% - 64px)); margin: 0 auto; padding: 58px 0 120px; }
+    .hero {
+      position: relative; overflow: hidden; min-height: 520px; padding: 64px;
+      border: 1px solid var(--line); background: var(--paper-2); box-shadow: var(--shadow);
+    }
+    .hero::after {
+      content: "RESEARCH / 26"; position: absolute; right: -42px; bottom: 34px;
+      color: rgba(231, 96, 31, .07); font: 900 clamp(50px, 10vw, 130px)/.8 var(--sans);
+      transform: rotate(-8deg); letter-spacing: -.08em; pointer-events: none;
+    }
+    .kicker { color: var(--orange-deep); font: 700 12px var(--mono); letter-spacing: .17em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: var(--serif); text-wrap: balance; }
+    h1 { max-width: 900px; margin: 24px 0 24px; font-size: clamp(42px, 7vw, 88px); line-height: 1.04; letter-spacing: -.045em; }
+    .hero-lead { max-width: 790px; color: #4e453d; font: 19px/1.75 var(--serif); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 48px; color: var(--muted); font: 12px var(--mono); }
+    .hero-meta b { color: var(--ink); }
+    .verdict {
+      position: relative; z-index: 1; margin-top: -38px; margin-left: 8%; width: 84%;
+      display: grid; grid-template-columns: repeat(4, 1fr); background: var(--ink); color: #fff;
+      box-shadow: 0 20px 50px rgba(35,29,24,.25);
+    }
+    .verdict article { padding: 22px; border-right: 1px solid rgba(255,255,255,.15); }
+    .verdict article:last-child { border: 0; }
+    .verdict strong { display: block; color: #ffb17f; font: 12px var(--mono); }
+    .verdict span { display: block; margin-top: 8px; font: 16px/1.45 var(--serif); }
+    section { scroll-margin-top: 24px; padding-top: 94px; }
+    .section-head { display: grid; grid-template-columns: 80px 1fr; gap: 22px; align-items: start; margin-bottom: 34px; }
+    .section-no { color: var(--orange); font: 700 42px/.9 var(--mono); }
+    h2 { margin: 0; font-size: clamp(32px, 4vw, 54px); line-height: 1.13; letter-spacing: -.025em; }
+    .section-head p { max-width: 800px; margin: 12px 0 0; color: var(--muted); }
+    .grid-2, .grid-3, .grid-4 { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card {
+      border: 1px solid var(--line); background: rgba(255, 250, 242, .78); padding: 24px;
+      box-shadow: 0 8px 26px rgba(76, 48, 23, .05);
+    }
+    .card h3 { margin: 0 0 10px; font-size: 22px; line-height: 1.25; }
+    .card p { margin: 0; color: var(--muted); }
+    .card .tag { display: inline-block; margin-bottom: 14px; color: var(--orange-deep); font: 700 10px var(--mono); letter-spacing: .1em; }
+    .card.p0 { border-top: 5px solid var(--orange); }
+    .card.p1 { border-top: 5px solid var(--amber); }
+    .card.p2 { border-top: 5px solid var(--blue); }
+    .card.stop { border-top: 5px solid var(--red); }
+    .callout {
+      display: grid; grid-template-columns: 10px 1fr; gap: 22px; margin: 28px 0;
+      padding: 24px 26px; border: 1px solid var(--line); background: #fff7ec;
+    }
+    .callout::before { content: ""; background: var(--orange); }
+    .callout strong { font-family: var(--serif); font-size: 21px; }
+    .callout p { margin: 5px 0 0; color: var(--muted); }
+    .metric { margin-bottom: 20px; }
+    .metric-head { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
+    .metric-head b { font-family: var(--mono); }
+    .bar { height: 9px; margin-top: 7px; overflow: hidden; border-radius: 99px; background: #e8ded1; }
+    .bar i { display: block; height: 100%; width: var(--w); border-radius: inherit; background: var(--orange); }
+    .bar.green i { background: var(--green); }
+    .bar.blue i { background: var(--blue); }
+    .bar.amber i { background: var(--amber); }
+    .facts { margin: 0; padding: 0; list-style: none; }
+    .facts li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .facts li:last-child { border: 0; }
+    .facts b { color: var(--orange-deep); font: 700 13px var(--mono); }
+    .pipeline { display: grid; grid-template-columns: repeat(7, minmax(110px, 1fr)); gap: 10px; align-items: stretch; }
+    .node {
+      position: relative; padding: 18px 14px; min-height: 130px; border: 1px solid var(--line); background: var(--paper-2);
+    }
+    .node:not(:last-child)::after {
+      content: "→"; position: absolute; right: -15px; top: 48%; z-index: 2;
+      width: 20px; height: 20px; display: grid; place-items: center; color: var(--orange); background: var(--paper);
+    }
+    .node b { display: block; font: 700 12px var(--mono); color: var(--orange-deep); }
+    .node span { display: block; margin-top: 9px; font: 16px/1.3 var(--serif); }
+    .node small { display: block; margin-top: 9px; color: var(--muted); line-height: 1.4; }
+    .architecture-note { margin-top: 16px; text-align: center; color: var(--muted); font-size: 13px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+    .filter-btn { padding: 7px 11px; border: 1px solid var(--line); background: transparent; border-radius: 99px; cursor: pointer; }
+    .filter-btn.active { color: #fff; border-color: var(--ink); background: var(--ink); }
+    .search { min-width: 240px; margin-left: auto; padding: 8px 12px; border: 1px solid var(--line); background: var(--paper-2); }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--paper-2); }
+    table { width: 100%; border-collapse: collapse; min-width: 860px; }
+    th { padding: 13px 15px; color: #fff; background: var(--ink); text-align: left; font: 700 11px var(--mono); letter-spacing: .08em; }
+    td { padding: 14px 15px; vertical-align: top; border-bottom: 1px solid var(--line); }
+    tr:last-child td { border: 0; }
+    tr:hover td { background: #fff7eb; }
+    .pill { display: inline-block; padding: 3px 8px; border-radius: 99px; font: 700 10px var(--mono); }
+    .pill.now { color: #fff; background: var(--green); }
+    .pill.pilot { color: #4c3204; background: #ffd77a; }
+    .pill.watch { color: #fff; background: var(--blue); }
+    .pill.no { color: #fff; background: var(--red); }
+    .formula {
+      padding: 28px; color: #fff; background: var(--ink); overflow-x: auto;
+      font: 16px/1.8 var(--mono); box-shadow: var(--shadow);
+    }
+    .formula em { color: #ffb17f; font-style: normal; }
+    .weight { display: grid; grid-template-columns: 130px 1fr 44px; gap: 12px; align-items: center; margin: 10px 0; }
+    .weight span { font-size: 13px; }
+    .weight b { text-align: right; color: var(--orange-deep); font: 700 12px var(--mono); }
+    .score-track { height: 8px; background: #e8ded1; }
+    .score-track i { display: block; height: 100%; width: var(--w); background: var(--orange); }
+    details { border-top: 1px solid var(--line); }
+    details:last-child { border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; padding: 16px 4px; font: 700 17px var(--serif); }
+    details > div { padding: 0 4px 20px; color: var(--muted); }
+    code, pre { font-family: var(--mono); }
+    .codebox { position: relative; margin: 20px 0; }
+    pre { overflow: auto; margin: 0; padding: 24px; color: #f7efe7; background: #201b17; font-size: 12px; line-height: 1.7; }
+    .copy { position: absolute; right: 10px; top: 10px; color: #fff; border: 1px solid #6d6259; background: #332b25; padding: 5px 9px; cursor: pointer; }
+    .compiler { display: grid; grid-template-columns: 1.1fr repeat(3, 1fr); gap: 10px; }
+    .compiler > div { min-height: 170px; padding: 20px; border: 1px solid var(--line); background: var(--paper-2); }
+    .compiler .source { color: #fff; background: var(--orange-deep); }
+    .compiler h3 { margin: 0 0 10px; font-size: 19px; }
+    .compiler ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    .compiler .source ul { color: #ffe8d8; }
+    .roadmap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .phase { border: 1px solid var(--line); background: var(--paper-2); }
+    .phase-head { padding: 20px; color: #fff; background: var(--ink); }
+    .phase-head strong { display: block; color: #ffb17f; font: 12px var(--mono); }
+    .phase-head h3 { margin: 7px 0 0; font-size: 23px; }
+    .checklist { margin: 0; padding: 18px 20px; list-style: none; }
+    .checklist li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .checklist li:last-child { border: 0; }
+    .checklist label { display: grid; grid-template-columns: 24px 1fr; gap: 8px; cursor: pointer; }
+    .checklist input { width: 17px; height: 17px; accent-color: var(--orange); }
+    .checklist input:checked + span { color: var(--muted); text-decoration: line-through; }
+    .kpi { text-align: center; padding: 26px 18px; border: 1px solid var(--line); background: var(--paper-2); }
+    .kpi strong { display: block; color: var(--orange); font: 700 34px var(--serif); }
+    .kpi span { color: var(--muted); font-size: 13px; }
+    .source-list { columns: 2; column-gap: 40px; }
+    .source-item { break-inside: avoid; padding: 13px 0; border-bottom: 1px solid var(--line); }
+    .source-item b { display: block; font: 12px var(--mono); color: var(--orange-deep); }
+    .source-item span { display: block; color: var(--muted); font-size: 13px; }
+    footer { margin-top: 80px; padding: 26px 0; border-top: 1px solid var(--line); color: var(--muted); font: 11px var(--mono); }
+    .hide { display: none !important; }
+    @media (max-width: 1120px) {
+      .shell { grid-template-columns: 1fr; }
+      aside { position: relative; height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+      nav { display: flex; overflow-x: auto; }
+      nav a { min-width: 150px; }
+      .aside-actions, .stamp { display: none; }
+      .pipeline { grid-template-columns: repeat(2, 1fr); }
+      .node:not(:last-child)::after { display: none; }
+      .compiler { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .page { width: min(100% - 28px, 1220px); padding-top: 24px; }
+      .hero { min-height: 0; padding: 34px 24px 70px; }
+      h1 { font-size: 42px; }
+      .verdict { margin: -34px 12px 0; width: auto; grid-template-columns: 1fr 1fr; }
+      .verdict article:nth-child(2) { border-right: 0; }
+      .verdict article:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.15); }
+      .section-head { grid-template-columns: 50px 1fr; }
+      .section-no { font-size: 28px; }
+      .grid-2, .grid-3, .grid-4, .roadmap, .compiler { grid-template-columns: 1fr; }
+      .pipeline { grid-template-columns: 1fr; }
+      .source-list { columns: 1; }
+      .search { width: 100%; margin: 0; }
+    }
+    @media print {
+      body { background: #fff; }
+      aside, .toolbar, .copy, .aside-actions { display: none !important; }
+      .shell { display: block; }
+      .page { width: 100%; padding: 0; }
+      .hero, .card, .table-wrap, .phase { box-shadow: none; break-inside: avoid; }
+      section { padding-top: 38px; }
+      a { color: #000; text-decoration: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳到正文</a>
+  <div class="shell">
+    <aside aria-label="报告目录">
+      <div class="brand">
+        <div class="brand-mark">策</div>
+        <div><strong>内容系统研究室</strong><small>RESEARCH DOSSIER 2026</small></div>
+      </div>
+      <nav id="toc">
+        <a href="#summary"><span>00</span>结论摘要</a>
+        <a href="#baseline"><span>01</span>当前诊断</a>
+        <a href="#radar"><span>02</span>技术雷达</a>
+        <a href="#architecture"><span>03</span>目标架构</a>
+        <a href="#sources"><span>04</span>数据源地图</a>
+        <a href="#topics"><span>05</span>选题结构</a>
+        <a href="#collection"><span>06</span>采集规范</a>
+        <a href="#writing"><span>07</span>写作评测</a>
+        <a href="#layout"><span>08</span>排版编译</a>
+        <a href="#roadmap"><span>09</span>90 天路线</a>
+        <a href="#references"><span>10</span>证据来源</a>
+      </nav>
+      <div class="aside-actions">
+        <button class="btn primary" onclick="window.print()">打印 / 导出 PDF</button>
+        <button class="btn" id="toggleDetails">展开全部细节</button>
+      </div>
+      <div class="stamp">UPDATED 2026-07-10<br>ASIA / SHANGHAI<br>LOCAL-FIRST · SOURCE-LED</div>
+    </aside>
+
+    <main id="content">
+      <div class="page">
+        <header class="hero" id="summary">
+          <div class="kicker">AUTOMATED WRITING × EDITORIAL DESIGN × SIGNAL INTELLIGENCE</div>
+          <h1>不是再加一个抓取器，<br>而是把素材变成可验证的选题资产。</h1>
+          <p class="hero-lead">这份报告基于 2026 年 7 月 10 日的本机真实运行日志，并核验 MCP、Agents SDK、LangGraph、X API、Bluesky、OpenAlex、Google Trends、feedgrab、Jina Reader、DTCG Design Tokens、unified、Playwright 等一手资料。目标不是推倒 Hermes，而是让采集、选题、写作、排版和发布之间形成可恢复、可回归、可追溯的闭环。</p>
+          <div class="hero-meta">
+            <span><b>研究范围</b> 27 个一手来源</span>
+            <span><b>本机样本</b> 2026-07-10 全链日志</span>
+            <span><b>实施周期</b> 90 天，三阶段</span>
+            <span><b>原则</b> fail-soft / human-approved</span>
+          </div>
+        </header>
+
+        <div class="verdict" aria-label="四项核心结论">
+          <article><strong>01 / 先统一</strong><span>建立 Content Signal Ledger，结束多目录、多格式、不可联查。</span></article>
+          <article><strong>02 / 再评分</strong><span>绝对点赞阈值改为相对速度、账号基线与组合多样性。</span></article>
+          <article><strong>03 / 单条隔离</strong><span>一个候选疑似幻觉，只隔离这一条，不拖死整批选题。</span></article>
+          <article><strong>04 / 设计编译</strong><span>保留 3×6 视觉资产，升级为 AST + Token + 三渠道编译器。</span></article>
+        </div>
+
+        <section id="baseline">
+          <div class="section-head">
+            <div class="section-no">01</div>
+            <div><h2>今天的运行数据已经说明，瓶颈不在“素材数量”</h2><p>素材足够多，但来源偏科、规则刚性、阶段之间没有统一状态，使得有效信号在管线中途损耗。</p></div>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <span class="tag">SOURCE COVERAGE / TODAY</span>
+              <h3>RSS 193 条，结构明显偏科技</h3>
+              <div class="metric"><div class="metric-head"><span>AI 科技</span><b>103</b></div><div class="bar" style="--w:53.4%"><i></i></div></div>
+              <div class="metric"><div class="metric-head"><span>非 AI 技术</span><b>54</b></div><div class="bar blue" style="--w:28%"><i></i></div></div>
+              <div class="metric"><div class="metric-head"><span>创业实操</span><b>22</b></div><div class="bar green" style="--w:11.4%"><i></i></div></div>
+              <div class="metric"><div class="metric-head"><span>历史哲学</span><b>14</b></div><div class="bar amber" style="--w:7.2%"><i></i></div></div>
+              <p>本地 RSSHub 未运行，6 个中文源被跳过；直连又有 4 个源失败。最终 12/17 源成功。</p>
+            </div>
+            <div class="card">
+              <span class="tag">PIPELINE FRICTION / TODAY</span>
+              <h3>238 条进入评分，价值在后段被消耗</h3>
+              <ul class="facts">
+                <li><b>45 条</b><span>趋势数据只来自 HN + GitHub；V2EX、微博、知乎全部失败。</span></li>
+                <li><b>1 条</b><span>疑似幻觉候选触发整批“不复制到选题库”。</span></li>
+                <li><b>114 条</b><span>X 晨扫真实抓取量，最终整理成 5 gems / 3 topics。</span></li>
+                <li><b>0 条</b><span>因固定 likes ≥ 3000，X 种子池仍为空。</span></li>
+                <li><b>多次</b><span>选题与起稿出现模型 ECONNRESET / fallback，缺少细粒度 checkpoint。</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="callout"><div><strong>主诊断：系统已有“采集能力”，缺的是“信号治理”。</strong><p>当前 URL/标题去重、目录级中间件与整批阻断，无法回答“同一事件跨平台热度如何”“哪条主张由哪个来源支持”“哪个规则造成了候选损失”。新增数据源之前，先把事件账本、候选隔离和统一指标做好。</p></div></div>
+        </section>
+
+        <section id="radar">
+          <div class="section-head">
+            <div class="section-no">02</div>
+            <div><h2>2026 技术雷达：立即吸收的是工程模式，不是框架名字</h2><p>最新一手资料共同指向四件事：append-only 日志、可恢复执行、结构化输出、离线与在线评测。现有 Node/Shell 管线可以先吸收这些模式，再决定是否引入更重的框架。</p></div>
+          </div>
+          <div class="grid-4">
+            <article class="card p0"><span class="tag">P0 / NOW</span><h3>Signal Ledger</h3><p>SQLite 作为结构化真相源；原始抓取仍追加保存，Obsidian 只接收可读导出。</p></article>
+            <article class="card p0"><span class="tag">P0 / NOW</span><h3>Claim Provenance</h3><p>从“文章有来源”升级为“事实主张绑定 source_id、证据片段和置信度”。</p></article>
+            <article class="card p0"><span class="tag">P0 / NOW</span><h3>Fail-soft Gate</h3><p>单源失败、单条幻觉、单模型超时分别隔离，不再把局部故障放大成整批失败。</p></article>
+            <article class="card p0"><span class="tag">P0 / NOW</span><h3>AST Compilers</h3><p>Markdown 先变 ArticleDoc，再输出微信、Web 和社媒卡片。</p></article>
+            <article class="card p1"><span class="tag">P1 / PILOT</span><h3>feedgrab</h3><p>今天的 0.1.18 已增强 X 中文 Article 与 Latest+Top 合并；仅试公开、非 X 内容采集。X 网页自动化不进生产。</p></article>
+            <article class="card p1"><span class="tag">P1 / PILOT</span><h3>Open Social</h3><p>Bluesky Jetstream 提供公开 JSON 流，作为 X 之外的技术讨论补充源。</p></article>
+            <article class="card p1"><span class="tag">P1 / PILOT</span><h3>Research Graph</h3><p>OpenAlex 为 evergreen 和论文背景供料；GDELT 补充跨语种宏观事件。</p></article>
+            <article class="card p1"><span class="tag">P1 / PILOT</span><h3>Eval Harness</h3><p>用 Promptfoo / 自建脚本跑 20–30 个真实稿件回归集，保留 pairwise 人工评分。</p></article>
+            <article class="card p2"><span class="tag">P2 / WATCH</span><h3>Google Trends API</h3><p>alpha 有一致尺度和 5 年数据，但仍限量开放；申请，不做主链依赖。</p></article>
+            <article class="card p2"><span class="tag">P2 / WATCH</span><h3>MCP 2026 RC</h3><p>稳定版仍是 2025-11-25；2026-07-28 候选版只在 feature flag 后试验。</p></article>
+            <article class="card stop"><span class="tag">STOP</span><h3>重写成“全 Agent”</h3><p>每日固定流程不需要多 agent 放大成本；深度研究才使用并行探索。</p></article>
+            <article class="card stop"><span class="tag">STOP</span><h3>全自动发布</h3><p>草稿箱与公开发布保持两级状态；来源风险、版权与最终标题继续人工确认。</p></article>
+          </div>
+          <details><summary>为什么不建议立刻把整套流程重写成 LangGraph？</summary><div>LangGraph 的 checkpoint、HITL 和 time travel 很适合长任务，但现有系统的首要问题是数据契约和故障边界。先用 SQLite `runs / stages / artifacts / errors` 四张表即可获得 80% 的可恢复价值。等到跨模型并行、长任务恢复和人工中断成为常态，再把相同状态机迁移到 LangGraph，避免框架先于问题。</div></details>
+          <details><summary>多 Agent 什么时候值得用？</summary><div>Anthropic 的生产经验显示，多 agent 对“多个相互独立方向的广度型研究”有效，但 token 成本显著更高。建议只用于高价值深度选题：例如同时查产业链、竞品、海外讨论、论文与本地案例；每日 RSS 归并、去重、评分、排版继续走确定性 DAG。</div></details>
+          <details><summary>2026-07-10 核验到的关键版本</summary><div>MCP 稳定版 2025-11-25、2026-07-28 RC；OpenAI Agents SDK Python v0.18.0；LangGraph 1.2.8；Promptfoo 0.121.18；Ragas 0.4.3；LangSmith SDK 0.10.1。所有快速迭代依赖都应精确 pin 版本，并在升级前跑固定回归集。</div></details>
+        </section>
+
+        <section id="architecture">
+          <div class="section-head">
+            <div class="section-no">03</div>
+            <div><h2>目标架构：一条不可变信号流，三次人工决策</h2><p>三个明确的人类节点分别是：是否进入候选池、是否进入起稿、是否进入草稿箱。其余步骤自动化并保留 trace。</p></div>
+          </div>
+          <div class="pipeline" aria-label="目标内容流程">
+            <div class="node"><b>01 INGEST</b><span>采集适配器</span><small>RSS / X / GitHub / HN / Bluesky / OpenAlex</small></div>
+            <div class="node"><b>02 NORMALIZE</b><span>统一事件账本</span><small>canonical URL / hash / 时间 / 权利</small></div>
+            <div class="node"><b>03 CLUSTER</b><span>事件聚类</span><small>exact + SimHash + embedding + mechanism</small></div>
+            <div class="node"><b>04 SCORE</b><span>选题组合</span><small>价值评分 + MMR 多样性 + 配额</small></div>
+            <div class="node"><b>05 RESEARCH</b><span>证据包</span><small>claims / sources / counterpoints / risks</small></div>
+            <div class="node"><b>06 DRAFT</b><span>写作与评测</span><small>结构输出 / trace / regression dataset</small></div>
+            <div class="node"><b>07 COMPILE</b><span>多渠道编译</span><small>WeChat / Web / social card / approval / receipt</small></div>
+          </div>
+          <p class="architecture-note">每个节点写入 `run_id + stage + input_hash + output_hash + status + latency + cost + error_class`，失败后从最近成功 checkpoint 恢复。</p>
+          <div class="grid-3" style="margin-top:24px">
+            <div class="card"><span class="tag">HUMAN GATE A</span><h3>候选池放行</h3><p>只看 8–12 个聚类后的事件卡，不看 200 条原始素材。允许“保留观察”，不要求立刻起稿。</p></div>
+            <div class="card"><span class="tag">HUMAN GATE B</span><h3>起稿放行</h3><p>检查核心机制、证据级别、个人桥与同月选题组合。一次选择 1–3 篇。</p></div>
+            <div class="card"><span class="tag">HUMAN GATE C</span><h3>草稿箱放行</h3><p>检查标题、来源风险、版面快照和微信往返结果。草稿箱不等于公开发布。</p></div>
+          </div>
+          <details><summary>微信推送超时为什么不能直接重试？</summary><div>这是有外部副作用的步骤：远端可能已创建草稿，但客户端没有拿到响应。遇到 ambiguous 状态，必须先查草稿箱，按标题、内容 hash 或稳定指纹 reconciliation；找到后补记 <code>appMsgId</code>，无法确认则暂停人工处理。只有“草稿已创建 + appMsgId”才算成功，不能盲重试制造重复草稿。</div></details>
+        </section>
+
+        <section id="sources">
+          <div class="section-head">
+            <div class="section-no">04</div>
+            <div><h2>数据源地图：用不同来源回答不同问题</h2><p>新闻、搜索兴趣、社区讨论、项目活动和学术研究不能混成一个“热度”。每类数据源只承担自己擅长的信号。</p></div>
+          </div>
+          <div class="toolbar" aria-label="数据源筛选">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="now">立即接入</button>
+            <button class="filter-btn" data-filter="pilot">隔离试点</button>
+            <button class="filter-btn" data-filter="watch">观察 / 申请</button>
+            <input class="search" id="sourceSearch" type="search" placeholder="搜索来源、用途、风险…" aria-label="搜索数据源">
+          </div>
+          <div class="table-wrap">
+            <table id="sourceTable">
+              <thead><tr><th>来源</th><th>最适合回答</th><th>接入方式</th><th>频率</th><th>成本 / 风险</th><th>建议</th></tr></thead>
+              <tbody>
+                <tr data-status="now"><td><b>现有 RSS + RSSHub</b></td><td>稳定媒体更新、已知作者</td><td>feedsmith + RSSHub</td><td>30–60 分钟</td><td>路由易失效；需源健康表</td><td><span class="pill now">保留并加固</span></td></tr>
+                <tr data-status="now"><td><b>Hacker News</b></td><td>开发者争议、反对意见、早期工具</td><td>官方 Firebase API + 评论树</td><td>15 分钟</td><td>英文技术偏差</td><td><span class="pill now">立即接入</span></td></tr>
+                <tr data-status="now"><td><b>GitHub</b></td><td>项目真实活跃度、发布与问题速度</td><td>REST events / releases / issues</td><td>1 小时</td><td>星数可被营销放大</td><td><span class="pill now">扩展指标</span></td></tr>
+                <tr data-status="watch"><td><b>X 现有 Chrome 晨扫</b></td><td>现状仍能发现关注圈层信号</td><td>登录态后台抓取</td><td>当前每日 1 次</td><td>官方政策不允许非 API 自动抓取</td><td><span class="pill no">迁移后退出</span></td></tr>
+                <tr data-status="pilot"><td><b>X 官方 API</b></td><td>精确关键词、计数、可复现实验</td><td>recent search / filtered stream</td><td>≤300 Post/day</td><td>$0.005/Post；约 $45/月上限</td><td><span class="pill pilot">$25 额度试点</span></td></tr>
+                <tr data-status="pilot"><td><b>feedgrab 0.1.18</b></td><td>多平台公开内容入库</td><td>CLI / MCP / Markdown</td><td>低频批量</td><td>Cookie、封号、预览版未签名；X 抓取有政策风险</td><td><span class="pill pilot">非 X 隔离试点</span></td></tr>
+                <tr data-status="pilot"><td><b>Bluesky Jetstream</b></td><td>开放社交上的技术话题速度</td><td>公开 JSON WebSocket</td><td>实时 / 采样</td><td>中文覆盖较小</td><td><span class="pill pilot">低成本补源</span></td></tr>
+                <tr data-status="pilot"><td><b>OpenAlex</b></td><td>论文、主题演化、研究背景与引用</td><td>Works / Topics / Keywords API</td><td>每日</td><td>新热点有时滞</td><td><span class="pill pilot">evergreen 车道</span></td></tr>
+                <tr data-status="pilot"><td><b>GDELT DOC 2</b></td><td>跨地区新闻覆盖与宏观事件</td><td>全文搜索 JSON</td><td>1–3 小时</td><td>噪音大、质量差异大</td><td><span class="pill pilot">聚类后使用</span></td></tr>
+                <tr data-status="now"><td><b>Google Trends RSS / BigQuery</b></td><td>突发趋势与地区搜索兴趣</td><td>Trending Now RSS + 公共数据集</td><td>10 分钟 / 日</td><td>抽样、归一化，不是绝对搜索量</td><td><span class="pill now">立即接入</span></td></tr>
+                <tr data-status="watch"><td><b>Google Trends API</b></td><td>一致尺度的长期搜索兴趣</td><td>alpha 申请</td><td>每日 / 周</td><td>访问受限，数据延迟约 2 天</td><td><span class="pill watch">申请但不依赖</span></td></tr>
+                <tr data-status="pilot"><td><b>Jina Reader</b></td><td>公开 URL → Markdown/JSON</td><td>API 或 self-host</td><td>按需</td><td>缓存与抽取误差需记录</td><td><span class="pill pilot">通用抽取层</span></td></tr>
+                <tr data-status="now"><td><b>Trafilatura</b></td><td>本地免费正文与元数据抽取</td><td>Python 2.1</td><td>按需</td><td>复杂 JS 页能力有限</td><td><span class="pill now">本地交叉校验</span></td></tr>
+                <tr data-status="pilot"><td><b>Firecrawl</b></td><td>复杂 JS 站点、站点 map 与深度 crawl</td><td>v2 API</td><td>按项目</td><td>付费、抓取合规</td><td><span class="pill pilot">例外路径</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout"><div><strong>X 热度必须改成相对指标。</strong><p>建议使用 `log1p(互动数 / 帖龄小时)` 的平台内百分位，再减去作者近 30 天基线。这样 700 粉账号的异常增长、新帖的早期速度和大账号的正常流量可以公平比较。固定 3000 点赞只会系统性错过小账号与早期机会。</p></div></div>
+          <div class="callout"><div><strong>同时必须遵守 X 的接入边界。</strong><p>相对热度算法用于官方 API 返回的数据；现有 Chrome 自动抓取只能作为迁移前现状，不能继续扩成生产核心。API 只存 post ID、URL、允许的派生聚合与必要证据；正文长期留存和删除同步按开发者政策处理。</p></div></div>
+        </section>
+
+        <section id="topics">
+          <div class="section-head">
+            <div class="section-no">05</div>
+            <div><h2>选题不是排行榜，是每天的内容投资组合</h2><p>先对单个候选评分，再用 MMR 做组合去重，最后施加品类配额。这样可以同时解决“都很热但都在讲同一件事”和“换标题重复同一机制”。</p></div>
+          </div>
+          <div class="formula"><em>BaseScore</em> = 20×证据 + 18×账号匹配 + 16×机制新颖 + 14×新鲜度 + 14×可执行/商业性 + 8×讨论速度 + 6×个人桥 + 4×可复用资产 − 风险罚分<br><em>PortfolioPick</em> = λ×BaseScore − (1−λ)×maxSimilarity(已选题)　　建议 λ = 0.68</div>
+          <div class="grid-2" style="margin-top:24px">
+            <div class="card">
+              <span class="tag">WEIGHT DESIGN</span><h3>评分权重（总分 100）</h3>
+              <div class="weight"><span>证据强度</span><div class="score-track" style="--w:100%"><i></i></div><b>20</b></div>
+              <div class="weight"><span>账号 / 受众匹配</span><div class="score-track" style="--w:90%"><i></i></div><b>18</b></div>
+              <div class="weight"><span>机制新颖性</span><div class="score-track" style="--w:80%"><i></i></div><b>16</b></div>
+              <div class="weight"><span>新鲜度</span><div class="score-track" style="--w:70%"><i></i></div><b>14</b></div>
+              <div class="weight"><span>可执行 / 商业性</span><div class="score-track" style="--w:70%"><i></i></div><b>14</b></div>
+              <div class="weight"><span>讨论速度</span><div class="score-track" style="--w:40%"><i></i></div><b>8</b></div>
+              <div class="weight"><span>个人经历桥</span><div class="score-track" style="--w:30%"><i></i></div><b>6</b></div>
+              <div class="weight"><span>多平台复用</span><div class="score-track" style="--w:20%"><i></i></div><b>4</b></div>
+            </div>
+            <div class="card">
+              <span class="tag">DAILY PORTFOLIO</span><h3>四个选题槽位</h3>
+              <ul class="facts">
+                <li><b>快信号</b><span>24–72h；至少 2 个独立来源；回答“今天为什么值得写”。</span></li>
+                <li><b>结构题</b><span>7–30 天；同类事件聚类；回答“背后的因果机制是什么”。</span></li>
+                <li><b>机会题</b><span>明确谁付钱、成本、毛利、门槛、竞争者和停止条件。</span></li>
+                <li><b>长青题</b><span>论文、历史、行业底层规律；不伪装成即时新闻。</span></li>
+              </ul>
+              <p style="margin-top:16px">每日 shortlist 8–12 个，起稿 1–3 个。任何单一 category 不超过当日入选的 40%；至少 1 个非 AI 题，至少 1 个有可核算商业结构的题。</p>
+            </div>
+          </div>
+          <details><summary>新颖性为什么要分成“叙事相似”和“机制相似”？</summary><div>同一机制可以换很多标题、场景和词汇，单纯 embedding 会漏掉“换皮重复”；反过来，两篇文章可能使用相近词汇，却回答完全不同的因果问题。建议保留现有 lexical + embedding，并新增 `mechanism_id / causal_chain`：例如“信息缺席”“评分表外包”“精度预算”作为机制层标识。组合选择时分别惩罚叙事相似和机制重复。</div></details>
+          <details><summary>候选被判疑似幻觉时如何处理？</summary><div>把候选状态改为 `quarantined`，记录失败的 claim 或 title token，继续让其余候选进入选题库。只有当整批来源文件损坏、schema 解析失败或来源时间不可信时才阻断整个 batch。人工修复后可从 quarantine 单条重放。</div></details>
+        </section>
+
+        <section id="collection">
+          <div class="section-head">
+            <div class="section-no">06</div>
+            <div><h2>“抓文章”升级为带权利边界的内容事件</h2><p>默认保存元数据、摘要、证据片段和哈希；只有公开且允许保存的内容才保留全文。付费墙、私密群、主账号 Cookie 和绕过权限不进入自动化默认路径。</p></div>
+          </div>
+          <div class="grid-3">
+            <article class="card"><span class="tag">LAYER 1</span><h3>Raw Event</h3><p>原始响应或最小快照，append-only；记录抓取器、时间、HTTP 状态、etag、原始 hash。</p></article>
+            <article class="card"><span class="tag">LAYER 2</span><h3>Normalized Item</h3><p>统一标题、作者、canonical URL、发布时间、语言、正文摘要、权利与公开范围。</p></article>
+            <article class="card"><span class="tag">LAYER 3</span><h3>Evidence Pack</h3><p>主张、来源、证据片段、反证、实体、机制、风险与候选选题之间的引用关系。</p></article>
+          </div>
+          <div class="codebox">
+            <button class="copy" data-copy="schema">复制 Schema</button>
+            <pre id="schema">{
+  "item_id": "sha256(canonical_url + published_at)",
+  "source": {
+    "platform": "x|rss|github|hn|openalex|gdelt|web",
+    "canonical_url": "https://…",
+    "author": "…",
+    "published_at": "ISO-8601",
+    "captured_at": "ISO-8601",
+    "collector": "name@version",
+    "public_scope": "public|authenticated|restricted",
+    "rights": "metadata_only|excerpt_allowed|fulltext_allowed|unknown"
+  },
+  "content": {
+    "title": "…",
+    "summary": "…",
+    "language": "zh-CN",
+    "raw_hash": "sha256:…",
+    "text_hash": "sha256:…",
+    "simhash64": "…"
+  },
+  "signals": {
+    "engagement_velocity_percentile": 0.87,
+    "author_baseline_delta": 1.42,
+    "cross_platform_count": 4,
+    "source_quality": 0.9
+  },
+  "enrichment": {
+    "entities": [],
+    "topics": [],
+    "mechanism_id": "…",
+    "cluster_id": "event_…"
+  },
+  "claims": [
+    {"claim_id":"c1","text":"…","source_ids":["s1","s2"],"evidence_excerpt":"…","confidence":0.86}
+  ],
+  "status": "captured|normalized|clustered|candidate|quarantined|selected|archived"
+}</pre>
+          </div>
+          <div class="callout"><div><strong>抽取器采用“两便宜一昂贵”的降级链。</strong><p>静态页面先用 Trafilatura；复杂公开页再用 Jina Reader browser mode；只有站点级 map、复杂 JS 交互或专题研究才调用 Firecrawl。每次抽取都保存 extractor 版本和 text_hash，并对 5% 样本保留原 HTML 做准确率抽检。</p></div></div>
+        </section>
+
+        <section id="writing">
+          <div class="section-head">
+            <div class="section-no">07</div>
+            <div><h2>写作门禁从正则清单，升级为可比较的评测集</h2><p>现有 Humanizer、content guard、diversity audit 应继续保留，但要把每次判定写成 trace，并用固定样本比较版本差异。</p></div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>层级</th><th>自动检查</th><th>建议指标</th><th>失败处理</th></tr></thead>
+              <tbody>
+                <tr><td><b>结构</b></td><td>frontmatter enum、字数、章节、引用、表格、图片 alt</td><td>schema pass = 100%</td><td>就地修复，不调用大模型</td></tr>
+                <tr><td><b>来源</b></td><td>URL 可达、日期、独立来源、claim 绑定</td><td>claim coverage ≥ 95%</td><td>隔离对应 claim / candidate</td></tr>
+                <tr><td><b>事实</b></td><td>数字、专名、事件是否被证据支持</td><td>faithfulness ≥ 0.90</td><td>删除或降级措辞</td></tr>
+                <tr><td><b>新颖</b></td><td>lexical、embedding、mechanism 三轴</td><td>重复机制 = 0</td><td>只允许一次定向重写</td></tr>
+                <tr><td><b>表达</b></td><td>机械腔、句式密度、具体动作/身体/时间锚点</td><td>人工 pairwise 胜率</td><td>定向补场景，不做泛化润色</td></tr>
+                <tr><td><b>结果</b></td><td>用户是否选用、编辑量、草稿箱成功、阅读反馈</td><td>accept / edit / publish</td><td>回写 eval dataset</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid-3" style="margin-top:18px">
+            <div class="card"><span class="tag">OFFLINE EVAL</span><h3>30 篇黄金集</h3><p>10 篇优秀、10 篇边界、10 篇真实失败。每次 prompt、模型、门禁变化都重跑，比较基线。</p></div>
+            <div class="card"><span class="tag">ONLINE TRACE</span><h3>每阶段有 span</h3><p>记录输入哈希、模型、工具、成本、延迟、输出、guard 结果与人工动作。</p></div>
+            <div class="card"><span class="tag">HUMAN PAIRWISE</span><h3>只问“哪版更好”</h3><p>绝对 0–100 分容易漂移；标题、开头、结构与整篇采用 A/B 选择更稳定。</p></div>
+          </div>
+          <details><summary>建议的首批 12 个回归用例</summary><div>单来源新闻、两来源冲突、旧闻伪装新鲜、数字无来源、强个人观察、商业拆账、纯认知长青、X 小号异常增长、重复机制换标题、超长表格、图片 alt 为空、微信不支持 CSS。每个用例保存期望状态、允许的警告与不可接受结果。</div></details>
+        </section>
+
+        <section id="layout">
+          <div class="section-head">
+            <div class="section-no">08</div>
+            <div><h2>排版系统不推倒：把 3×6 从字符串升级为编译系统</h2><p>当前 3 章法 × 6 皮肤是值得保留的设计资产。问题在于解析、设计、平台约束和测试耦合在同一个渲染器里。</p></div>
+          </div>
+          <div class="compiler" aria-label="内容编译架构">
+            <div class="source"><h3>ArticleDoc</h3><p>由 unified / mdast 生成的语义组件：</p><ul><li>Hero / Lead</li><li>SectionHeading</li><li>PullQuote / EvidenceTable</li><li>Checklist / Figure / Divider</li></ul></div>
+            <div><h3>微信公众号</h3><ul><li>DTCG token → 静态 JS map</li><li>Juice 内联</li><li>真正 CSS allowlist</li><li>677px 快照</li><li>ProseMirror 往返 diff</li></ul></div>
+            <div><h3>Web</h3><ul><li>语义 HTML</li><li>CSS variables / responsive</li><li>rehype-sanitize</li><li>axe-core</li><li>Playwright 多 viewport</li></ul></div>
+            <div><h3>社媒卡片</h3><ul><li>标题 / 金句 / 数据卡</li><li>Satori + Resvg</li><li>1200×630</li><li>固定中文字体</li><li>文本溢出快照</li></ul></div>
+          </div>
+          <div class="grid-2" style="margin-top:20px">
+            <div class="card">
+              <span class="tag">TOKEN MODEL</span><h3>颜色、章法、渠道三维正交</h3>
+              <p><code>foundation</code> 保存颜色/字号/间距；<code>semantic</code> 保存正文/弱文字/强调；<code>component</code> 保存 quote/table/hero；6 个 palette 只覆盖颜色；3 个 motif 是结构 recipe；channel 只定义平台约束。避免复制 18×渠道套模板。</p>
+            </div>
+            <div class="card">
+              <span class="tag">IMPORTANT CORRECTION</span><h3>现有自检更像 denylist</h3>
+              <p>当前禁用项扫描不能被称为完整“白名单”。新编译器必须逐个解析 style declaration，把属性分成 <code>verified-safe</code>、<code>verified-stripped</code>、<code>unknown</code>；生产环境默认阻断 unknown，并继续做真实微信往返。</p>
+            </div>
+          </div>
+          <details><summary>DTCG 与 Style Dictionary 的实施边界</summary><div>DTCG 2025.10 已是稳定社区格式，但不能假设 Style Dictionary 已完整实现 Resolver Module。P0 使用明确、可测试的 merge order，并生成三份产物：Web CSS variables、微信静态 JS token map、卡片 TypeScript object。等完整兼容成熟后再迁移 modifier / resolver。</div></details>
+          <div class="callout"><div><strong>章法选择由内容特征决定，hash 只作平局。</strong><p>数据/表格密集优先 classic；叙事/观点型优先 centered；教程/行动清单优先 kicker。生产必须允许显式 override。测试注入固定 `date/seed/font/browser`，否则“标题 + 当天”会让截图每日漂移。</p></div></div>
+          <details><summary>视觉回归的最小测试矩阵</summary><div>准备 12 份 Markdown fixture；一个 canonical 稿跑完整 3×6 共 18 张微信预览；每个 motif 做真实往返 smoke；token 变更跑 6 palette；发布前或 nightly 才跑全 18。Playwright baseline 必须固定 OS、浏览器、字体和 seed。Web 额外要求 axe violation = 0，incomplete 进入人工复核。</div></details>
+          <details><summary>为什么 Juice 不能替代微信兼容验证？</summary><div>Juice 只负责把 CSS 规则内联到元素，不知道微信会剥除哪些属性、节点和 URL。正确顺序是：组件 CSS → Juice → HTML 节点 allowlist → style 属性/值 allowlist → 空装饰节点与图片检查 → 微信 ProseMirror 往返 → 归一化节点、样式签名和截图对比。</div></details>
+        </section>
+
+        <section id="roadmap">
+          <div class="section-head">
+            <div class="section-no">09</div>
+            <div><h2>90 天可执行路线：先止损，再统一，再扩大来源</h2><p>下方清单可直接勾选，状态保存在当前浏览器本地。P0 完成前，不建议再新增高维护抓取源。</p></div>
+          </div>
+          <div class="roadmap">
+            <article class="phase">
+              <div class="phase-head"><strong>P0 · DAY 1–14</strong><h3>止损与可观测</h3></div>
+              <ul class="checklist">
+                <li><label><input type="checkbox" data-task="p0-1"><span>把整批幻觉阻断改成单候选 quarantine</span></label></li>
+                <li><label><input type="checkbox" data-task="p0-2"><span>X 固定 3000 点赞改为相对速度百分位</span></label></li>
+                <li><label><input type="checkbox" data-task="p0-3"><span>建立 sources health 表和 7 日成功率</span></label></li>
+                <li><label><input type="checkbox" data-task="p0-4"><span>建立 SQLite runs / stages / artifacts / errors</span></label></li>
+                <li><label><input type="checkbox" data-task="p0-5"><span>统一 canonical URL、hash、时间与 rights 字段</span></label></li>
+                <li><label><input type="checkbox" data-task="p0-6"><span>固定 30 篇写作 eval 基线</span></label></li>
+              </ul>
+            </article>
+            <article class="phase">
+              <div class="phase-head"><strong>P1 · DAY 15–45</strong><h3>统一内核</h3></div>
+              <ul class="checklist">
+                <li><label><input type="checkbox" data-task="p1-1"><span>实现 Content Signal Ledger 与 Obsidian 导出</span></label></li>
+                <li><label><input type="checkbox" data-task="p1-2"><span>实现 exact + SimHash + embedding + mechanism 聚类</span></label></li>
+                <li><label><input type="checkbox" data-task="p1-3"><span>上线选题评分 + MMR + 配额</span></label></li>
+                <li><label><input type="checkbox" data-task="p1-4"><span>Markdown → ArticleDoc，旧渲染器保留回滚</span></label></li>
+                <li><label><input type="checkbox" data-task="p1-5"><span>DTCG token 生成旧 JS map</span></label></li>
+                <li><label><input type="checkbox" data-task="p1-6"><span>18 组合快照 + 微信往返 smoke</span></label></li>
+              </ul>
+            </article>
+            <article class="phase">
+              <div class="phase-head"><strong>P2 · DAY 46–90</strong><h3>扩大与优化</h3></div>
+              <ul class="checklist">
+                <li><label><input type="checkbox" data-task="p2-1"><span>feedgrab 非 X 公开内容两周隔离试点并评估命中率</span></label></li>
+                <li><label><input type="checkbox" data-task="p2-2"><span>接入 Bluesky / OpenAlex / GDELT 三条新车道</span></label></li>
+                <li><label><input type="checkbox" data-task="p2-3"><span>接 Trends RSS/BigQuery，并申请 API alpha</span></label></li>
+                <li><label><input type="checkbox" data-task="p2-4"><span>上线 Web compiler + axe</span></label></li>
+                <li><label><input type="checkbox" data-task="p2-5"><span>上线标题卡 / 金句卡 / 数据卡</span></label></li>
+                <li><label><input type="checkbox" data-task="p2-6"><span>按月复盘来源 ROI、规则误杀和人工编辑量</span></label></li>
+              </ul>
+            </article>
+          </div>
+          <h3 style="margin-top:38px">验收 KPI</h3>
+          <div class="grid-4">
+            <div class="kpi"><strong>≥ 85%</strong><span>核心来源 7 日成功率</span></div>
+            <div class="kpi"><strong>&lt; 5%</strong><span>有效候选误杀率</span></div>
+            <div class="kpi"><strong>≥ 95%</strong><span>事实 claim 来源覆盖</span></div>
+            <div class="kpi"><strong>0</strong><span>重复机制进入草稿箱</span></div>
+            <div class="kpi"><strong>≤ 20%</strong><span>入选稿人工大改比例</span></div>
+            <div class="kpi"><strong>100%</strong><span>草稿箱 appMsgId 可追踪</span></div>
+            <div class="kpi"><strong>0</strong><span>Web axe 自动违规</span></div>
+            <div class="kpi"><strong>&lt; 1%</strong><span>视觉快照非预期漂移</span></div>
+          </div>
+          <div class="callout"><div><strong>第一周只做三件事也会立刻见效。</strong><p>① 单条 quarantine；② X 相对热度；③ source health + run checkpoint。它们分别减少误杀、扩大早期选题范围、缩短故障定位时间，是当前投入产出比最高的改造。</p></div></div>
+        </section>
+
+        <section id="references">
+          <div class="section-head">
+            <div class="section-no">10</div>
+            <div><h2>一手证据与技术来源</h2><p>技术判断优先使用官方文档、官方仓库、协议与原始工程文章。X 社区观点只作为方向信号，不作为能力证明。</p></div>
+          </div>
+          <div class="source-list">
+            <div class="source-item"><b>E01 · MCP VERSIONING</b><a href="https://modelcontextprotocol.io/docs/learn/versioning">当前稳定版 2025-11-25</a><span>生产协议基线。</span></div>
+            <div class="source-item"><b>E02 · MCP RELEASE CANDIDATE</b><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">2026-07-28 RC</a><span>候选能力，非当前稳定版。</span></div>
+            <div class="source-item"><b>E03 · OPENAI AGENTS SDK</b><a href="https://openai.github.io/openai-agents-python/tracing/">Tracing</a><span>生成、工具、guardrail 与自定义 span。</span></div>
+            <div class="source-item"><b>E04 · LANGGRAPH</b><a href="https://docs.langchain.com/oss/python/langgraph/persistence">Persistence</a><span>checkpoint、HITL、time travel、fault tolerance。</span></div>
+            <div class="source-item"><b>E05 · ANTHROPIC</b><a href="https://www.anthropic.com/engineering/multi-agent-research-system">Multi-agent research system</a><span>并行研究的收益、成本与评测经验。</span></div>
+            <div class="source-item"><b>E06 · ANTHROPIC</b><a href="https://www.anthropic.com/engineering/managed-agents">Managed Agents</a><span>session / harness / sandbox 分离。</span></div>
+            <div class="source-item"><b>E07 · GOOGLE TRENDS</b><a href="https://developers.google.com/search/apis/trends">API alpha</a><span>近 5 年一致尺度、地域和多粒度数据。</span></div>
+            <div class="source-item"><b>E08 · X API</b><a href="https://docs.x.com/x-api/fundamentals/post-cap">Usage & billing</a><span>按量付费、日内去重与月度上限。</span></div>
+            <div class="source-item"><b>E09 · X API</b><a href="https://docs.x.com/x-api/fundamentals/rate-limits">Rate limits</a><span>recent search 与 filtered stream 限制。</span></div>
+            <div class="source-item"><b>E10 · BLUESKY</b><a href="https://docs.bsky.app/docs/advanced-guides/firehose">Firehose / Jetstream</a><span>公开 JSON 事件流。</span></div>
+            <div class="source-item"><b>E11 · HACKER NEWS</b><a href="https://github.com/HackerNews/API">Official API</a><span>近实时公开数据。</span></div>
+            <div class="source-item"><b>E12 · GITHUB</b><a href="https://docs.github.com/en/rest/activity">Activity API</a><span>events、feeds、notifications。</span></div>
+            <div class="source-item"><b>E13 · OPENALEX</b><a href="https://developers.openalex.org/api-reference/introduction">API Overview</a><span>works、topics、keywords 与研究图谱。</span></div>
+            <div class="source-item"><b>E14 · GDELT</b><a href="https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/amp/">DOC 2 API</a><span>近 3 个月跨语种新闻全文搜索。</span></div>
+            <div class="source-item"><b>E15 · FEEDGRAB</b><a href="https://github.com/iBigQiang/feedgrab">Main repository</a><span>多平台、Markdown、MCP、item_id。</span></div>
+            <div class="source-item"><b>E16 · FEEDGRAB</b><a href="https://github.com/iBigQiang/feedgrab/releases">2026-07-10 release</a><span>Desktop 0.1.18，X 中文 Article 与合并召回。</span></div>
+            <div class="source-item"><b>E17 · JINA READER</b><a href="https://github.com/jina-ai/reader">Official repository</a><span>URL → Markdown/JSON、browser/curl、self-host。</span></div>
+            <div class="source-item"><b>E18 · TRAFILATURA</b><a href="https://trafilatura.readthedocs.io/en/latest/usage-python.html">Python usage</a><span>Markdown/JSON、元数据与去重。</span></div>
+            <div class="source-item"><b>E19 · FIRECRAWL</b><a href="https://docs.firecrawl.dev/api-reference/v2-introduction">API v2</a><span>scrape、crawl、map、search、browser。</span></div>
+            <div class="source-item"><b>E20 · PROMPTFOO</b><a href="https://www.promptfoo.dev/docs/configuration/expected-outputs/">Assertions & metrics</a><span>结构、相似度、自定义与模型评分断言。</span></div>
+            <div class="source-item"><b>E21 · RAGAS</b><a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/">Metrics</a><span>faithfulness、factual correctness、agent goal。</span></div>
+            <div class="source-item"><b>E22 · DTCG</b><a href="https://www.w3.org/community/reports/design-tokens/CG-FINAL-format-20251028/">Design Tokens 2025.10</a><span>首个稳定社区格式规范。</span></div>
+            <div class="source-item"><b>E23 · UNIFIED</b><a href="https://unifiedjs.com/learn/guide/using-unified/">Markdown → AST → HTML</a><span>mdast / hast 插件处理链。</span></div>
+            <div class="source-item"><b>E24 · JUICE</b><a href="https://automattic.github.io/juice/">CSS inliner</a><span>内联 CSS，但不替代微信兼容验证。</span></div>
+            <div class="source-item"><b>E25 · VERCEL OG</b><a href="https://vercel.com/docs/og-image-generation">Satori + Resvg</a><span>HTML/CSS → 1200×630 社媒图。</span></div>
+            <div class="source-item"><b>E26 · PLAYWRIGHT</b><a href="https://playwright.dev/docs/next/test-snapshots">Visual comparisons</a><span>截图与 snapshot 回归。</span></div>
+            <div class="source-item"><b>E27 · AXE-CORE</b><a href="https://github.com/dequelabs/axe-core">Accessibility engine</a><span>WCAG 自动检查与能力边界。</span></div>
+            <div class="source-item"><b>E28 · X POLICY</b><a href="https://docs.x.com/developer-terms/policy">Developer policy</a><span>自动化、保存、删除同步与再分发边界。</span></div>
+            <div class="source-item"><b>E29 · GOOGLE TRENDS</b><a href="https://support.google.com/trends/answer/12764470">BigQuery dataset</a><span>可立即使用的公共趋势数据，不等 alpha API。</span></div>
+          </div>
+        </section>
+
+        <footer>LOCAL ARTIFACT · RESEARCHED 2026-07-10 · No external scripts or fonts required · Checklist state stays in this browser.</footer>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const navLinks = [...document.querySelectorAll('#toc a')];
+    const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    sections.forEach(section => observer.observe(section));
+
+    const filterButtons = [...document.querySelectorAll('.filter-btn')];
+    const sourceRows = [...document.querySelectorAll('#sourceTable tbody tr')];
+    const sourceSearch = document.getElementById('sourceSearch');
+    let currentFilter = 'all';
+    function filterSources() {
+      const q = sourceSearch.value.trim().toLowerCase();
+      sourceRows.forEach(row => {
+        const statusOK = currentFilter === 'all' || row.dataset.status === currentFilter;
+        const textOK = !q || row.textContent.toLowerCase().includes(q);
+        row.classList.toggle('hide', !(statusOK && textOK));
+      });
+    }
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      currentFilter = button.dataset.filter;
+      filterButtons.forEach(b => b.classList.toggle('active', b === button));
+      filterSources();
+    }));
+    sourceSearch.addEventListener('input', filterSources);
+
+    document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click', async () => {
+      const target = document.getElementById(button.dataset.copy);
+      try {
+        await navigator.clipboard.writeText(target.innerText);
+        const old = button.textContent; button.textContent = '已复制';
+        setTimeout(() => button.textContent = old, 1400);
+      } catch (_) { button.textContent = '请手动复制'; }
+    }));
+
+    const checks = [...document.querySelectorAll('[data-task]')];
+    checks.forEach(input => {
+      input.checked = localStorage.getItem('content-upgrade:' + input.dataset.task) === '1';
+      input.addEventListener('change', () => localStorage.setItem('content-upgrade:' + input.dataset.task, input.checked ? '1' : '0'));
+    });
+
+    const toggle = document.getElementById('toggleDetails');
+    let expanded = false;
+    toggle.addEventListener('click', () => {
+      expanded = !expanded;
+      document.querySelectorAll('details').forEach(d => d.open = expanded);
+      toggle.textContent = expanded ? '收起全部细节' : '展开全部细节';
+    });
+  </script>
+</body>
+</html>

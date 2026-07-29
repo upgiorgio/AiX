@@ -1,0 +1,14 @@
+name = "aix-ai-api"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+account_id = "07728da33c7e188b00a80f1462376afc"
+
+[ai]
+binding = "AI"
+
+# Kimi/Moonshot is the preferred provider. Put the secret with:
+# wrangler secret put MOONSHOT_API_KEY
+[vars]
+KIMI_BASE_URL = "https://api.moonshot.cn/v1"
+KIMI_MODEL = "kimi-k2.6"
+KIMI_FAST_MODEL = "kimi-k2.6"

@@ -112,6 +112,18 @@ python3 -m http.server 4173
 
 打开 `http://localhost:4173`
 
+### AI 后端（KimiClaw / Kimi）
+
+文案卡片套件默认请求 Cloudflare Worker：`https://aix-ai-api.musd-app.workers.dev`。Worker 现在会优先使用 Kimi/Moonshot 兼容 OpenAI 的接口，缺少密钥时才回退到 Cloudflare Workers AI。
+
+```bash
+cd ai-worker
+wrangler secret put MOONSHOT_API_KEY
+wrangler deploy
+```
+
+可选变量在 `ai-worker/wrangler.toml` 中配置：`KIMI_BASE_URL`、`KIMI_MODEL`、`KIMI_FAST_MODEL`。
+
 ### 典型工作流
 
 1. **主工作台** → 填写主题与观点 → 生成内容套件（标题 + 文章 + Thread + 时间轴）
@@ -198,6 +210,7 @@ vercel --prod
 ## 🛠 技术说明
 
 - **纯前端静态站点** — HTML / CSS / Vanilla JS，无框架依赖
+- **KimiClaw / Kimi AI Worker** — `/ai/generate`、`/ai/stream`、`/url/extract` 统一走 Worker 代理
 - **Vercel Serverless API** — `/api/hot-topics` 用于热点聚合
 - **PWA 支持** — manifest + Service Worker，可离线访问
 - **html2canvas** — 卡片 PNG 导出（CDN 加载，按需使用）

@@ -1,3 +1,45 @@
 .DS_Store
 .vercel
 *.log
+# === 迁移标准 .gitignore (2026-07-29) ===
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# 密钥 — 绝不提交
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pem
+*.mobileprovision
+*credentials*.json
+*secret*.json
+# 构建产物
+dist/
+build/
+.next/
+.vercel/
+.open-next/
+out/
+DerivedData/
+*.xcuserstate
+.cxx/
+.hvigor/
+# 日志与缓存
+.cache/
+.turbo/
+# 构建产物 (补充: Swift/Tauri/Rust)
+.build/
+target/
+src-tauri/target/
+src-tauri/gen/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+# 客户/个人数据 — 绝不提交
+bazi-chat/2026-*/
+**/客户/
+**/clients/

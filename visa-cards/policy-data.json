@@ -1,0 +1,3346 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-29T06:42:57.945Z",
+  "verifiedAt": "2026-07-28",
+  "countries": [
+    {
+      "slug": "美国签证-乔大帅",
+      "code": "US",
+      "flag": "🇺🇸",
+      "country": "美国",
+      "topic": "B1/B2 访客签证",
+      "accent": "#d95f2a",
+      "secondary": "#18334f",
+      "pattern": "LIBERTY / 01",
+      "policyEffective": "2025-09-30",
+      "officialUpdated": "2026-05-01",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-04",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "短期旅游、探亲或符合规定的商务访问",
+        "stay": "由入境口岸 CBP 决定",
+        "cumulative": "无统一累计天数；不得借访客身份长期居留",
+        "visa": "需要，通常申请 B2 或 B1/B2",
+        "arrivalCard": "按承运人与入境口岸要求",
+        "fee": "签证申请费 US$185；EVUS 新登记 US$30",
+        "processing": "面谈排期因地点、季节和类别而变",
+        "districtException": "非移民签证面谈原则上在国籍国或居住国预约",
+        "risk": "高"
+      },
+      "sources": [
+        {
+          "id": "visitor",
+          "label": "美国国务院｜Visitor Visa",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
+          "pageDate": "2026-05-01"
+        },
+        {
+          "id": "ds160",
+          "label": "美国国务院｜DS-160",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/forms/ds-160-online-nonimmigrant-visa-application.html",
+          "pageDate": "2026-05-01"
+        },
+        {
+          "id": "evus",
+          "label": "EVUS 官方网站",
+          "url": "https://www.evus.gov/",
+          "pageDate": "2025-09-30"
+        },
+        {
+          "id": "wait",
+          "label": "美国国务院｜面谈等待时间",
+          "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/wait-times.html",
+          "pageDate": "2026-07-28"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去美国，要办什么签证？",
+          "answer": "短期旅游通常办 B2 或 B1/B2",
+          "bullets": [
+            "B2：旅游、探亲、医疗等访问",
+            "B1/B2：同时覆盖合规商务与旅游访问",
+            "签证不保证入境，最终由口岸决定"
+          ],
+          "sourceIds": [
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "B1、B2、B1/B2 怎么选？",
+          "answer": "看真实目的，不按“更容易过”来选",
+          "bullets": [
+            "纯旅游通常对应 B2",
+            "兼有合规商务活动可选 B1/B2",
+            "不能用访客签证在美就业或长期学习"
+          ],
+          "sourceIds": [
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "申请前先判断什么？",
+          "answer": "核心是临时访问目的与按期离境约束",
+          "bullets": [
+            "行程目的要具体、真实、可解释",
+            "准备资金来源和国内约束证明",
+            "不要先买不可退改行程赌出签"
+          ],
+          "sourceIds": [
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "DS-160 怎么填不容易出错？",
+          "answer": "按护照与真实经历逐项填写",
+          "bullets": [
+            "保存 Application ID，及时备份",
+            "工作、教育、旅行史保持时间线一致",
+            "提交后打印确认页，面谈要带"
+          ],
+          "sourceIds": [
+            "ds160"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "账户、缴费与预约顺序",
+          "answer": "DS-160 → 缴费 → 预约 → 准备面谈",
+          "bullets": [
+            "签证申请费为 US$185，通常不退",
+            "预约平台只用使领馆指向的官方入口",
+            "每位申请人都要有独立 DS-160"
+          ],
+          "sourceIds": [
+            "visitor",
+            "ds160"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "面谈城市和排期怎么看？",
+          "answer": "按国籍国或居住国预约，并查实时等待时间",
+          "bullets": [
+            "不同城市排期可能不同",
+            "等待时间只是估算，不是承诺",
+            "2026 加急试点不等于全国通用"
+          ],
+          "sourceIds": [
+            "wait"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "面谈必带什么？",
+          "answer": "护照、DS-160 确认页、缴费凭证、合规照片",
+          "bullets": [
+            "护照通常需覆盖预计停留期后至少 6 个月",
+            "辅助材料围绕目的、资金和回国约束",
+            "材料多不等于更有说服力"
+          ],
+          "sourceIds": [
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "面谈常问什么？",
+          "answer": "为什么去、去多久、谁付钱、为什么会回来",
+          "bullets": [
+            "答案与 DS-160 保持一致",
+            "短句回答，缺什么就如实说明",
+            "不背模板，不编邀请人或收入"
+          ],
+          "sourceIds": [
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "行政审查、通过、拒签怎么办？",
+          "answer": "三种状态都以官方通知为准",
+          "bullets": [
+            "行政审查可能要求补材料或等待",
+            "通过后仍等护照返还再定不可退行程",
+            "拒签不等于永久禁止，可在情况变化后重申"
+          ],
+          "sourceIds": [
+            "visitor"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "拿到护照先检查什么？",
+          "answer": "姓名、护照号、签证类别、有效期、Entries",
+          "bullets": [
+            "发现错误及时联系签发使领馆",
+            "有效期不等于每次可停留天数",
+            "旧护照有有效签证时先查官方携带规则"
+          ],
+          "sourceIds": [
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "10 年 B 类签证还差一步",
+          "answer": "出发前完成有效 EVUS 登记",
+          "bullets": [
+            "每两年或换新护照/新签证时重新登记",
+            "自 2025-09-30 起新登记收费 US$30",
+            "只认 evus.gov，警惕高价代填站"
+          ],
+          "sourceIds": [
+            "visitor",
+            "evus"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "美国官方来源与核验记录",
+          "answer": "四个入口足够覆盖申请、排期与 EVUS",
+          "bullets": [
+            "政策生效、页面更新、人工核验日期分开记录",
+            "每周扫描费用、预约和 EVUS 变化",
+            "任何“包过率”都不是官方信息"
+          ],
+          "sourceIds": [
+            "visitor",
+            "ds160",
+            "evus",
+            "wait"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "英国签证-乔大帅",
+      "code": "GB",
+      "flag": "🇬🇧",
+      "country": "英国",
+      "topic": "Standard Visitor",
+      "accent": "#d76b36",
+      "secondary": "#243a57",
+      "pattern": "BORDER / 02",
+      "policyEffective": "2026-04-08",
+      "officialUpdated": "2026-07-01",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-28",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "旅游、探亲及其他获准的短期访问活动",
+        "stay": "通常每次最多 6 个月",
+        "cumulative": "长期签证不等于可在英国长期居住",
+        "visa": "需要 Standard Visitor visa",
+        "arrivalCard": "按英国边境与承运人要求",
+        "fee": "6 个月短期访问签证 £135",
+        "processing": "完成身份核验和递交材料后通常约 3 周",
+        "districtException": "签证中心服务与可选付费项目以预约页面为准",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "overview",
+          "label": "GOV.UK｜Standard Visitor",
+          "url": "https://www.gov.uk/standard-visitor",
+          "pageDate": "2026-07-01"
+        },
+        {
+          "id": "apply",
+          "label": "GOV.UK｜申请流程",
+          "url": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
+          "pageDate": "2026-07-01"
+        },
+        {
+          "id": "docs",
+          "label": "GOV.UK｜支持文件",
+          "url": "https://www.gov.uk/government/publications/visitor-visa-guide-to-supporting-documents",
+          "pageDate": "2026-07-01"
+        },
+        {
+          "id": "fees",
+          "label": "GOV.UK｜2026 费用表",
+          "url": "https://www.gov.uk/government/publications/visa-regulations-revised-table/home-office-immigration-and-nationality-fees-8-april-2026",
+          "pageDate": "2026-03-18"
+        }
+      ],
+      "cards": [
+        {
+          "title": "去英国旅游办什么？",
+          "answer": "中国普通护照通常申请 Standard Visitor visa",
+          "bullets": [
+            "适用于旅游、探亲及部分获准活动",
+            "通常每次停留最多 6 个月",
+            "签证获批仍需通过边境检查"
+          ],
+          "sourceIds": [
+            "overview"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "开始申请前先做三件事",
+          "answer": "核对目的、资格与是否需要签证",
+          "bullets": [
+            "列出具体行程与预计费用",
+            "确认资金来源和回国安排",
+            "最早通常可提前 3 个月申请"
+          ],
+          "sourceIds": [
+            "overview",
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "在线申请怎么走？",
+          "answer": "填表 → 付费 → 预约签证中心 → 递交材料",
+          "bullets": [
+            "每位同行者单独申请",
+            "信息必须与护照和证明材料一致",
+            "保存申请编号与付款记录"
+          ],
+          "sourceIds": [
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "资金材料看什么？",
+          "answer": "重点是来源合理、余额与行程匹配",
+          "bullets": [
+            "银行流水要能解释收入与大额进账",
+            "资助人需说明关系和承担范围",
+            "不是余额越高越好，而是证据链一致"
+          ],
+          "sourceIds": [
+            "docs"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "中文材料要翻译吗？",
+          "answer": "非英文或威尔士文材料通常需完整翻译",
+          "bullets": [
+            "译文应准确对应原件",
+            "包含译者确认、日期、姓名与联系方式",
+            "不要只翻关键句或自行删减"
+          ],
+          "sourceIds": [
+            "docs"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "录指纹和递交材料",
+          "answer": "按预约到签证申请中心完成身份核验",
+          "bullets": [
+            "带护照及预约要求的文件",
+            "扫描、快递等增值服务不等于加快审理",
+            "以预约中心当日规则为准"
+          ],
+          "sourceIds": [
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "2026 申请费是多少？",
+          "answer": "短期 6 个月 Standard Visitor 为 £135",
+          "bullets": [
+            "2026-04-08 起执行新费率",
+            "拒签或获批更短有效期通常不退款",
+            "增值服务另计且并非必须"
+          ],
+          "sourceIds": [
+            "fees",
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "多久能出结果？",
+          "answer": "官方通常写约 3 周，不是固定出签日",
+          "bullets": [
+            "从完成身份核验和递交文件后计算",
+            "补件或复杂审查可能更久",
+            "未拿到护照前避免不可退改支出"
+          ],
+          "sourceIds": [
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "长期访问签证的误区",
+          "answer": "2/5/10 年有效，不等于可长期住英国",
+          "bullets": [
+            "每次停留仍受许可限制，通常最多 6 个月",
+            "频繁、连续长住可能被质疑访问目的",
+            "签证有效期与准许停留期分开看"
+          ],
+          "sourceIds": [
+            "overview"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "英国官方来源与核验记录",
+          "answer": "只跟 GOV.UK 的规则、费用与材料指南",
+          "bullets": [
+            "费用生效日：2026-04-08",
+            "官方页面日与本页核验日分别显示",
+            "每月复核，费用调整期加密扫描"
+          ],
+          "sourceIds": [
+            "overview",
+            "apply",
+            "docs",
+            "fees"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "澳大利亚签证-乔大帅",
+      "code": "AU",
+      "flag": "🇦🇺",
+      "country": "澳大利亚",
+      "topic": "Visitor visa 600",
+      "accent": "#d97837",
+      "secondary": "#173e52",
+      "pattern": "SOUTH / 03",
+      "policyEffective": "2026-07-01",
+      "officialUpdated": "2026-07-01",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-28",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "旅游、邮轮、探亲访友",
+        "stay": "批准信可能给 3、6 或 12 个月；通常为 3 个月",
+        "cumulative": "以签证批准信的有效期、入境次数和条件为准",
+        "visa": "通常申请 Visitor visa subclass 600 Tourist stream",
+        "arrivalCard": "按澳大利亚边境当期要求",
+        "fee": "境外 Tourist stream 自 AUD250 起",
+        "processing": "使用官方 Processing Times Guide 动态查询",
+        "districtException": "可能被要求体检或采集生物信息",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "600",
+          "label": "Home Affairs｜Visitor 600",
+          "url": "https://immi.homeaffairs.gov.au/Visa-subsite/Pages/visit/600-visitor-landing.aspx",
+          "pageDate": "2026-07-01"
+        },
+        {
+          "id": "tourist",
+          "label": "Home Affairs｜Tourist stream",
+          "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas",
+          "pageDate": "2026-07-01"
+        },
+        {
+          "id": "immi",
+          "label": "ImmiAccount",
+          "url": "https://online.immi.gov.au/lusc/login",
+          "pageDate": "2026-07-28"
+        },
+        {
+          "id": "times",
+          "label": "Home Affairs｜Processing times",
+          "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times",
+          "pageDate": "2026-07-28"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去澳洲办什么？",
+          "answer": "旅游通常申请 600 类 Tourist stream",
+          "bullets": [
+            "适用于旅游、邮轮、探亲访友",
+            "人在澳洲境外申请与等待决定",
+            "不能工作，可短期学习不超过 3 个月"
+          ],
+          "sourceIds": [
+            "600",
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "600 签证能待多久？",
+          "answer": "以批准信为准，可能是 3、6 或 12 个月",
+          "bullets": [
+            "官方说明通常批准 3 个月停留",
+            "可能单次或多次入境",
+            "签证有效期不等于每次停留期"
+          ],
+          "sourceIds": [
+            "600",
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "什么叫“真实访客”？",
+          "answer": "目的临时、资金足够、愿意按期离境",
+          "bullets": [
+            "行程与个人情况相匹配",
+            "说明工作、家庭或学业等回国约束",
+            "不要制造虚假邀请或流水"
+          ],
+          "sourceIds": [
+            "600",
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "ImmiAccount 申请顺序",
+          "answer": "建账户 → 填表 → 上传材料 → 付款 → 跟进通知",
+          "bullets": [
+            "只用 immi.homeaffairs.gov.au 官方域名",
+            "保存 TRN 与提交回执",
+            "家庭成员通常各自提交申请"
+          ],
+          "sourceIds": [
+            "immi",
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "材料怎么组织？",
+          "answer": "按身份、资金、行程、约束四组上传",
+          "bullets": [
+            "护照与旅行历史清晰扫描",
+            "流水标出工资和大额进账来源",
+            "文件名写清内容、日期和申请人"
+          ],
+          "sourceIds": [
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "体检和生物信息",
+          "answer": "不是人人固定要求，以账户通知为准",
+          "bullets": [
+            "收到要求后按指定机构与期限完成",
+            "不要自行提前做不匹配的检查",
+            "未完成要求可能影响决定"
+          ],
+          "sourceIds": [
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "费用与处理时间",
+          "answer": "境外 Tourist stream 自 AUD250 起，时间动态变化",
+          "bullets": [
+            "费用以付款页的 Visa Pricing Estimator 为准",
+            "处理时间工具是近期案例指南，不是承诺",
+            "材料不完整可能导致延误"
+          ],
+          "sourceIds": [
+            "tourist",
+            "times"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "批准信到手看什么？",
+          "answer": "看有效期、入境次数、每次停留和附加条件",
+          "bullets": [
+            "记录 must not arrive after 日期",
+            "检查 8101 不得工作等条件",
+            "电子签通常不贴签，随身存批准信"
+          ],
+          "sourceIds": [
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "入境时准备什么？",
+          "answer": "护照、批准信、返程安排、住宿与资金证明",
+          "bullets": [
+            "签证获批不等于保证入境",
+            "回答与申请信息保持一致",
+            "如实申报食品、药品和受管制物品"
+          ],
+          "sourceIds": [
+            "tourist"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "澳洲官方来源与核验记录",
+          "answer": "申请、费用、时效都回到 Home Affairs",
+          "bullets": [
+            "停留期以个人批准信为最终依据",
+            "处理时间每次出发前重查",
+            "每月复核政策与费用"
+          ],
+          "sourceIds": [
+            "600",
+            "tourist",
+            "immi",
+            "times"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "韩国签证-乔大帅",
+      "code": "KR",
+      "flag": "🇰🇷",
+      "country": "韩国",
+      "topic": "C-3-9 一般观光",
+      "accent": "#dc653d",
+      "secondary": "#283b67",
+      "pattern": "SEOUL / 04",
+      "policyEffective": "2026-06-01",
+      "officialUpdated": "2026-07-14",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-04",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "一般观光",
+        "stay": "以签证页或签发确认书为准",
+        "cumulative": "按签证有效期、入境次数和停留资格执行",
+        "visa": "一般观光通常为 C-3-9",
+        "arrivalCard": "按韩国入境部门当期要求",
+        "fee": "按签证类别、领区及签证中心通知",
+        "processing": "领区差异明显，广州一般观光自 2026-06-01 起标示 10 个工作日内",
+        "districtException": "必须按常住地所属使领馆/签证中心核验",
+        "risk": "高"
+      },
+      "sources": [
+        {
+          "id": "embassy",
+          "label": "韩国驻华使馆｜签证材料",
+          "url": "https://overseas.mofa.go.kr/cn-zh/brd/m_1201/view.do?page=1&seq=695439",
+          "pageDate": "2026-07-14"
+        },
+        {
+          "id": "visa",
+          "label": "Korea Visa Portal",
+          "url": "https://www.visa.go.kr/",
+          "pageDate": "2026-07-28"
+        },
+        {
+          "id": "shanghai",
+          "label": "韩国驻上海总领馆｜公告",
+          "url": "https://overseas.mofa.go.kr/cn-shanghai-zh/brd/m_492/list.do",
+          "pageDate": "2026-07-28"
+        },
+        {
+          "id": "guangzhou",
+          "label": "韩国驻广州总领馆｜VISA",
+          "url": "https://overseas.mofa.go.kr/cn-guangzhou-zh/wpge/m_91/contents.do",
+          "pageDate": "2026-06-01"
+        }
+      ],
+      "cards": [
+        {
+          "title": "去韩国自由行办什么？",
+          "answer": "一般观光通常对应 C-3-9",
+          "bullets": [
+            "适用短期旅游，不等于工作或留学许可",
+            "具体有效期和停留期看签发结果",
+            "特殊免签或团签须另查当期条件"
+          ],
+          "sourceIds": [
+            "embassy"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "第一步不是准备流水",
+          "answer": "先确认常住地所属领区",
+          "bullets": [
+            "不同使领馆受理对象可能不同",
+            "材料、预约、费用、时效均可能有差异",
+            "不要拿其他领区清单直接照抄"
+          ],
+          "sourceIds": [
+            "embassy",
+            "shanghai"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "电子申请表怎么填？",
+          "answer": "以 Visa Portal 和领区通知为准",
+          "bullets": [
+            "姓名拼音、护照号逐字核对",
+            "旅行目的与行程一致",
+            "打印、签字要求按受理机构执行"
+          ],
+          "sourceIds": [
+            "visa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "从哪里递交？",
+          "answer": "多数普通申请转由所属签证申请中心受理",
+          "bullets": [
+            "先看使领馆最新公告",
+            "外交、公务或紧急人道情况可能另有渠道",
+            "只用官方指向的中心入口"
+          ],
+          "sourceIds": [
+            "embassy"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "基础材料怎么分组？",
+          "answer": "身份、申请表、行程、资金与在职/在学证明",
+          "bullets": [
+            "领区清单优先于通用攻略",
+            "提交复印件时核对是否需原件",
+            "被要求补件会延长审理"
+          ],
+          "sourceIds": [
+            "embassy"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "领区差异有多大？",
+          "answer": "可能直接影响受理资格与审理时间",
+          "bullets": [
+            "上海 2026-07 曾连续调整旅游签业务",
+            "广州一般观光标示 10 个工作日内",
+            "每次提交前重开本领区公告"
+          ],
+          "sourceIds": [
+            "shanghai",
+            "guangzhou"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "团签、济州或过境免签",
+          "answer": "都是有条件例外，不能等同全国自由行免签",
+          "bullets": [
+            "核对出发地、目的地、路线和团队资格",
+            "任一条件不符就按普通签证准备",
+            "不要购买所谓“口岸包过”服务"
+          ],
+          "sourceIds": [
+            "embassy"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "进度和签发结果怎么查？",
+          "answer": "在 Korea Visa Portal 查询",
+          "bullets": [
+            "按系统要求输入护照与英文姓名",
+            "签发确认书信息要逐项核对",
+            "状态更新不等于已拿到全部旅行文件"
+          ],
+          "sourceIds": [
+            "visa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "入境申报与随身材料",
+          "answer": "按出发时的韩国官方入境规则办理",
+          "bullets": [
+            "随身带返程票、住宿、行程与资金证明",
+            "签证不保证入境",
+            "回答与申请用途一致"
+          ],
+          "sourceIds": [
+            "visa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "韩国官方来源与核验记录",
+          "answer": "总则看使馆，落地必须看所属领区",
+          "bullets": [
+            "每周扫描北京、上海及申请人领区公告",
+            "审理时间只能写“官方标示”，不能承诺",
+            "页面日期与人工核验日期分开"
+          ],
+          "sourceIds": [
+            "embassy",
+            "shanghai",
+            "guangzhou",
+            "visa"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "日本签证-乔大帅",
+      "code": "JP",
+      "flag": "🇯🇵",
+      "country": "日本",
+      "topic": "个人旅游签 / eVISA",
+      "accent": "#df633e",
+      "secondary": "#26374a",
+      "pattern": "NIPPON / 05",
+      "policyEffective": "2026-05-15",
+      "officialUpdated": "2026-07-01",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-04",
+      "fields": {
+        "passport": "中国普通护照，且居住在中国境内",
+        "purpose": "短期观光旅游",
+        "stay": "eVISA 通常签发 15 日或 30 日停留期",
+        "cumulative": "以具体签证有效期、入境次数和签发通知为准",
+        "visa": "需要；旅游签须经所属领区指定旅行社办理",
+        "arrivalCard": "按 Visit Japan Web / 日本入境当期要求",
+        "fee": "使领馆签证费与旅行社服务费分开，以当期通知为准",
+        "processing": "由指定旅行社与所属使领馆通知，不承诺固定日期",
+        "districtException": "按常住地所属使领馆及指定旅行社办理",
+        "risk": "高"
+      },
+      "sources": [
+        {
+          "id": "evisa",
+          "label": "日本外务省｜JAPAN eVISA",
+          "url": "https://www.mofa.go.jp/j_info/visit/visa/visaonline.html",
+          "pageDate": "2026-05-15"
+        },
+        {
+          "id": "china",
+          "label": "日本驻华使馆｜赴日旅游签证",
+          "url": "https://www.cn.emb-japan.go.jp/consular/visa_dantai.htm",
+          "pageDate": "2026-07-01"
+        },
+        {
+          "id": "agency",
+          "label": "日本驻华使馆｜指定旅行社",
+          "url": "https://www.cn.emb-japan.go.jp/itpr_zh/visa_dantai_daili.html",
+          "pageDate": "2025-05-09"
+        },
+        {
+          "id": "vjw",
+          "label": "Visit Japan Web",
+          "url": "https://www.vjw.digital.go.jp/",
+          "pageDate": "2026-07-28"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去日本免签吗？",
+          "answer": "不免签，短期观光要先办旅游签",
+          "bullets": [
+            "适用：中国境内居住的中国普通护照",
+            "旅游签通常通过所属领区指定旅行社办理",
+            "不能直接拿攻略去使领馆个人递交"
+          ],
+          "sourceIds": [
+            "china",
+            "agency"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "2026 日本 eVISA 新变化",
+          "answer": "中国境内申请人可经指定代理办理电子旅游签",
+          "bullets": [
+            "政策自 2026-05-15 起适用",
+            "只适用于短期观光等规定范围",
+            "不是申请人绕过旅行社自行直申"
+          ],
+          "sourceIds": [
+            "evisa",
+            "china"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "电子签能待多久？",
+          "answer": "中国境内申请人通常签发 15 日或 30 日",
+          "bullets": [
+            "实际以 Visa issuance notice 为准",
+            "停留期不等于签证可使用窗口",
+            "是否单次/多次看具体签发结果"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "单次、多次怎么选？",
+          "answer": "按真实出行频率与领区条件申请",
+          "bullets": [
+            "多次签不代表每次可无限停留",
+            "不同类型材料和资格可能不同",
+            "旅行社“推荐”不能代替官方条件"
+          ],
+          "sourceIds": [
+            "china"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "先找哪家代理机构？",
+          "answer": "只找所属使领馆公布的指定旅行社",
+          "bullets": [
+            "先确认常住地领区",
+            "核对机构名称与官方名单",
+            "使领馆费用与代办服务费分开问清"
+          ],
+          "sourceIds": [
+            "agency"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "材料怎么准备？",
+          "answer": "以所属领区与指定旅行社最新清单为准",
+          "bullets": [
+            "护照、申请表、照片与身份材料",
+            "行程、住宿、资金和在职/在学证明按要求提交",
+            "信息要与真实旅行计划一致"
+          ],
+          "sourceIds": [
+            "china",
+            "agency"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "电子签在机场怎么出示？",
+          "answer": "必须联网打开 Visa issuance notice",
+          "bullets": [
+            "截图不接受",
+            "PDF 不接受",
+            "打印件不能代替在线展示"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "出发前还要做什么？",
+          "answer": "核对签证、护照、航班住宿与入境申报",
+          "bullets": [
+            "建议在 Visit Japan Web 准备入境信息",
+            "确认手机可联网并能登录 eVISA",
+            "随身带返程和住宿等证明"
+          ],
+          "sourceIds": [
+            "evisa",
+            "vjw"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "拿到签证先核对什么？",
+          "answer": "姓名、护照号、有效期、停留期与入境次数",
+          "bullets": [
+            "错字要及时通过代办机构处理",
+            "签证签发不保证入境",
+            "不要把“15/30 日”写成统一有效期"
+          ],
+          "sourceIds": [
+            "evisa",
+            "china"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "日本官方来源与核验记录",
+          "answer": "外务省定规则，驻华使领馆定中国申请路径",
+          "bullets": [
+            "政策生效：2026-05-15",
+            "驻华旅游签页面：2026-07-01",
+            "每周扫描 eVISA、代理名单和领区通知"
+          ],
+          "sourceIds": [
+            "evisa",
+            "china",
+            "agency",
+            "vjw"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "泰国免签-乔大帅",
+      "code": "TH",
+      "flag": "🇹🇭",
+      "country": "泰国",
+      "topic": "中泰互免 + TDAC",
+      "accent": "#e06d31",
+      "secondary": "#293558",
+      "pattern": "SIAM / 06",
+      "policyEffective": "2024-03-01",
+      "officialUpdated": "2026-05-19",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-04",
+      "fields": {
+        "passport": "有效中国普通护照",
+        "purpose": "短期旅游及协议允许的访问",
+        "stay": "每次不超过 30 天",
+        "cumulative": "任意 180 天累计不超过 90 天",
+        "visa": "符合条件可免签",
+        "arrivalCard": "需要 TDAC，抵达前 3 天内提交",
+        "fee": "免签本身无签证费；TDAC 官方提交免费",
+        "processing": "入境现场审核，无“包入境”",
+        "districtException": "居留、就业、学习、媒体等活动须事先获批",
+        "risk": "高"
+      },
+      "sources": [
+        {
+          "id": "agreement",
+          "label": "泰国外交部｜中泰互免协议",
+          "url": "https://www.mfa.go.th/en/content/thcn280124",
+          "pageDate": "2024-01-28"
+        },
+        {
+          "id": "revision",
+          "label": "泰国领事司｜2026 免签调整",
+          "url": "https://consular.mfa.go.th/th/content/20-5-69-0000",
+          "pageDate": "2026-05-19"
+        },
+        {
+          "id": "tdac",
+          "label": "泰国移民局｜TDAC 中文指南",
+          "url": "https://tdac.immigration.go.th/manual/cn/index.html",
+          "pageDate": "2026-07-28"
+        },
+        {
+          "id": "tdacform",
+          "label": "TDAC 官方入口",
+          "url": "https://tdac.immigration.go.th/",
+          "pageDate": "2026-07-28"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去泰国免签吗？",
+          "answer": "可以，但不是无限停留",
+          "bullets": [
+            "适用有效中国普通护照",
+            "每次停留不超过 30 天",
+            "任意 180 天累计不超过 90 天"
+          ],
+          "sourceIds": [
+            "agreement"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "为什么不是 60 天？",
+          "answer": "中国按中泰双边协议执行 30/90/180",
+          "bullets": [
+            "2026 调整的是一般免签框架",
+            "中国仍列在双边协议 30 天组",
+            "别把旧版“60 天免签”写进新攻略"
+          ],
+          "sourceIds": [
+            "agreement",
+            "revision"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "30/90/180 怎么算？",
+          "answer": "单次 ≤30 天，同时滚动 180 天内合计 ≤90 天",
+          "bullets": [
+            "不是离境一次就自动清零",
+            "多次短住要自己核算累计天数",
+            "最终以泰国移民部门认定为准"
+          ],
+          "sourceIds": [
+            "agreement"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "TDAC 什么时候填？",
+          "answer": "所有非泰国旅客抵达前 3 天内提交",
+          "bullets": [
+            "陆路、空路、海路入境都适用",
+            "填写护照、行程、住宿等信息",
+            "资料变化时用官方入口更新"
+          ],
+          "sourceIds": [
+            "tdac"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "TDAC 只认哪个网站？",
+          "answer": "只认 tdac.immigration.go.th",
+          "bullets": [
+            "官方提交不收代填费",
+            "警惕搜索广告和仿冒收费站",
+            "不要向非官方页面上传护照资料"
+          ],
+          "sourceIds": [
+            "tdac",
+            "tdacform"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "入境随身带什么？",
+          "answer": "护照、返程/续程、住宿、资金与 TDAC 确认",
+          "bullets": [
+            "免签不等于无条件入境",
+            "行程和回答保持一致",
+            "边检可要求进一步说明访问目的"
+          ],
+          "sourceIds": [
+            "agreement",
+            "tdac"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "免签不能做什么？",
+          "answer": "不能借旅游免签居留、工作、学习或做媒体活动",
+          "bullets": [
+            "这些活动需要事先取得相应批准",
+            "所谓“落地后再洗身份”风险很高",
+            "逾期停留会产生处罚与后续影响"
+          ],
+          "sourceIds": [
+            "agreement"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "泰国官方来源与核验记录",
+          "answer": "互免看外交部，入境卡看移民局",
+          "bullets": [
+            "协议生效：2024-03-01",
+            "2026 调整公告：2026-05-19",
+            "每周扫描免签框架与 TDAC 系统"
+          ],
+          "sourceIds": [
+            "agreement",
+            "revision",
+            "tdac",
+            "tdacform"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "马来西亚免签-乔大帅",
+      "code": "MY",
+      "flag": "🇲🇾",
+      "country": "马来西亚",
+      "topic": "30 天互免 + MDAC",
+      "accent": "#dd7438",
+      "secondary": "#1d4150",
+      "pattern": "STRAIT / 07",
+      "policyEffective": "2025-07-17",
+      "officialUpdated": "2025-12-01",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-28",
+      "fields": {
+        "passport": "有效期至少 6 个月的中国普通护照",
+        "purpose": "旅游、商务或探亲等社会访问",
+        "stay": "每次不超过 30 天",
+        "cumulative": "任意 180 天累计不超过 90 天",
+        "visa": "符合条件可免签",
+        "arrivalCard": "需要 MDAC，行程须在提交日起 3 天内",
+        "fee": "免签与 MDAC 官方提交不收签证费",
+        "processing": "入境现场审核",
+        "districtException": "工作、学习或其他非社会访问目的需相应许可",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "faq",
+          "label": "马来西亚移民局｜中马互免 FAQ",
+          "url": "https://malaysiavisa.imi.gov.my/faq/",
+          "pageDate": "2025-12-01"
+        },
+        {
+          "id": "mdac",
+          "label": "马来西亚移民局｜MDAC",
+          "url": "https://imigresen-online.imi.gov.my/mdac/register",
+          "pageDate": "2026-07-28"
+        },
+        {
+          "id": "notice",
+          "label": "马来西亚移民局｜MDAC 公告",
+          "url": "https://www.imi.gov.my/index.php/en/pengumuman/malaysia-digital-arrival-card-mdac/",
+          "pageDate": "2026-07-28"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去马来西亚免签吗？",
+          "answer": "可以，社会访问每次最多 30 天",
+          "bullets": [
+            "适用普通或公务普通护照",
+            "护照入境时至少还有 6 个月有效期",
+            "旅游、商务、探亲等目的受协议覆盖"
+          ],
+          "sourceIds": [
+            "faq"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "30/90/180 规则",
+          "answer": "每次 ≤30 天，任意 180 天累计 ≤90 天",
+          "bullets": [
+            "不是出境一次就清零",
+            "频繁往返要自行累计",
+            "实际准许停留以入境许可为准"
+          ],
+          "sourceIds": [
+            "faq"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "MDAC 什么时候填？",
+          "answer": "抵达日期须在提交日起 3 天内",
+          "bullets": [
+            "填写护照、交通、住宿与联系方式",
+            "出发日期变化时重新核对信息",
+            "保存提交确认以便查验"
+          ],
+          "sourceIds": [
+            "mdac"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "MDAC 官方入口",
+          "answer": "只认 imigresen-online.imi.gov.my",
+          "bullets": [
+            "从移民局官网进入最稳妥",
+            "警惕收费代填与仿冒页面",
+            "不要把护照资料交给陌生网站"
+          ],
+          "sourceIds": [
+            "mdac",
+            "notice"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "入境检查准备什么？",
+          "answer": "护照、返程/续程、住宿、资金和 MDAC",
+          "bullets": [
+            "免签不保证入境",
+            "访问目的要与材料一致",
+            "必要时证明可进入下一目的地"
+          ],
+          "sourceIds": [
+            "faq",
+            "mdac"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "免签能工作或留学吗？",
+          "answer": "不能，工作和学习要办相应许可",
+          "bullets": [
+            "社会访问不是就业许可",
+            "不要接受“先入境再补证”的安排",
+            "逾期或目的不符会影响后续入境"
+          ],
+          "sourceIds": [
+            "faq"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "多次签与免签不是一回事",
+          "answer": "协议免签不覆盖主动申请 MEV 的情形",
+          "bullets": [
+            "每次免签仍受 30/90/180 限制",
+            "需要其他身份或更长期限时另查签证",
+            "不要混用 eVISA 旧规则"
+          ],
+          "sourceIds": [
+            "faq"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "马来西亚官方来源与核验记录",
+          "answer": "互免 FAQ 与 MDAC 都以移民局为准",
+          "bullets": [
+            "协议生效：2025-07-17",
+            "FAQ 页面更新：2025-12-01",
+            "每月复核互免与入境卡入口"
+          ],
+          "sourceIds": [
+            "faq",
+            "mdac",
+            "notice"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "新加坡免签-乔大帅",
+      "code": "SG",
+      "flag": "🇸🇬",
+      "country": "新加坡",
+      "topic": "30 天互免 + SG Arrival Card",
+      "accent": "#df633d",
+      "secondary": "#1d3a49",
+      "pattern": "LION / 08",
+      "policyEffective": "2024-02-09",
+      "officialUpdated": "2026-06-01",
+      "verified": "2026-07-28",
+      "nextReview": "2026-08-28",
+      "fields": {
+        "passport": "有效期至少 6 个月的中国普通护照",
+        "purpose": "短期旅游及符合规定的访问",
+        "stay": "免签最多 30 天；实际以入境签发的 e-Pass 为准",
+        "cumulative": "没有“出境即自动再给 30 天”的保证",
+        "visa": "符合条件可免签",
+        "arrivalCard": "需要 SG Arrival Card，抵达前 3 天内提交",
+        "fee": "SG Arrival Card 官方提交免费",
+        "processing": "入境现场决定是否准许及停留期限",
+        "districtException": "延期仅可在现有 STVP 剩余 14 天或更少时在线申请",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "waiver",
+          "label": "ICA｜中新 30 天互免",
+          "url": "https://www.ica.gov.sg/news-and-publications/newsroom/media-release/mutual-30-day-visa-exemption-arrangement-between-singapore-and-the-people-s-republic-of-china",
+          "pageDate": "2024-01-25"
+        },
+        {
+          "id": "entry",
+          "label": "ICA｜Entering Singapore",
+          "url": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore",
+          "pageDate": "2026-06-01"
+        },
+        {
+          "id": "sgac",
+          "label": "ICA｜SG Arrival Card",
+          "url": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/sg-arrival-card",
+          "pageDate": "2026-07-28"
+        },
+        {
+          "id": "extend",
+          "label": "ICA｜延期 STVP",
+          "url": "https://www.ica.gov.sg/enter-transit-depart/extend-stay",
+          "pageDate": "2026-03-01"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去新加坡免签吗？",
+          "answer": "可以，协议上限为 30 天",
+          "bullets": [
+            "适用中国普通护照",
+            "互免自 2024-02-09 生效",
+            "最终停留期限看入境签发的 e-Pass"
+          ],
+          "sourceIds": [
+            "waiver",
+            "entry"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "免签 30 天不是保证 30 天",
+          "answer": "是否准入、给几天都由 ICA 口岸决定",
+          "bullets": [
+            "准备返程/续程、住宿与足够资金",
+            "入境许可与签证有效期是两回事",
+            "收到 e-Pass 后核对最后可停留日"
+          ],
+          "sourceIds": [
+            "entry"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "SG Arrival Card 什么时候填？",
+          "answer": "抵达前 3 天内提交，包含抵达当天",
+          "bullets": [
+            "提交旅行资料和健康申报",
+            "所有外籍旅客通常都需办理，除官方列明例外",
+            "使用真实有效邮箱接收 e-Pass"
+          ],
+          "sourceIds": [
+            "entry",
+            "sgac"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "SG Arrival Card 收费吗？",
+          "answer": "官方服务免费，而且它不是签证",
+          "bullets": [
+            "只用 ICA 官网或 MyICA 应用",
+            "警惕搜索广告中的收费仿冒站",
+            "不要在非官方页面上传护照"
+          ],
+          "sourceIds": [
+            "sgac"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "入境随身材料",
+          "answer": "护照、返程/续程、住宿、资金和 SGAC 确认",
+          "bullets": [
+            "护照通常至少 6 个月有效",
+            "需要时证明可进入下一目的地",
+            "访问目的与回答保持一致"
+          ],
+          "sourceIds": [
+            "entry"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "能工作或做生意吗？",
+          "answer": "短期访问准证下不得从事未经许可的工作",
+          "bullets": [
+            "包括有偿或无偿就业",
+            "获准的商务访问活动不等于就业",
+            "需要工作准证时应提前办理"
+          ],
+          "sourceIds": [
+            "extend"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "想延期怎么办？",
+          "answer": "STVP 剩余 14 天或更少时才可在线申请",
+          "bullets": [
+            "延期不是自动批准",
+            "ICA 会综合个案情况决定",
+            "在结果出来前仍须遵守现有离境日期"
+          ],
+          "sourceIds": [
+            "extend"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "新加坡官方来源与核验记录",
+          "answer": "互免、入境卡、e-Pass 和延期都只看 ICA",
+          "bullets": [
+            "协议生效：2024-02-09",
+            "Entering Singapore 页面：2026-06-01",
+            "每月复核入境要求与防钓鱼提醒"
+          ],
+          "sourceIds": [
+            "waiver",
+            "entry",
+            "sgac",
+            "extend"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "法国签证-乔大帅",
+      "code": "FR",
+      "flag": "🇫🇷",
+      "country": "法国",
+      "topic": "申根短期签证",
+      "accent": "#d8663b",
+      "secondary": "#233a61",
+      "pattern": "PARIS / 09",
+      "policyEffective": "2024-06-11",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "短期旅游",
+        "stay": "任意 180 天内最多 90 天",
+        "cumulative": "与整个申根区停留合并计算",
+        "visa": "需要申根短期签证（C 类）",
+        "arrivalCard": "按法国及申根边境当期要求",
+        "fee": "成人签证费通常 €90，服务费另计",
+        "processing": "法国中国页面称完整简单申请原则上 24–48 个工作小时；不构成承诺",
+        "districtException": "中国大陆通常经 TLScontact 递交，受理地按居住地与官方规则选择",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "france",
+          "label": "France-Visas｜中国申请说明",
+          "url": "https://www.france-visas.gouv.fr/en/chine",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "short",
+          "label": "France-Visas｜短期签证",
+          "url": "https://www.france-visas.gouv.fr/en/web/france-visas/visa-de-court-sejour",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "tour",
+          "label": "France-Visas｜短期旅游",
+          "url": "https://france-visas.gouv.fr/en/sejour-touristique-de-moins-de-3-mois",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "code",
+          "label": "EUR-Lex｜欧盟签证规则",
+          "url": "https://eur-lex.europa.eu/EN/legal-content/summary/visa-code.html",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去法国要签证吗？",
+          "answer": "需要，短期旅游通常办申根 C 类签证",
+          "bullets": [
+            "适用短期旅游、探亲等获准访问",
+            "最多按 90/180 规则停留",
+            "签证不保证入境"
+          ],
+          "sourceIds": [
+            "short",
+            "tour"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "应该向法国申请吗？",
+          "answer": "法国是唯一或主要目的地时向法国申请",
+          "bullets": [
+            "停留最长的国家通常是主要目的地",
+            "没有主要目的地时看第一入境国",
+            "不要只因预约快就选法国"
+          ],
+          "sourceIds": [
+            "short",
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "什么时候可以递交？",
+          "answer": "最早提前 6 个月，通常不晚于出发前 15 天",
+          "bullets": [
+            "旺季应尽早预约",
+            "申请日与出发日要留出护照返还时间",
+            "不要先买不可退改行程"
+          ],
+          "sourceIds": [
+            "france",
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "中国大陆从哪里递交？",
+          "answer": "先在 France-Visas 填表，再按指引到 TLScontact",
+          "bullets": [
+            "只从 France-Visas 跳转预约",
+            "核对居住地对应受理中心",
+            "服务费与签证费分开"
+          ],
+          "sourceIds": [
+            "france"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "核心材料看什么？",
+          "answer": "目的真实、资金够用、住宿交通可信、会按期离境",
+          "bullets": [
+            "护照、照片、保险与申请表",
+            "行程、住宿和往返安排相互一致",
+            "流水重点看来源而非临时余额"
+          ],
+          "sourceIds": [
+            "tour"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "法国签证多久出结果？",
+          "answer": "官方中国页的快速时效只是原则性参考",
+          "bullets": [
+            "完整简单短签原则上 24–48 个工作小时",
+            "补件、核查或旺季会更久",
+            "不能把参考时效写成固定出签日"
+          ],
+          "sourceIds": [
+            "france"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "拿到签证看哪几项？",
+          "answer": "有效期、入境次数、Duration of stay",
+          "bullets": [
+            "有效期不是可连续停留天数",
+            "多国行程仍按申根累计天数算",
+            "姓名或护照号错误应立即反馈"
+          ],
+          "sourceIds": [
+            "short"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "法国官方来源与核验记录",
+          "answer": "申请入口只认 France-Visas 与欧盟规则",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "出发前重查受理中心和边境要求",
+            "警惕仿冒预约与保险网站"
+          ],
+          "sourceIds": [
+            "france",
+            "short",
+            "tour",
+            "code"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "德国签证-乔大帅",
+      "code": "DE",
+      "flag": "🇩🇪",
+      "country": "德国",
+      "topic": "申根短期签证",
+      "accent": "#d78235",
+      "secondary": "#26343f",
+      "pattern": "BERLIN / 10",
+      "policyEffective": "2024-06-11",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "短期旅游",
+        "stay": "任意 180 天内最多 90 天",
+        "cumulative": "与整个申根区停留合并计算",
+        "visa": "需要申根短期签证（C 类）",
+        "arrivalCard": "按德国及申根边境当期要求",
+        "fee": "成人签证费通常 €90，VFS 服务费另计",
+        "processing": "以德国驻华机构及受理中心的实时说明为准",
+        "districtException": "按常住地对应德国驻华使领馆辖区，经官方指定渠道递交",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "germany",
+          "label": "德国驻华使领馆｜签证与入境",
+          "url": "https://china.diplo.de/cn-zh/service/visa-einreise",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "code",
+          "label": "EUR-Lex｜欧盟签证规则",
+          "url": "https://eur-lex.europa.eu/EN/legal-content/summary/visa-code.html",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "ees",
+          "label": "德国驻华使领馆｜EES 提示",
+          "url": "https://china.diplo.de/cn-zh/service/visa-einreise",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去德国旅游要签证吗？",
+          "answer": "需要申根短期签证",
+          "bullets": [
+            "短期访问适用 C 类签证",
+            "全申根区合计遵守 90/180",
+            "最终入境由边境机关决定"
+          ],
+          "sourceIds": [
+            "germany",
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "德国是不是正确申请国？",
+          "answer": "德国应是唯一或主要目的地",
+          "bullets": [
+            "比较各国实际停留天数和旅行目的",
+            "无主要目的地才看第一入境国",
+            "行程与酒店要支持这一结论"
+          ],
+          "sourceIds": [
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "按哪个领区递交？",
+          "answer": "按常住地对应使领馆辖区办理",
+          "bullets": [
+            "先看德国驻华官网最新说明",
+            "通过官网指向的 VFS 渠道预约",
+            "跨领区递交可能被要求解释"
+          ],
+          "sourceIds": [
+            "germany"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "材料怎么搭证据链？",
+          "answer": "身份—行程—资金—回国约束四组互相印证",
+          "bullets": [
+            "保险覆盖整个申根行程",
+            "住宿与交通日期相互一致",
+            "解释大额入账和资助关系"
+          ],
+          "sourceIds": [
+            "germany"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "申根保险怎么准备？",
+          "answer": "覆盖整个申根区和全部旅行日期",
+          "bullets": [
+            "医疗与紧急遣返保障按官方标准",
+            "姓名和护照信息准确",
+            "不要买无法核验的低价保单"
+          ],
+          "sourceIds": [
+            "germany",
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "处理时间怎么理解？",
+          "answer": "官方时间是一般指引，不是出签承诺",
+          "bullets": [
+            "旺季、补件或背景核查可能延长",
+            "从正式受理而非开始填表计算",
+            "护照返还还需额外时间"
+          ],
+          "sourceIds": [
+            "germany"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "EES 会影响什么？",
+          "answer": "申根口岸逐步以电子出入境记录替代手工章",
+          "bullets": [
+            "按边境要求采集信息",
+            "签证和 90/180 规则仍要遵守",
+            "出发前查当期启用口岸说明"
+          ],
+          "sourceIds": [
+            "ees"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "德国官方来源与核验记录",
+          "answer": "总则看德国驻华官网，申根规则看 EUR-Lex",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "每月复核费用、领区与受理中心",
+            "不引用旅行社所谓通过率"
+          ],
+          "sourceIds": [
+            "germany",
+            "code"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "意大利签证-乔大帅",
+      "code": "IT",
+      "flag": "🇮🇹",
+      "country": "意大利",
+      "topic": "申根短期签证",
+      "accent": "#cc6941",
+      "secondary": "#234b46",
+      "pattern": "ROMA / 11",
+      "policyEffective": "2026-04-01",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "短期旅游",
+        "stay": "任意 180 天内最多 90 天",
+        "cumulative": "与整个申根区停留合并计算",
+        "visa": "需要申根短期签证（C 类）",
+        "arrivalCard": "按意大利及申根边境当期要求",
+        "fee": "北京领区 2026-04-01 起成人旅游签证费 732 元；服务费另计",
+        "processing": "一般规则与个案核查并存，不能承诺固定日期",
+        "districtException": "按常住地所属意大利驻华使领馆与指定签证中心办理",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "italy",
+          "label": "意大利外交部｜入境签证",
+          "url": "https://www.esteri.it/en/servizi-opportunita/ingressosoggiornoinitalia/visto_ingresso/",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "fees",
+          "label": "意大利驻华使馆｜2026 第二季度费率",
+          "url": "https://ambpechino.esteri.it/wp-content/uploads/2026/04/ITALY-VISA-FEES-I-QUARTER-TBR-da-1-aprile-2026-colour.pdf",
+          "pageDate": "2026-04-01"
+        },
+        {
+          "id": "code",
+          "label": "EUR-Lex｜欧盟签证规则",
+          "url": "https://eur-lex.europa.eu/EN/legal-content/summary/visa-code.html",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去意大利要签证吗？",
+          "answer": "需要申根短期签证",
+          "bullets": [
+            "旅游通常申请 C 类签证",
+            "全申根区累计最多 90/180",
+            "签发不等于保证入境"
+          ],
+          "sourceIds": [
+            "italy",
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "什么时候该向意大利申请？",
+          "answer": "意大利是唯一或主要目的地时",
+          "bullets": [
+            "主目的地看目的和停留天数",
+            "无主要目的地才看第一入境国",
+            "别做与真实行程不符的假预订单"
+          ],
+          "sourceIds": [
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "先确认领区",
+          "answer": "按常住地对应使领馆与签证中心办理",
+          "bullets": [
+            "不同领区预约与材料细节可能不同",
+            "只从使领馆官网进入指定中心",
+            "服务费和签证费分开核对"
+          ],
+          "sourceIds": [
+            "italy"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "旅游材料重点",
+          "answer": "完整行程、住宿交通、保险、资金和回国约束",
+          "bullets": [
+            "覆盖所有申根日期",
+            "流水解释收入与大额入账",
+            "翻译要求按领区清单执行"
+          ],
+          "sourceIds": [
+            "italy"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "2026 年费用怎么看？",
+          "answer": "北京领区成人旅游签证费标示 732 元",
+          "bullets": [
+            "自 2026-04-01 起的季度费率",
+            "汇率换算表可能按季度更新",
+            "签证中心服务费另计"
+          ],
+          "sourceIds": [
+            "fees"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "多久能办完？",
+          "answer": "只能按官方一般处理规则预留时间",
+          "bullets": [
+            "补件、核查或旺季会延长",
+            "不要把最短案例当承诺",
+            "拿回护照前避免不可退行程"
+          ],
+          "sourceIds": [
+            "italy"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "签证页三项最关键",
+          "answer": "VALID UNTIL、NUMBER OF ENTRIES、DURATION OF STAY",
+          "bullets": [
+            "有效期不等于可停留天数",
+            "多次入境仍受 90/180 限制",
+            "发现身份信息错误立即联系"
+          ],
+          "sourceIds": [
+            "italy"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "意大利官方来源与核验记录",
+          "answer": "外交部定总则，驻华机构定领区和人民币费率",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "费率按季度复核",
+            "出发前重查边境要求"
+          ],
+          "sourceIds": [
+            "italy",
+            "fees",
+            "code"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "西班牙签证-乔大帅",
+      "code": "ES",
+      "flag": "🇪🇸",
+      "country": "西班牙",
+      "topic": "申根短期签证",
+      "accent": "#d76b32",
+      "secondary": "#4b3140",
+      "pattern": "MADRID / 12",
+      "policyEffective": "2024-06-11",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "短期旅游",
+        "stay": "任意 180 天内最多 90 天",
+        "cumulative": "与整个申根区停留合并计算",
+        "visa": "需要申根短期签证（C 类）",
+        "arrivalCard": "按西班牙及申根边境当期要求",
+        "fee": "成人 €90；6–11 岁 €45；BLS 服务费另计",
+        "processing": "法定一般决定期 15 个日历日，个案可延至 45 日",
+        "districtException": "按常住地所属领区经 BLS 递交",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "spain",
+          "label": "西班牙驻北京总领馆｜申根签证",
+          "url": "https://www.exteriores.gob.es/Consulados/pekin/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "place",
+          "label": "西班牙驻北京总领馆｜递交地点",
+          "url": "https://www.exteriores.gob.es/Consulados/pekin/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=China&scd=225&scs=Lugar+de+presentaci%C3%B3n+de+solicitudes+de+visado",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "code",
+          "label": "EUR-Lex｜欧盟签证规则",
+          "url": "https://eur-lex.europa.eu/EN/legal-content/summary/visa-code.html",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去西班牙要签证吗？",
+          "answer": "需要申根短期签证",
+          "bullets": [
+            "短期旅游通常办 C 类",
+            "全申根区合计遵守 90/180",
+            "入境时仍可能核查材料"
+          ],
+          "sourceIds": [
+            "spain",
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "谁该向西班牙申请？",
+          "answer": "西班牙是唯一或主要目的地的人",
+          "bullets": [
+            "停留最长或核心活动在西班牙",
+            "无主要目的地才看第一入境国",
+            "申请国必须与真实行程一致"
+          ],
+          "sourceIds": [
+            "spain",
+            "code"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "护照和保险硬条件",
+          "answer": "护照、空白页和 €30,000 保险都要达标",
+          "bullets": [
+            "护照离开申根后通常至少 3 个月有效",
+            "护照须在过去 10 年内签发并有 2 页空白",
+            "保险最低保障 €30,000"
+          ],
+          "sourceIds": [
+            "spain"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "什么时候递交？",
+          "answer": "最早提前 6 个月，通常至少提前 15 天",
+          "bullets": [
+            "旺季预约更应提前",
+            "按常住地领区选择 BLS",
+            "未获签前避免不可退订单"
+          ],
+          "sourceIds": [
+            "spain",
+            "place"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "费用是多少？",
+          "answer": "成人 €90，6–11 岁 €45",
+          "bullets": [
+            "签证中心服务费另计",
+            "是否减免看官方适用情形",
+            "拒签通常不退申请费"
+          ],
+          "sourceIds": [
+            "spain"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "官方处理时间",
+          "answer": "一般 15 个日历日，个案可延至 45 日",
+          "bullets": [
+            "从正式受理开始计算",
+            "补件或进一步审查会延长",
+            "不是 15 天必出签"
+          ],
+          "sourceIds": [
+            "spain"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "拿到签证怎么检查？",
+          "answer": "姓名、有效期、次数、可停留天数",
+          "bullets": [
+            "90/180 仍需自己累计",
+            "入境章或电子记录不改变签证条件",
+            "错误应立即联系受理机构"
+          ],
+          "sourceIds": [
+            "spain"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "西班牙官方来源与核验记录",
+          "answer": "总领馆页面给出了费用、时效和材料硬条件",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "每月复核 BLS 与领区安排",
+            "只用外交部官网指向的入口"
+          ],
+          "sourceIds": [
+            "spain",
+            "place",
+            "code"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "阿联酋免签-乔大帅",
+      "code": "AE",
+      "flag": "🇦🇪",
+      "country": "阿联酋",
+      "topic": "30 天免签",
+      "accent": "#d66d3d",
+      "secondary": "#244447",
+      "pattern": "EMIRATES / 13",
+      "policyEffective": "2018-01-16",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "有效中国普通护照",
+        "purpose": "短期旅游及获准访问",
+        "stay": "免签停留最多 30 天",
+        "cumulative": "延期与再次入境须按移民机关当期规则",
+        "visa": "符合条件可免签",
+        "arrivalCard": "按航空公司及阿联酋口岸当期要求",
+        "fee": "免签本身无签证申请费",
+        "processing": "入境现场审核",
+        "districtException": "护照通常须至少 6 个月有效；各酋长国移民服务入口可能不同",
+        "risk": "中"
+      },
+      "sources": [
+        {
+          "id": "beijing",
+          "label": "阿联酋驻华使馆｜签证",
+          "url": "https://www.mofa.gov.ae/en/Missions/Beijing/Services/Visas",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "shanghai",
+          "label": "阿联酋驻上海总领馆｜签证",
+          "url": "https://www.mofa.gov.ae/en/Missions/Shanghai/Services/Visas",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "passport",
+          "label": "阿联酋外交部｜30 天及护照要求",
+          "url": "https://www.mofa.gov.ae/en/missions/oslo/services/visas",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去阿联酋免签吗？",
+          "answer": "免签，短期停留最多 30 天",
+          "bullets": [
+            "适用有效中国普通护照",
+            "旅游等短期访问适用",
+            "实际准入由口岸决定"
+          ],
+          "sourceIds": [
+            "beijing",
+            "shanghai"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "护照有效期要多久？",
+          "answer": "建议入境时至少还有 6 个月",
+          "bullets": [
+            "破损护照可能影响登机和入境",
+            "儿童也要持独立有效旅行证件",
+            "出发前让承运人再次核验"
+          ],
+          "sourceIds": [
+            "passport"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "30 天从哪天算？",
+          "answer": "以边检准许入境和系统记录为准",
+          "bullets": [
+            "不要自行按航班起飞时间估算",
+            "保存入境记录和电子许可",
+            "离境日也要纳入行程规划"
+          ],
+          "sourceIds": [
+            "beijing"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "想延期怎么办？",
+          "answer": "必须按当地移民机关当期渠道申请",
+          "bullets": [
+            "不是自动再送 30 天",
+            "不同酋长国服务入口可能不同",
+            "在获批前仍受原离境期限约束"
+          ],
+          "sourceIds": [
+            "shanghai"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "入境随身材料",
+          "answer": "护照、返程/续程、住宿和足够资金",
+          "bullets": [
+            "免签不等于无条件入境",
+            "访问目的与住宿安排保持一致",
+            "必要时说明下一目的地资格"
+          ],
+          "sourceIds": [
+            "beijing"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "免签不能做什么？",
+          "answer": "不能把旅游身份当工作或长期居留许可",
+          "bullets": [
+            "就业需相应签证和许可",
+            "超期会产生罚款及后续风险",
+            "警惕“落地转身份包办”"
+          ],
+          "sourceIds": [
+            "beijing"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "转机也要看路线",
+          "answer": "是否入境取行李决定是否接受边检",
+          "bullets": [
+            "联程与非联程处理不同",
+            "跨机场或重新托运通常要入境",
+            "让航空公司按完整行程核验"
+          ],
+          "sourceIds": [
+            "passport"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "阿联酋官方来源与核验记录",
+          "answer": "签证结论以阿联酋外交部和移民机关为准",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "每月复核延期与口岸规则",
+            "不要用商业代办页替代官方结论"
+          ],
+          "sourceIds": [
+            "beijing",
+            "shanghai",
+            "passport"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "印度尼西亚落地签-乔大帅",
+      "code": "ID",
+      "flag": "🇮🇩",
+      "country": "印度尼西亚",
+      "topic": "落地签 / e-VOA",
+      "accent": "#dc6240",
+      "secondary": "#35434a",
+      "pattern": "NUSANTARA / 14",
+      "policyEffective": "2025-10-01",
+      "officialUpdated": "2026-07-20",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-05",
+      "fields": {
+        "passport": "有效中国普通护照",
+        "purpose": "旅游等 B1 允许的访问",
+        "stay": "首次最多 30 天，可按规则延长一次",
+        "cumulative": "单次入境；延期后总停留通常最多 60 天",
+        "visa": "可办 B1 落地签或官方 e-VOA",
+        "arrivalCard": "需要 All Indonesia，到达前 3 天内可填",
+        "fee": "B1 通常 IDR 500,000；以官方支付页为准",
+        "processing": "e-VOA 以系统处理为准；现场落地签另需排队",
+        "districtException": "须从获准口岸入境并遵守签证活动范围",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "voa",
+          "label": "印尼移民局｜VoA 适用国家",
+          "url": "https://kanwilsultra.imigrasi.go.id/wna/daftar-subjek-voa-bvk-calling-visa",
+          "pageDate": "2026-07-20"
+        },
+        {
+          "id": "b1",
+          "label": "印尼移民局｜B1 落地签",
+          "url": "https://jakartapusat.imigrasi.go.id/index.php/layanan/warga-negara-asing-wna/visa-republik-indonesia/b1-visa-saat-kedatangan-wisata",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "evisa",
+          "label": "印尼移民局｜eVisa 官方入口",
+          "url": "https://evisa.imigrasi.go.id/",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "arrival",
+          "label": "印尼移民局｜All Indonesia",
+          "url": "https://www.imigrasi.go.id/siaran_pers/mulai-1-oktober-deklarasi-kedatangan-penumpang-wajib-dilakukan-di-aplikasi-all-indonesia",
+          "pageDate": "2025-09-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去印尼免签吗？",
+          "answer": "普通旅游通常办 B1 落地签或 e-VOA",
+          "bullets": [
+            "中国在 VoA 适用国家名单内",
+            "不是无条件免签",
+            "出发前可走官方 eVisa 系统"
+          ],
+          "sourceIds": [
+            "voa",
+            "b1",
+            "evisa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "B1 能待多久？",
+          "answer": "首次最多 30 天，可按规则延长一次",
+          "bullets": [
+            "延期不是自动完成",
+            "总停留通常最多 60 天",
+            "以签证和移民系统记录为准"
+          ],
+          "sourceIds": [
+            "b1"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "落地办还是网上办？",
+          "answer": "e-VOA 可减少现场手续，落地签适合符合条件的临时办理",
+          "bullets": [
+            "只用 evisa.imigrasi.go.id",
+            "网上获批也不保证入境",
+            "现场落地签可能排队"
+          ],
+          "sourceIds": [
+            "evisa",
+            "b1"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "费用怎么核对？",
+          "answer": "B1 通常 IDR 500,000，以付款页为准",
+          "bullets": [
+            "第三方代办会另收服务费",
+            "付款前确认域名与签证类型",
+            "拒绝重复支付可疑链接"
+          ],
+          "sourceIds": [
+            "b1",
+            "evisa"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "All Indonesia 是什么？",
+          "answer": "入境前统一填写移民、海关、健康与检疫申报",
+          "bullets": [
+            "2025-10-01 起全面实施",
+            "可在抵达前 3 天内填写",
+            "官方申报免费"
+          ],
+          "sourceIds": [
+            "arrival"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "入境随身材料",
+          "answer": "护照、签证/付款证明、返程票、住宿和资金",
+          "bullets": [
+            "护照有效期按官方与承运人要求准备",
+            "返程或续程安排要可信",
+            "按实际情况申报物品"
+          ],
+          "sourceIds": [
+            "b1",
+            "arrival"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "B1 不能做什么？",
+          "answer": "不能用于就业或超出许可范围的活动",
+          "bullets": [
+            "签证类型要匹配真实目的",
+            "逾期停留会产生罚款和后续风险",
+            "不要轻信“落地后洗签证”"
+          ],
+          "sourceIds": [
+            "b1"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "印尼官方来源与核验记录",
+          "answer": "签证只认移民局 eVisa，申报只认 All Indonesia",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "每周扫描入境申报与 VoA 名单",
+            "费用付款前再次核对"
+          ],
+          "sourceIds": [
+            "voa",
+            "b1",
+            "evisa",
+            "arrival"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "越南电子签-乔大帅",
+      "code": "VN",
+      "flag": "🇻🇳",
+      "country": "越南",
+      "topic": "电子签证",
+      "accent": "#d76835",
+      "secondary": "#34464b",
+      "pattern": "VIETNAM / 15",
+      "policyEffective": "2023-08-15",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-05",
+      "fields": {
+        "passport": "有效中国普通护照",
+        "purpose": "电子签允许的短期访问",
+        "stay": "最长 90 天",
+        "cumulative": "按获批电子签的起止日期、单次/多次入境执行",
+        "visa": "需要，可申请电子签证",
+        "arrivalCard": "官方建议按需完成 Pre-arrival 信息",
+        "fee": "单次 US$25；多次 US$50",
+        "processing": "以 evisa.gov.vn 申请状态与官方通知为准",
+        "districtException": "必须从电子签列明/允许的口岸出入境",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "evisa",
+          "label": "越南公安部移民局｜eVisa",
+          "url": "https://evisa.gov.vn/",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "pre",
+          "label": "越南移民局｜Pre-arrival",
+          "url": "https://prearrival.immigration.gov.vn/",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去越南要签证吗？",
+          "answer": "需要，可在线申请电子签证",
+          "bullets": [
+            "最长可签 90 天",
+            "可选单次或多次入境",
+            "实际以获批文件为准"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "电子签能待多久？",
+          "answer": "看获批的 From—To 日期，最长 90 天",
+          "bullets": [
+            "不是获批后任意 90 天",
+            "入境次数按 single / multiple 执行",
+            "逾期风险要按自然日规划"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "只认哪个申请网站？",
+          "answer": "只认 evisa.gov.vn",
+          "bullets": [
+            "警惕搜索广告与仿冒代办站",
+            "逐字核对护照号和英文姓名",
+            "保存申请码、付款与结果文件"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "费用是多少？",
+          "answer": "单次 US$25，多次 US$50",
+          "bullets": [
+            "以官方支付页面显示为准",
+            "申请未获批通常不退费",
+            "不要向个人账户转账"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "申请信息最容易错哪？",
+          "answer": "姓名、护照号、日期、入境口岸和照片",
+          "bullets": [
+            "口岸必须在电子签允许范围内",
+            "旅行日期要落在签证有效窗口",
+            "提交前逐栏复核"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "Pre-arrival 要不要填？",
+          "answer": "按官方入口和行程要求办理",
+          "bullets": [
+            "入口为 immigration.gov.vn 域名",
+            "提前填写可减少抵达时重复录入",
+            "不把第三方健康码当官方要求"
+          ],
+          "sourceIds": [
+            "pre"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "入境随身带什么？",
+          "answer": "护照、电子签、返程/续程、住宿和资金证明",
+          "bullets": [
+            "建议保存电子版并打印备份",
+            "签证不等于保证入境",
+            "访问目的与申请一致"
+          ],
+          "sourceIds": [
+            "evisa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "越南官方来源与核验记录",
+          "answer": "电子签只回到公安部移民局官方域名",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "每周扫描口岸名单和表单变化",
+            "付款前再次核对域名"
+          ],
+          "sourceIds": [
+            "evisa",
+            "pre"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "新西兰签证-乔大帅",
+      "code": "NZ",
+      "flag": "🇳🇿",
+      "country": "新西兰",
+      "topic": "Visitor Visa",
+      "accent": "#d56e3d",
+      "secondary": "#183d55",
+      "pattern": "AOTEAROA / 16",
+      "policyEffective": "2025-11-03",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "旅游、探亲访友",
+        "stay": "多次签每 12 个月累计最多 6 个月；单次签最多 9 个月/18 个月",
+        "cumulative": "以获批签证的入境次数和条件为准",
+        "visa": "通常需要 Visitor Visa；符合澳洲出发试点者可改用 NZeTA",
+        "arrivalCard": "需要 New Zealand Traveller Declaration，最早出发前 24 小时提交",
+        "fee": "Visitor Visa 自 NZD 441 起",
+        "processing": "官方当前显示 80% 约 1.5–2 周，动态变化",
+        "districtException": "持合资格澳大利亚签证且每次从澳大利亚出发者，可在试点期用 NZeTA",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "guide",
+          "label": "新西兰移民局｜中国公民申请指南",
+          "url": "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/visitor-visa-application-guide-for-citizens-of-china/",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "visitor",
+          "label": "新西兰移民局｜Visitor Visa",
+          "url": "https://www.immigration.govt.nz/visas/visitor-visa/",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "trial",
+          "label": "新西兰移民局｜澳洲出发 NZeTA 试点",
+          "url": "https://www.immigration.govt.nz/about-us/news-centre/easier-travel-from-australia-to-new-zealand-for-chinese-visitors/",
+          "pageDate": "2025-11-03"
+        },
+        {
+          "id": "nzeta",
+          "label": "新西兰移民局｜NZeTA",
+          "url": "https://www.immigration.govt.nz/visas/new-zealand-electronic-travel-authority-nzeta/",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去新西兰要签证吗？",
+          "answer": "通常要办 Visitor Visa",
+          "bullets": [
+            "适用旅游和探亲访友",
+            "可在线申请",
+            "获批不等于保证入境"
+          ],
+          "sourceIds": [
+            "guide",
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "能停留多久？",
+          "answer": "多次签与单次签规则不同",
+          "bullets": [
+            "多次签：每 12 个月累计最多 6 个月",
+            "单次签：最多 9 个月/18 个月",
+            "最终以签证条件为准"
+          ],
+          "sourceIds": [
+            "guide",
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "费用和时间",
+          "answer": "自 NZD 441 起，80% 约 1.5–2 周",
+          "bullets": [
+            "处理时间会动态变化",
+            "材料不足可能延误或拒签",
+            "官方建议获批前别订不可退行程"
+          ],
+          "sourceIds": [
+            "guide",
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "材料核心是什么？",
+          "answer": "真实访客、足够资金、会按期离境",
+          "bullets": [
+            "中文文件需按要求提供英文翻译",
+            "提交原件扫描件和译文",
+            "行程与个人财务能力匹配"
+          ],
+          "sourceIds": [
+            "guide"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "特殊 NZeTA 试点",
+          "answer": "持合资格澳签并从澳大利亚出发，可免 Visitor Visa",
+          "bullets": [
+            "试点自 2025-11-03 起运行 12 个月",
+            "每次都必须从澳大利亚出发",
+            "停留最多 3 个月并持有效 NZeTA"
+          ],
+          "sourceIds": [
+            "trial",
+            "nzeta"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "NZTD 什么时候填？",
+          "answer": "最早可在开始旅行前 24 小时提交",
+          "bullets": [
+            "数字或纸质申报按官方要求",
+            "如实申报食品、药品与生物安全物品",
+            "保存提交确认"
+          ],
+          "sourceIds": [
+            "guide"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "入境时准备什么？",
+          "answer": "护照、签证/NZeTA、返程、住宿和资金证明",
+          "bullets": [
+            "边检会判断是否仍为真实访客",
+            "海关和生物安全检查独立进行",
+            "回答与申请保持一致"
+          ],
+          "sourceIds": [
+            "guide",
+            "visitor"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "新西兰官方来源与核验记录",
+          "answer": "普通路径与澳洲出发试点必须分开写",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "试点到期前重点复核",
+            "费用和处理时间每次出发前重查"
+          ],
+          "sourceIds": [
+            "guide",
+            "visitor",
+            "trial",
+            "nzeta"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "加拿大签证-乔大帅",
+      "code": "CA",
+      "flag": "🇨🇦",
+      "country": "加拿大",
+      "topic": "Visitor Visa",
+      "accent": "#d85f3a",
+      "secondary": "#34404b",
+      "pattern": "CANADA / 17",
+      "policyEffective": "2026-05-26",
+      "officialUpdated": "2026-07-19",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "中国普通护照",
+        "purpose": "短期旅游、探亲访友",
+        "stay": "多数访客每次最多 6 个月，边境官可决定更短或更长",
+        "cumulative": "签证有效期不等于获准停留期",
+        "visa": "需要 Visitor Visa（TRV）",
+        "arrivalCard": "按加拿大边境和机场当期要求",
+        "fee": "签证 CAD 100；如需生物信息，个人 CAD 85",
+        "processing": "因申请国家和个案而异，生物信息时间另计",
+        "districtException": "在线申请后按通知录指纹、递交护照或补件",
+        "risk": "高"
+      },
+      "sources": [
+        {
+          "id": "visa",
+          "label": "加拿大 IRCC｜Visitor Visa",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/visitor-visa.html",
+          "pageDate": "2026-05-26"
+        },
+        {
+          "id": "apply",
+          "label": "加拿大 IRCC｜如何申请",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "arrival",
+          "label": "加拿大 IRCC｜抵达加拿大",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/prepare-arrival.html",
+          "pageDate": "2026-07-19"
+        },
+        {
+          "id": "eligibility",
+          "label": "加拿大 IRCC｜申请资格",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/eligibility.html",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去加拿大要签证吗？",
+          "answer": "需要 Visitor Visa（TRV）",
+          "bullets": [
+            "贴在护照上的访问签证",
+            "可签单次或多次，由签证官决定",
+            "签证有效不代表保证入境"
+          ],
+          "sourceIds": [
+            "visa"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "签证能给多久？",
+          "answer": "最长可能到 10 年，但受护照和生物信息有效期限制",
+          "bullets": [
+            "最终有效期由签证官决定",
+            "有效期是可用于旅行的窗口",
+            "每次停留期限另由边境决定"
+          ],
+          "sourceIds": [
+            "visa",
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "每次能待多久？",
+          "answer": "多数访客最多 6 个月",
+          "bullets": [
+            "边境官可批准更短或更长",
+            "有盖章或 visitor record 时按其日期离境",
+            "无特殊日期通常按入境日起 6 个月"
+          ],
+          "sourceIds": [
+            "arrival"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "申请路径",
+          "answer": "IRCC Portal 在线填表、上传材料、付费",
+          "bullets": [
+            "按通知完成生物信息",
+            "获批后再按要求递交护照",
+            "只用 canada.ca 指向的入口"
+          ],
+          "sourceIds": [
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "费用怎么算？",
+          "answer": "个人签证费 CAD 100，生物信息通常 CAD 85",
+          "bullets": [
+            "家庭费用上限按官方表执行",
+            "体检、翻译、快递等可能另收费",
+            "费用调整以付款页面为准"
+          ],
+          "sourceIds": [
+            "apply"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "材料核心",
+          "answer": "证明有钱完成旅行、目的真实、会离开加拿大",
+          "bullets": [
+            "工作、家庭、资产等国内联系",
+            "旅行计划与预算相匹配",
+            "邀请函不替代申请人自身资格"
+          ],
+          "sourceIds": [
+            "eligibility"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "处理时间不能承诺",
+          "answer": "IRCC 明确按国家、完整度和个案变化",
+          "bullets": [
+            "录指纹时间不一定计入",
+            "补件和背景核查会延长",
+            "未拿回护照前避免不可退行程"
+          ],
+          "sourceIds": [
+            "visa"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "加拿大官方来源与核验记录",
+          "answer": "签证、费用、入境期限全部回到 IRCC",
+          "bullets": [
+            "本页核验：2026-07-29",
+            "处理时间出发前动态查询",
+            "不把签证到期日写成离境日"
+          ],
+          "sourceIds": [
+            "visa",
+            "apply",
+            "arrival",
+            "eligibility"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "土耳其免签-乔大帅",
+      "code": "TR",
+      "flag": "🇹🇷",
+      "country": "土耳其",
+      "topic": "90/180 免签",
+      "accent": "#d65e38",
+      "secondary": "#3c3b46",
+      "pattern": "TÜRKIYE / 18",
+      "policyEffective": "2026-01-02",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-05",
+      "fields": {
+        "passport": "有效中国普通护照",
+        "purpose": "短期旅游及免签允许的访问",
+        "stay": "任意 180 天内累计最多 90 天",
+        "cumulative": "滚动 180 天计算，不因短暂离境清零",
+        "visa": "自 2026-01-02 起符合条件可免签",
+        "arrivalCard": "按土耳其边境及承运人当期要求",
+        "fee": "免签本身无签证费",
+        "processing": "入境现场审核",
+        "districtException": "工作、学习等目的仍需相应签证/许可；护照有效期须覆盖停留期后至少 60 天",
+        "risk": "中高"
+      },
+      "sources": [
+        {
+          "id": "regime",
+          "label": "土耳其外交部｜外国人签证制度",
+          "url": "https://www.mfa.gov.tr/yabancilarin-tabi-oldugu-vize-rejimi.tr.mfa",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "general",
+          "label": "土耳其外交部｜签证一般信息",
+          "url": "https://www.mfa.gov.tr/general-information-about-turkish-visas.en.mfa",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去土耳其免签吗？",
+          "answer": "免签，2026-01-02 起适用",
+          "bullets": [
+            "适用中国普通护照",
+            "任意 180 天累计最多 90 天",
+            "旧版“必须电子签”攻略已过时"
+          ],
+          "sourceIds": [
+            "regime"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "90/180 怎么算？",
+          "answer": "按每一天向前滚动 180 天累计",
+          "bullets": [
+            "不是离境一次就清零",
+            "多次往返要自己记录天数",
+            "边境系统记录为最终依据"
+          ],
+          "sourceIds": [
+            "regime",
+            "general"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "护照有效期要求",
+          "answer": "至少覆盖获准停留期结束后 60 天",
+          "bullets": [
+            "90 天停留通常意味着入境时至少约 150 天有效",
+            "官方另建议护照自抵达日起至少 6 个月",
+            "破损或空白页不足要提前换证"
+          ],
+          "sourceIds": [
+            "general"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "入境随身材料",
+          "answer": "返程/续程、住宿、资金和真实行程",
+          "bullets": [
+            "免签不保证入境",
+            "回答与实际旅游目的一致",
+            "必要时证明可进入下一目的地"
+          ],
+          "sourceIds": [
+            "regime"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "还能用 eVisa 吗？",
+          "answer": "对中国普通护照，现行免签结论优先",
+          "bullets": [
+            "不要照搬 2025 年以前的电子签教程",
+            "第三方仍收费代办不代表官方要求",
+            "出发前以土耳其外交部国别表复核"
+          ],
+          "sourceIds": [
+            "regime"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "免签不能做什么？",
+          "answer": "工作、学习等仍需相应签证或许可",
+          "bullets": [
+            "旅游身份不能用于就业",
+            "超期停留会影响罚款和后续入境",
+            "长期居留须走正式许可"
+          ],
+          "sourceIds": [
+            "general"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "签证有效期与停留期",
+          "answer": "免签下看的是边境准入和 90/180 累计",
+          "bullets": [
+            "没有一张签证供你“用满有效期”",
+            "边境可基于个案限制准入",
+            "保留入境和离境记录"
+          ],
+          "sourceIds": [
+            "regime"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "土耳其官方来源与核验记录",
+          "answer": "只看土耳其外交部最新国别制度表",
+          "bullets": [
+            "政策生效：2026-01-02",
+            "本页核验：2026-07-29",
+            "每周扫描免签是否调整"
+          ],
+          "sourceIds": [
+            "regime",
+            "general"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "格鲁吉亚免签-乔大帅",
+      "code": "GE",
+      "flag": "🇬🇪",
+      "country": "格鲁吉亚",
+      "topic": "30/90/180 免签",
+      "accent": "#d3683d",
+      "secondary": "#3b4249",
+      "pattern": "SAKARTVELO / 19",
+      "policyEffective": "2024-05-28",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-29",
+      "fields": {
+        "passport": "有效中国普通护照",
+        "purpose": "短期旅游",
+        "stay": "每次最多 30 天",
+        "cumulative": "任意 180 天累计最多 90 天",
+        "visa": "符合协议条件可免签",
+        "arrivalCard": "按格鲁吉亚边境当期要求",
+        "fee": "免签本身无签证费",
+        "processing": "入境现场审核",
+        "districtException": "须经官方开放的国际边境口岸入境；就业、学习等目的另办许可",
+        "risk": "中"
+      },
+      "sources": [
+        {
+          "id": "effective",
+          "label": "格鲁吉亚外交部｜互免生效",
+          "url": "https://mfa.gov.ge/en/news/425297-28-misidan-saqartvelosa-da-chinetis-sakhalkho-respublikas-shoris-uvizo-mimosvlis-shesakheb-shetankhm",
+          "pageDate": "2024-05-28"
+        },
+        {
+          "id": "agreement",
+          "label": "格鲁吉亚外交部｜互免协议",
+          "url": "https://www.mfa.gov.ge/en/news/641804-saqartvelosa-da-chinets-mtavrobas-shoris-kheli-moetsera-ordinaluri-pasportebis-mphlobelta-savizo-mot",
+          "pageDate": "2024-04-10"
+        },
+        {
+          "id": "china",
+          "label": "格鲁吉亚驻华使馆｜重要信息",
+          "url": "https://china.mfa.gov.ge/important-information",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去格鲁吉亚免签吗？",
+          "answer": "免签，协议自 2024-05-28 生效",
+          "bullets": [
+            "适用中国普通护照",
+            "旅游每次最多 30 天",
+            "实际准入由边境决定"
+          ],
+          "sourceIds": [
+            "effective",
+            "china"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "累计停留怎么算？",
+          "answer": "任意 180 天内累计最多 90 天",
+          "bullets": [
+            "单次仍不能超过 30 天",
+            "短暂离境不会自动清零",
+            "多次旅行要自己核算"
+          ],
+          "sourceIds": [
+            "effective"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "从哪里入境？",
+          "answer": "从官方开放的国际边境口岸入境",
+          "bullets": [
+            "航空、陆路路线都应先核验口岸状态",
+            "转经第三国还要满足该国过境要求",
+            "承运人规则需单独确认"
+          ],
+          "sourceIds": [
+            "china"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "随身材料",
+          "answer": "护照、返程/续程、住宿、资金和保险",
+          "bullets": [
+            "免签不等于无条件入境",
+            "说明清楚访问目的和天数",
+            "必要时证明可进入下一站"
+          ],
+          "sourceIds": [
+            "china"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "能不能工作？",
+          "answer": "旅游免签不等于就业或学习许可",
+          "bullets": [
+            "从事受许可活动前先办手续",
+            "不要用频繁出入境代替居留许可",
+            "超期会影响后续旅行"
+          ],
+          "sourceIds": [
+            "agreement"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "30 天和 90 天别混淆",
+          "answer": "30 天是单次上限，90 天是 180 天累计上限",
+          "bullets": [
+            "两项限制同时满足",
+            "不是一次可以停 90 天",
+            "按自然日保守规划"
+          ],
+          "sourceIds": [
+            "effective"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "入境决定谁来做？",
+          "answer": "签证互免不削弱边境机关的审查权",
+          "bullets": [
+            "行程与住宿要真实可核验",
+            "不能证明访问目的可能被进一步询问",
+            "保存返程和资金证明"
+          ],
+          "sourceIds": [
+            "china"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "格鲁吉亚官方来源与核验记录",
+          "answer": "协议与驻华使馆说明交叉核验",
+          "bullets": [
+            "政策生效：2024-05-28",
+            "本页核验：2026-07-29",
+            "每月复核口岸与停留规则"
+          ],
+          "sourceIds": [
+            "effective",
+            "agreement",
+            "china"
+          ],
+          "tone": "standard"
+        }
+      ]
+    },
+    {
+      "slug": "俄罗斯电子签-乔大帅",
+      "code": "RU",
+      "flag": "🇷🇺",
+      "country": "俄罗斯",
+      "topic": "统一电子签证",
+      "accent": "#d3633b",
+      "secondary": "#29405c",
+      "pattern": "RUSSIA / 20",
+      "policyEffective": "2025-08-23",
+      "officialUpdated": "2026-07-29",
+      "verified": "2026-07-29",
+      "nextReview": "2026-08-05",
+      "fields": {
+        "passport": "符合名单要求的中国普通护照",
+        "purpose": "旅游、私人访问、商务及电子签允许活动",
+        "stay": "单次最多 30 天",
+        "cumulative": "签发后 120 天内使用，离境不得晚于第 120 天",
+        "visa": "需要，可申请统一电子签证",
+        "arrivalCard": "按俄罗斯边境与移民登记要求",
+        "fee": "以俄罗斯外交部电子签系统支付页为准",
+        "processing": "官方称 4 个日历日，不含提交当天",
+        "districtException": "只能从政府批准的电子签口岸出入境；住宿方通常办理移民登记",
+        "risk": "高"
+      },
+      "sources": [
+        {
+          "id": "portal",
+          "label": "俄罗斯外交部｜统一电子签",
+          "url": "https://electronic-visa.kdmid.ru/index_en.html",
+          "pageDate": "2026-07-29"
+        },
+        {
+          "id": "faq",
+          "label": "俄罗斯外交部｜电子签 FAQ",
+          "url": "https://electronic-visa.kdmid.ru/faq_en.html",
+          "pageDate": "2026-07-29"
+        }
+      ],
+      "cards": [
+        {
+          "title": "中国护照去俄罗斯怎么签？",
+          "answer": "短期旅游可申请统一电子签证",
+          "bullets": [
+            "不需要邀请函或旅游确认函",
+            "在线填表、付费、收取签发通知",
+            "适用目的以官方清单为准"
+          ],
+          "sourceIds": [
+            "portal",
+            "faq"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "2025 年后有效期怎么变？",
+          "answer": "签发后 120 天内使用，单次最多停留 30 天",
+          "bullets": [
+            "新规则自 2025-08-23 起适用",
+            "离境不得晚于签发后第 120 天",
+            "有效期不等于能住 120 天"
+          ],
+          "sourceIds": [
+            "faq"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "多久处理？",
+          "answer": "官方称 4 个日历日，不含提交当天",
+          "bullets": [
+            "周末和法定假日计入官方处理表述",
+            "退回修改后会重新计算",
+            "不要压着出发日申请"
+          ],
+          "sourceIds": [
+            "portal",
+            "faq"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "只认哪个网站？",
+          "answer": "只认 electronic-visa.kdmid.ru",
+          "bullets": [
+            "警惕代办仿冒站",
+            "逐字核对护照号和姓名",
+            "保存通知并下载到手机"
+          ],
+          "sourceIds": [
+            "portal"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "哪些口岸能走？",
+          "answer": "只能从政府批准的电子签口岸出入境",
+          "bullets": [
+            "入境和离境口岸都必须在名单内",
+            "不能从未授权口岸离境",
+            "订票前先查最新口岸清单"
+          ],
+          "sourceIds": [
+            "faq"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "入境随身材料",
+          "answer": "护照、电子签通知、返程、住宿和保险等",
+          "bullets": [
+            "承运人和边境都会核验通知",
+            "电子版之外建议准备打印备份",
+            "签证不保证入境"
+          ],
+          "sourceIds": [
+            "portal"
+          ],
+          "tone": "standard"
+        },
+        {
+          "title": "移民登记怎么做？",
+          "answer": "一般需在抵达住宿地后 7 个工作日内办理",
+          "bullets": [
+            "住酒店通常由酒店自动办理",
+            "住私人住所要确认申报责任",
+            "保存登记凭证至离境"
+          ],
+          "sourceIds": [
+            "faq"
+          ],
+          "tone": "risk"
+        },
+        {
+          "title": "俄罗斯官方来源与核验记录",
+          "answer": "有效期、停留期、口岸和登记均以外交部系统为准",
+          "bullets": [
+            "政策生效：2025-08-23",
+            "本页核验：2026-07-29",
+            "每周扫描口岸与电子签规则"
+          ],
+          "sourceIds": [
+            "portal",
+            "faq"
+          ],
+          "tone": "standard"
+        }
+      ]
+    }
+  ]
+}

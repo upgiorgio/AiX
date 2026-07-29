@@ -34,7 +34,7 @@
 | **产品名** | AiX Card Suite / X Articles Studio |
 | **核心价值** | AI 辅助多平台内容创作 → 视觉卡片 → 多平台发布 一体化工作流 |
 | **目标用户** | 自媒体创作者、个人 IP、企业内容团队 |
-| **技术栈** | 纯前端静态 HTML/CSS/Vanilla JS + Cloudflare Workers AI 后端 |
+| **技术栈** | 纯前端静态 HTML/CSS/Vanilla JS + KimiClaw/Kimi Worker 后端 |
 | **当前阶段** | Beta 1.0（Web PWA，可安装到桌面/手机主屏） |
 
 ### 1.2 三层架构
@@ -45,13 +45,13 @@
 │  主工作台  │  MD排版工坊  │  文案卡片套件(7个工具页)        │
 │  Vercel 托管 · GitHub 自动部署 · PWA 支持                 │
 ├─────────────────────────────────────────────────────────┤
-│          AI 后端 (Cloudflare Workers)                    │
+│          AI 后端 (Cloudflare Worker)                     │
 │  aix-ai-api.musd-app.workers.dev                        │
 │  /ai/generate  /ai/stream  /url/extract                  │
-│  模型: Llama 3.3 70B · Llama 3.1 8B (fast模式)          │
+│  模型: Kimi/Moonshot 优先 · Cloudflare AI 兜底           │
 ├─────────────────────────────────────────────────────────┤
-│              可选：用户自带 OpenAI Key                     │
-│  GPT-4o / GPT-4o-mini / GPT-4-turbo (直连)              │
+│              可选：用户自带 Kimi 或 OpenAI Key             │
+│  Kimi K2.6 / GPT-4o / GPT-4o-mini (直连)                 │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -90,7 +90,7 @@
 │   ├── 📄 app.js
 │   └── 📄 styles.css
 │
-├── 📁 ai-worker/                           ← Cloudflare Workers AI 后端
+├── 📁 ai-worker/                           ← KimiClaw/Kimi Worker 后端
 │   ├── 📄 src/index.js                     ← Worker 主逻辑
 │   └── 📄 wrangler.toml                    ← Worker 配置
 │
@@ -284,9 +284,12 @@ window.AiGateway.getSettings();    // 返回当前设置对象
 ```javascript
 // localStorage key: "aix-ai-settings-v1"
 {
-  provider: "cf" | "openai",   // 默认 "cf"（免费Cloudflare层）
-  openaiKey: "sk-...",          // 仅 provider=openai 时有效
-  model: "gpt-4o-mini"          // gpt-4o-mini | gpt-4o | gpt-4-turbo
+  provider: "cf" | "kimi" | "openai", // 默认 "cf"（KimiClaw Worker代理）
+  openaiKey: "sk-...",                // 仅 provider=openai 时有效
+  model: "gpt-4o-mini",               // gpt-4o-mini | gpt-4o | gpt-4-turbo
+  kimiKey: "sk-...",                  // 仅 provider=kimi 本地直连时有效
+  kimiBaseUrl: "https://api.moonshot.cn/v1",
+  kimiModel: "kimi-k2.6"
 }
 ```
 
@@ -303,7 +306,7 @@ window.AiGateway.getSettings();    // 返回当前设置对象
 | `aix-card-suite-copy-v1` | 文案工场 | `{ scenario, platform, tone, length, topic, audience, thesis, cta, draftOutput, promptOutput }` | 文案工场状态 |
 | `aix-copy-versions-v1` | 文案工场 | `{ versions:{0:"",1:"",2:""}, current:0 }` | A/B/C 三版本草稿 |
 | `aix-card-suite-designer-input` | 卡片设计器 | `{ text, topic, platform, updatedAt }` | 从文案工场跨页传递的内容 |
-| `aix-ai-settings-v1` | 全局 AI 设置 | `{ provider, openaiKey, model }` | AI 服务配置 |
+| `aix-ai-settings-v1` | 全局 AI 设置 | `{ provider, openaiKey, model, kimiKey, kimiBaseUrl, kimiModel }` | AI 服务配置 |
 
 ### 6.1 主草稿完整结构
 
