@@ -1,0 +1,11 @@
+{
+  "name": "aix-studio-web",
+  "private": true,
+  "scripts": {
+    "cf:deploy": "wrangler deploy",
+    "cf:dev": "wrangler dev --local"
+  },
+  "devDependencies": {
+    "wrangler": "4.116.0"
+  }
+}

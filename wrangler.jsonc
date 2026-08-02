@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aix-studio-web",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-07-30",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // banana.school 这个 zone 在 Account A, 不是 musd/6gai 所在的 Account B。
+  // ai-worker/wrangler.toml 里写的 account_id 是 Account B, 别照抄。
+  "account_id": "e6616d694a93e0a02eca10617ff3e1f6",
+
+  "assets": {
+    // 站点根目录就是静态资源目录 (32 个 html + 各类子站)。
+    "directory": "./",
+    "binding": "ASSETS",
+    // 对应原 vercel.json 的 cleanUrls: true
+    "html_handling": "auto-trailing-slash",
+    // 有 /api/hot-topics 要走 Worker, 所以不能让 assets 抢先响应所有请求。
+    "run_worker_first": ["/api/*"]
+  },
+
+  "observability": { "enabled": true },
+
+  "routes": [
+    { "pattern": "x.banana.school", "custom_domain": true }
+  ]
+}

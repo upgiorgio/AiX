@@ -1,0 +1,19 @@
+# Cloudflare Workers 静态资源排除清单
+# 2026-08-02 从 Vercel 迁来时新增。站点根目录同时是源码仓库根目录,
+# 不排除的话会把 iOS 工程、脚本、Worker 源码一起上传。
+
+# 源码 / 工程, 不是网站内容
+ai-worker/
+api/
+worker/
+scripts/
+banana_ios/
+node_modules/
+.git/
+.wrangler/
+
+# 配置与文档
+vercel.json
+wrangler.jsonc
+.assetsignore
+*.md
