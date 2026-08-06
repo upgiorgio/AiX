@@ -1,0 +1,2071 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/rdgw80",
+    "id": "rdgw80",
+    "slide": 8,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ito765gr",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5wzq10zi",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "08",
+      "textPreview": "08",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "08"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "08",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "08",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4vqp8vyx",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vqxovqhg",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "方案 D｜内蒙古草原 + 沙漠 + 阿拉善",
+      "textPreview": "方案 D｜内蒙古草原 + 沙漠 + 阿拉善",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "方案 D｜内蒙古草原 + 沙漠 + 阿拉善"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "方案 D｜内蒙古草原 + 沙漠 + 阿拉善",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "方案 D｜内蒙古草原 + 沙漠 + 阿拉善",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upo72lgv",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "呼和浩特进、银川出；异地还车未锁定前不成立",
+      "textPreview": "呼和浩特进、银川出；异地还车未锁定前不成立",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "呼和浩特进、银川出；异地还车未锁定前不成立"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "呼和浩特进、银川出；异地还车未锁定前不成立",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "呼和浩特进、银川出；异地还车未锁定前不成立",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hsf6x0z6",
+      "id": "6",
+      "name": "route-node-1",
+      "bbox": [
+        96,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#557B65",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gr6p4vy1",
+      "id": "7",
+      "bbox": [
+        48,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "呼和浩特",
+      "textPreview": "呼和浩特",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "呼和浩特"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "呼和浩特",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "呼和浩特",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72dor6h4",
+      "id": "8",
+      "bbox": [
+        40,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "取车",
+      "textPreview": "取车",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "取车"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "取车",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "取车",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6147ylgj",
+      "id": "9",
+      "name": "route-node-2",
+      "bbox": [
+        308,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#557B65",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kn6d4r6x",
+      "id": "10",
+      "bbox": [
+        260,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "草原",
+      "textPreview": "草原",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "草原"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "草原",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "草原",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5ozexwn2",
+      "id": "11",
+      "bbox": [
+        252,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "秋草",
+      "textPreview": "秋草",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "秋草"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "秋草",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "秋草",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ylov21or",
+      "id": "12",
+      "name": "route-node-3",
+      "bbox": [
+        520,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#557B65",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jmxwvm5c",
+      "id": "13",
+      "bbox": [
+        472,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "响沙湾",
+      "textPreview": "响沙湾",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "响沙湾"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "响沙湾",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "响沙湾",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wj6d0r6l",
+      "id": "14",
+      "bbox": [
+        464,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "沙漠",
+      "textPreview": "沙漠",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "沙漠"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "沙漠",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "沙漠",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xkfetwn6",
+      "id": "15",
+      "name": "route-node-4",
+      "bbox": [
+        732,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#557B65",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ahovyhof",
+      "id": "16",
+      "bbox": [
+        684,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "鄂尔多斯",
+      "textPreview": "鄂尔多斯",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "鄂尔多斯"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "鄂尔多斯",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "鄂尔多斯",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bixw7m50",
+      "id": "17",
+      "bbox": [
+        676,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "城市休整",
+      "textPreview": "城市休整",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "城市休整"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "城市休整",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "城市休整",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfqdcb6p",
+      "id": "18",
+      "name": "route-node-5",
+      "bbox": [
+        944,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#557B65",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hgje5gna",
+      "id": "19",
+      "bbox": [
+        896,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "阿拉善",
+      "textPreview": "阿拉善",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "阿拉善"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "阿拉善",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "阿拉善",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0vm9cbi",
+      "id": "20",
+      "bbox": [
+        888,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "腾格里",
+      "textPreview": "腾格里",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "腾格里"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "腾格里",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "腾格里",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4zm50rax",
+      "id": "21",
+      "name": "route-node-6",
+      "bbox": [
+        1156,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#557B65",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3yd47mtc",
+      "id": "22",
+      "bbox": [
+        1108,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "银川",
+      "textPreview": "银川",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "银川"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "银川",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "银川",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2xknyhsr",
+      "id": "23",
+      "bbox": [
+        1100,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "还车返深",
+      "textPreview": "还车返深",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "还车返深"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "还车返深",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "还车返深",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwbm5cb6",
+      "id": "24",
+      "bbox": [
+        124,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#557B65",
+      "lineWidth": 4
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gv25w7ul",
+      "id": "25",
+      "bbox": [
+        336,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#557B65",
+      "lineWidth": 4
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fut432tg",
+      "id": "26",
+      "bbox": [
+        548,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#557B65",
+      "lineWidth": 4
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/utk3uxcv",
+      "id": "27",
+      "bbox": [
+        760,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#557B65",
+      "lineWidth": 4
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tsbm1sba",
+      "id": "28",
+      "bbox": [
+        972,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#557B65",
+      "lineWidth": 4
+    },
+    {
+      "order": 29,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/rax4bydg",
+      "id": "29",
+      "bbox": [
+        72,
+        300,
+        1136,
+        282
+      ],
+      "text": "日期 | 住宿 | 重点 | 驾驶参考\n9/29 | 呼和浩特 | 机场取车，市区休息 | 低\n9/30 | 草原 | 辉腾锡勒/黄花沟 | 中\n10/1 | 响沙湾 | 草原→响沙湾 | 约270 km\n10/2 | 响沙湾 | 完整玩沙漠 | 低\n10/3 | 鄂尔多斯 | 康巴什 / 博物馆 | 低\n10/4 | 阿拉善左旗 | 鄂尔多斯→阿拉善，最长的一天 | 约350–380 km\n10/5/6 | 银川返程 | 阿拉善→银川机场，异地还车 | 约120 km",
+      "textPreview": "日期 | 住宿 | 重点 | 驾驶参考 | 9/29 | 呼和浩特 | 机场取车，市区休息 | 低 | 9/30 | 草原 | 辉腾锡勒/黄花沟 | 中 | 10/1 | 响沙湾 | 草原→响沙湾 | 约270 km | 10/2 | 响沙湾 | 完整玩沙漠 | 低 | 1...",
+      "rows": 8,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            72,
+            300,
+            284,
+            35.25
+          ],
+          "text": "日期",
+          "textPreview": "日期",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "日期",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "日期"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            356,
+            300,
+            284,
+            35.25
+          ],
+          "text": "住宿",
+          "textPreview": "住宿",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "住宿",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "住宿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            640,
+            300,
+            284,
+            35.25
+          ],
+          "text": "重点",
+          "textPreview": "重点",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "重点",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "重点"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            924,
+            300,
+            284,
+            35.25
+          ],
+          "text": "驾驶参考",
+          "textPreview": "驾驶参考",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "驾驶参考",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "驾驶参考"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            72,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "9/29",
+          "textPreview": "9/29",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "9/29",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "9/29"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            356,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "呼和浩特",
+          "textPreview": "呼和浩特",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "呼和浩特",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "呼和浩特"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            640,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "机场取车，市区休息",
+          "textPreview": "机场取车，市区休息",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "机场取车，市区休息",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "机场取车，市区休息"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            924,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "低",
+          "textPreview": "低",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "低",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "低"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            72,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "9/30",
+          "textPreview": "9/30",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "9/30",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "9/30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            356,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "草原",
+          "textPreview": "草原",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "草原",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "草原"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            640,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "辉腾锡勒/黄花沟",
+          "textPreview": "辉腾锡勒/黄花沟",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "辉腾锡勒/黄花沟",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "辉腾锡勒/黄花沟"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            924,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "中",
+          "textPreview": "中",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "中",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "中"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            72,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "10/1",
+          "textPreview": "10/1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            356,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "响沙湾",
+          "textPreview": "响沙湾",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "响沙湾",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "响沙湾"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            640,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "草原→响沙湾",
+          "textPreview": "草原→响沙湾",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "草原→响沙湾",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "草原→响沙湾"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            924,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "约270 km",
+          "textPreview": "约270 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约270 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约270 km"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            72,
+            441,
+            284,
+            35.25
+          ],
+          "text": "10/2",
+          "textPreview": "10/2",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/2",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            356,
+            441,
+            284,
+            35.25
+          ],
+          "text": "响沙湾",
+          "textPreview": "响沙湾",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "响沙湾",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "响沙湾"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            640,
+            441,
+            284,
+            35.25
+          ],
+          "text": "完整玩沙漠",
+          "textPreview": "完整玩沙漠",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "完整玩沙漠",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "完整玩沙漠"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            924,
+            441,
+            284,
+            35.25
+          ],
+          "text": "低",
+          "textPreview": "低",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "低",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "低"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            72,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "10/3",
+          "textPreview": "10/3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/3",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            356,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "鄂尔多斯",
+          "textPreview": "鄂尔多斯",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "鄂尔多斯",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "鄂尔多斯"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            640,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "康巴什 / 博物馆",
+          "textPreview": "康巴什 / 博物馆",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "康巴什 / 博物馆",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "康巴什 / 博物馆"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            924,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "低",
+          "textPreview": "低",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "低",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "低"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            72,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "10/4",
+          "textPreview": "10/4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/4",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            356,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "阿拉善左旗",
+          "textPreview": "阿拉善左旗",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "阿拉善左旗",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "阿拉善左旗"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            640,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "鄂尔多斯→阿拉善，最长的一天",
+          "textPreview": "鄂尔多斯→阿拉善，最长的一天",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "鄂尔多斯→阿拉善，最长的一天",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "鄂尔多斯→阿拉善，最长的一天"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            924,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "约350–380 km",
+          "textPreview": "约350–380 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约350–380 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约350–380 km"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            72,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "10/5/6",
+          "textPreview": "10/5/6",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/5/6",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/5/6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            356,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "银川返程",
+          "textPreview": "银川返程",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "银川返程",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "银川返程"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            640,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "阿拉善→银川机场，异地还车",
+          "textPreview": "阿拉善→银川机场，异地还车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "阿拉善→银川机场，异地还车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "阿拉善→银川机场，异地还车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            924,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "约120 km",
+          "textPreview": "约120 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约120 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约120 km"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

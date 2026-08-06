@@ -1,0 +1,626 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/4eokgb",
+    "id": "4eokgb",
+    "slide": 15,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#2B211C",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e18rutsf",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 下一步",
+      "textPreview": "国庆自驾研究 · 下一步",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 下一步"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 下一步",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 下一步",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/14jqpor6",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "15",
+      "textPreview": "15",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "15"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "15",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "15",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/03a9wjal",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ryh8je94",
+      "id": "4",
+      "bbox": [
+        72,
+        108,
+        720,
+        54
+      ],
+      "geometry": "rect",
+      "text": "下一步只需要做一个选择",
+      "textPreview": "下一步只需要做一个选择",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "fontSize": 38,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "下一步只需要做一个选择"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "下一步只需要做一个选择",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "下一步只需要做一个选择",
+              "fontSize": 38,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qx87q9sj",
+      "id": "5",
+      "bbox": [
+        72,
+        184,
+        122,
+        6
+      ],
+      "geometry": "rect",
+      "fillColor": "#F47C48",
+      "lineColor": "#F47C48",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d0zqloru",
+      "id": "6",
+      "bbox": [
+        72,
+        230,
+        720,
+        72
+      ],
+      "geometry": "rect",
+      "text": "你能不能把返程放到 10 月 6 日？",
+      "textPreview": "你能不能把返程放到 10 月 6 日？",
+      "resolvedFontSize": 30,
+      "resolvedTextStyle": {
+        "fontSize": 30,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "你能不能把返程放到 10 月 6 日？"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "你能不能把返程放到 10 月 6 日？",
+          "resolvedTextStyle": {
+            "fontSize": 30,
+            "color": "#F47C48",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "你能不能把返程放到 10 月 6 日？",
+              "fontSize": 30,
+              "color": "#F47C48",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/szq9sja9",
+      "id": "7",
+      "bbox": [
+        72,
+        356,
+        500,
+        160
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F47C48",
+      "lineColor": "#F47C48",
+      "lineWidth": 1
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ax8fe9s",
+      "id": "8",
+      "bbox": [
+        106,
+        400,
+        430,
+        76
+      ],
+      "geometry": "rect",
+      "text": "能 → 贵州舒适环线\n现在就按 7 晚去锁贵阳 / 兴义 / 织金住宿",
+      "textPreview": "能 → 贵州舒适环线 | 现在就按 7 晚去锁贵阳 / 兴义 / 织金住宿",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "fontSize": 22,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "能 → 贵州舒适环线"
+          },
+          {
+            "index": 2,
+            "text": "现在就按 7 晚去锁贵阳 / 兴义 / 织金住宿"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "能 → 贵州舒适环线",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "能 → 贵州舒适环线",
+              "fontSize": 22,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "现在就按 7 晚去锁贵阳 / 兴义 / 织金住宿",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "现在就按 7 晚去锁贵阳 / 兴义 / 织金住宿",
+              "fontSize": 22,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i9o7m9s7",
+      "id": "9",
+      "bbox": [
+        620,
+        356,
+        588,
+        160
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#3E6B8C",
+      "lineColor": "#3E6B8C",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8fetcjed",
+      "id": "10",
+      "bbox": [
+        654,
+        400,
+        520,
+        76
+      ],
+      "geometry": "rect",
+      "text": "不能 → 贵州高强度版 / 呼和浩特稳妥线\n优先锁交通，再决定住景区还是住城市基地",
+      "textPreview": "不能 → 贵州高强度版 / 呼和浩特稳妥线 | 优先锁交通，再决定住景区还是住城市基地",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "不能 → 贵州高强度版 / 呼和浩特稳妥线"
+          },
+          {
+            "index": 2,
+            "text": "优先锁交通，再决定住景区还是住城市基地"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "不能 → 贵州高强度版 / 呼和浩特稳妥线",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "不能 → 贵州高强度版 / 呼和浩特稳妥线",
+              "fontSize": 21,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "优先锁交通，再决定住景区还是住城市基地",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "优先锁交通，再决定住景区还是住城市基地",
+              "fontSize": 21,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gnalovy",
+      "id": "11",
+      "bbox": [
+        72,
+        600,
+        820,
+        56
+      ],
+      "geometry": "rect",
+      "text": "报告文件：PPTX 可编辑版 + CSV 证据表\n查询基准日：2026-08-03 · 动态价格请在下单前复核",
+      "textPreview": "报告文件：PPTX 可编辑版 + CSV 证据表 | 查询基准日：2026-08-03 · 动态价格请在下单前复核",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#F5E8DA",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "报告文件：PPTX 可编辑版 + CSV 证据表"
+          },
+          {
+            "index": 2,
+            "text": "查询基准日：2026-08-03 · 动态价格请在下单前复核"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "报告文件：PPTX 可编辑版 + CSV 证据表",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#F5E8DA"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "报告文件：PPTX 可编辑版 + CSV 证据表",
+              "fontSize": 16,
+              "color": "#F5E8DA"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "查询基准日：2026-08-03 · 动态价格请在下单前复核",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#F5E8DA"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "查询基准日：2026-08-03 · 动态价格请在下单前复核",
+              "fontSize": 16,
+              "color": "#F5E8DA"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

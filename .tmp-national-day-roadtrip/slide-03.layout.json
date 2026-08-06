@@ -1,0 +1,1223 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/8pxmvj",
+    "id": "8pxmvj",
+    "slide": 3,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b21gve1s",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cnax4j2d",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/do3yxojy",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2xsfy9kb",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "决策矩阵：贵州在 6–7 天窗口里更适合深圳出发",
+      "textPreview": "决策矩阵：贵州在 6–7 天窗口里更适合深圳出发",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "决策矩阵：贵州在 6–7 天窗口里更适合深圳出发"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "决策矩阵：贵州在 6–7 天窗口里更适合深圳出发",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "决策矩阵：贵州在 6–7 天窗口里更适合深圳出发",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3y1grulw",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "所有评分为研究组的相对决策评分，满分 5 分；权重和分值均可在 PPT 中直接修改",
+      "textPreview": "所有评分为研究组的相对决策评分，满分 5 分；权重和分值均可在 PPT 中直接修改",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "所有评分为研究组的相对决策评分，满分 5 分；权重和分值均可在 PPT 中直接修改"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "所有评分为研究组的相对决策评分，满分 5 分；权重和分值均可在 PPT 中直接修改",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "所有评分为研究组的相对决策评分，满分 5 分；权重和分值均可在 PPT 中直接修改",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/ov6l4byl",
+      "id": "6",
+      "bbox": [
+        72,
+        205,
+        470,
+        360
+      ],
+      "chartType": "bar"
+    },
+    {
+      "order": 7,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/gf6p8r65",
+      "id": "7",
+      "bbox": [
+        590,
+        198,
+        618,
+        372
+      ],
+      "text": "维度 | 权重 | 贵州 | 内蒙古\n深圳出发效率 | 20% | 5.0 | 3.5\n路线紧凑度 | 20% | 4.5 | 3.2\n10月初适配 | 15% | 4.0 | 3.0\n景观独特性 | 15% | 4.0 | 4.5\n预算可控性 | 15% | 4.2 | 3.3\n落地租车适配 | 10% | 3.8 | 4.5\n国庆排队/拥堵风险 | 5% | 2.8 | 3.1",
+      "textPreview": "维度 | 权重 | 贵州 | 内蒙古 | 深圳出发效率 | 20% | 5.0 | 3.5 | 路线紧凑度 | 20% | 4.5 | 3.2 | 10月初适配 | 15% | 4.0 | 3.0 | 景观独特性 | 15% | 4.0 | 4.5 | 预算可控性 | 15...",
+      "rows": 8,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            590,
+            198,
+            154.5,
+            46.5
+          ],
+          "text": "维度",
+          "textPreview": "维度",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "维度",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "维度"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            744.5,
+            198,
+            154.5,
+            46.5
+          ],
+          "text": "权重",
+          "textPreview": "权重",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "权重",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "权重"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            899,
+            198,
+            154.5,
+            46.5
+          ],
+          "text": "贵州",
+          "textPreview": "贵州",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵州",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵州"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            198,
+            154.5,
+            46.5
+          ],
+          "text": "内蒙古",
+          "textPreview": "内蒙古",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "内蒙古",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "内蒙古"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            590,
+            244.5,
+            154.5,
+            46.5
+          ],
+          "text": "深圳出发效率",
+          "textPreview": "深圳出发效率",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "深圳出发效率",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "深圳出发效率"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            744.5,
+            244.5,
+            154.5,
+            46.5
+          ],
+          "text": "20%",
+          "textPreview": "20%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "20%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "20%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            899,
+            244.5,
+            154.5,
+            46.5
+          ],
+          "text": "5.0",
+          "textPreview": "5.0",
+          "fillColor": "#FCE3D1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "5.0",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "5.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            244.5,
+            154.5,
+            46.5
+          ],
+          "text": "3.5",
+          "textPreview": "3.5",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3.5",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            590,
+            291,
+            154.5,
+            46.5
+          ],
+          "text": "路线紧凑度",
+          "textPreview": "路线紧凑度",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "路线紧凑度",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "路线紧凑度"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            744.5,
+            291,
+            154.5,
+            46.5
+          ],
+          "text": "20%",
+          "textPreview": "20%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "20%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "20%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            899,
+            291,
+            154.5,
+            46.5
+          ],
+          "text": "4.5",
+          "textPreview": "4.5",
+          "fillColor": "#FCE3D1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.5",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            291,
+            154.5,
+            46.5
+          ],
+          "text": "3.2",
+          "textPreview": "3.2",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3.2",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            590,
+            337.5,
+            154.5,
+            46.5
+          ],
+          "text": "10月初适配",
+          "textPreview": "10月初适配",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10月初适配",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10月初适配"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            744.5,
+            337.5,
+            154.5,
+            46.5
+          ],
+          "text": "15%",
+          "textPreview": "15%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "15%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "15%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            899,
+            337.5,
+            154.5,
+            46.5
+          ],
+          "text": "4.0",
+          "textPreview": "4.0",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.0",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            337.5,
+            154.5,
+            46.5
+          ],
+          "text": "3.0",
+          "textPreview": "3.0",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3.0",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            590,
+            384,
+            154.5,
+            46.5
+          ],
+          "text": "景观独特性",
+          "textPreview": "景观独特性",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "景观独特性",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "景观独特性"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            744.5,
+            384,
+            154.5,
+            46.5
+          ],
+          "text": "15%",
+          "textPreview": "15%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "15%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "15%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            899,
+            384,
+            154.5,
+            46.5
+          ],
+          "text": "4.0",
+          "textPreview": "4.0",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.0",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            384,
+            154.5,
+            46.5
+          ],
+          "text": "4.5",
+          "textPreview": "4.5",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.5",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            590,
+            430.5,
+            154.5,
+            46.5
+          ],
+          "text": "预算可控性",
+          "textPreview": "预算可控性",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "预算可控性",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "预算可控性"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            744.5,
+            430.5,
+            154.5,
+            46.5
+          ],
+          "text": "15%",
+          "textPreview": "15%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "15%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "15%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            899,
+            430.5,
+            154.5,
+            46.5
+          ],
+          "text": "4.2",
+          "textPreview": "4.2",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.2",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            430.5,
+            154.5,
+            46.5
+          ],
+          "text": "3.3",
+          "textPreview": "3.3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3.3",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            590,
+            477,
+            154.5,
+            46.5
+          ],
+          "text": "落地租车适配",
+          "textPreview": "落地租车适配",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "落地租车适配",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "落地租车适配"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            744.5,
+            477,
+            154.5,
+            46.5
+          ],
+          "text": "10%",
+          "textPreview": "10%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            899,
+            477,
+            154.5,
+            46.5
+          ],
+          "text": "3.8",
+          "textPreview": "3.8",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3.8",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            477,
+            154.5,
+            46.5
+          ],
+          "text": "4.5",
+          "textPreview": "4.5",
+          "fillColor": "#DCEAF3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.5",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            590,
+            523.5,
+            154.5,
+            46.5
+          ],
+          "text": "国庆排队/拥堵风险",
+          "textPreview": "国庆排队/拥堵风险",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "国庆排队/拥堵风险",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "国庆排队/拥堵风险"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            744.5,
+            523.5,
+            154.5,
+            46.5
+          ],
+          "text": "5%",
+          "textPreview": "5%",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "5%",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "5%"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            899,
+            523.5,
+            154.5,
+            46.5
+          ],
+          "text": "2.8",
+          "textPreview": "2.8",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "2.8",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "2.8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            1053.5,
+            523.5,
+            154.5,
+            46.5
+          ],
+          "text": "3.1",
+          "textPreview": "3.1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "3.1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "3.1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mtcfatkf",
+      "id": "8",
+      "bbox": [
+        72,
+        596,
+        1090,
+        34
+      ],
+      "geometry": "rect",
+      "text": "结论不是“哪个省更好”，而是“哪个省更适合这段假期长度与出发地”。",
+      "textPreview": "结论不是“哪个省更好”，而是“哪个省更适合这段假期长度与出发地”。",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "结论不是“哪个省更好”，而是“哪个省更适合这段假期长度与出发地”。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "结论不是“哪个省更好”，而是“哪个省更适合这段假期长度与出发地”。",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#F47C48",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "结论不是“哪个省更好”，而是“哪个省更适合这段假期长度与出发地”。",
+              "fontSize": 18,
+              "color": "#F47C48",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

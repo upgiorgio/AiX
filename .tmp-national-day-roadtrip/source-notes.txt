@@ -1,0 +1,47 @@
+S01	12306 贵广客专票价说明	https://www.12306.cn/mormhweb/zxdt/202308/t20230826_39897.html	动车组执行票价按日期、时段、席别浮动
+S02	深圳北—贵阳北公开高铁票价	https://www.gaotie.com.cn/lieche/shenzhenbei-guiyangbei.html	公开样本二等座约 ¥515.5/程
+S03	携程深圳—贵阳机票页	https://m.ctrip.com/html5/flight/SZX-KWE-day-1.html	附近日期可见约 ¥610–1,080/程
+S04	携程贵阳—深圳机票页	https://m.ctrip.com/html5/flight/kwe-szx-day-1.html	附近日期返程样本约 ¥550–920/程
+S05	携程深圳—呼和浩特机票页	https://m.ctrip.com/html5/flight/szx-het-day-1.html	公开样本用于国庆前后比价
+S06	携程呼和浩特—深圳机票页	https://m.ctrip.com/html5/flight/het-szx-day-1.html	公开样本用于返程比价
+S07	神州租车贵阳网点	https://guiyang.zuche.com/	龙洞堡机场 T1/T2/T3 网点
+S08	一嗨贵阳车型页	https://www.1hai.cn/CityCarRental/index?City=%E8%B4%B5%E9%98%B3	车型/服务入口，目标日动态价待核
+S09	神州租车呼和浩特网点	https://huhehaote.zuche.com/	白塔机场服务点
+S10	神州租车鄂尔多斯网点	https://eerduosi.zuche.com/	鄂尔多斯机场/伊旗服务点
+S11	黄果树官方游览信息	https://movement.gzstv.com/news/detail/HPzWJ9/	大瀑布、陡坡塘、天星桥及游览信息
+S12	万峰林景区官网	https://www.wanfenglin.cn/wanfenglingaishu.html	景区开放、预约与官方介绍
+S13	贵州省 A 级旅游景区名录	https://drc.guizhou.gov.cn/xxgk/sqjs/gzfg/gzfg/202405/t20240523_84672683.html	景区等级及部分门票参考
+S14	织金洞世界地质公园官网	https://www.zjdgeopark.com/cn	溶洞/世界地质公园官方信息
+S15	荔波小七孔官方规划/报道	https://www.forestry.gov.cn/lyj/1/dfdt/20260612/675979.html	客流与景区热度风险
+S16	西江千户苗寨官方票价	https://www.xjqhmz.com/news/detail?id=767709855313141762&type=news-notice	门票与观光车公开价
+S17	国务院办公厅 2026 国庆假期	https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm	10/1–10/7 假期与调休
+S18	2026 国庆高速免费说明	https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html	7座及以下 10/1–10/7 免费
+S19	贵州公路国庆拥堵研判（历史参考）	https://glj.guizhou.gov.cn/xwzx_500473/yw/202509/t20250930_88672139.html	高峰时段与拥堵规律
+S20	响沙湾官方介绍	https://www.ixsw.cn/xsw/about/about-1.html	5A 景区、库布其沙漠与景区交通
+S21	响沙湾官方交通	https://www.ixsw.cn/xsw/about/about-138.html	呼和浩特/包头/东胜方向交通
+S22	呼和浩特白塔机场 2026 航季	https://inews.nmgnews.com.cn/system/2026/03/29/030326703.shtml	深圳方向航班密度参考
+S23	内蒙古国庆交通预测	https://nm.people.com.cn/n2/2025/0929/c196689-41368554.html	呼包段、鄂尔多斯、响沙湾风险
+S24	中国天气网额济纳气候/胡杨	https://news.weather.com.cn/2024/10/3922118.shtml	10月初胡杨观赏窗口参考
+S25	携程兴义万峰林捌舍民宿	https://hotels.ctrip.com/hotels/15154300.html	4.9/5、261条、停车与景观评价
+S26	携程兴义万峰林隐阅山也民宿	https://hotels.ctrip.com/hotels/100389892.html	4.9/5、624条、景观/早餐/服务关键词
+S27	携程半山酒店·安顺古城店	https://tw.trip.com/hotels/anshun-hotel-detail-38324007/mid-level-hotel/	9.5/10、约6,522条、免费停车
+S28	携程荔波山语·水岸美宿	https://sg.trip.com/hotels/libo-hotel-detail-110419924/shanyushuian/	9.7/10、663条、停车/充电桩
+S29	大众点评老凯俚酸汤鱼公开页	https://m.dianping.com/discovery/695584544	公开页可见约 ¥87/人，评分/口径可能随门店变化
+S30	大众点评老凯俚酸汤鱼相册/门店	https://www.dianping.com/shop/24873401/photos	门店、菜品与近期用户图文入口
+S31	大众点评金牌罗记肠旺面攻略	https://m.dianping.com/discovery/703922120	肠旺面/软哨/血旺体验关键词
+S32	携程安顺餐饮列表	https://you.ctrip.com/restaurantlist/anshun518/s0-p23.html	黔人百味 4.9/5、150条、人均约 ¥46
+S33	携程安顺程汤圆	https://you.ctrip.com/food/anshun518/16263081.html	4.8/5、5条、人均约 ¥9
+S34	携程呼和浩特老绥元烧麦	https://you.ctrip.com/food/hohhot156/12513942-dianping.html	4.5/5、89条、人均约 ¥56
+S35	大众点评呼市烧麦羊杂公开页	https://www.dianping.com/shop/ilskogWYshhxQxWO/photos	菜单与近期评价入口，数字需 App 复核
+S36	携程包头蒙餐/小肥羊列表	https://you.ctrip.com/restaurantlist/baotou347/s0-p8.html	牧人嘎查 4.8/5、25条、人均约 ¥84；小肥羊 4.3/5、94条、人均约 ¥96
+S37	小红书：贵阳丝娃娃搜索	https://www.xiaohongshu.com/search_result?keyword=%E8%B4%B5%E9%98%B3%20%E4%B8%9D%E5%A8%83%E5%A8%83	需用户在 App/登录态复核笔记正文
+S38	小红书：安顺小吃搜索	https://www.xiaohongshu.com/search_result?keyword=%E5%AE%89%E9%A1%BA%20%E8%A3%B9%E5%8D%B7%20%E5%A4%BA%E5%A4%BA%E7%B2%89	裹卷/夺夺粉/冲冲糕检索入口
+S39	小红书：荔波美食搜索	https://www.xiaohongshu.com/search_result?keyword=%E8%8D%94%E6%B3%A2%20%E5%B0%8F%E4%B8%83%E5%AD%94%20%E7%BE%8E%E9%A3%9F	小七孔/酸汤牛肉检索入口
+S40	小红书：西江酸汤鱼搜索	https://www.xiaohongshu.com/search_result?keyword=%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A8%20%E9%85%B8%E6%B1%A4%E9%B1%BC	西江餐饮住宿检索入口
+S41	小红书：呼和浩特烧麦搜索	https://www.xiaohongshu.com/search_result?keyword=%E5%91%BC%E5%92%8C%E6%B5%A9%E7%89%B9%20%E7%83%A7%E9%BA%A6	烧麦/羊杂/宽巷子检索入口
+S42	小红书：包头蒙餐搜索	https://www.xiaohongshu.com/search_result?keyword=%E5%8C%85%E5%A4%B4%20%E8%92%99%E9%A4%90%20%E7%83%A7%E9%BA%A6	蒙餐/烧麦检索入口
+S43	小红书：鄂尔多斯响沙湾咖啡搜索	https://www.xiaohongshu.com/search_result?keyword=%E9%84%82%E5%B0%94%E5%A4%9A%E6%96%AF%20%E5%93%8D%E6%B2%99%E6%B9%BE%20%E5%92%96%E5%95%A1	沙漠咖啡/蒙餐检索入口
+S44	贵阳公开咖啡地图（含小红书引用）	https://www.sohu.com/a/901913972_121106687	贵阳咖啡店与小红书用户引用摘要
+S45	呼和浩特东护城河咖啡街报道	https://static.0471tv.org.cn/rb/pc/con/202411/11/content_74543.html	大众点评/小红书是当地咖啡检索入口
+S46	呼市烧麦测评公开摘要	https://m.sohu.com/a/915568366_122358233	多家烧麦体验摘要，非官方评分
+S47	一嗨鄂尔多斯车型页	https://www.1hai.cn/c_eerduosi	车型与机场租车入口，目标日动态价待核

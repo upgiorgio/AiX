@@ -1,0 +1,1656 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/wc6w14",
+    "id": "wc6w14",
+    "slide": 13,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/al0vqp0f",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xoru1kz6",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "13",
+      "textPreview": "13",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "13"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "13",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "13",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wnidsfil",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nipcvah4",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "证据表：每个数字都有来源状态，用户可在 PPT/CSV 中继续改和补",
+      "textPreview": "证据表：每个数字都有来源状态，用户可在 PPT/CSV 中继续改和补",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "证据表：每个数字都有来源状态，用户可在 PPT/CSV 中继续改和补"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "证据表：每个数字都有来源状态，用户可在 PPT/CSV 中继续改和补",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "证据表：每个数字都有来源状态，用户可在 PPT/CSV 中继续改和补",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mxgvm50j",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "A = 公开页可见数字；B = 体验/位置可见但数字不完整；M = 模型区间；X = 小红书检索入口，需手工复核",
+      "textPreview": "A = 公开页可见数字；B = 体验/位置可见但数字不完整；M = 模型区间；X = 小红书检索入口，需手工复核",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A = 公开页可见数字；B = 体验/位置可见但数字不完整；M = 模型区间；X = 小红书检索入口，需手工复核"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A = 公开页可见数字；B = 体验/位置可见但数字不完整；M = 模型区间；X = 小红书检索入口，需手工复核",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A = 公开页可见数字；B = 体验/位置可见但数字不完整；M = 模型区间；X = 小红书检索入口，需手工复核",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/on294f25",
+      "id": "6",
+      "bbox": [
+        72,
+        198,
+        1136,
+        372
+      ],
+      "text": "类型 | 项目 | 价格/评分 | 状态 | 来源\n交通 | 深—贵高铁 | ¥480.5–515.5/程 | A / 公开样本 | S01;S02\n交通 | 深—贵飞机 | ¥610–1,080/程附近样本 | A / 非目标日 | S03;S04\n租车 | 贵阳/兴义 SUV | ¥250–500/天 | M / 待下单核 | S07;S08\n交通 | 深—呼飞机 | ¥2,100–3,250往返模型 | M / 待下单核 | S05;S06;S22\n酒店 | 万峰林捌舍 | 4.9/5，261条 | A / 住客评价 | S25\n酒店 | 安顺半山 | 9.5/10，约6,522条 | A / 住客评价 | S27\n餐饮 | 老凯俚酸汤鱼 | 约¥79–87/人 | A / 公开口径有差异 | S29;S30\n餐饮 | 老绥元烧麦 | 4.5/5，89条，约¥56 | A / 公开页 | S34\n社媒 | 小红书推荐 | 不写硬评分 | X / 登录后复核 | S37–S43",
+      "textPreview": "类型 | 项目 | 价格/评分 | 状态 | 来源 | 交通 | 深—贵高铁 | ¥480.5–515.5/程 | A / 公开样本 | S01;S02 | 交通 | 深—贵飞机 | ¥610–1,080/程附近样本 | A / 非目标日 | S03;S04 | 租车 | ...",
+      "rows": 10,
+      "cols": 5,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            72,
+            198,
+            227.2,
+            37.2
+          ],
+          "text": "类型",
+          "textPreview": "类型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "类型",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "类型"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            299.2,
+            198,
+            227.2,
+            37.2
+          ],
+          "text": "项目",
+          "textPreview": "项目",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "项目",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "项目"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            526.4,
+            198,
+            227.2,
+            37.2
+          ],
+          "text": "价格/评分",
+          "textPreview": "价格/评分",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "价格/评分",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "价格/评分"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            753.6,
+            198,
+            227.2,
+            37.2
+          ],
+          "text": "状态",
+          "textPreview": "状态",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "状态",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "状态"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 1,
+          "column": 5,
+          "bbox": [
+            980.8,
+            198,
+            227.2,
+            37.2
+          ],
+          "text": "来源",
+          "textPreview": "来源",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "来源",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "来源"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            72,
+            235.2,
+            227.2,
+            37.2
+          ],
+          "text": "交通",
+          "textPreview": "交通",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "交通",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "交通"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            299.2,
+            235.2,
+            227.2,
+            37.2
+          ],
+          "text": "深—贵高铁",
+          "textPreview": "深—贵高铁",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "深—贵高铁",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "深—贵高铁"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            526.4,
+            235.2,
+            227.2,
+            37.2
+          ],
+          "text": "¥480.5–515.5/程",
+          "textPreview": "¥480.5–515.5/程",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥480.5–515.5/程",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥480.5–515.5/程"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            753.6,
+            235.2,
+            227.2,
+            37.2
+          ],
+          "text": "A / 公开样本",
+          "textPreview": "A / 公开样本",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "A / 公开样本",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "A / 公开样本"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 2,
+          "column": 5,
+          "bbox": [
+            980.8,
+            235.2,
+            227.2,
+            37.2
+          ],
+          "text": "S01;S02",
+          "textPreview": "S01;S02",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S01;S02",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S01;S02"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            72,
+            272.4,
+            227.2,
+            37.2
+          ],
+          "text": "交通",
+          "textPreview": "交通",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "交通",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "交通"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            299.2,
+            272.4,
+            227.2,
+            37.2
+          ],
+          "text": "深—贵飞机",
+          "textPreview": "深—贵飞机",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "深—贵飞机",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "深—贵飞机"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            526.4,
+            272.4,
+            227.2,
+            37.2
+          ],
+          "text": "¥610–1,080/程附近样本",
+          "textPreview": "¥610–1,080/程附近样本",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥610–1,080/程附近样本",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥610–1,080/程附近样本"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            753.6,
+            272.4,
+            227.2,
+            37.2
+          ],
+          "text": "A / 非目标日",
+          "textPreview": "A / 非目标日",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "A / 非目标日",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "A / 非目标日"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 3,
+          "column": 5,
+          "bbox": [
+            980.8,
+            272.4,
+            227.2,
+            37.2
+          ],
+          "text": "S03;S04",
+          "textPreview": "S03;S04",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S03;S04",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S03;S04"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            72,
+            309.6,
+            227.2,
+            37.2
+          ],
+          "text": "租车",
+          "textPreview": "租车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "租车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "租车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            299.2,
+            309.6,
+            227.2,
+            37.2
+          ],
+          "text": "贵阳/兴义 SUV",
+          "textPreview": "贵阳/兴义 SUV",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵阳/兴义 SUV",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵阳/兴义 SUV"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            526.4,
+            309.6,
+            227.2,
+            37.2
+          ],
+          "text": "¥250–500/天",
+          "textPreview": "¥250–500/天",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥250–500/天",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥250–500/天"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            753.6,
+            309.6,
+            227.2,
+            37.2
+          ],
+          "text": "M / 待下单核",
+          "textPreview": "M / 待下单核",
+          "fillColor": "#FCE3D1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "M / 待下单核",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "M / 待下单核"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 4,
+          "column": 5,
+          "bbox": [
+            980.8,
+            309.6,
+            227.2,
+            37.2
+          ],
+          "text": "S07;S08",
+          "textPreview": "S07;S08",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S07;S08",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S07;S08"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            72,
+            346.8,
+            227.2,
+            37.2
+          ],
+          "text": "交通",
+          "textPreview": "交通",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "交通",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "交通"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            299.2,
+            346.8,
+            227.2,
+            37.2
+          ],
+          "text": "深—呼飞机",
+          "textPreview": "深—呼飞机",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "深—呼飞机",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "深—呼飞机"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            526.4,
+            346.8,
+            227.2,
+            37.2
+          ],
+          "text": "¥2,100–3,250往返模型",
+          "textPreview": "¥2,100–3,250往返模型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥2,100–3,250往返模型",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥2,100–3,250往返模型"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            753.6,
+            346.8,
+            227.2,
+            37.2
+          ],
+          "text": "M / 待下单核",
+          "textPreview": "M / 待下单核",
+          "fillColor": "#FCE3D1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "M / 待下单核",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "M / 待下单核"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 5,
+          "column": 5,
+          "bbox": [
+            980.8,
+            346.8,
+            227.2,
+            37.2
+          ],
+          "text": "S05;S06;S22",
+          "textPreview": "S05;S06;S22",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S05;S06;S22",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S05;S06;S22"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            72,
+            384,
+            227.2,
+            37.2
+          ],
+          "text": "酒店",
+          "textPreview": "酒店",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "酒店",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "酒店"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            299.2,
+            384,
+            227.2,
+            37.2
+          ],
+          "text": "万峰林捌舍",
+          "textPreview": "万峰林捌舍",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "万峰林捌舍",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "万峰林捌舍"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            526.4,
+            384,
+            227.2,
+            37.2
+          ],
+          "text": "4.9/5，261条",
+          "textPreview": "4.9/5，261条",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.9/5，261条",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.9/5，261条"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            753.6,
+            384,
+            227.2,
+            37.2
+          ],
+          "text": "A / 住客评价",
+          "textPreview": "A / 住客评价",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "A / 住客评价",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "A / 住客评价"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 6,
+          "column": 5,
+          "bbox": [
+            980.8,
+            384,
+            227.2,
+            37.2
+          ],
+          "text": "S25",
+          "textPreview": "S25",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S25",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S25"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            72,
+            421.2,
+            227.2,
+            37.2
+          ],
+          "text": "酒店",
+          "textPreview": "酒店",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "酒店",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "酒店"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            299.2,
+            421.2,
+            227.2,
+            37.2
+          ],
+          "text": "安顺半山",
+          "textPreview": "安顺半山",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "安顺半山",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "安顺半山"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            526.4,
+            421.2,
+            227.2,
+            37.2
+          ],
+          "text": "9.5/10，约6,522条",
+          "textPreview": "9.5/10，约6,522条",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "9.5/10，约6,522条",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "9.5/10，约6,522条"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            753.6,
+            421.2,
+            227.2,
+            37.2
+          ],
+          "text": "A / 住客评价",
+          "textPreview": "A / 住客评价",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "A / 住客评价",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "A / 住客评价"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "row": 7,
+          "column": 5,
+          "bbox": [
+            980.8,
+            421.2,
+            227.2,
+            37.2
+          ],
+          "text": "S27",
+          "textPreview": "S27",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S27",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S27"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            72,
+            458.4,
+            227.2,
+            37.2
+          ],
+          "text": "餐饮",
+          "textPreview": "餐饮",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "餐饮",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "餐饮"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            299.2,
+            458.4,
+            227.2,
+            37.2
+          ],
+          "text": "老凯俚酸汤鱼",
+          "textPreview": "老凯俚酸汤鱼",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "老凯俚酸汤鱼",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "老凯俚酸汤鱼"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            526.4,
+            458.4,
+            227.2,
+            37.2
+          ],
+          "text": "约¥79–87/人",
+          "textPreview": "约¥79–87/人",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约¥79–87/人",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约¥79–87/人"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            753.6,
+            458.4,
+            227.2,
+            37.2
+          ],
+          "text": "A / 公开口径有差异",
+          "textPreview": "A / 公开口径有差异",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "A / 公开口径有差异",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "A / 公开口径有差异"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "row": 8,
+          "column": 5,
+          "bbox": [
+            980.8,
+            458.4,
+            227.2,
+            37.2
+          ],
+          "text": "S29;S30",
+          "textPreview": "S29;S30",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S29;S30",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S29;S30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 41,
+          "row": 9,
+          "column": 1,
+          "bbox": [
+            72,
+            495.6,
+            227.2,
+            37.2
+          ],
+          "text": "餐饮",
+          "textPreview": "餐饮",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "餐饮",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "餐饮"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 42,
+          "row": 9,
+          "column": 2,
+          "bbox": [
+            299.2,
+            495.6,
+            227.2,
+            37.2
+          ],
+          "text": "老绥元烧麦",
+          "textPreview": "老绥元烧麦",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "老绥元烧麦",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "老绥元烧麦"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 43,
+          "row": 9,
+          "column": 3,
+          "bbox": [
+            526.4,
+            495.6,
+            227.2,
+            37.2
+          ],
+          "text": "4.5/5，89条，约¥56",
+          "textPreview": "4.5/5，89条，约¥56",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "4.5/5，89条，约¥56",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "4.5/5，89条，约¥56"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 44,
+          "row": 9,
+          "column": 4,
+          "bbox": [
+            753.6,
+            495.6,
+            227.2,
+            37.2
+          ],
+          "text": "A / 公开页",
+          "textPreview": "A / 公开页",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "A / 公开页",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "A / 公开页"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 45,
+          "row": 9,
+          "column": 5,
+          "bbox": [
+            980.8,
+            495.6,
+            227.2,
+            37.2
+          ],
+          "text": "S34",
+          "textPreview": "S34",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S34",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S34"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 46,
+          "row": 10,
+          "column": 1,
+          "bbox": [
+            72,
+            532.8,
+            227.2,
+            37.2
+          ],
+          "text": "社媒",
+          "textPreview": "社媒",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "社媒",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "社媒"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 47,
+          "row": 10,
+          "column": 2,
+          "bbox": [
+            299.2,
+            532.8,
+            227.2,
+            37.2
+          ],
+          "text": "小红书推荐",
+          "textPreview": "小红书推荐",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "小红书推荐",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "小红书推荐"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 48,
+          "row": 10,
+          "column": 3,
+          "bbox": [
+            526.4,
+            532.8,
+            227.2,
+            37.2
+          ],
+          "text": "不写硬评分",
+          "textPreview": "不写硬评分",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "不写硬评分",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "不写硬评分"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 49,
+          "row": 10,
+          "column": 4,
+          "bbox": [
+            753.6,
+            532.8,
+            227.2,
+            37.2
+          ],
+          "text": "X / 登录后复核",
+          "textPreview": "X / 登录后复核",
+          "fillColor": "#DCEAF3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "X / 登录后复核",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "X / 登录后复核"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 50,
+          "row": 10,
+          "column": 5,
+          "bbox": [
+            980.8,
+            532.8,
+            227.2,
+            37.2
+          ],
+          "text": "S37–S43",
+          "textPreview": "S37–S43",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S37–S43",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S37–S43"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ojidofip",
+      "id": "7",
+      "bbox": [
+        72,
+        684,
+        1120,
+        20
+      ],
+      "geometry": "rect",
+      "text": "完整 URL 在 speaker notes 与同目录 CSV；动态价格建议 9 月上旬、出发前 7 天复核。",
+      "textPreview": "完整 URL 在 speaker notes 与同目录 CSV；动态价格建议 9 月上旬、出发前 7 天复核。",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "完整 URL 在 speaker notes 与同目录 CSV；动态价格建议 9 月上旬、出发前 7 天复核。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "完整 URL 在 speaker notes 与同目录 CSV；动态价格建议 9 月上旬、出发前 7 天复核。",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "完整 URL 在 speaker notes 与同目录 CSV；动态价格建议 9 月上旬、出发前 7 天复核。",
+              "fontSize": 12,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

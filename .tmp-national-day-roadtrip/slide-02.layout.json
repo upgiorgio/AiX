@@ -1,0 +1,1197 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/wrqxkm",
+    "id": "wrqxkm",
+    "slide": 2,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhwb2dgj",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lk7uxsfu",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0jet4ny9",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nmpcz2x0",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "先给结论：贵州是更稳的主方案，内蒙古是偏好驱动的备选",
+      "textPreview": "先给结论：贵州是更稳的主方案，内蒙古是偏好驱动的备选",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "先给结论：贵州是更稳的主方案，内蒙古是偏好驱动的备选"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "先给结论：贵州是更稳的主方案，内蒙古是偏好驱动的备选",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "先给结论：贵州是更稳的主方案，内蒙古是偏好驱动的备选",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mlgb6xgf",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "评价维度：深圳出发效率、路线紧凑度、季节适配、预算可控、落地租车与国庆风险",
+      "textPreview": "评价维度：深圳出发效率、路线紧凑度、季节适配、预算可控、落地租车与国庆风险",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "评价维度：深圳出发效率、路线紧凑度、季节适配、预算可控、落地租车与国庆风险"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "评价维度：深圳出发效率、路线紧凑度、季节适配、预算可控、落地租车与国庆风险",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "评价维度：深圳出发效率、路线紧凑度、季节适配、预算可控、落地租车与国庆风险",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9o7u1sf6",
+      "id": "6",
+      "name": "rec-guizhou",
+      "bbox": [
+        72,
+        198,
+        420,
+        360
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F47C48",
+      "lineColor": "#F47C48",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8nyt8nyl",
+      "id": "7",
+      "bbox": [
+        104,
+        228,
+        340,
+        35
+      ],
+      "geometry": "rect",
+      "text": "A · 贵州西南舒适环线",
+      "textPreview": "A · 贵州西南舒适环线",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A · 贵州西南舒适环线"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A · 贵州西南舒适环线",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A · 贵州西南舒适环线",
+              "fontSize": 25,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vqpc32xw",
+      "id": "8",
+      "bbox": [
+        104,
+        286,
+        330,
+        92
+      ],
+      "geometry": "rect",
+      "text": "7晚 / 9.29–10.06\n贵阳 → 黄果树 → 兴义 → 贞丰 → 六盘水 → 织金 → 贵阳",
+      "textPreview": "7晚 / 9.29–10.06 | 贵阳 → 黄果树 → 兴义 → 贞丰 → 六盘水 → 织金 → 贵阳",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "7晚 / 9.29–10.06"
+          },
+          {
+            "index": 2,
+            "text": "贵阳 → 黄果树 → 兴义 → 贞丰 →"
+          },
+          {
+            "index": 3,
+            "text": "六盘水 → 织金 → 贵阳"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "7晚 / 9.29–10.06",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "7晚 / 9.29–10.06",
+              "fontSize": 19,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "贵阳 → 黄果树 → 兴义 → 贞丰 → 六盘水 → 织金 → 贵阳",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "贵阳 → 黄果树 → 兴义 → 贞丰 → 六盘水 → 织金 → 贵阳",
+              "fontSize": 19,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/apgbaxgb",
+      "id": "9",
+      "bbox": [
+        104,
+        410,
+        330,
+        100
+      ],
+      "geometry": "rect",
+      "text": "适合：想玩得舒服、减少换酒店、看瀑布 + 峰林 + 溶洞。\n预算：两人约 ¥1.50–2.69万（舒适档模型，含机动金）。",
+      "textPreview": "适合：想玩得舒服、减少换酒店、看瀑布 + 峰林 + 溶洞。 | 预算：两人约 ¥1.50–2.69万（舒适档模型，含机动金）。",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "适合：想玩得舒服、减少换酒店、看瀑布 +"
+          },
+          {
+            "index": 2,
+            "text": "峰林 + 溶洞。"
+          },
+          {
+            "index": 3,
+            "text": "预算：两人约"
+          },
+          {
+            "index": 4,
+            "text": "¥1.50–2.69万（舒适档模型，含机动金）。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "适合：想玩得舒服、减少换酒店、看瀑布 + 峰林 + 溶洞。",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "适合：想玩得舒服、减少换酒店、看瀑布 + 峰林 + 溶洞。",
+              "fontSize": 16,
+              "color": "#FFFFFF"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "预算：两人约 ¥1.50–2.69万（舒适档模型，含机动金）。",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "预算：两人约 ¥1.50–2.69万（舒适档模型，含机动金）。",
+              "fontSize": 16,
+              "color": "#FFFFFF"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cji58r6l",
+      "id": "10",
+      "name": "rec-inner",
+      "bbox": [
+        530,
+        198,
+        320,
+        360
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#3E6B8C",
+      "lineColor": "#3E6B8C",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dkrmhwn6",
+      "id": "11",
+      "bbox": [
+        558,
+        228,
+        260,
+        35
+      ],
+      "geometry": "rect",
+      "text": "B · 内蒙古呼包鄂稳妥线",
+      "textPreview": "B · 内蒙古呼包鄂稳妥线",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "B ·"
+          },
+          {
+            "index": 2,
+            "text": "内蒙古呼包鄂稳妥线"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "B · 内蒙古呼包鄂稳妥线",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "B · 内蒙古呼包鄂稳妥线",
+              "fontSize": 24,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qh0n6hov",
+      "id": "12",
+      "bbox": [
+        558,
+        286,
+        260,
+        92
+      ],
+      "geometry": "rect",
+      "text": "6晚 / 9.29–10.05\n呼和浩特 → 草原 → 响沙湾 → 鄂尔多斯 → 呼和浩特",
+      "textPreview": "6晚 / 9.29–10.05 | 呼和浩特 → 草原 → 响沙湾 → 鄂尔多斯 → 呼和浩特",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "6晚 / 9.29–10.05"
+          },
+          {
+            "index": 2,
+            "text": "呼和浩特 → 草原 → 响沙湾"
+          },
+          {
+            "index": 3,
+            "text": "→ 鄂尔多斯 → 呼和浩特"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "6晚 / 9.29–10.05",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6晚 / 9.29–10.05",
+              "fontSize": 18,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "呼和浩特 → 草原 → 响沙湾 → 鄂尔多斯 → 呼和浩特",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#FFFFFF",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "呼和浩特 → 草原 → 响沙湾 → 鄂尔多斯 → 呼和浩特",
+              "fontSize": 18,
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bi94fm5g",
+      "id": "13",
+      "bbox": [
+        558,
+        410,
+        260,
+        100
+      ],
+      "geometry": "rect",
+      "text": "适合：明确想看草原、沙漠、辽阔公路感。\n预算：两人约 ¥1.75–3.21万（舒适档模型，含机动金）。",
+      "textPreview": "适合：明确想看草原、沙漠、辽阔公路感。 | 预算：两人约 ¥1.75–3.21万（舒适档模型，含机动金）。",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 5,
+        "lines": [
+          {
+            "index": 1,
+            "text": "适合：明确想看草原、沙漠、辽阔"
+          },
+          {
+            "index": 2,
+            "text": "公路感。"
+          },
+          {
+            "index": 3,
+            "text": "预算：两人约"
+          },
+          {
+            "index": 4,
+            "text": "¥1.75–3.21万（舒适档模型，含机"
+          },
+          {
+            "index": 5,
+            "text": "动金）。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "适合：明确想看草原、沙漠、辽阔公路感。",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "适合：明确想看草原、沙漠、辽阔公路感。",
+              "fontSize": 16,
+              "color": "#FFFFFF"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "预算：两人约 ¥1.75–3.21万（舒适档模型，含机动金）。",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#FFFFFF"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "预算：两人约 ¥1.75–3.21万（舒适档模型，含机动金）。",
+              "fontSize": 16,
+              "color": "#FFFFFF"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0n25cr6x",
+      "id": "14",
+      "name": "rec-rule",
+      "bbox": [
+        888,
+        198,
+        320,
+        360
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l8bmlwni",
+      "id": "15",
+      "bbox": [
+        920,
+        228,
+        180,
+        34
+      ],
+      "geometry": "rect",
+      "text": "怎么选",
+      "textPreview": "怎么选",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "怎么选"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "怎么选",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "怎么选",
+              "fontSize": 24,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yl0na1or",
+      "id": "16",
+      "bbox": [
+        920,
+        286,
+        220,
+        200
+      ],
+      "geometry": "rect",
+      "text": "10/06 回深\n→ 贵州舒适版\n\n10/05 回深\n→ 贵州高强度版\n   或内蒙古稳妥版\n\n预算 < ¥1.5万\n→ 贵州优先",
+      "textPreview": "10/06 回深 | → 贵州舒适版 |  | 10/05 回深 | → 贵州高强度版 |    或内蒙古稳妥版 |  | 预算 < ¥1.5万 | → 贵州优先",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 9,
+        "lines": [
+          {
+            "index": 1,
+            "text": "10/06 回深"
+          },
+          {
+            "index": 2,
+            "text": "→ 贵州舒适版"
+          },
+          {
+            "index": 3,
+            "text": ""
+          },
+          {
+            "index": 4,
+            "text": "10/05 回深"
+          },
+          {
+            "index": 5,
+            "text": "→ 贵州高强度版"
+          },
+          {
+            "index": 6,
+            "text": "   或内蒙古稳妥版"
+          },
+          {
+            "index": 7,
+            "text": ""
+          },
+          {
+            "index": 8,
+            "text": "预算 < ¥1.5万"
+          },
+          {
+            "index": 9,
+            "text": "→ 贵州优先"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "10/06 回深",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10/06 回深",
+              "fontSize": 19,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "→ 贵州舒适版",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "→ 贵州舒适版",
+              "fontSize": 19,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 4,
+          "text": "10/05 回深",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10/05 回深",
+              "fontSize": 19,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 5,
+          "text": "→ 贵州高强度版",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "→ 贵州高强度版",
+              "fontSize": 19,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 6,
+          "text": "   或内蒙古稳妥版",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "   或内蒙古稳妥版",
+              "fontSize": 19,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 8,
+          "text": "预算 < ¥1.5万",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "预算 < ¥1.5万",
+              "fontSize": 19,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 9,
+          "text": "→ 贵州优先",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "→ 贵州优先",
+              "fontSize": 19,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zm94j65c",
+      "id": "17",
+      "bbox": [
+        920,
+        510,
+        240,
+        54
+      ],
+      "geometry": "rect",
+      "text": "额济纳不建议与草原、响沙湾、鄂尔多斯全部叠加；若胡杨是第一优先级，应另做专项。",
+      "textPreview": "额济纳不建议与草原、响沙湾、鄂尔多斯全部叠加；若胡杨是第一优先级，应另做专项。",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#B95243",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "额济纳不建议与草原、响沙湾、鄂"
+          },
+          {
+            "index": 2,
+            "text": "尔多斯全部叠加；若胡杨是第一优"
+          },
+          {
+            "index": 3,
+            "text": "先级，应另做专项。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "额济纳不建议与草原、响沙湾、鄂尔多斯全部叠加；若胡杨是第一优先级，应另做专项。",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#B95243",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "额济纳不建议与草原、响沙湾、鄂尔多斯全部叠加；若胡杨是第一优先级，应另做专项。",
+              "fontSize": 14,
+              "color": "#B95243",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

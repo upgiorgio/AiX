@@ -1,0 +1,1932 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/7751b4",
+    "id": "7751b4",
+    "slide": 14,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gzi58fal",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fy94fat0",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "14",
+      "textPreview": "14",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "14"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "14",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "14",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ux0n65sf",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p4b6lkb2",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "落地流程：先锁不可逆资源，再按实时路况微调路线",
+      "textPreview": "落地流程：先锁不可逆资源，再按实时路况微调路线",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "落地流程：先锁不可逆资源，再按实时路况微调路线"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "落地流程：先锁不可逆资源，再按实时路况微调路线",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "落地流程：先锁不可逆资源，再按实时路况微调路线",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4325cfax",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "把“计划 / 报价 / 订单 / 到店确认”四种状态分开",
+      "textPreview": "把“计划 / 报价 / 订单 / 到店确认”四种状态分开",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "把“计划 / 报价 / 订单 / 到店确认”四种状态分开"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "把“计划 / 报价 / 订单 / 到店确认”四种状态分开",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "把“计划 / 报价 / 订单 / 到店确认”四种状态分开",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32tojatc",
+      "id": "6",
+      "name": "flow-1",
+      "bbox": [
+        76,
+        250,
+        160,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/21knapsr",
+      "id": "7",
+      "bbox": [
+        92,
+        274,
+        128,
+        24
+      ],
+      "geometry": "rect",
+      "text": "现在",
+      "textPreview": "现在",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "现在"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "现在",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "现在",
+              "fontSize": 15,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsv6p4be",
+      "id": "8",
+      "bbox": [
+        90,
+        312,
+        132,
+        34
+      ],
+      "geometry": "rect",
+      "text": "选路线",
+      "textPreview": "选路线",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "选路线"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "选路线",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "选路线",
+              "fontSize": 20,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c725gzat",
+      "id": "9",
+      "bbox": [
+        90,
+        364,
+        132,
+        56
+      ],
+      "geometry": "rect",
+      "text": "确定 10/5 还是 10/6\n确定贵州 / 内蒙古",
+      "textPreview": "确定 10/5 还是 10/6 | 确定贵州 / 内蒙古",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "确定 10/5 还是"
+          },
+          {
+            "index": 2,
+            "text": "10/6"
+          },
+          {
+            "index": 3,
+            "text": "确定贵州 / 内蒙古"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "确定 10/5 还是 10/6",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "确定 10/5 还是 10/6",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "确定贵州 / 内蒙古",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "确定贵州 / 内蒙古",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61sby58n",
+      "id": "10",
+      "name": "flow-2",
+      "bbox": [
+        266,
+        250,
+        160,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/721srap8",
+      "id": "11",
+      "bbox": [
+        282,
+        274,
+        128,
+        24
+      ],
+      "geometry": "rect",
+      "text": "出发前 45–30 天",
+      "textPreview": "出发前 45–30 天",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "出发前 45–30"
+          },
+          {
+            "index": 2,
+            "text": "天"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "出发前 45–30 天",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "出发前 45–30 天",
+              "fontSize": 15,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s3at0fqt",
+      "id": "12",
+      "bbox": [
+        280,
+        312,
+        132,
+        34
+      ],
+      "geometry": "rect",
+      "text": "锁交通",
+      "textPreview": "锁交通",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "锁交通"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "锁交通",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "锁交通",
+              "fontSize": 20,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t4jatk7e",
+      "id": "13",
+      "bbox": [
+        280,
+        364,
+        132,
+        56
+      ],
+      "geometry": "rect",
+      "text": "比机票 / 高铁\n优先可退或可改",
+      "textPreview": "比机票 / 高铁 | 优先可退或可改",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "比机票 / 高铁"
+          },
+          {
+            "index": 2,
+            "text": "优先可退或可改"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "比机票 / 高铁",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "比机票 / 高铁",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "优先可退或可改",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "优先可退或可改",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u5sb2p8z",
+      "id": "14",
+      "name": "flow-3",
+      "bbox": [
+        456,
+        250,
+        160,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 1
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/f61cvupk",
+      "id": "15",
+      "bbox": [
+        472,
+        274,
+        128,
+        24
+      ],
+      "geometry": "rect",
+      "text": "出发前 30–20 天",
+      "textPreview": "出发前 30–20 天",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "出发前 30–20"
+          },
+          {
+            "index": 2,
+            "text": "天"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "出发前 30–20 天",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "出发前 30–20 天",
+              "fontSize": 15,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/g7ut4fq5",
+      "id": "16",
+      "bbox": [
+        470,
+        312,
+        132,
+        34
+      ],
+      "geometry": "rect",
+      "text": "锁租车",
+      "textPreview": "锁租车",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "锁租车"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "锁租车",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "锁租车",
+              "fontSize": 20,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h83uxk7a",
+      "id": "17",
+      "bbox": [
+        470,
+        364,
+        132,
+        56
+      ],
+      "geometry": "rect",
+      "text": "车型、保险、超公里\n异地还车资格",
+      "textPreview": "车型、保险、超公里 | 异地还车资格",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "车型、保险、超公"
+          },
+          {
+            "index": 2,
+            "text": "里"
+          },
+          {
+            "index": 3,
+            "text": "异地还车资格"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "车型、保险、超公里",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "车型、保险、超公里",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "异地还车资格",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "异地还车资格",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a98bql8f",
+      "id": "18",
+      "name": "flow-4",
+      "bbox": [
+        646,
+        250,
+        160,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 1
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vahsjq90",
+      "id": "19",
+      "bbox": [
+        662,
+        274,
+        128,
+        24
+      ],
+      "geometry": "rect",
+      "text": "出发前 20–10 天",
+      "textPreview": "出发前 20–10 天",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "出发前 20–10"
+          },
+          {
+            "index": 2,
+            "text": "天"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "出发前 20–10 天",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "出发前 20–10 天",
+              "fontSize": 15,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zed8rmps",
+      "id": "20",
+      "bbox": [
+        660,
+        312,
+        132,
+        34
+      ],
+      "geometry": "rect",
+      "text": "锁酒店",
+      "textPreview": "锁酒店",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "锁酒店"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "锁酒店",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "锁酒店",
+              "fontSize": 20,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yd47yho7",
+      "id": "21",
+      "bbox": [
+        660,
+        364,
+        132,
+        56
+      ],
+      "geometry": "rect",
+      "text": "景区房少就改住城市基地\n保留取消窗口",
+      "textPreview": "景区房少就改住城市基地 | 保留取消窗口",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "景区房少就改住城"
+          },
+          {
+            "index": 2,
+            "text": "市基地"
+          },
+          {
+            "index": 3,
+            "text": "保留取消窗口"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "景区房少就改住城市基地",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "景区房少就改住城市基地",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "保留取消窗口",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "保留取消窗口",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lgfqtw7y",
+      "id": "22",
+      "name": "flow-5",
+      "bbox": [
+        836,
+        250,
+        160,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 1
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0fmp0r6d",
+      "id": "23",
+      "bbox": [
+        852,
+        274,
+        128,
+        24
+      ],
+      "geometry": "rect",
+      "text": "出发前 7 天",
+      "textPreview": "出发前 7 天",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "出发前 7 天"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "出发前 7 天",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "出发前 7 天",
+              "fontSize": 15,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bad8nmpw",
+      "id": "24",
+      "bbox": [
+        850,
+        312,
+        132,
+        34
+      ],
+      "geometry": "rect",
+      "text": "复核",
+      "textPreview": "复核",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "复核"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "复核",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "复核",
+              "fontSize": 20,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q947uhob",
+      "id": "25",
+      "bbox": [
+        850,
+        364,
+        132,
+        56
+      ],
+      "geometry": "rect",
+      "text": "天气、路况、营业\n小红书近期笔记",
+      "textPreview": "天气、路况、营业 | 小红书近期笔记",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "天气、路况、营业"
+          },
+          {
+            "index": 2,
+            "text": "小红书近期笔记"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "天气、路况、营业",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "天气、路况、营业",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "小红书近期笔记",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "小红书近期笔记",
+              "fontSize": 14,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcvqpc72",
+      "id": "26",
+      "name": "flow-6",
+      "bbox": [
+        1026,
+        250,
+        160,
+        190
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F47C48",
+      "lineColor": "#F47C48",
+      "lineWidth": 1
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbmpwr6h",
+      "id": "27",
+      "bbox": [
+        1042,
+        274,
+        128,
+        24
+      ],
+      "geometry": "rect",
+      "text": "出发当天",
+      "textPreview": "出发当天",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "出发当天"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "出发当天",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "出发当天",
+              "fontSize": 15,
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v6x8z650",
+      "id": "28",
+      "bbox": [
+        1040,
+        312,
+        132,
+        34
+      ],
+      "geometry": "rect",
+      "text": "执行",
+      "textPreview": "执行",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "执行"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "执行",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "执行",
+              "fontSize": 20,
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a5or61of",
+      "id": "29",
+      "bbox": [
+        1040,
+        364,
+        132,
+        56
+      ],
+      "geometry": "rect",
+      "text": "早入景区\n动态避堵 / 备用餐馆",
+      "textPreview": "早入景区 | 动态避堵 / 备用餐馆",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#FFFFFF",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "早入景区"
+          },
+          {
+            "index": 2,
+            "text": "动态避堵 /"
+          },
+          {
+            "index": 3,
+            "text": "备用餐馆"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "早入景区",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#FFFFFF",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "早入景区",
+              "fontSize": 14,
+              "color": "#FFFFFF",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "动态避堵 / 备用餐馆",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#FFFFFF",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "动态避堵 / 备用餐馆",
+              "fontSize": 14,
+              "color": "#FFFFFF",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 30,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8fyd4ji1",
+      "id": "30",
+      "bbox": [
+        236,
+        345,
+        30,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F47C48",
+      "lineWidth": 3
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tg7ed4j6",
+      "id": "31",
+      "bbox": [
+        426,
+        345,
+        30,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F47C48",
+      "lineWidth": 3
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dgv290v",
+      "id": "32",
+      "bbox": [
+        616,
+        345,
+        30,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F47C48",
+      "lineWidth": 3
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7epwbe1g",
+      "id": "33",
+      "bbox": [
+        806,
+        345,
+        30,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F47C48",
+      "lineWidth": 3
+    },
+    {
+      "order": 34,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gjyx8jix",
+      "id": "34",
+      "bbox": [
+        996,
+        345,
+        30,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F47C48",
+      "lineWidth": 3
+    },
+    {
+      "order": 35,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h4rehoji",
+      "id": "35",
+      "bbox": [
+        72,
+        514,
+        1136,
+        108
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F5E8DA",
+      "lineColor": "#F5E8DA",
+      "lineWidth": 1
+    },
+    {
+      "order": 36,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uhgv690r",
+      "id": "36",
+      "bbox": [
+        98,
+        540,
+        190,
+        26
+      ],
+      "geometry": "rect",
+      "text": "必要的人工复核",
+      "textPreview": "必要的人工复核",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "必要的人工复核"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "必要的人工复核",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "必要的人工复核",
+              "fontSize": 18,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 37,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vipwfe1c",
+      "id": "37",
+      "bbox": [
+        300,
+        534,
+        850,
+        48
+      ],
+      "geometry": "rect",
+      "text": "小红书原文、国庆营业、景区分时预约、酒店停车/接驳、租车保险与异地还车费，都不要仅凭搜索摘要下结论。",
+      "textPreview": "小红书原文、国庆营业、景区分时预约、酒店停车/接驳、租车保险与异地还车费，都不要仅凭搜索摘要下结论。",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "小红书原文、国庆营业、景区分时预约、酒店停车/接驳、租车保险与异地还车费，都不要仅凭搜索摘要下结论。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "小红书原文、国庆营业、景区分时预约、酒店停车/接驳、租车保险与异地还车费，都不要仅凭搜索摘要下结论。",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "color": "#2B211C"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "小红书原文、国庆营业、景区分时预约、酒店停车/接驳、租车保险与异地还车费，都不要仅凭搜索摘要下结论。",
+              "fontSize": 16,
+              "color": "#2B211C"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

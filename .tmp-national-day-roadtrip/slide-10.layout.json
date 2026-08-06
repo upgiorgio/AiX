@@ -1,0 +1,879 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/bsw0py",
+    "id": "bsw0py",
+    "slide": 10,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ra9gvq5g",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sbixovm1",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "10",
+      "textPreview": "10",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "10"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "10",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dcryx0nm",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i5gfil4z",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "两人总预算：贵州更容易把舒适档控制在 ¥2 万上下",
+      "textPreview": "两人总预算：贵州更容易把舒适档控制在 ¥2 万上下",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "两人总预算：贵州更容易把舒适档控制在 ¥2 万上下"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "两人总预算：贵州更容易把舒适档控制在 ¥2 万上下",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "两人总预算：贵州更容易把舒适档控制在 ¥2 万上下",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/369grq5k",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "含 10%–15% 国庆机动金；不含购物与不可预见的大额项目",
+      "textPreview": "含 10%–15% 国庆机动金；不含购物与不可预见的大额项目",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "含 10%–15% 国庆机动金；不含购物与不可预见的大额项目"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "含 10%–15% 国庆机动金；不含购物与不可预见的大额项目",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "含 10%–15% 国庆机动金；不含购物与不可预见的大额项目",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "chart",
+      "scope": "slide",
+      "aid": "ch/gnqlcv2d",
+      "id": "6",
+      "bbox": [
+        72,
+        200,
+        680,
+        380
+      ],
+      "chartType": "bar"
+    },
+    {
+      "order": 7,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/gbypw32x",
+      "id": "7",
+      "bbox": [
+        800,
+        220,
+        408,
+        190
+      ],
+      "text": "档位 | 贵州 6晚 | 内蒙古 6晚 | 适合\n经济 | ¥0.99–1.79万 | ¥1.14–2.04万 | 省预算 / 普通住宿\n舒适 | ¥1.50–2.69万 | ¥1.75–3.21万 | 两人首选\n品质 | ¥2.45–4.52万 | ¥2.89–5.23万 | 景区房 / 高弹性",
+      "textPreview": "档位 | 贵州 6晚 | 内蒙古 6晚 | 适合 | 经济 | ¥0.99–1.79万 | ¥1.14–2.04万 | 省预算 / 普通住宿 | 舒适 | ¥1.50–2.69万 | ¥1.75–3.21万 | 两人首选 | 品质 | ¥2.45–4.52万 | ¥2.89...",
+      "rows": 4,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            800,
+            220,
+            102,
+            47.5
+          ],
+          "text": "档位",
+          "textPreview": "档位",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "档位",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "档位"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            902,
+            220,
+            102,
+            47.5
+          ],
+          "text": "贵州 6晚",
+          "textPreview": "贵州 6晚",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵州 6晚",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵州 6晚"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            1004,
+            220,
+            102,
+            47.5
+          ],
+          "text": "内蒙古 6晚",
+          "textPreview": "内蒙古 6晚",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "内蒙古 6晚",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "内蒙古 6晚"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            1106,
+            220,
+            102,
+            47.5
+          ],
+          "text": "适合",
+          "textPreview": "适合",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "适合",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "适合"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            800,
+            267.5,
+            102,
+            47.5
+          ],
+          "text": "经济",
+          "textPreview": "经济",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "经济",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "经济"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            902,
+            267.5,
+            102,
+            47.5
+          ],
+          "text": "¥0.99–1.79万",
+          "textPreview": "¥0.99–1.79万",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥0.99–1.79万",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥0.99–1.79万"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            1004,
+            267.5,
+            102,
+            47.5
+          ],
+          "text": "¥1.14–2.04万",
+          "textPreview": "¥1.14–2.04万",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥1.14–2.04万",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥1.14–2.04万"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            1106,
+            267.5,
+            102,
+            47.5
+          ],
+          "text": "省预算 / 普通住宿",
+          "textPreview": "省预算 / 普通住宿",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "省预算 / 普通住宿",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "省预算 / 普通住宿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            800,
+            315,
+            102,
+            47.5
+          ],
+          "text": "舒适",
+          "textPreview": "舒适",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "舒适",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "舒适"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            902,
+            315,
+            102,
+            47.5
+          ],
+          "text": "¥1.50–2.69万",
+          "textPreview": "¥1.50–2.69万",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥1.50–2.69万",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥1.50–2.69万"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            1004,
+            315,
+            102,
+            47.5
+          ],
+          "text": "¥1.75–3.21万",
+          "textPreview": "¥1.75–3.21万",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥1.75–3.21万",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥1.75–3.21万"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            1106,
+            315,
+            102,
+            47.5
+          ],
+          "text": "两人首选",
+          "textPreview": "两人首选",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "两人首选",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "两人首选"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            800,
+            362.5,
+            102,
+            47.5
+          ],
+          "text": "品质",
+          "textPreview": "品质",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "品质",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "品质"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            902,
+            362.5,
+            102,
+            47.5
+          ],
+          "text": "¥2.45–4.52万",
+          "textPreview": "¥2.45–4.52万",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥2.45–4.52万",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥2.45–4.52万"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            1004,
+            362.5,
+            102,
+            47.5
+          ],
+          "text": "¥2.89–5.23万",
+          "textPreview": "¥2.89–5.23万",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥2.89–5.23万",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥2.89–5.23万"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            1106,
+            362.5,
+            102,
+            47.5
+          ],
+          "text": "景区房 / 高弹性",
+          "textPreview": "景区房 / 高弹性",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "景区房 / 高弹性",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "景区房 / 高弹性"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/21kfup43",
+      "id": "8",
+      "bbox": [
+        800,
+        610,
+        408,
+        30
+      ],
+      "geometry": "rect",
+      "text": "预算敏感项：国庆住宿、低价舱位、异地还车、沙漠二次消费、保险/停车/超公里。",
+      "textPreview": "预算敏感项：国庆住宿、低价舱位、异地还车、沙漠二次消费、保险/停车/超公里。",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "预算敏感项：国庆住宿、低价舱位、异地还车、沙漠二次消费、保险/停车"
+          },
+          {
+            "index": 2,
+            "text": "/超公里。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "预算敏感项：国庆住宿、低价舱位、异地还车、沙漠二次消费、保险/停车/超公里。",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "预算敏感项：国庆住宿、低价舱位、异地还车、沙漠二次消费、保险/停车/超公里。",
+              "fontSize": 12,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/n2tg3a5o",
+      "id": "9",
+      "bbox": [
+        72,
+        614,
+        720,
+        26
+      ],
+      "geometry": "rect",
+      "text": "预算页按 6 晚统一口径；10/6 贵州舒适环线为 7 晚，需另加 1 晚住宿、餐饮和停车。",
+      "textPreview": "预算页按 6 晚统一口径；10/6 贵州舒适环线为 7 晚，需另加 1 晚住宿、餐饮和停车。",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "预算页按 6 晚统一口径；10/6 贵州舒适环线为 7 晚，需另加 1 晚住宿、餐饮和停车。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "预算页按 6 晚统一口径；10/6 贵州舒适环线为 7 晚，需另加 1 晚住宿、餐饮和停车。",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "预算页按 6 晚统一口径；10/6 贵州舒适环线为 7 晚，需另加 1 晚住宿、餐饮和停车。",
+              "fontSize": 14,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

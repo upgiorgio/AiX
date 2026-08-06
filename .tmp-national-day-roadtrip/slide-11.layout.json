@@ -1,0 +1,1028 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/kjj5iq",
+    "id": "kjj5iq",
+    "slide": 11,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kve14zy5",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zu50buhk",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "11",
+      "textPreview": "11",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "11"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "11",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "11",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytwj2pgz",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xs3i9kze",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "贵州吃住咖啡：把“评价数字”和“真实体验入口”分开看",
+      "textPreview": "贵州吃住咖啡：把“评价数字”和“真实体验入口”分开看",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "贵州吃住咖啡：把“评价数字”和“真实体验入口”分开看"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "贵州吃住咖啡：把“评价数字”和“真实体验入口”分开看",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "贵州吃住咖啡：把“评价数字”和“真实体验入口”分开看",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cru10fyt",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "大众点评/携程用于结构化评分与人均；小红书用于场景关键词和新鲜体验，原文需登录后复核",
+      "textPreview": "大众点评/携程用于结构化评分与人均；小红书用于场景关键词和新鲜体验，原文需登录后复核",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "大众点评/携程用于结构化评分与人均；小红书用于场景关键词和新鲜体验，原文需登录后复核"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "大众点评/携程用于结构化评分与人均；小红书用于场景关键词和新鲜体验，原文需登录后复核",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "大众点评/携程用于结构化评分与人均；小红书用于场景关键词和新鲜体验，原文需登录后复核",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/q58v21cj",
+      "id": "6",
+      "bbox": [
+        72,
+        206,
+        1136,
+        270
+      ],
+      "text": "城市 | 住宿建议 | 餐饮 / 苍蝇小馆 | 咖啡 | 证据\n贵阳 | 观山湖/机场周边 | 老凯俚酸汤鱼 ¥79–87；罗记肠旺面 | 咖啡地图；优先商场停车店 | S29;S31;S44\n安顺/黄果树 | 半山 9.5/10、6,522条、停车 | 黔人百味 4.9/5、¥46；程汤圆 ¥9 | 独立证据弱；用酒店/商圈替代 | S27;S32;S33;S38\n兴义 | 捌舍 4.9/5、261条、景观/停车 | 酸笋牛肉 / 酸汤鱼；看近期菜单 | 民宿/万峰林周边 | S25;S26;S30;S39\n荔波/西江 | 小七孔东门 / 西江外 | 酸汤牛肉、酸汤鱼；景区慎价 | 酒店/营地优先 | S28;S40",
+      "textPreview": "城市 | 住宿建议 | 餐饮 / 苍蝇小馆 | 咖啡 | 证据 | 贵阳 | 观山湖/机场周边 | 老凯俚酸汤鱼 ¥79–87；罗记肠旺面 | 咖啡地图；优先商场停车店 | S29;S31;S44 | 安顺/黄果树 | 半山 9.5/10、6,522条、停车 | 黔人百味 ...",
+      "rows": 5,
+      "cols": 5,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            72,
+            206,
+            227.2,
+            54
+          ],
+          "text": "城市",
+          "textPreview": "城市",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "城市",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "城市"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            299.2,
+            206,
+            227.2,
+            54
+          ],
+          "text": "住宿建议",
+          "textPreview": "住宿建议",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "住宿建议",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "住宿建议"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            526.4,
+            206,
+            227.2,
+            54
+          ],
+          "text": "餐饮 / 苍蝇小馆",
+          "textPreview": "餐饮 / 苍蝇小馆",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "餐饮 / 苍蝇小馆",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "餐饮 / 苍蝇小馆"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            753.6,
+            206,
+            227.2,
+            54
+          ],
+          "text": "咖啡",
+          "textPreview": "咖啡",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "咖啡",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "咖啡"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 1,
+          "column": 5,
+          "bbox": [
+            980.8,
+            206,
+            227.2,
+            54
+          ],
+          "text": "证据",
+          "textPreview": "证据",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "证据",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "证据"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            72,
+            260,
+            227.2,
+            54
+          ],
+          "text": "贵阳",
+          "textPreview": "贵阳",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵阳",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵阳"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            299.2,
+            260,
+            227.2,
+            54
+          ],
+          "text": "观山湖/机场周边",
+          "textPreview": "观山湖/机场周边",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "观山湖/机场周边",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "观山湖/机场周边"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            526.4,
+            260,
+            227.2,
+            54
+          ],
+          "text": "老凯俚酸汤鱼 ¥79–87；罗记肠旺面",
+          "textPreview": "老凯俚酸汤鱼 ¥79–87；罗记肠旺面",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "老凯俚酸汤鱼 ¥79–87；罗记肠旺面",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "老凯俚酸汤鱼 ¥79–87；罗记肠旺面"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            753.6,
+            260,
+            227.2,
+            54
+          ],
+          "text": "咖啡地图；优先商场停车店",
+          "textPreview": "咖啡地图；优先商场停车店",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "咖啡地图；优先商场停车店",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "咖啡地图；优先商场停车店"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 2,
+          "column": 5,
+          "bbox": [
+            980.8,
+            260,
+            227.2,
+            54
+          ],
+          "text": "S29;S31;S44",
+          "textPreview": "S29;S31;S44",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S29;S31;S44",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S29;S31;S44"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            72,
+            314,
+            227.2,
+            54
+          ],
+          "text": "安顺/黄果树",
+          "textPreview": "安顺/黄果树",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "安顺/黄果树",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "安顺/黄果树"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            299.2,
+            314,
+            227.2,
+            54
+          ],
+          "text": "半山 9.5/10、6,522条、停车",
+          "textPreview": "半山 9.5/10、6,522条、停车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "半山 9.5/10、6,522条、停车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "半山 9.5/10、6,522条、停车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            526.4,
+            314,
+            227.2,
+            54
+          ],
+          "text": "黔人百味 4.9/5、¥46；程汤圆 ¥9",
+          "textPreview": "黔人百味 4.9/5、¥46；程汤圆 ¥9",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "黔人百味 4.9/5、¥46；程汤圆 ¥9",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "黔人百味 4.9/5、¥46；程汤圆 ¥9"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            753.6,
+            314,
+            227.2,
+            54
+          ],
+          "text": "独立证据弱；用酒店/商圈替代",
+          "textPreview": "独立证据弱；用酒店/商圈替代",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "独立证据弱；用酒店/商圈替代",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "独立证据弱；用酒店/商圈替代"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 3,
+          "column": 5,
+          "bbox": [
+            980.8,
+            314,
+            227.2,
+            54
+          ],
+          "text": "S27;S32;S33;S38",
+          "textPreview": "S27;S32;S33;S38",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S27;S32;S33;S38",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S27;S32;S33;S38"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            72,
+            368,
+            227.2,
+            54
+          ],
+          "text": "兴义",
+          "textPreview": "兴义",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "兴义",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "兴义"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            299.2,
+            368,
+            227.2,
+            54
+          ],
+          "text": "捌舍 4.9/5、261条、景观/停车",
+          "textPreview": "捌舍 4.9/5、261条、景观/停车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "捌舍 4.9/5、261条、景观/停车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "捌舍 4.9/5、261条、景观/停车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            526.4,
+            368,
+            227.2,
+            54
+          ],
+          "text": "酸笋牛肉 / 酸汤鱼；看近期菜单",
+          "textPreview": "酸笋牛肉 / 酸汤鱼；看近期菜单",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "酸笋牛肉 / 酸汤鱼；看近期菜单",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "酸笋牛肉 / 酸汤鱼；看近期菜单"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            753.6,
+            368,
+            227.2,
+            54
+          ],
+          "text": "民宿/万峰林周边",
+          "textPreview": "民宿/万峰林周边",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "民宿/万峰林周边",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "民宿/万峰林周边"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 4,
+          "column": 5,
+          "bbox": [
+            980.8,
+            368,
+            227.2,
+            54
+          ],
+          "text": "S25;S26;S30;S39",
+          "textPreview": "S25;S26;S30;S39",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S25;S26;S30;S39",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S25;S26;S30;S39"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            72,
+            422,
+            227.2,
+            54
+          ],
+          "text": "荔波/西江",
+          "textPreview": "荔波/西江",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "荔波/西江",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "荔波/西江"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            299.2,
+            422,
+            227.2,
+            54
+          ],
+          "text": "小七孔东门 / 西江外",
+          "textPreview": "小七孔东门 / 西江外",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "小七孔东门 / 西江外",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "小七孔东门 / 西江外"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            526.4,
+            422,
+            227.2,
+            54
+          ],
+          "text": "酸汤牛肉、酸汤鱼；景区慎价",
+          "textPreview": "酸汤牛肉、酸汤鱼；景区慎价",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "酸汤牛肉、酸汤鱼；景区慎价",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "酸汤牛肉、酸汤鱼；景区慎价"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            753.6,
+            422,
+            227.2,
+            54
+          ],
+          "text": "酒店/营地优先",
+          "textPreview": "酒店/营地优先",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "酒店/营地优先",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "酒店/营地优先"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 5,
+          "column": 5,
+          "bbox": [
+            980.8,
+            422,
+            227.2,
+            54
+          ],
+          "text": "S28;S40",
+          "textPreview": "S28;S40",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S28;S40",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S28;S40"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/apcjypgn",
+      "id": "7",
+      "bbox": [
+        72,
+        174,
+        1136,
+        20
+      ],
+      "geometry": "rect",
+      "text": "下单前：大众点评看近 30–90 天图文差评；小红书筛近期/非广告/有菜单或停车实拍；国庆前 3–7 天电话确认营业。",
+      "textPreview": "下单前：大众点评看近 30–90 天图文差评；小红书筛近期/非广告/有菜单或停车实拍；国庆前 3–7 天电话确认营业。",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "下单前：大众点评看近 30–90 天图文差评；小红书筛近期/非广告/有菜单或停车实拍；国庆前 3–7 天电话确认营业。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "下单前：大众点评看近 30–90 天图文差评；小红书筛近期/非广告/有菜单或停车实拍；国庆前 3–7 天电话确认营业。",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#F47C48"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "下单前：大众点评看近 30–90 天图文差评；小红书筛近期/非广告/有菜单或停车实拍；国庆前 3–7 天电话确认营业。",
+              "fontSize": 12,
+              "color": "#F47C48"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

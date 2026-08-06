@@ -1,0 +1,1453 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/jklyuv",
+    "id": "jklyuv",
+    "slide": 9,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fq5gfe1k",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/grehozip",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "09",
+      "textPreview": "09",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "09"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "09",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "09",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1snyh4ja",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/61cfip0n",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "交通与租车报价：先锁“确定性”，再追求最低价",
+      "textPreview": "交通与租车报价：先锁“确定性”，再追求最低价",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "交通与租车报价：先锁“确定性”，再追求最低价"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "交通与租车报价：先锁“确定性”，再追求最低价",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "交通与租车报价：先锁“确定性”，再追求最低价",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r2lgbu18",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "当前查询日 2026-08-03；目标日期动态报价尚未全部开放或未能取得完整结算页",
+      "textPreview": "当前查询日 2026-08-03；目标日期动态报价尚未全部开放或未能取得完整结算页",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "当前查询日 2026-08-03；目标日期动态报价尚未全部开放或未能取得完整结算页"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "当前查询日 2026-08-03；目标日期动态报价尚未全部开放或未能取得完整结算页",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "当前查询日 2026-08-03；目标日期动态报价尚未全部开放或未能取得完整结算页",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/hcri94zi",
+      "id": "6",
+      "bbox": [
+        72,
+        198,
+        1136,
+        292
+      ],
+      "text": "区域 | 方式 | 组合 | 价格参考 | 决策备注 | 来源\n贵州 | 高铁 | 深圳北—贵阳北 | ¥480.5–515.5/人/程 | 公开样本；关注预售 | S01;S02\n贵州 | 飞机 | 深圳—贵阳 | ¥1,200–3,000/人往返模型 | 附近日 ¥610–1,080/程；待核 | S03;S04\n贵州 | 租车 | 龙洞堡 SUV 6/7天 | ¥1,500–3,500 模型 | 保障、油、停车另计 | S07;S08\n内蒙古 | 飞机 | 深圳—呼和浩特 | ¥2,100–3,250/人往返模型 | 直飞优先；返程选择多 | S05;S06;S22\n内蒙古 | 租车 | 白塔 SUV 6/7天 | ¥1,500–2,800 模型 | 呼包鄂线不异地还车 | S09\n内蒙古 | 飞机+租车 | 呼和浩特进 / 银川出 | 至少加异地还车费 | 未拿到订单前不纳入预算 | S09;S20;S21",
+      "textPreview": "区域 | 方式 | 组合 | 价格参考 | 决策备注 | 来源 | 贵州 | 高铁 | 深圳北—贵阳北 | ¥480.5–515.5/人/程 | 公开样本；关注预售 | S01;S02 | 贵州 | 飞机 | 深圳—贵阳 | ¥1,200–3,000/人往返模型 | 附近日...",
+      "rows": 7,
+      "cols": 6,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            72,
+            198,
+            189.33,
+            41.71
+          ],
+          "text": "区域",
+          "textPreview": "区域",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "区域",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "区域"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            261.33,
+            198,
+            189.33,
+            41.71
+          ],
+          "text": "方式",
+          "textPreview": "方式",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "方式",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "方式"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            450.67,
+            198,
+            189.33,
+            41.71
+          ],
+          "text": "组合",
+          "textPreview": "组合",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "组合",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "组合"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            640,
+            198,
+            189.33,
+            41.71
+          ],
+          "text": "价格参考",
+          "textPreview": "价格参考",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "价格参考",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "价格参考"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 1,
+          "column": 5,
+          "bbox": [
+            829.33,
+            198,
+            189.33,
+            41.71
+          ],
+          "text": "决策备注",
+          "textPreview": "决策备注",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "决策备注",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "决策备注"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 1,
+          "column": 6,
+          "bbox": [
+            1018.67,
+            198,
+            189.33,
+            41.71
+          ],
+          "text": "来源",
+          "textPreview": "来源",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "来源",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "来源"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            72,
+            239.71,
+            189.33,
+            41.71
+          ],
+          "text": "贵州",
+          "textPreview": "贵州",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵州",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵州"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            261.33,
+            239.71,
+            189.33,
+            41.71
+          ],
+          "text": "高铁",
+          "textPreview": "高铁",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "高铁",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "高铁"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            450.67,
+            239.71,
+            189.33,
+            41.71
+          ],
+          "text": "深圳北—贵阳北",
+          "textPreview": "深圳北—贵阳北",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "深圳北—贵阳北",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "深圳北—贵阳北"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            640,
+            239.71,
+            189.33,
+            41.71
+          ],
+          "text": "¥480.5–515.5/人/程",
+          "textPreview": "¥480.5–515.5/人/程",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥480.5–515.5/人/程",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥480.5–515.5/人/程"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 2,
+          "column": 5,
+          "bbox": [
+            829.33,
+            239.71,
+            189.33,
+            41.71
+          ],
+          "text": "公开样本；关注预售",
+          "textPreview": "公开样本；关注预售",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "公开样本；关注预售",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "公开样本；关注预售"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 2,
+          "column": 6,
+          "bbox": [
+            1018.67,
+            239.71,
+            189.33,
+            41.71
+          ],
+          "text": "S01;S02",
+          "textPreview": "S01;S02",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S01;S02",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S01;S02"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            72,
+            281.43,
+            189.33,
+            41.71
+          ],
+          "text": "贵州",
+          "textPreview": "贵州",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵州",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵州"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            261.33,
+            281.43,
+            189.33,
+            41.71
+          ],
+          "text": "飞机",
+          "textPreview": "飞机",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "飞机",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "飞机"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            450.67,
+            281.43,
+            189.33,
+            41.71
+          ],
+          "text": "深圳—贵阳",
+          "textPreview": "深圳—贵阳",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "深圳—贵阳",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "深圳—贵阳"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            640,
+            281.43,
+            189.33,
+            41.71
+          ],
+          "text": "¥1,200–3,000/人往返模型",
+          "textPreview": "¥1,200–3,000/人往返模型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥1,200–3,000/人往返模型",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥1,200–3,000/人往返模型"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 3,
+          "column": 5,
+          "bbox": [
+            829.33,
+            281.43,
+            189.33,
+            41.71
+          ],
+          "text": "附近日 ¥610–1,080/程；待核",
+          "textPreview": "附近日 ¥610–1,080/程；待核",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "附近日 ¥610–1,080/程；待核",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "附近日 ¥610–1,080/程；待核"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 3,
+          "column": 6,
+          "bbox": [
+            1018.67,
+            281.43,
+            189.33,
+            41.71
+          ],
+          "text": "S03;S04",
+          "textPreview": "S03;S04",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S03;S04",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S03;S04"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            72,
+            323.14,
+            189.33,
+            41.71
+          ],
+          "text": "贵州",
+          "textPreview": "贵州",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵州",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵州"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            261.33,
+            323.14,
+            189.33,
+            41.71
+          ],
+          "text": "租车",
+          "textPreview": "租车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "租车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "租车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            450.67,
+            323.14,
+            189.33,
+            41.71
+          ],
+          "text": "龙洞堡 SUV 6/7天",
+          "textPreview": "龙洞堡 SUV 6/7天",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "龙洞堡 SUV 6/7天",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "龙洞堡 SUV 6/7天"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            640,
+            323.14,
+            189.33,
+            41.71
+          ],
+          "text": "¥1,500–3,500 模型",
+          "textPreview": "¥1,500–3,500 模型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥1,500–3,500 模型",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥1,500–3,500 模型"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 4,
+          "column": 5,
+          "bbox": [
+            829.33,
+            323.14,
+            189.33,
+            41.71
+          ],
+          "text": "保障、油、停车另计",
+          "textPreview": "保障、油、停车另计",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "保障、油、停车另计",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "保障、油、停车另计"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 4,
+          "column": 6,
+          "bbox": [
+            1018.67,
+            323.14,
+            189.33,
+            41.71
+          ],
+          "text": "S07;S08",
+          "textPreview": "S07;S08",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S07;S08",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S07;S08"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            72,
+            364.86,
+            189.33,
+            41.71
+          ],
+          "text": "内蒙古",
+          "textPreview": "内蒙古",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "内蒙古",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "内蒙古"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            261.33,
+            364.86,
+            189.33,
+            41.71
+          ],
+          "text": "飞机",
+          "textPreview": "飞机",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "飞机",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "飞机"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            450.67,
+            364.86,
+            189.33,
+            41.71
+          ],
+          "text": "深圳—呼和浩特",
+          "textPreview": "深圳—呼和浩特",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "深圳—呼和浩特",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "深圳—呼和浩特"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            640,
+            364.86,
+            189.33,
+            41.71
+          ],
+          "text": "¥2,100–3,250/人往返模型",
+          "textPreview": "¥2,100–3,250/人往返模型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥2,100–3,250/人往返模型",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥2,100–3,250/人往返模型"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 5,
+          "column": 5,
+          "bbox": [
+            829.33,
+            364.86,
+            189.33,
+            41.71
+          ],
+          "text": "直飞优先；返程选择多",
+          "textPreview": "直飞优先；返程选择多",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "直飞优先；返程选择多",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "直飞优先；返程选择多"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 5,
+          "column": 6,
+          "bbox": [
+            1018.67,
+            364.86,
+            189.33,
+            41.71
+          ],
+          "text": "S05;S06;S22",
+          "textPreview": "S05;S06;S22",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S05;S06;S22",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S05;S06;S22"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            72,
+            406.57,
+            189.33,
+            41.71
+          ],
+          "text": "内蒙古",
+          "textPreview": "内蒙古",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "内蒙古",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "内蒙古"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            261.33,
+            406.57,
+            189.33,
+            41.71
+          ],
+          "text": "租车",
+          "textPreview": "租车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "租车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "租车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            450.67,
+            406.57,
+            189.33,
+            41.71
+          ],
+          "text": "白塔 SUV 6/7天",
+          "textPreview": "白塔 SUV 6/7天",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "白塔 SUV 6/7天",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "白塔 SUV 6/7天"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            640,
+            406.57,
+            189.33,
+            41.71
+          ],
+          "text": "¥1,500–2,800 模型",
+          "textPreview": "¥1,500–2,800 模型",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "¥1,500–2,800 模型",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "¥1,500–2,800 模型"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "row": 6,
+          "column": 5,
+          "bbox": [
+            829.33,
+            406.57,
+            189.33,
+            41.71
+          ],
+          "text": "呼包鄂线不异地还车",
+          "textPreview": "呼包鄂线不异地还车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "呼包鄂线不异地还车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "呼包鄂线不异地还车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "row": 6,
+          "column": 6,
+          "bbox": [
+            1018.67,
+            406.57,
+            189.33,
+            41.71
+          ],
+          "text": "S09",
+          "textPreview": "S09",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S09",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S09"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            72,
+            448.29,
+            189.33,
+            41.71
+          ],
+          "text": "内蒙古",
+          "textPreview": "内蒙古",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "内蒙古",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "内蒙古"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            261.33,
+            448.29,
+            189.33,
+            41.71
+          ],
+          "text": "飞机+租车",
+          "textPreview": "飞机+租车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "飞机+租车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "飞机+租车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            450.67,
+            448.29,
+            189.33,
+            41.71
+          ],
+          "text": "呼和浩特进 / 银川出",
+          "textPreview": "呼和浩特进 / 银川出",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "呼和浩特进 / 银川出",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "呼和浩特进 / 银川出"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            640,
+            448.29,
+            189.33,
+            41.71
+          ],
+          "text": "至少加异地还车费",
+          "textPreview": "至少加异地还车费",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "至少加异地还车费",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "至少加异地还车费"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 41,
+          "row": 7,
+          "column": 5,
+          "bbox": [
+            829.33,
+            448.29,
+            189.33,
+            41.71
+          ],
+          "text": "未拿到订单前不纳入预算",
+          "textPreview": "未拿到订单前不纳入预算",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "未拿到订单前不纳入预算",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "未拿到订单前不纳入预算"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 42,
+          "row": 7,
+          "column": 6,
+          "bbox": [
+            1018.67,
+            448.29,
+            189.33,
+            41.71
+          ],
+          "text": "S09;S20;S21",
+          "textPreview": "S09;S20;S21",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "S09;S20;S21",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "S09;S20;S21"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t4nyd4je",
+      "id": "7",
+      "bbox": [
+        72,
+        166,
+        1136,
+        22
+      ],
+      "geometry": "rect",
+      "text": "预算公式：往返票价×2 + 租车日租×天数 + 保障/油费/停车等；模型区间在出发前 30–45 天重核。",
+      "textPreview": "预算公式：往返票价×2 + 租车日租×天数 + 保障/油费/停车等；模型区间在出发前 30–45 天重核。",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "预算公式：往返票价×2 + 租车日租×天数 + 保障/油费/停车等；模型区间在出发前 30–45 天重核。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "预算公式：往返票价×2 + 租车日租×天数 + 保障/油费/停车等；模型区间在出发前 30–45 天重核。",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#F47C48"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "预算公式：往返票价×2 + 租车日租×天数 + 保障/油费/停车等；模型区间在出发前 30–45 天重核。",
+              "fontSize": 12,
+              "color": "#F47C48"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

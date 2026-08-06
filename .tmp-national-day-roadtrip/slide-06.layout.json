@@ -1,0 +1,2071 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/95yn4n",
+    "id": "95yn4n",
+    "slide": 6,
+    "layoutId": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8F2",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "75c5c1ae-2265-428e-a625-5dc434d788c1",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "4fcb495e-41df-41b8-9f45-874b895a597c",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jud0bihg",
+      "id": "1",
+      "bbox": [
+        72,
+        26,
+        540,
+        22
+      ],
+      "geometry": "rect",
+      "text": "国庆自驾研究 · 2026-08-03",
+      "textPreview": "国庆自驾研究 · 2026-08-03",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "fontSize": 12,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "国庆自驾研究 · 2026-08-03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "国庆自驾研究 · 2026-08-03",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "color": "#776D66",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "国庆自驾研究 · 2026-08-03",
+              "fontSize": 12,
+              "color": "#776D66",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4vmhkny1",
+      "id": "2",
+      "bbox": [
+        1170,
+        24,
+        38,
+        24
+      ],
+      "geometry": "rect",
+      "text": "06",
+      "textPreview": "06",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "fontSize": 14,
+        "typeface": "+mn-lt",
+        "color": "#F47C48",
+        "bold": true,
+        "alignment": "right",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "06"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "06",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "color": "#F47C48",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "06",
+              "fontSize": 14,
+              "color": "#F47C48",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5wvidsfm",
+      "id": "3",
+      "bbox": [
+        72,
+        58,
+        1136,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#E8DCCF",
+      "lineColor": "#E8DCCF",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6x4zmxg7",
+      "id": "4",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        78,
+        1040,
+        58
+      ],
+      "geometry": "rect",
+      "text": "方案 B｜贵州高强度版：10/5 回深",
+      "textPreview": "方案 B｜贵州高强度版：10/5 回深",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "fontSize": 34,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "方案 B｜贵州高强度版：10/5 回深"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "方案 B｜贵州高强度版：10/5 回深",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "color": "#2B211C",
+            "bold": true
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "方案 B｜贵州高强度版：10/5 回深",
+              "fontSize": 34,
+              "color": "#2B211C",
+              "bold": true
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ryx0f2xs",
+      "id": "5",
+      "bbox": [
+        74,
+        138,
+        1050,
+        34
+      ],
+      "geometry": "rect",
+      "text": "一次看黄果树、万峰林、小七孔、西江；10/3–10/4 是压力测试",
+      "textPreview": "一次看黄果树、万峰林、小七孔、西江；10/3–10/4 是压力测试",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "一次看黄果树、万峰林、小七孔、西江；10/3–10/4 是压力测试"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "一次看黄果树、万峰林、小七孔、西江；10/3–10/4 是压力测试",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#776D66"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "一次看黄果树、万峰林、小七孔、西江；10/3–10/4 是压力测试",
+              "fontSize": 17,
+              "color": "#776D66"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sz6ho7yx",
+      "id": "6",
+      "name": "route-node-1",
+      "bbox": [
+        96,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F3A64A",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t0fihcfi",
+      "id": "7",
+      "bbox": [
+        48,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "贵阳",
+      "textPreview": "贵阳",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "贵阳"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "贵阳",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "贵阳",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m1kzadgn",
+      "id": "8",
+      "bbox": [
+        40,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "取车",
+      "textPreview": "取车",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "取车"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "取车",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "取车",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72t03yh8",
+      "id": "9",
+      "name": "route-node-2",
+      "bbox": [
+        308,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F3A64A",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3yhsf65k",
+      "id": "10",
+      "bbox": [
+        260,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "黄果树",
+      "textPreview": "黄果树",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "黄果树"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "黄果树",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "黄果树",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2x8r614z",
+      "id": "11",
+      "bbox": [
+        252,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "瀑布",
+      "textPreview": "瀑布",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "瀑布"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "瀑布",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "瀑布",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/p0zahgnq",
+      "id": "12",
+      "name": "route-node-3",
+      "bbox": [
+        520,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F3A64A",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ozq98bm5",
+      "id": "13",
+      "bbox": [
+        472,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "兴义",
+      "textPreview": "兴义",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "兴义"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "兴义",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "兴义",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fux8b65o",
+      "id": "14",
+      "bbox": [
+        464,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "峰林",
+      "textPreview": "峰林",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "峰林"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "峰林",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "峰林",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/etor2143",
+      "id": "15",
+      "name": "route-node-4",
+      "bbox": [
+        732,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F3A64A",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1wzadgnu",
+      "id": "16",
+      "bbox": [
+        684,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "荔波",
+      "textPreview": "荔波",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "荔波"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "荔波",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "荔波",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gvq94bm9",
+      "id": "17",
+      "bbox": [
+        676,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "小七孔",
+      "textPreview": "小七孔",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "小七孔"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "小七孔",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "小七孔",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqx87m5c",
+      "id": "18",
+      "name": "route-node-5",
+      "bbox": [
+        944,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F3A64A",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65oryho7",
+      "id": "19",
+      "bbox": [
+        896,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "西江",
+      "textPreview": "西江",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "西江"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "西江",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "西江",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a14rah8z",
+      "id": "20",
+      "bbox": [
+        888,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "苗寨",
+      "textPreview": "苗寨",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "苗寨"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "苗寨",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "苗寨",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v2dsjmpk",
+      "id": "21",
+      "name": "route-node-6",
+      "bbox": [
+        1156,
+        190,
+        28,
+        28
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#F3A64A",
+      "lineColor": "#FFFFFF",
+      "lineWidth": 3
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3mtcrq5",
+      "id": "22",
+      "bbox": [
+        1108,
+        226,
+        124,
+        30
+      ],
+      "geometry": "rect",
+      "text": "贵阳",
+      "textPreview": "贵阳",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#2B211C",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "贵阳"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "贵阳",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#2B211C",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "贵阳",
+              "fontSize": 15,
+              "color": "#2B211C",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xofalw7a",
+      "id": "23",
+      "bbox": [
+        1100,
+        256,
+        140,
+        42
+      ],
+      "geometry": "rect",
+      "text": "还车返深",
+      "textPreview": "还车返深",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#776D66",
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "还车返深"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "还车返深",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#776D66",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "还车返深",
+              "fontSize": 13,
+              "color": "#776D66",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ipobe18v",
+      "id": "24",
+      "bbox": [
+        124,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F3A64A",
+      "lineWidth": 4
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jqxsn6pg",
+      "id": "25",
+      "bbox": [
+        336,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F3A64A",
+      "lineWidth": 4
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4r6tgrq1",
+      "id": "26",
+      "bbox": [
+        548,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F3A64A",
+      "lineWidth": 4
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sfapw7m",
+      "id": "27",
+      "bbox": [
+        760,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F3A64A",
+      "lineWidth": 4
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6tobi187",
+      "id": "28",
+      "bbox": [
+        972,
+        204,
+        184,
+        0
+      ],
+      "geometry": "straightConnector1",
+      "lineColor": "#F3A64A",
+      "lineWidth": 4
+    },
+    {
+      "order": 29,
+      "kind": "table",
+      "scope": "slide",
+      "aid": "tb/orapov6x",
+      "id": "29",
+      "bbox": [
+        72,
+        300,
+        1136,
+        282
+      ],
+      "text": "日期 | 住宿 | 重点 | 驾驶参考\n9/29 | 贵阳 | 落地取车、休息 | 0–30 km\n9/30 | 黄果树 | 大瀑布主线 | 约128 km\n10/1 | 兴义 | 黄果树→兴义，下午轻活动 | 约205 km\n10/2 | 兴义 | 万峰林 + 马岭河峡谷 | 市内短途\n10/3 | 荔波 | 兴义→荔波，纯转场 | 约472 km / 7–8.5h\n10/4 | 西江 | 早入小七孔 → 西江夜景 | 约270–330 km\n10/5 | 返深 | 西江短游→贵阳→还车 | 约210–216 km",
+      "textPreview": "日期 | 住宿 | 重点 | 驾驶参考 | 9/29 | 贵阳 | 落地取车、休息 | 0–30 km | 9/30 | 黄果树 | 大瀑布主线 | 约128 km | 10/1 | 兴义 | 黄果树→兴义，下午轻活动 | 约205 km | 10/2 | 兴义 | 万峰林...",
+      "rows": 8,
+      "cols": 4,
+      "cells": [
+        {
+          "index": 1,
+          "row": 1,
+          "column": 1,
+          "bbox": [
+            72,
+            300,
+            284,
+            35.25
+          ],
+          "text": "日期",
+          "textPreview": "日期",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "日期",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "日期"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "row": 1,
+          "column": 2,
+          "bbox": [
+            356,
+            300,
+            284,
+            35.25
+          ],
+          "text": "住宿",
+          "textPreview": "住宿",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "住宿",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "住宿"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "row": 1,
+          "column": 3,
+          "bbox": [
+            640,
+            300,
+            284,
+            35.25
+          ],
+          "text": "重点",
+          "textPreview": "重点",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "重点",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "重点"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "row": 1,
+          "column": 4,
+          "bbox": [
+            924,
+            300,
+            284,
+            35.25
+          ],
+          "text": "驾驶参考",
+          "textPreview": "驾驶参考",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "驾驶参考",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "驾驶参考"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "row": 2,
+          "column": 1,
+          "bbox": [
+            72,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "9/29",
+          "textPreview": "9/29",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "9/29",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "9/29"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "row": 2,
+          "column": 2,
+          "bbox": [
+            356,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "贵阳",
+          "textPreview": "贵阳",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "贵阳",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "贵阳"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "row": 2,
+          "column": 3,
+          "bbox": [
+            640,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "落地取车、休息",
+          "textPreview": "落地取车、休息",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "落地取车、休息",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "落地取车、休息"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "row": 2,
+          "column": 4,
+          "bbox": [
+            924,
+            335.25,
+            284,
+            35.25
+          ],
+          "text": "0–30 km",
+          "textPreview": "0–30 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "0–30 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "0–30 km"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "row": 3,
+          "column": 1,
+          "bbox": [
+            72,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "9/30",
+          "textPreview": "9/30",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "9/30",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "9/30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "row": 3,
+          "column": 2,
+          "bbox": [
+            356,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "黄果树",
+          "textPreview": "黄果树",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "黄果树",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "黄果树"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "row": 3,
+          "column": 3,
+          "bbox": [
+            640,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "大瀑布主线",
+          "textPreview": "大瀑布主线",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "大瀑布主线",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "大瀑布主线"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "row": 3,
+          "column": 4,
+          "bbox": [
+            924,
+            370.5,
+            284,
+            35.25
+          ],
+          "text": "约128 km",
+          "textPreview": "约128 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约128 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约128 km"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "row": 4,
+          "column": 1,
+          "bbox": [
+            72,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "10/1",
+          "textPreview": "10/1",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/1",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "row": 4,
+          "column": 2,
+          "bbox": [
+            356,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "兴义",
+          "textPreview": "兴义",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "兴义",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "兴义"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "row": 4,
+          "column": 3,
+          "bbox": [
+            640,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "黄果树→兴义，下午轻活动",
+          "textPreview": "黄果树→兴义，下午轻活动",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "黄果树→兴义，下午轻活动",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "黄果树→兴义，下午轻活动"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "row": 4,
+          "column": 4,
+          "bbox": [
+            924,
+            405.75,
+            284,
+            35.25
+          ],
+          "text": "约205 km",
+          "textPreview": "约205 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约205 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约205 km"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "row": 5,
+          "column": 1,
+          "bbox": [
+            72,
+            441,
+            284,
+            35.25
+          ],
+          "text": "10/2",
+          "textPreview": "10/2",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/2",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "row": 5,
+          "column": 2,
+          "bbox": [
+            356,
+            441,
+            284,
+            35.25
+          ],
+          "text": "兴义",
+          "textPreview": "兴义",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "兴义",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "兴义"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "row": 5,
+          "column": 3,
+          "bbox": [
+            640,
+            441,
+            284,
+            35.25
+          ],
+          "text": "万峰林 + 马岭河峡谷",
+          "textPreview": "万峰林 + 马岭河峡谷",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "万峰林 + 马岭河峡谷",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "万峰林 + 马岭河峡谷"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "row": 5,
+          "column": 4,
+          "bbox": [
+            924,
+            441,
+            284,
+            35.25
+          ],
+          "text": "市内短途",
+          "textPreview": "市内短途",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "市内短途",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "市内短途"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "row": 6,
+          "column": 1,
+          "bbox": [
+            72,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "10/3",
+          "textPreview": "10/3",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/3",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "row": 6,
+          "column": 2,
+          "bbox": [
+            356,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "荔波",
+          "textPreview": "荔波",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "荔波",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "荔波"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "row": 6,
+          "column": 3,
+          "bbox": [
+            640,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "兴义→荔波，纯转场",
+          "textPreview": "兴义→荔波，纯转场",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "兴义→荔波，纯转场",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "兴义→荔波，纯转场"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "row": 6,
+          "column": 4,
+          "bbox": [
+            924,
+            476.25,
+            284,
+            35.25
+          ],
+          "text": "约472 km / 7–8.5h",
+          "textPreview": "约472 km / 7–8.5h",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约472 km / 7–8.5h",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约472 km / 7–8.5h"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "row": 7,
+          "column": 1,
+          "bbox": [
+            72,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "10/4",
+          "textPreview": "10/4",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/4",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "row": 7,
+          "column": 2,
+          "bbox": [
+            356,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "西江",
+          "textPreview": "西江",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "西江",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "西江"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "row": 7,
+          "column": 3,
+          "bbox": [
+            640,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "早入小七孔 → 西江夜景",
+          "textPreview": "早入小七孔 → 西江夜景",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "早入小七孔 → 西江夜景",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "早入小七孔 → 西江夜景"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "row": 7,
+          "column": 4,
+          "bbox": [
+            924,
+            511.5,
+            284,
+            35.25
+          ],
+          "text": "约270–330 km",
+          "textPreview": "约270–330 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约270–330 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约270–330 km"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "row": 8,
+          "column": 1,
+          "bbox": [
+            72,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "10/5",
+          "textPreview": "10/5",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "10/5",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "10/5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "row": 8,
+          "column": 2,
+          "bbox": [
+            356,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "返深",
+          "textPreview": "返深",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "返深",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "返深"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "row": 8,
+          "column": 3,
+          "bbox": [
+            640,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "西江短游→贵阳→还车",
+          "textPreview": "西江短游→贵阳→还车",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "西江短游→贵阳→还车",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "西江短游→贵阳→还车"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "row": 8,
+          "column": 4,
+          "bbox": [
+            924,
+            546.75,
+            284,
+            35.25
+          ],
+          "text": "约210–216 km",
+          "textPreview": "约210–216 km",
+          "paragraphs": [
+            {
+              "index": 1,
+              "text": "约210–216 km",
+              "runs": [
+                {
+                  "index": 1,
+                  "text": "约210–216 km"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeRuns": []
+}

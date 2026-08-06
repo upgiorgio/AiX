@@ -1,0 +1,353 @@
+{"kind":"deck","id":"pr/24vz5l","name":"Deck"}
+{"kind":"layout","layoutId":"4fcb495e-41df-41b8-9f45-874b895a597c","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"75c5c1ae-2265-428e-a625-5dc434d788c1","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/7lq1rq","slide":1,"title":"国庆自驾游","textShapes":29}
+{"kind":"shape","id":"sh/q5g3i50j","slide":1,"name":"cover-bg","bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/ds7mtkja","slide":1,"bbox":[72,102,112,6]}
+{"kind":"textbox","id":"sh/crylkfip","slide":1,"name":"cover-title","text":"国庆自驾游\n路线研究报告","textPreview":"国庆自驾游 | 路线研究报告","textChars":12,"textLines":2,"bbox":[72,132,610,182]}
+{"kind":"textbox","id":"sh/32p4nq18","slide":1,"text":"深圳出发 · 贵州 vs 内蒙古\n2026.09.29 → 2026.10.05 / 06 · 两人 · 落地租车","textPreview":"深圳出发 · 贵州 vs 内蒙古 | 2026.09.29 → 2026.10.05 / 06 · 两人 · 落地租车","textChars":57,"textLines":2,"bbox":[76,344,560,82]}
+{"kind":"textbox","id":"sh/21w3e50n","slide":1,"text":"研究结论先行：能 10 月 6 日回深，贵州更匹配；只能 10 月 5 日回，则需要接受更高强度的贵州方案或选择呼和浩特往返稳妥版。","textPreview":"研究结论先行：能 10 月 6 日回深，贵州更匹配；只能 10 月 5 日回，则需要接受更高强度的贵州方案或选择呼和浩特往返稳妥版。","textChars":66,"textLines":1,"bbox":[76,484,540,92]}
+{"kind":"shape","id":"sh/p47mp0je","slide":1,"name":"cover-route-surface","bbox":[760,94,420,500]}
+{"kind":"textbox","id":"sh/o3ylgvit","slide":1,"text":"两条研究主线","textPreview":"两条研究主线","textChars":6,"textLines":1,"bbox":[802,132,320,32]}
+{"kind":"shape","id":"sh/7y94zu1c","slide":1,"name":"route-node-1","bbox":[96,240,28,28]}
+{"kind":"textbox","id":"sh/mx0nqp0r","slide":1,"text":"深圳","textPreview":"深圳","textChars":2,"textLines":1,"bbox":[48,276,124,30]}
+{"kind":"textbox","id":"sh/8ja9o72x","slide":1,"text":"出发","textPreview":"出发","textChars":2,"textLines":1,"bbox":[40,306,140,42]}
+{"kind":"shape","id":"sh/94jaxc3i","slide":1,"name":"route-node-2","bbox":[308,240,28,28]}
+{"kind":"textbox","id":"sh/mhsrmxk7","slide":1,"text":"贵阳","textPreview":"贵阳","textChars":2,"textLines":1,"bbox":[260,276,124,30]}
+{"kind":"textbox","id":"sh/ni1sv2lc","slide":1,"text":"入口","textPreview":"入口","textChars":2,"textLines":1,"bbox":[252,306,140,42]}
+{"kind":"shape","id":"sh/0fq9kn21","slide":1,"name":"route-node-3","bbox":[520,240,28,28]}
+{"kind":"textbox","id":"sh/lgjats3m","slide":1,"text":"黄果树","textPreview":"黄果树","textChars":3,"textLines":1,"bbox":[472,276,124,30]}
+{"kind":"textbox","id":"sh/yd8rixkv","slide":1,"text":"瀑布","textPreview":"瀑布","textChars":2,"textLines":1,"bbox":[464,306,140,42]}
+{"kind":"shape","id":"sh/zehsr2lg","slide":1,"name":"route-node-4","bbox":[732,240,28,28]}
+{"kind":"textbox","id":"sh/cbq9gn2p","slide":1,"text":"兴义","textPreview":"兴义","textChars":2,"textLines":1,"bbox":[684,276,124,30]}
+{"kind":"textbox","id":"sh/dczaps3a","slide":1,"text":"峰林","textPreview":"峰林","textChars":2,"textLines":1,"bbox":[676,306,140,42]}
+{"kind":"shape","id":"sh/tw7yxkr2","slide":1,"name":"route-node-5","bbox":[944,240,28,28]}
+{"kind":"textbox","id":"sh/svyh4fah","slide":1,"text":"织金","textPreview":"织金","textChars":2,"textLines":1,"bbox":[896,276,124,30]}
+{"kind":"textbox","id":"sh/7upgva9w","slide":1,"text":"溶洞","textPreview":"溶洞","textChars":2,"textLines":1,"bbox":[888,306,140,42]}
+{"kind":"shape","id":"sh/6tgz25sb","slide":1,"name":"route-node-6","bbox":[1156,240,28,28]}
+{"kind":"textbox","id":"sh/5s7yt0rq","slide":1,"text":"深圳","textPreview":"深圳","textChars":2,"textLines":1,"bbox":[1108,276,124,30]}
+{"kind":"textbox","id":"sh/kryh0fal","slide":1,"text":"回程","textPreview":"回程","textChars":2,"textLines":1,"bbox":[1100,306,140,42]}
+{"kind":"shape","id":"sh/jq5gra90","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/i5wzy5sf","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/pori54ra","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/4nihczap","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/m9cvq187","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/nalwz6ps","slide":1,"name":"route-node-1","bbox":[96,438,28,28]}
+{"kind":"textbox","id":"sh/8budsbqd","slide":1,"text":"深圳","textPreview":"深圳","textChars":2,"textLines":1,"bbox":[48,474,124,30]}
+{"kind":"textbox","id":"sh/9w3e1g7i","slide":1,"text":"出发","textPreview":"出发","textChars":2,"textLines":1,"bbox":[40,504,140,42]}
+{"kind":"shape","id":"sh/y5svmh8v","slide":1,"name":"route-node-2","bbox":[308,438,28,28]}
+{"kind":"textbox","id":"sh/z61wvmpg","slide":1,"text":"呼和浩特","textPreview":"呼和浩特","textChars":4,"textLines":1,"bbox":[260,474,124,30]}
+{"kind":"textbox","id":"sh/07adorq1","slide":1,"text":"入口","textPreview":"入口","textChars":2,"textLines":1,"bbox":[252,504,140,42]}
+{"kind":"shape","id":"sh/l83exw7m","slide":1,"name":"route-node-3","bbox":[520,438,28,28]}
+{"kind":"textbox","id":"sh/i1wfyl8f","slide":1,"text":"草原","textPreview":"草原","textChars":2,"textLines":1,"bbox":[472,474,124,30]}
+{"kind":"textbox","id":"sh/j25w7qp0","slide":1,"text":"高原秋色","textPreview":"高原秋色","textChars":4,"textLines":1,"bbox":[464,504,140,42]}
+{"kind":"shape","id":"sh/3uls3it0","slide":1,"name":"route-node-4","bbox":[732,438,28,28]}
+{"kind":"textbox","id":"sh/2tcrudcv","slide":1,"text":"响沙湾","textPreview":"响沙湾","textChars":3,"textLines":1,"bbox":[684,474,124,30]}
+{"kind":"textbox","id":"sh/pw3a5sb6","slide":1,"text":"沙漠","textPreview":"沙漠","textChars":2,"textLines":1,"bbox":[676,504,140,42]}
+{"kind":"shape","id":"sh/4vu9wnul","slide":1,"name":"route-node-5","bbox":[944,438,28,28]}
+{"kind":"textbox","id":"sh/fq1szit4","slide":1,"text":"鄂尔多斯","textPreview":"鄂尔多斯","textChars":4,"textLines":1,"bbox":[896,474,124,30]}
+{"kind":"textbox","id":"sh/upsrqdcj","slide":1,"text":"康巴什","textPreview":"康巴什","textChars":3,"textLines":1,"bbox":[888,504,140,42]}
+{"kind":"shape","id":"sh/hsja18ba","slide":1,"name":"route-node-6","bbox":[1156,438,28,28]}
+{"kind":"textbox","id":"sh/gra9snup","slide":1,"text":"深圳","textPreview":"深圳","textChars":2,"textLines":1,"bbox":[1108,474,124,30]}
+{"kind":"textbox","id":"sh/zm5sb2t8","slide":1,"text":"回程","textPreview":"回程","textChars":2,"textLines":1,"bbox":[1100,504,140,42]}
+{"kind":"shape","id":"sh/elwb2xsn","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/w76pwza5","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/x8f654rq","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/a5o7upsf","slide":1,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/b6xo3u90","slide":1,"bbox":[0,0,0,0]}
+{"kind":"textbox","id":"sh/kvqp0jah","slide":1,"text":"价格 = 公开样本 / 建模区间 / 待下单核价，三种状态严格区分。\n评价 = 平台数字 + 体验关键词 + 可复核入口，不把不可读原文写成已核验。","textPreview":"价格 = 公开样本 / 建模区间 / 待下单核价，三种状态严格区分。 | 评价 = 平台数字 + 体验关键词 + 可复核入口，不把不可读原文写成已核验。","textChars":74,"textLines":2,"bbox":[802,616,335,64]}
+{"kind":"notes","id":"nt/7lq1rq","slide":1,"text":"封面。交付以可编辑 PPTX 为主；所有数据和推荐均在后续页标注来源与不确定性。\n\n[Sources]\nS17 国务院办公厅 2026 国庆假期 — https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm\nS18 2026 国庆高速免费说明 — https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html"}
+{"kind":"slide","id":"sl/wrqxkm","slide":2,"title":"国庆自驾研究 · 2026-08-03","textShapes":13}
+{"kind":"textbox","id":"sh/yhwb2dgj","slide":2,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/lk7uxsfu","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/0jet4ny9","slide":2,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/nmpcz2x0","slide":2,"name":"slide-title","text":"先给结论：贵州是更稳的主方案，内蒙古是偏好驱动的备选","textPreview":"先给结论：贵州是更稳的主方案，内蒙古是偏好驱动的备选","textChars":26,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/mlgb6xgf","slide":2,"text":"评价维度：深圳出发效率、路线紧凑度、季节适配、预算可控、落地租车与国庆风险","textPreview":"评价维度：深圳出发效率、路线紧凑度、季节适配、预算可控、落地租车与国庆风险","textChars":37,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"shape","id":"sh/9o7u1sf6","slide":2,"name":"rec-guizhou","bbox":[72,198,420,360]}
+{"kind":"textbox","id":"sh/8nyt8nyl","slide":2,"text":"A · 贵州西南舒适环线","textPreview":"A · 贵州西南舒适环线","textChars":12,"textLines":1,"bbox":[104,228,340,35]}
+{"kind":"textbox","id":"sh/vqpc32xw","slide":2,"text":"7晚 / 9.29–10.06\n贵阳 → 黄果树 → 兴义 → 贞丰 → 六盘水 → 织金 → 贵阳","textPreview":"7晚 / 9.29–10.06 | 贵阳 → 黄果树 → 兴义 → 贞丰 → 六盘水 → 织金 → 贵阳","textChars":50,"textLines":2,"bbox":[104,286,330,92]}
+{"kind":"textbox","id":"sh/apgbaxgb","slide":2,"text":"适合：想玩得舒服、减少换酒店、看瀑布 + 峰林 + 溶洞。\n预算：两人约 ¥1.50–2.69万（舒适档模型，含机动金）。","textPreview":"适合：想玩得舒服、减少换酒店、看瀑布 + 峰林 + 溶洞。 | 预算：两人约 ¥1.50–2.69万（舒适档模型，含机动金）。","textChars":61,"textLines":2,"bbox":[104,410,330,100]}
+{"kind":"shape","id":"sh/cji58r6l","slide":2,"name":"rec-inner","bbox":[530,198,320,360]}
+{"kind":"textbox","id":"sh/dkrmhwn6","slide":2,"text":"B · 内蒙古呼包鄂稳妥线","textPreview":"B · 内蒙古呼包鄂稳妥线","textChars":13,"textLines":1,"bbox":[558,228,260,35]}
+{"kind":"textbox","id":"sh/qh0n6hov","slide":2,"text":"6晚 / 9.29–10.05\n呼和浩特 → 草原 → 响沙湾 → 鄂尔多斯 → 呼和浩特","textPreview":"6晚 / 9.29–10.05 | 呼和浩特 → 草原 → 响沙湾 → 鄂尔多斯 → 呼和浩特","textChars":45,"textLines":2,"bbox":[558,286,260,92]}
+{"kind":"textbox","id":"sh/bi94fm5g","slide":2,"text":"适合：明确想看草原、沙漠、辽阔公路感。\n预算：两人约 ¥1.75–3.21万（舒适档模型，含机动金）。","textPreview":"适合：明确想看草原、沙漠、辽阔公路感。 | 预算：两人约 ¥1.75–3.21万（舒适档模型，含机动金）。","textChars":51,"textLines":2,"bbox":[558,410,260,100]}
+{"kind":"shape","id":"sh/0n25cr6x","slide":2,"name":"rec-rule","bbox":[888,198,320,360]}
+{"kind":"textbox","id":"sh/l8bmlwni","slide":2,"text":"怎么选","textPreview":"怎么选","textChars":3,"textLines":1,"bbox":[920,228,180,34]}
+{"kind":"textbox","id":"sh/yl0na1or","slide":2,"text":"10/06 回深\n→ 贵州舒适版\n\n10/05 回深\n→ 贵州高强度版\n   或内蒙古稳妥版\n\n预算 < ¥1.5万\n→ 贵州优先","textPreview":"10/06 回深 | → 贵州舒适版 |  | 10/05 回深 | → 贵州高强度版 |    或内蒙古稳妥版 |  | 预算 < ¥1.5万 | → 贵州优先","textChars":65,"textLines":9,"bbox":[920,286,220,200]}
+{"kind":"textbox","id":"sh/zm94j65c","slide":2,"text":"额济纳不建议与草原、响沙湾、鄂尔多斯全部叠加；若胡杨是第一优先级，应另做专项。","textPreview":"额济纳不建议与草原、响沙湾、鄂尔多斯全部叠加；若胡杨是第一优先级，应另做专项。","textChars":39,"textLines":1,"bbox":[920,510,240,54]}
+{"kind":"notes","id":"nt/wrqxkm","slide":2,"text":"本页为综合判断，分数与预算来自研究组的统一模型；模型不是订单报价。\n\n[Sources]\nS17 国务院办公厅 2026 国庆假期 — https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm\nS18 2026 国庆高速免费说明 — https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html\nS22 呼和浩特白塔机场 2026 航季 — https://inews.nmgnews.com.cn/system/2026/03/29/030326703.shtml\nS24 中国天气网额济纳气候/胡杨 — https://news.weather.com.cn/2024/10/3922118.shtml"}
+{"kind":"slide","id":"sl/8pxmvj","slide":3,"title":"国庆自驾研究 · 2026-08-03","textShapes":5}
+{"kind":"textbox","id":"sh/b21gve1s","slide":3,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/cnax4j2d","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/do3yxojy","slide":3,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/2xsfy9kb","slide":3,"name":"slide-title","text":"决策矩阵：贵州在 6–7 天窗口里更适合深圳出发","textPreview":"决策矩阵：贵州在 6–7 天窗口里更适合深圳出发","textChars":24,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/3y1grulw","slide":3,"text":"所有评分为研究组的相对决策评分，满分 5 分；权重和分值均可在 PPT 中直接修改","textPreview":"所有评分为研究组的相对决策评分，满分 5 分；权重和分值均可在 PPT 中直接修改","textChars":41,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"textbox","id":"sh/mtcfatkf","slide":3,"text":"结论不是“哪个省更好”，而是“哪个省更适合这段假期长度与出发地”。","textPreview":"结论不是“哪个省更好”，而是“哪个省更适合这段假期长度与出发地”。","textChars":33,"textLines":1,"bbox":[72,596,1090,34]}
+{"kind":"chart","id":"ch/ov6l4byl","slide":3,"name":"","chartType":"bar","bbox":[72,205,470,360]}
+{"kind":"table","id":"tb/gf6p8r65","slide":3,"name":"","rows":8,"cols":4,"preview":"维度 | 权重 | 贵州 | 内蒙古","bbox":[590,198,618,372]}
+{"kind":"notes","id":"nt/8pxmvj","slide":3,"text":"评分由研究组按用户约束统一评估，建议若改变权重后重新看结论。\n\n[Sources]\nS17 国务院办公厅 2026 国庆假期 — https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm\nS22 呼和浩特白塔机场 2026 航季 — https://inews.nmgnews.com.cn/system/2026/03/29/030326703.shtml\nS23 内蒙古国庆交通预测 — https://nm.people.com.cn/n2/2025/0929/c196689-41368554.html\nS24 中国天气网额济纳气候/胡杨 — https://news.weather.com.cn/2024/10/3922118.shtml"}
+{"kind":"slide","id":"sl/fpvkw3","slide":4,"title":"国庆自驾研究 · 2026-08-03","textShapes":29}
+{"kind":"textbox","id":"sh/zmdsjeto","slide":4,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/0nm9cjat","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/lovalobe","slide":4,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/qxkr69sr","slide":4,"name":"slide-title","text":"时间线：9/29 出发正好避开假期最早一波，但 10/1–7 仍要按峰值规划","textPreview":"时间线：9/29 出发正好避开假期最早一波，但 10/1–7 仍要按峰值规划","textChars":38,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/byt8fetc","slide":4,"text":"把“出发日 / 高速免费 / 返程风险 / 订票节点”放在一条线上","textPreview":"把“出发日 / 高速免费 / 返程风险 / 订票节点”放在一条线上","textChars":33,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"shape","id":"sh/cz298jax","slide":4,"bbox":[104,290,1055,6]}
+{"kind":"shape","id":"sh/d0bah4bi","slide":4,"bbox":[96,276,30,30]}
+{"kind":"textbox","id":"sh/at4ritsb","slide":4,"text":"9/15","textPreview":"9/15","textChars":4,"textLines":1,"bbox":[74,224,74,28]}
+{"kind":"textbox","id":"sh/vuxsry9g","slide":4,"text":"高铁票最早开售参考","textPreview":"高铁票最早开售参考","textChars":9,"textLines":1,"bbox":[40,326,140,40]}
+{"kind":"textbox","id":"sh/na1grudg","slide":4,"text":"提前锁票","textPreview":"提前锁票","textChars":4,"textLines":1,"bbox":[38,375,144,44]}
+{"kind":"shape","id":"sh/mpszypwb","slide":4,"bbox":[260,276,30,30]}
+{"kind":"textbox","id":"sh/9c3it4vm","slide":4,"text":"9/29","textPreview":"9/29","textChars":4,"textLines":1,"bbox":[238,224,74,28]}
+{"kind":"textbox","id":"sh/obuh0ze1","slide":4,"text":"出发 · 交通仍收费","textPreview":"出发 · 交通仍收费","textChars":10,"textLines":1,"bbox":[204,326,140,40]}
+{"kind":"textbox","id":"sh/bel0veds","slide":4,"text":"取车 / 住贵阳或呼市","textPreview":"取车 / 住贵阳或呼市","textChars":11,"textLines":1,"bbox":[202,375,144,44]}
+{"kind":"shape","id":"sh/adcz29w7","slide":4,"bbox":[424,276,30,30]}
+{"kind":"textbox","id":"sh/xg3ix4vy","slide":4,"text":"9/30","textPreview":"9/30","textChars":4,"textLines":1,"bbox":[402,224,74,28]}
+{"kind":"textbox","id":"sh/wfuh4zed","slide":4,"text":"节前晚高峰","textPreview":"节前晚高峰","textChars":5,"textLines":1,"bbox":[368,326,140,40]}
+{"kind":"textbox","id":"sh/ji50zedo","slide":4,"text":"避免傍晚跨城","textPreview":"避免傍晚跨城","textChars":6,"textLines":1,"bbox":[366,375,144,44]}
+{"kind":"shape","id":"sh/yhcz69w3","slide":4,"bbox":[588,276,30,30]}
+{"kind":"textbox","id":"sh/udgjydgb","slide":4,"text":"10/1","textPreview":"10/1","textChars":4,"textLines":1,"bbox":[566,224,74,28]}
+{"kind":"textbox","id":"sh/vepkrixw","slide":4,"text":"假期首日 · 高速免费","textPreview":"假期首日 · 高速免费","textChars":11,"textLines":1,"bbox":[532,326,140,40]}
+{"kind":"textbox","id":"sh/gzyl0nyh","slide":4,"text":"景区早入","textPreview":"景区早入","textChars":4,"textLines":1,"bbox":[530,375,144,44]}
+{"kind":"shape","id":"sh/h072tsf2","slide":4,"bbox":[752,276,30,30]}
+{"kind":"textbox","id":"sh/69wjudgf","slide":4,"text":"10/2–4","textPreview":"10/2–4","textChars":6,"textLines":1,"bbox":[730,224,74,28]}
+{"kind":"textbox","id":"sh/7apknyx0","slide":4,"text":"核心游玩窗口","textPreview":"核心游玩窗口","textChars":6,"textLines":1,"bbox":[696,326,140,40]}
+{"kind":"textbox","id":"sh/8by1w3yl","slide":4,"text":"10–12 / 16–18 易拥堵","textPreview":"10–12 / 16–18 易拥堵","textChars":17,"textLines":1,"bbox":[694,375,144,44]}
+{"kind":"shape","id":"sh/tc72p8f6","slide":4,"bbox":[916,276,30,30]}
+{"kind":"textbox","id":"sh/q5036xgj","slide":4,"text":"10/5","textPreview":"10/5","textChars":4,"textLines":1,"bbox":[894,224,74,28]}
+{"kind":"textbox","id":"sh/r69kz2x4","slide":4,"text":"可选返深","textPreview":"可选返深","textChars":4,"textLines":1,"bbox":[860,326,140,40]}
+{"kind":"textbox","id":"sh/10bm5wz6","slide":4,"text":"必须压缩行程","textPreview":"必须压缩行程","textChars":6,"textLines":1,"bbox":[858,375,144,44]}
+{"kind":"shape","id":"sh/0z25wri1","slide":4,"bbox":[1080,276,30,30]}
+{"kind":"textbox","id":"sh/zyt43mhg","slide":4,"text":"10/6","textPreview":"10/6","textChars":4,"textLines":1,"bbox":[1058,224,74,28]}
+{"kind":"textbox","id":"sh/exknu10v","slide":4,"text":"更优返程日","textPreview":"更优返程日","textChars":5,"textLines":1,"bbox":[1024,326,140,40]}
+{"kind":"textbox","id":"sh/dwbm1wza","slide":4,"text":"贵州舒适版","textPreview":"贵州舒适版","textChars":5,"textLines":1,"bbox":[1022,375,144,44]}
+{"kind":"shape","id":"sh/cv25srip","slide":4,"name":"traffic-green","bbox":[72,500,520,100]}
+{"kind":"textbox","id":"sh/rut4zmh4","slide":4,"text":"可执行策略","textPreview":"可执行策略","textChars":5,"textLines":1,"bbox":[98,522,130,26]}
+{"kind":"textbox","id":"sh/qtknqh0j","slide":4,"text":"景区 7:00–8:00 到；长途转场尽量放 9/29、10/3、10/4；每日驾驶预留 30%–50% 弹性。","textPreview":"景区 7:00–8:00 到；长途转场尽量放 9/29、10/3、10/4；每日驾驶预留 30%–50% 弹性。","textChars":56,"textLines":1,"bbox":[98,552,450,36]}
+{"kind":"shape","id":"sh/xsf6dgze","slide":4,"name":"traffic-red","bbox":[628,500,580,100]}
+{"kind":"textbox","id":"sh/wrm54byt","slide":4,"text":"最容易踩坑","textPreview":"最容易踩坑","textChars":5,"textLines":1,"bbox":[654,522,130,26]}
+{"kind":"textbox","id":"sh/4bad4bip","slide":4,"text":"把“高速免费”误读成“9/29 出发也免费”；把周中房价乘进国庆；把沙漠门票起价当成完整体验价。","textPreview":"把“高速免费”误读成“9/29 出发也免费”；把周中房价乘进国庆；把沙漠门票起价当成完整体验价。","textChars":48,"textLines":1,"bbox":[654,552,500,36]}
+{"kind":"notes","id":"nt/fpvkw3","slide":4,"text":"假期和高速免费按官方公开信息；拥堵时段是历史研判参考，2026年9月底需重新查实时路况。\n\n[Sources]\nS17 国务院办公厅 2026 国庆假期 — https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm\nS18 2026 国庆高速免费说明 — https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html\nS19 贵州公路国庆拥堵研判（历史参考） — https://glj.guizhou.gov.cn/xwzx_500473/yw/202509/t20250930_88672139.html\nS23 内蒙古国庆交通预测 — https://nm.people.com.cn/n2/2025/0929/c196689-41368554.html"}
+{"kind":"slide","id":"sl/d1fkz1","slide":5,"title":"国庆自驾研究 · 2026-08-03","textShapes":18}
+{"kind":"textbox","id":"sh/1sby1cr6","slide":5,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/e50fqx8v","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/fqtgz29g","slide":5,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/ov2hw7qx","slide":5,"name":"slide-title","text":"方案 A｜贵州西南舒适环线：10/6 回深","textPreview":"方案 A｜贵州西南舒适环线：10/6 回深","textChars":21,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/pwby5cri","slide":5,"text":"不追求全省打卡；把瀑布、峰林、溶洞串成一条完成度高的环线","textPreview":"不追求全省打卡；把瀑布、峰林、溶洞串成一条完成度高的环线","textChars":28,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"shape","id":"sh/2tkzuh8r","slide":5,"name":"route-node-1","bbox":[96,190,28,28]}
+{"kind":"textbox","id":"sh/3utg3m9c","slide":5,"text":"贵阳","textPreview":"贵阳","textChars":2,"textLines":1,"bbox":[48,226,124,30]}
+{"kind":"textbox","id":"sh/czmh0rqt","slide":5,"text":"取还车","textPreview":"取还车","textChars":3,"textLines":1,"bbox":[40,256,140,42]}
+{"kind":"shape","id":"sh/x0vy9wre","slide":5,"name":"route-node-2","bbox":[272.67,190,28,28]}
+{"kind":"textbox","id":"sh/dcn21sra","slide":5,"text":"黄果树","textPreview":"黄果树","textChars":3,"textLines":1,"bbox":[224.67,226,124,30]}
+{"kind":"textbox","id":"sh/cbelsnap","slide":5,"text":"瀑布","textPreview":"瀑布","textChars":2,"textLines":1,"bbox":[216.67,256,140,42]}
+{"kind":"shape","id":"sh/ra5kzi94","slide":5,"name":"route-node-3","bbox":[449.33,190,28,28]}
+{"kind":"textbox","id":"sh/q9c3qdsz","slide":5,"text":"兴义","textPreview":"兴义","textChars":2,"textLines":1,"bbox":[401.33,226,124,30]}
+{"kind":"textbox","id":"sh/10n25srm","slide":5,"text":"峰林峡谷","textPreview":"峰林峡谷","textChars":4,"textLines":1,"bbox":[393.33,256,140,42]}
+{"kind":"shape","id":"sh/0zelwna1","slide":5,"name":"route-node-4","bbox":[626,190,28,28]}
+{"kind":"textbox","id":"sh/zy5k3i9g","slide":5,"text":"贞丰","textPreview":"贞丰","textChars":2,"textLines":1,"bbox":[578,226,124,30]}
+{"kind":"textbox","id":"sh/exw3udsv","slide":5,"text":"双乳峰/休整","textPreview":"双乳峰/休整","textChars":6,"textLines":1,"bbox":[570,256,140,42]}
+{"kind":"shape","id":"sh/h432t8b2","slide":5,"name":"route-node-5","bbox":[802.67,190,28,28]}
+{"kind":"textbox","id":"sh/g3u1k3ah","slide":5,"text":"六盘水","textPreview":"六盘水","textChars":3,"textLines":1,"bbox":[754.67,226,124,30]}
+{"kind":"textbox","id":"sh/8nylg3id","slide":5,"text":"补给","textPreview":"补给","textChars":2,"textLines":1,"bbox":[746.67,256,140,42]}
+{"kind":"shape","id":"sh/to7298jy","slide":5,"name":"route-node-6","bbox":[979.33,190,28,28]}
+{"kind":"textbox","id":"sh/6lw3et0n","slide":5,"text":"织金","textPreview":"织金","textChars":2,"textLines":1,"bbox":[931.33,226,124,30]}
+{"kind":"textbox","id":"sh/7m5k7y1s","slide":5,"text":"溶洞","textPreview":"溶洞","textChars":2,"textLines":1,"bbox":[923.33,256,140,42]}
+{"kind":"shape","id":"sh/grylk3ip","slide":5,"name":"route-node-7","bbox":[1156,190,28,28]}
+{"kind":"textbox","id":"sh/hc7md8ja","slide":5,"text":"贵阳","textPreview":"贵阳","textChars":2,"textLines":1,"bbox":[1108,226,124,30]}
+{"kind":"textbox","id":"sh/upg3id0j","slide":5,"text":"返深","textPreview":"返深","textChars":2,"textLines":1,"bbox":[1100,256,140,42]}
+{"kind":"shape","id":"sh/vqpkby14","slide":5,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/4filonil","slide":5,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/5grmhsz6","slide":5,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/zmdw36pk","slide":5,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/el4fuloz","slide":5,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/1ove5g7q","slide":5,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/ba5sbe9k","slide":5,"name":"","rows":9,"cols":5,"preview":"日期 | 段落 | 当天重点 | 驾驶参考 | 住宿/状态","bbox":[72,300,1136,308]}
+{"kind":"notes","id":"nt/d1fkz1","slide":5,"text":"路线与驾驶距离为公开路线参考及研究组综合；最终导航以高德/百度出发当天实时路况为准。\n\n[Sources]\nS11 黄果树官方游览信息 — https://movement.gzstv.com/news/detail/HPzWJ9/\nS12 万峰林景区官网 — https://www.wanfenglin.cn/wanfenglingaishu.html\nS14 织金洞世界地质公园官网 — https://www.zjdgeopark.com/cn\nS19 贵州公路国庆拥堵研判（历史参考） — https://glj.guizhou.gov.cn/xwzx_500473/yw/202509/t20250930_88672139.html"}
+{"kind":"slide","id":"sl/95yn4n","slide":6,"title":"国庆自驾研究 · 2026-08-03","textShapes":16}
+{"kind":"textbox","id":"sh/jud0bihg","slide":6,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/4vmhkny1","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/5wvidsfm","slide":6,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/6x4zmxg7","slide":6,"name":"slide-title","text":"方案 B｜贵州高强度版：10/5 回深","textPreview":"方案 B｜贵州高强度版：10/5 回深","textChars":19,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/ryx0f2xs","slide":6,"text":"一次看黄果树、万峰林、小七孔、西江；10/3–10/4 是压力测试","textPreview":"一次看黄果树、万峰林、小七孔、西江；10/3–10/4 是压力测试","textChars":33,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"shape","id":"sh/sz6ho7yx","slide":6,"name":"route-node-1","bbox":[96,190,28,28]}
+{"kind":"textbox","id":"sh/t0fihcfi","slide":6,"text":"贵阳","textPreview":"贵阳","textChars":2,"textLines":1,"bbox":[48,226,124,30]}
+{"kind":"textbox","id":"sh/m1kzadgn","slide":6,"text":"取车","textPreview":"取车","textChars":2,"textLines":1,"bbox":[40,256,140,42]}
+{"kind":"shape","id":"sh/72t03yh8","slide":6,"name":"route-node-2","bbox":[308,190,28,28]}
+{"kind":"textbox","id":"sh/3yhsf65k","slide":6,"text":"黄果树","textPreview":"黄果树","textChars":3,"textLines":1,"bbox":[260,226,124,30]}
+{"kind":"textbox","id":"sh/2x8r614z","slide":6,"text":"瀑布","textPreview":"瀑布","textChars":2,"textLines":1,"bbox":[252,256,140,42]}
+{"kind":"shape","id":"sh/p0zahgnq","slide":6,"name":"route-node-3","bbox":[520,190,28,28]}
+{"kind":"textbox","id":"sh/ozq98bm5","slide":6,"text":"兴义","textPreview":"兴义","textChars":2,"textLines":1,"bbox":[472,226,124,30]}
+{"kind":"textbox","id":"sh/fux8b65o","slide":6,"text":"峰林","textPreview":"峰林","textChars":2,"textLines":1,"bbox":[464,256,140,42]}
+{"kind":"shape","id":"sh/etor2143","slide":6,"name":"route-node-4","bbox":[732,190,28,28]}
+{"kind":"textbox","id":"sh/1wzadgnu","slide":6,"text":"荔波","textPreview":"荔波","textChars":2,"textLines":1,"bbox":[684,226,124,30]}
+{"kind":"textbox","id":"sh/gvq94bm9","slide":6,"text":"小七孔","textPreview":"小七孔","textChars":3,"textLines":1,"bbox":[676,256,140,42]}
+{"kind":"shape","id":"sh/rqx87m5c","slide":6,"name":"route-node-5","bbox":[944,190,28,28]}
+{"kind":"textbox","id":"sh/65oryho7","slide":6,"text":"西江","textPreview":"西江","textChars":2,"textLines":1,"bbox":[896,226,124,30]}
+{"kind":"textbox","id":"sh/a14rah8z","slide":6,"text":"苗寨","textPreview":"苗寨","textChars":2,"textLines":1,"bbox":[888,256,140,42]}
+{"kind":"shape","id":"sh/v2dsjmpk","slide":6,"name":"route-node-6","bbox":[1156,190,28,28]}
+{"kind":"textbox","id":"sh/w3mtcrq5","slide":6,"text":"贵阳","textPreview":"贵阳","textChars":2,"textLines":1,"bbox":[1108,226,124,30]}
+{"kind":"textbox","id":"sh/xofalw7a","slide":6,"text":"还车返深","textPreview":"还车返深","textChars":4,"textLines":1,"bbox":[1100,256,140,42]}
+{"kind":"shape","id":"sh/ipobe18v","slide":6,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/jqxsn6pg","slide":6,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/4r6tgrq1","slide":6,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/5sfapw7m","slide":6,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/6tobi187","slide":6,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/orapov6x","slide":6,"name":"","rows":8,"cols":4,"preview":"日期 | 住宿 | 重点 | 驾驶参考","bbox":[72,300,1136,282]}
+{"kind":"notes","id":"nt/95yn4n","slide":6,"text":"小七孔客流与西江接驳风险是高强度版的主要不确定性；西江景区内自驾受限，住西门外更稳。\n\n[Sources]\nS15 荔波小七孔官方规划/报道 — https://www.forestry.gov.cn/lyj/1/dfdt/20260612/675979.html\nS16 西江千户苗寨官方票价 — https://www.xjqhmz.com/news/detail?id=767709855313141762&type=news-notice\nS19 贵州公路国庆拥堵研判（历史参考） — https://glj.guizhou.gov.cn/xwzx_500473/yw/202509/t20250930_88672139.html"}
+{"kind":"slide","id":"sl/rra7zc","slide":7,"title":"国庆自驾研究 · 2026-08-03","textShapes":14}
+{"kind":"textbox","id":"sh/vix0zmhc","slide":7,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/gjqhsrix","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/hkzi1wz2","slide":7,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/il8zu10n","slide":7,"name":"slide-title","text":"方案 C｜内蒙古呼包鄂稳妥线：往返呼和浩特","textPreview":"方案 C｜内蒙古呼包鄂稳妥线：往返呼和浩特","textChars":21,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/36h036h8","slide":7,"text":"第一次去内蒙古；不做跨省异地还车，把草原、沙漠和城市休整放进可回撤路线","textPreview":"第一次去内蒙古；不做跨省异地还车，把草原、沙漠和城市休整放进可回撤路线","textChars":35,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"shape","id":"sh/47qhwbit","slide":7,"name":"route-node-1","bbox":[96,190,28,28]}
+{"kind":"textbox","id":"sh/58zi5gze","slide":7,"text":"呼和浩特","textPreview":"呼和浩特","textChars":4,"textLines":1,"bbox":[48,226,124,30]}
+{"kind":"textbox","id":"sh/q98jyl0z","slide":7,"text":"取车","textPreview":"取车","textChars":2,"textLines":1,"bbox":[40,256,140,42]}
+{"kind":"shape","id":"sh/rah076hk","slide":7,"name":"route-node-2","bbox":[361,190,28,28]}
+{"kind":"textbox","id":"sh/zitcj2t4","slide":7,"text":"辉腾锡勒","textPreview":"辉腾锡勒","textChars":4,"textLines":1,"bbox":[313,226,124,30]}
+{"kind":"textbox","id":"sh/yhkbqxsz","slide":7,"text":"草原","textPreview":"草原","textChars":2,"textLines":1,"bbox":[305,256,140,42]}
+{"kind":"shape","id":"sh/lkvulcba","slide":7,"name":"route-node-3","bbox":[626,190,28,28]}
+{"kind":"textbox","id":"sh/kjmds7ap","slide":7,"text":"响沙湾","textPreview":"响沙湾","textChars":3,"textLines":1,"bbox":[578,226,124,30]}
+{"kind":"textbox","id":"sh/butcf2t8","slide":7,"text":"沙漠","textPreview":"沙漠","textChars":2,"textLines":1,"bbox":[570,256,140,42]}
+{"kind":"shape","id":"sh/atkbmxsn","slide":7,"name":"route-node-4","bbox":[891,190,28,28]}
+{"kind":"textbox","id":"sh/xgbuhsbe","slide":7,"text":"鄂尔多斯","textPreview":"鄂尔多斯","textChars":4,"textLines":1,"bbox":[843,226,124,30]}
+{"kind":"textbox","id":"sh/cf2to7at","slide":7,"text":"康巴什/博物馆","textPreview":"康巴什/博物馆","textChars":7,"textLines":1,"bbox":[835,256,140,42]}
+{"kind":"shape","id":"sh/vqdcrmtc","slide":7,"name":"route-node-5","bbox":[1156,190,28,28]}
+{"kind":"textbox","id":"sh/up4vyhsr","slide":7,"text":"呼和浩特","textPreview":"呼和浩特","textChars":4,"textLines":1,"bbox":[1108,226,124,30]}
+{"kind":"textbox","id":"sh/qhs76pgb","slide":7,"text":"还车返深","textPreview":"还车返深","textChars":4,"textLines":1,"bbox":[1100,256,140,42]}
+{"kind":"shape","id":"sh/ri1ofuhw","slide":7,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/cjap8zyh","slide":7,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/dkj6hkz2","slide":7,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/els7apgn","slide":7,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/ofahg76p","slide":7,"name":"","rows":8,"cols":4,"preview":"日期 | 住宿 | 重点 | 驾驶参考","bbox":[72,300,1136,282]}
+{"kind":"notes","id":"nt/rra7zc","slide":7,"text":"呼和浩特往返是内蒙古的稳妥版本；响沙湾景区内部使用景区交通，租赁车不建议驶入沙漠非铺装区。\n\n[Sources]\nS20 响沙湾官方介绍 — https://www.ixsw.cn/xsw/about/about-1.html\nS21 响沙湾官方交通 — https://www.ixsw.cn/xsw/about/about-138.html\nS22 呼和浩特白塔机场 2026 航季 — https://inews.nmgnews.com.cn/system/2026/03/29/030326703.shtml\nS23 内蒙古国庆交通预测 — https://nm.people.com.cn/n2/2025/0929/c196689-41368554.html"}
+{"kind":"slide","id":"sl/rdgw80","slide":8,"title":"国庆自驾研究 · 2026-08-03","textShapes":16}
+{"kind":"textbox","id":"sh/ito765gr","slide":8,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/5wzq10zi","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/4vqp8vyx","slide":8,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/vqxovqhg","slide":8,"name":"slide-title","text":"方案 D｜内蒙古草原 + 沙漠 + 阿拉善","textPreview":"方案 D｜内蒙古草原 + 沙漠 + 阿拉善","textChars":21,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/upo72lgv","slide":8,"text":"呼和浩特进、银川出；异地还车未锁定前不成立","textPreview":"呼和浩特进、银川出；异地还车未锁定前不成立","textChars":21,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"shape","id":"sh/hsf6x0z6","slide":8,"name":"route-node-1","bbox":[96,190,28,28]}
+{"kind":"textbox","id":"sh/gr6p4vy1","slide":8,"text":"呼和浩特","textPreview":"呼和浩特","textChars":4,"textLines":1,"bbox":[48,226,124,30]}
+{"kind":"textbox","id":"sh/72dor6h4","slide":8,"text":"取车","textPreview":"取车","textChars":2,"textLines":1,"bbox":[40,256,140,42]}
+{"kind":"shape","id":"sh/6147ylgj","slide":8,"name":"route-node-2","bbox":[308,190,28,28]}
+{"kind":"textbox","id":"sh/kn6d4r6x","slide":8,"text":"草原","textPreview":"草原","textChars":2,"textLines":1,"bbox":[260,226,124,30]}
+{"kind":"textbox","id":"sh/5ozexwn2","slide":8,"text":"秋草","textPreview":"秋草","textChars":2,"textLines":1,"bbox":[252,256,140,42]}
+{"kind":"shape","id":"sh/ylov21or","slide":8,"name":"route-node-3","bbox":[520,190,28,28]}
+{"kind":"textbox","id":"sh/jmxwvm5c","slide":8,"text":"响沙湾","textPreview":"响沙湾","textChars":3,"textLines":1,"bbox":[472,226,124,30]}
+{"kind":"textbox","id":"sh/wj6d0r6l","slide":8,"text":"沙漠","textPreview":"沙漠","textChars":2,"textLines":1,"bbox":[464,256,140,42]}
+{"kind":"shape","id":"sh/xkfetwn6","slide":8,"name":"route-node-4","bbox":[732,190,28,28]}
+{"kind":"textbox","id":"sh/ahovyhof","slide":8,"text":"鄂尔多斯","textPreview":"鄂尔多斯","textChars":4,"textLines":1,"bbox":[684,226,124,30]}
+{"kind":"textbox","id":"sh/bixw7m50","slide":8,"text":"城市休整","textPreview":"城市休整","textChars":4,"textLines":1,"bbox":[676,256,140,42]}
+{"kind":"shape","id":"sh/gfqdcb6p","slide":8,"name":"route-node-5","bbox":[944,190,28,28]}
+{"kind":"textbox","id":"sh/hgje5gna","slide":8,"text":"阿拉善","textPreview":"阿拉善","textChars":3,"textLines":1,"bbox":[896,226,124,30]}
+{"kind":"textbox","id":"sh/p0vm9cbi","slide":8,"text":"腾格里","textPreview":"腾格里","textChars":3,"textLines":1,"bbox":[888,256,140,42]}
+{"kind":"shape","id":"sh/4zm50rax","slide":8,"name":"route-node-6","bbox":[1156,190,28,28]}
+{"kind":"textbox","id":"sh/3yd47mtc","slide":8,"text":"银川","textPreview":"银川","textChars":2,"textLines":1,"bbox":[1108,226,124,30]}
+{"kind":"textbox","id":"sh/2xknyhsr","slide":8,"text":"还车返深","textPreview":"还车返深","textChars":4,"textLines":1,"bbox":[1100,256,140,42]}
+{"kind":"shape","id":"sh/hwbm5cb6","slide":8,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/gv25w7ul","slide":8,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/fut432tg","slide":8,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/utk3uxcv","slide":8,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/tsbm1sba","slide":8,"bbox":[0,0,0,0]}
+{"kind":"table","id":"tb/rax4bydg","slide":8,"name":"","rows":8,"cols":4,"preview":"日期 | 住宿 | 重点 | 驾驶参考","bbox":[72,300,1136,282]}
+{"kind":"notes","id":"nt/rdgw80","slide":8,"text":"阿拉善方案把异地还车、长距离驾驶和返程航班三种不确定性叠加；额济纳应单独做胡杨专项。\n\n[Sources]\nS20 响沙湾官方介绍 — https://www.ixsw.cn/xsw/about/about-1.html\nS21 响沙湾官方交通 — https://www.ixsw.cn/xsw/about/about-138.html\nS23 内蒙古国庆交通预测 — https://nm.people.com.cn/n2/2025/0929/c196689-41368554.html\nS24 中国天气网额济纳气候/胡杨 — https://news.weather.com.cn/2024/10/3922118.shtml"}
+{"kind":"slide","id":"sl/jklyuv","slide":9,"title":"国庆自驾研究 · 2026-08-03","textShapes":5}
+{"kind":"textbox","id":"sh/fq5gfe1k","slide":9,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/grehozip","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/1snyh4ja","slide":9,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/61cfip0n","slide":9,"name":"slide-title","text":"交通与租车报价：先锁“确定性”，再追求最低价","textPreview":"交通与租车报价：先锁“确定性”，再追求最低价","textChars":22,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/r2lgbu18","slide":9,"text":"当前查询日 2026-08-03；目标日期动态报价尚未全部开放或未能取得完整结算页","textPreview":"当前查询日 2026-08-03；目标日期动态报价尚未全部开放或未能取得完整结算页","textChars":41,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"textbox","id":"sh/t4nyd4je","slide":9,"text":"预算公式：往返票价×2 + 租车日租×天数 + 保障/油费/停车等；模型区间在出发前 30–45 天重核。","textPreview":"预算公式：往返票价×2 + 租车日租×天数 + 保障/油费/停车等；模型区间在出发前 30–45 天重核。","textChars":53,"textLines":1,"bbox":[72,166,1136,22]}
+{"kind":"table","id":"tb/hcri94zi","slide":9,"name":"","rows":7,"cols":6,"preview":"区域 | 方式 | 组合 | 价格参考 | 决策备注 | 来源","bbox":[72,198,1136,292]}
+{"kind":"notes","id":"nt/jklyuv","slide":9,"text":"报价区分公开样本与模型区间；模型的构建不等同于实时订单，建议在 9 月上旬/中旬按目标日期重新核价。\n\n[Sources]\nS01 12306 贵广客专票价说明 — https://www.12306.cn/mormhweb/zxdt/202308/t20230826_39897.html\nS02 深圳北—贵阳北公开高铁票价 — https://www.gaotie.com.cn/lieche/shenzhenbei-guiyangbei.html\nS03 携程深圳—贵阳机票页 — https://m.ctrip.com/html5/flight/SZX-KWE-day-1.html\nS04 携程贵阳—深圳机票页 — https://m.ctrip.com/html5/flight/kwe-szx-day-1.html\nS05 携程深圳—呼和浩特机票页 — https://m.ctrip.com/html5/flight/szx-het-day-1.html\nS06 携程呼和浩特—深圳机票页 — https://m.ctrip.com/html5/flight/het-szx-day-1.html\nS07 神州租车贵阳网点 — https://guiyang.zuche.com/\nS08 一嗨贵阳车型页 — https://www.1hai.cn/CityCarRental/index?City=%E8%B4%B5%E9%98%B3\nS09 神州租车呼和浩特网点 — https://huhehaote.zuche.com/\nS10 神州租车鄂尔多斯网点 — https://eerduosi.zuche.com/"}
+{"kind":"slide","id":"sl/bsw0py","slide":10,"title":"国庆自驾研究 · 2026-08-03","textShapes":6}
+{"kind":"textbox","id":"sh/ra9gvq5g","slide":10,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/sbixovm1","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/dcryx0nm","slide":10,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/i5gfil4z","slide":10,"name":"slide-title","text":"两人总预算：贵州更容易把舒适档控制在 ¥2 万上下","textPreview":"两人总预算：贵州更容易把舒适档控制在 ¥2 万上下","textChars":25,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/369grq5k","slide":10,"text":"含 10%–15% 国庆机动金；不含购物与不可预见的大额项目","textPreview":"含 10%–15% 国庆机动金；不含购物与不可预见的大额项目","textChars":30,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"textbox","id":"sh/21kfup43","slide":10,"text":"预算敏感项：国庆住宿、低价舱位、异地还车、沙漠二次消费、保险/停车/超公里。","textPreview":"预算敏感项：国庆住宿、低价舱位、异地还车、沙漠二次消费、保险/停车/超公里。","textChars":38,"textLines":1,"bbox":[800,610,408,30]}
+{"kind":"textbox","id":"sh/n2tg3a5o","slide":10,"text":"预算页按 6 晚统一口径；10/6 贵州舒适环线为 7 晚，需另加 1 晚住宿、餐饮和停车。","textPreview":"预算页按 6 晚统一口径；10/6 贵州舒适环线为 7 晚，需另加 1 晚住宿、餐饮和停车。","textChars":46,"textLines":1,"bbox":[72,614,720,26]}
+{"kind":"chart","id":"ch/gnqlcv2d","slide":10,"name":"","chartType":"bar","bbox":[72,200,680,380]}
+{"kind":"table","id":"tb/gbypw32x","slide":10,"name":"","rows":4,"cols":4,"preview":"档位 | 贵州 6晚 | 内蒙古 6晚 | 适合","bbox":[800,220,408,190]}
+{"kind":"notes","id":"nt/bsw0py","slide":10,"text":"预算区间来自研究组模型，采用公开交通样本、酒店与租车参考，叠加 10%–15% 国庆机动金；不是任何平台的结算单。\n\n[Sources]\nS03 携程深圳—贵阳机票页 — https://m.ctrip.com/html5/flight/SZX-KWE-day-1.html\nS04 携程贵阳—深圳机票页 — https://m.ctrip.com/html5/flight/kwe-szx-day-1.html\nS05 携程深圳—呼和浩特机票页 — https://m.ctrip.com/html5/flight/szx-het-day-1.html\nS06 携程呼和浩特—深圳机票页 — https://m.ctrip.com/html5/flight/het-szx-day-1.html\nS07 神州租车贵阳网点 — https://guiyang.zuche.com/\nS08 一嗨贵阳车型页 — https://www.1hai.cn/CityCarRental/index?City=%E8%B4%B5%E9%98%B3\nS09 神州租车呼和浩特网点 — https://huhehaote.zuche.com/\nS20 响沙湾官方介绍 — https://www.ixsw.cn/xsw/about/about-1.html\nS24 中国天气网额济纳气候/胡杨 — https://news.weather.com.cn/2024/10/3922118.shtml"}
+{"kind":"slide","id":"sl/kjj5iq","slide":11,"title":"国庆自驾研究 · 2026-08-03","textShapes":5}
+{"kind":"textbox","id":"sh/kve14zy5","slide":11,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/zu50buhk","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/ytwj2pgz","slide":11,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/xs3i9kze","slide":11,"name":"slide-title","text":"贵州吃住咖啡：把“评价数字”和“真实体验入口”分开看","textPreview":"贵州吃住咖啡：把“评价数字”和“真实体验入口”分开看","textChars":26,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/cru10fyt","slide":11,"text":"大众点评/携程用于结构化评分与人均；小红书用于场景关键词和新鲜体验，原文需登录后复核","textPreview":"大众点评/携程用于结构化评分与人均；小红书用于场景关键词和新鲜体验，原文需登录后复核","textChars":42,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"textbox","id":"sh/apcjypgn","slide":11,"text":"下单前：大众点评看近 30–90 天图文差评；小红书筛近期/非广告/有菜单或停车实拍；国庆前 3–7 天电话确认营业。","textPreview":"下单前：大众点评看近 30–90 天图文差评；小红书筛近期/非广告/有菜单或停车实拍；国庆前 3–7 天电话确认营业。","textChars":59,"textLines":1,"bbox":[72,174,1136,20]}
+{"kind":"table","id":"tb/q58v21cj","slide":11,"name":"","rows":5,"cols":5,"preview":"城市 | 住宿建议 | 餐饮 / 苍蝇小馆 | 咖啡 | 证据","bbox":[72,206,1136,270]}
+{"kind":"notes","id":"nt/kjj5iq","slide":11,"text":"贵州的餐饮住宿证据相对完整，但小红书原文受登录态和动态页面限制；报告只保留检索入口和公开摘要，不把未读原文写成已核验评价。\n\n[Sources]\nS25 携程兴义万峰林捌舍民宿 — https://hotels.ctrip.com/hotels/15154300.html\nS26 携程兴义万峰林隐阅山也民宿 — https://hotels.ctrip.com/hotels/100389892.html\nS27 携程半山酒店·安顺古城店 — https://tw.trip.com/hotels/anshun-hotel-detail-38324007/mid-level-hotel/\nS28 携程荔波山语·水岸美宿 — https://sg.trip.com/hotels/libo-hotel-detail-110419924/shanyushuian/\nS29 大众点评老凯俚酸汤鱼公开页 — https://m.dianping.com/discovery/695584544\nS30 大众点评老凯俚酸汤鱼相册/门店 — https://www.dianping.com/shop/24873401/photos\nS31 大众点评金牌罗记肠旺面攻略 — https://m.dianping.com/discovery/703922120\nS32 携程安顺餐饮列表 — https://you.ctrip.com/restaurantlist/anshun518/s0-p23.html\nS33 携程安顺程汤圆 — https://you.ctrip.com/food/anshun518/16263081.html\nS37 小红书：贵阳丝娃娃搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%B4%B5%E9%98%B3%20%E4%B8%9D%E5%A8%83%E5%A8%83\nS38 小红书：安顺小吃搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%AE%89%E9%A1%BA%20%E8%A3%B9%E5%8D%B7%20%E5%A4%BA%E5%A4%BA%E7%B2%89\nS39 小红书：荔波美食搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%8D%94%E6%B3%A2%20%E5%B0%8F%E4%B8%83%E5%AD%94%20%E7%BE%8E%E9%A3%9F\nS40 小红书：西江酸汤鱼搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A8%20%E9%85%B8%E6%B1%A4%E9%B1%BC\nS44 贵阳公开咖啡地图（含小红书引用） — https://www.sohu.com/a/901913972_121106687"}
+{"kind":"slide","id":"sl/eu71da","slide":12,"title":"国庆自驾研究 · 2026-08-03","textShapes":5}
+{"kind":"textbox","id":"sh/9wzyhovq","slide":12,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/mtof69wz","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/nuhgfedk","slide":12,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/wzqxcju1","slide":12,"name":"slide-title","text":"内蒙古吃住咖啡：优先城市基地，苍蝇小馆与独立咖啡证据更弱","textPreview":"内蒙古吃住咖啡：优先城市基地，苍蝇小馆与独立咖啡证据更弱","textChars":28,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/x0zylovm","slide":12,"text":"呼和浩特/包头/东胜住得稳，草原和沙漠做日游；景区内住宿需提前锁定","textPreview":"呼和浩特/包头/东胜住得稳，草原和沙漠做日游；景区内住宿需提前锁定","textChars":33,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"textbox","id":"sh/vyhgjydg","slide":12,"text":"现实判断：内蒙古的真实感更多来自路线与本地蒙餐；时间和预算优先留给沙漠项目、保暖装备与长途驾驶缓冲。","textPreview":"现实判断：内蒙古的真实感更多来自路线与本地蒙餐；时间和预算优先留给沙漠项目、保暖装备与长途驾驶缓冲。","textChars":50,"textLines":1,"bbox":[72,174,1136,20]}
+{"kind":"table","id":"tb/batwzmtc","slide":12,"name":"","rows":5,"cols":5,"preview":"城市 | 住宿建议 | 餐饮 / 苍蝇小馆 | 咖啡 | 证据","bbox":[72,206,1136,270]}
+{"kind":"notes","id":"nt/eu71da","slide":12,"text":"内蒙古餐饮和咖啡的公开数字较少，适合用城市基地和平台搜索做保底；小红书检索入口需在 App/登录态复核。\n\n[Sources]\nS20 响沙湾官方介绍 — https://www.ixsw.cn/xsw/about/about-1.html\nS21 响沙湾官方交通 — https://www.ixsw.cn/xsw/about/about-138.html\nS34 携程呼和浩特老绥元烧麦 — https://you.ctrip.com/food/hohhot156/12513942-dianping.html\nS35 大众点评呼市烧麦羊杂公开页 — https://www.dianping.com/shop/ilskogWYshhxQxWO/photos\nS36 携程包头蒙餐/小肥羊列表 — https://you.ctrip.com/restaurantlist/baotou347/s0-p8.html\nS41 小红书：呼和浩特烧麦搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%91%BC%E5%92%8C%E6%B5%A9%E7%89%B9%20%E7%83%A7%E9%BA%A6\nS42 小红书：包头蒙餐搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%8C%85%E5%A4%B4%20%E8%92%99%E9%A4%90%20%E7%83%A7%E9%BA%A6\nS43 小红书：鄂尔多斯响沙湾咖啡搜索 — https://www.xiaohongshu.com/search_result?keyword=%E9%84%82%E5%B0%94%E5%A4%9A%E6%96%AF%20%E5%93%8D%E6%B2%99%E6%B9%BE%20%E5%92%96%E5%95%A1\nS45 呼和浩特东护城河咖啡街报道 — https://static.0471tv.org.cn/rb/pc/con/202411/11/content_74543.html\nS46 呼市烧麦测评公开摘要 — https://m.sohu.com/a/915568366_122358233"}
+{"kind":"slide","id":"sl/wc6w14","slide":13,"title":"国庆自驾研究 · 2026-08-03","textShapes":5}
+{"kind":"textbox","id":"sh/al0vqp0f","slide":13,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/xoru1kz6","slide":13,"text":"13","textPreview":"13","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/wnidsfil","slide":13,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/nipcvah4","slide":13,"name":"slide-title","text":"证据表：每个数字都有来源状态，用户可在 PPT/CSV 中继续改和补","textPreview":"证据表：每个数字都有来源状态，用户可在 PPT/CSV 中继续改和补","textChars":34,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/mxgvm50j","slide":13,"text":"A = 公开页可见数字；B = 体验/位置可见但数字不完整；M = 模型区间；X = 小红书检索入口，需手工复核","textPreview":"A = 公开页可见数字；B = 体验/位置可见但数字不完整；M = 模型区间；X = 小红书检索入口，需手工复核","textChars":56,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"textbox","id":"sh/ojidofip","slide":13,"text":"完整 URL 在 speaker notes 与同目录 CSV；动态价格建议 9 月上旬、出发前 7 天复核。","textPreview":"完整 URL 在 speaker notes 与同目录 CSV；动态价格建议 9 月上旬、出发前 7 天复核。","textChars":55,"textLines":1,"bbox":[72,684,1120,20]}
+{"kind":"table","id":"tb/on294f25","slide":13,"name":"","rows":10,"cols":5,"preview":"类型 | 项目 | 价格/评分 | 状态 | 来源","bbox":[72,198,1136,372]}
+{"kind":"notes","id":"nt/wc6w14","slide":13,"text":"本页为证据表摘要；完整 URL 见 speaker notes 与同目录 CSV。\n\n[Sources]\nS01 12306 贵广客专票价说明 — https://www.12306.cn/mormhweb/zxdt/202308/t20230826_39897.html\nS02 深圳北—贵阳北公开高铁票价 — https://www.gaotie.com.cn/lieche/shenzhenbei-guiyangbei.html\nS03 携程深圳—贵阳机票页 — https://m.ctrip.com/html5/flight/SZX-KWE-day-1.html\nS04 携程贵阳—深圳机票页 — https://m.ctrip.com/html5/flight/kwe-szx-day-1.html\nS05 携程深圳—呼和浩特机票页 — https://m.ctrip.com/html5/flight/szx-het-day-1.html\nS06 携程呼和浩特—深圳机票页 — https://m.ctrip.com/html5/flight/het-szx-day-1.html\nS07 神州租车贵阳网点 — https://guiyang.zuche.com/\nS08 一嗨贵阳车型页 — https://www.1hai.cn/CityCarRental/index?City=%E8%B4%B5%E9%98%B3\nS09 神州租车呼和浩特网点 — https://huhehaote.zuche.com/\nS10 神州租车鄂尔多斯网点 — https://eerduosi.zuche.com/\nS11 黄果树官方游览信息 — https://movement.gzstv.com/news/detail/HPzWJ9/\nS12 万峰林景区官网 — https://www.wanfenglin.cn/wanfenglingaishu.html\nS13 贵州省 A 级旅游景区名录 — https://drc.guizhou.gov.cn/xxgk/sqjs/gzfg/gzfg/202405/t20240523_84672683.html\nS14 织金洞世界地质公园官网 — https://www.zjdgeopark.com/cn\nS15 荔波小七孔官方规划/报道 — https://www.forestry.gov.cn/lyj/1/dfdt/20260612/675979.html\nS16 西江千户苗寨官方票价 — https://www.xjqhmz.com/news/detail?id=767709855313141762&type=news-notice\nS17 国务院办公厅 2026 国庆假期 — https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm\nS18 2026 国庆高速免费说明 — https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html\nS19 贵州公路国庆拥堵研判（历史参考） — https://glj.guizhou.gov.cn/xwzx_500473/yw/202509/t20250930_88672139.html\nS20 响沙湾官方介绍 — https://www.ixsw.cn/xsw/about/about-1.html\nS21 响沙湾官方交通 — https://www.ixsw.cn/xsw/about/about-138.html\nS22 呼和浩特白塔机场 2026 航季 — https://inews.nmgnews.com.cn/system/2026/03/29/030326703.shtml\nS23 内蒙古国庆交通预测 — https://nm.people.com.cn/n2/2025/0929/c196689-41368554.html\nS24 中国天气网额济纳气候/胡杨 — https://news.weather.com.cn/2024/10/3922118.shtml\nS25 携程兴义万峰林捌舍民宿 — https://hotels.ctrip.com/hotels/15154300.html\nS26 携程兴义万峰林隐阅山也民宿 — https://hotels.ctrip.com/hotels/100389892.html\nS27 携程半山酒店·安顺古城店 — https://tw.trip.com/hotels/anshun-hotel-detail-38324007/mid-level-hotel/\nS28 携程荔波山语·水岸美宿 — https://sg.trip.com/hotels/libo-hotel-detail-110419924/shanyushuian/\nS29 大众点评老凯俚酸汤鱼公开页 — https://m.dianping.com/discovery/695584544\nS30 大众点评老凯俚酸汤鱼相册/门店 — https://www.dianping.com/shop/24873401/photos\nS31 大众点评金牌罗记肠旺面攻略 — https://m.dianping.com/discovery/703922120\nS32 携程安顺餐饮列表 — https://you.ctrip.com/restaurantlist/anshun518/s0-p23.html\nS33 携程安顺程汤圆 — https://you.ctrip.com/food/anshun518/16263081.html\nS34 携程呼和浩特老绥元烧麦 — https://you.ctrip.com/food/hohhot156/12513942-dianping.html\nS35 大众点评呼市烧麦羊杂公开页 — https://www.dianping.com/shop/ilskogWYshhxQxWO/photos\nS36 携程包头蒙餐/小肥羊列表 — https://you.ctrip.com/restaurantlist/baotou347/s0-p8.html\nS37 小红书：贵阳丝娃娃搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%B4%B5%E9%98%B3%20%E4%B8%9D%E5%A8%83%E5%A8%83\nS38 小红书：安顺小吃搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%AE%89%E9%A1%BA%20%E8%A3%B9%E5%8D%B7%20%E5%A4%BA%E5%A4%BA%E7%B2%89\nS39 小红书：荔波美食搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%8D%94%E6%B3%A2%20%E5%B0%8F%E4%B8%83%E5%AD%94%20%E7%BE%8E%E9%A3%9F\nS40 小红书：西江酸汤鱼搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A8%20%E9%85%B8%E6%B1%A4%E9%B1%BC\nS41 小红书：呼和浩特烧麦搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%91%BC%E5%92%8C%E6%B5%A9%E7%89%B9%20%E7%83%A7%E9%BA%A6\nS42 小红书：包头蒙餐搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%8C%85%E5%A4%B4%20%E8%92%99%E9%A4%90%20%E7%83%A7%E9%BA%A6\nS43 小红书：鄂尔多斯响沙湾咖啡搜索 — https://www.xiaohongshu.com/search_result?keyword=%E9%84%82%E5%B0%94%E5%A4%9A%E6%96%AF%20%E5%93%8D%E6%B2%99%E6%B9%BE%20%E5%92%96%E5%95%A1\nS44 贵阳公开咖啡地图（含小红书引用） — https://www.sohu.com/a/901913972_121106687\nS45 呼和浩特东护城河咖啡街报道 — https://static.0471tv.org.cn/rb/pc/con/202411/11/content_74543.html\nS46 呼市烧麦测评公开摘要 — https://m.sohu.com/a/915568366_122358233\nS47 一嗨鄂尔多斯车型页 — https://www.1hai.cn/c_eerduosi"}
+{"kind":"slide","id":"sl/7751b4","slide":14,"title":"国庆自驾研究 · 2026-08-03","textShapes":24}
+{"kind":"textbox","id":"sh/gzi58fal","slide":14,"text":"国庆自驾研究 · 2026-08-03","textPreview":"国庆自驾研究 · 2026-08-03","textChars":19,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/fy94fat0","slide":14,"text":"14","textPreview":"14","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/ux0n65sf","slide":14,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/p4b6lkb2","slide":14,"name":"slide-title","text":"落地流程：先锁不可逆资源，再按实时路况微调路线","textPreview":"落地流程：先锁不可逆资源，再按实时路况微调路线","textChars":23,"textLines":1,"bbox":[72,78,1040,58]}
+{"kind":"textbox","id":"sh/4325cfax","slide":14,"text":"把“计划 / 报价 / 订单 / 到店确认”四种状态分开","textPreview":"把“计划 / 报价 / 订单 / 到店确认”四种状态分开","textChars":28,"textLines":1,"bbox":[74,138,1050,34]}
+{"kind":"shape","id":"sh/32tojatc","slide":14,"name":"flow-1","bbox":[76,250,160,190]}
+{"kind":"textbox","id":"sh/21knapsr","slide":14,"text":"现在","textPreview":"现在","textChars":2,"textLines":1,"bbox":[92,274,128,24]}
+{"kind":"textbox","id":"sh/dsv6p4be","slide":14,"text":"选路线","textPreview":"选路线","textChars":3,"textLines":1,"bbox":[90,312,132,34]}
+{"kind":"textbox","id":"sh/c725gzat","slide":14,"text":"确定 10/5 还是 10/6\n确定贵州 / 内蒙古","textPreview":"确定 10/5 还是 10/6 | 确定贵州 / 内蒙古","textChars":26,"textLines":2,"bbox":[90,364,132,56]}
+{"kind":"shape","id":"sh/61sby58n","slide":14,"name":"flow-2","bbox":[266,250,160,190]}
+{"kind":"textbox","id":"sh/721srap8","slide":14,"text":"出发前 45–30 天","textPreview":"出发前 45–30 天","textChars":11,"textLines":1,"bbox":[282,274,128,24]}
+{"kind":"textbox","id":"sh/s3at0fqt","slide":14,"text":"锁交通","textPreview":"锁交通","textChars":3,"textLines":1,"bbox":[280,312,132,34]}
+{"kind":"textbox","id":"sh/t4jatk7e","slide":14,"text":"比机票 / 高铁\n优先可退或可改","textPreview":"比机票 / 高铁 | 优先可退或可改","textChars":16,"textLines":2,"bbox":[280,364,132,56]}
+{"kind":"shape","id":"sh/u5sb2p8z","slide":14,"name":"flow-3","bbox":[456,250,160,190]}
+{"kind":"textbox","id":"sh/f61cvupk","slide":14,"text":"出发前 30–20 天","textPreview":"出发前 30–20 天","textChars":11,"textLines":1,"bbox":[472,274,128,24]}
+{"kind":"textbox","id":"sh/g7ut4fq5","slide":14,"text":"锁租车","textPreview":"锁租车","textChars":3,"textLines":1,"bbox":[470,312,132,34]}
+{"kind":"textbox","id":"sh/h83uxk7a","slide":14,"text":"车型、保险、超公里\n异地还车资格","textPreview":"车型、保险、超公里 | 异地还车资格","textChars":16,"textLines":2,"bbox":[470,364,132,56]}
+{"kind":"shape","id":"sh/a98bql8f","slide":14,"name":"flow-4","bbox":[646,250,160,190]}
+{"kind":"textbox","id":"sh/vahsjq90","slide":14,"text":"出发前 20–10 天","textPreview":"出发前 20–10 天","textChars":11,"textLines":1,"bbox":[662,274,128,24]}
+{"kind":"textbox","id":"sh/zed8rmps","slide":14,"text":"锁酒店","textPreview":"锁酒店","textChars":3,"textLines":1,"bbox":[660,312,132,34]}
+{"kind":"textbox","id":"sh/yd47yho7","slide":14,"text":"景区房少就改住城市基地\n保留取消窗口","textPreview":"景区房少就改住城市基地 | 保留取消窗口","textChars":18,"textLines":2,"bbox":[660,364,132,56]}
+{"kind":"shape","id":"sh/lgfqtw7y","slide":14,"name":"flow-5","bbox":[836,250,160,190]}
+{"kind":"textbox","id":"sh/0fmp0r6d","slide":14,"text":"出发前 7 天","textPreview":"出发前 7 天","textChars":7,"textLines":1,"bbox":[852,274,128,24]}
+{"kind":"textbox","id":"sh/bad8nmpw","slide":14,"text":"复核","textPreview":"复核","textChars":2,"textLines":1,"bbox":[850,312,132,34]}
+{"kind":"textbox","id":"sh/q947uhob","slide":14,"text":"天气、路况、营业\n小红书近期笔记","textPreview":"天气、路况、营业 | 小红书近期笔记","textChars":16,"textLines":2,"bbox":[850,364,132,56]}
+{"kind":"shape","id":"sh/dcvqpc72","slide":14,"name":"flow-6","bbox":[1026,250,160,190]}
+{"kind":"textbox","id":"sh/cbmpwr6h","slide":14,"text":"出发当天","textPreview":"出发当天","textChars":4,"textLines":1,"bbox":[1042,274,128,24]}
+{"kind":"textbox","id":"sh/v6x8z650","slide":14,"text":"执行","textPreview":"执行","textChars":2,"textLines":1,"bbox":[1040,312,132,34]}
+{"kind":"textbox","id":"sh/a5or61of","slide":14,"text":"早入景区\n动态避堵 / 备用餐馆","textPreview":"早入景区 | 动态避堵 / 备用餐馆","textChars":16,"textLines":2,"bbox":[1040,364,132,56]}
+{"kind":"shape","id":"sh/8fyd4ji1","slide":14,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/tg7ed4j6","slide":14,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/6dgv290v","slide":14,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/7epwbe1g","slide":14,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/gjyx8jix","slide":14,"bbox":[0,0,0,0]}
+{"kind":"shape","id":"sh/h4rehoji","slide":14,"bbox":[72,514,1136,108]}
+{"kind":"textbox","id":"sh/uhgv690r","slide":14,"text":"必要的人工复核","textPreview":"必要的人工复核","textChars":7,"textLines":1,"bbox":[98,540,190,26]}
+{"kind":"textbox","id":"sh/vipwfe1c","slide":14,"text":"小红书原文、国庆营业、景区分时预约、酒店停车/接驳、租车保险与异地还车费，都不要仅凭搜索摘要下结论。","textPreview":"小红书原文、国庆营业、景区分时预约、酒店停车/接驳、租车保险与异地还车费，都不要仅凭搜索摘要下结论。","textChars":50,"textLines":1,"bbox":[300,534,850,48]}
+{"kind":"notes","id":"nt/7751b4","slide":14,"text":"流程图为可编辑形状；建议把最终订单号、酒店确认电话、租车合同条款补进 PPT 备注。\n\n[Sources]\nS01 12306 贵广客专票价说明 — https://www.12306.cn/mormhweb/zxdt/202308/t20230826_39897.html\nS07 神州租车贵阳网点 — https://guiyang.zuche.com/\nS08 一嗨贵阳车型页 — https://www.1hai.cn/CityCarRental/index?City=%E8%B4%B5%E9%98%B3\nS17 国务院办公厅 2026 国庆假期 — https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm\nS18 2026 国庆高速免费说明 — https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html\nS20 响沙湾官方介绍 — https://www.ixsw.cn/xsw/about/about-1.html\nS37 小红书：贵阳丝娃娃搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%B4%B5%E9%98%B3%20%E4%B8%9D%E5%A8%83%E5%A8%83\nS41 小红书：呼和浩特烧麦搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%91%BC%E5%92%8C%E6%B5%A9%E7%89%B9%20%E7%83%A7%E9%BA%A6"}
+{"kind":"slide","id":"sl/4eokgb","slide":15,"title":"国庆自驾研究 · 下一步","textShapes":7}
+{"kind":"textbox","id":"sh/e18rutsf","slide":15,"text":"国庆自驾研究 · 下一步","textPreview":"国庆自驾研究 · 下一步","textChars":12,"textLines":1,"bbox":[72,26,540,22]}
+{"kind":"textbox","id":"sh/14jqpor6","slide":15,"text":"15","textPreview":"15","textChars":2,"textLines":1,"bbox":[1170,24,38,24]}
+{"kind":"shape","id":"sh/03a9wjal","slide":15,"bbox":[72,58,1136,1]}
+{"kind":"textbox","id":"sh/ryh8je94","slide":15,"text":"下一步只需要做一个选择","textPreview":"下一步只需要做一个选择","textChars":11,"textLines":1,"bbox":[72,108,720,54]}
+{"kind":"shape","id":"sh/qx87q9sj","slide":15,"bbox":[72,184,122,6]}
+{"kind":"textbox","id":"sh/d0zqloru","slide":15,"text":"你能不能把返程放到 10 月 6 日？","textPreview":"你能不能把返程放到 10 月 6 日？","textChars":19,"textLines":1,"bbox":[72,230,720,72]}
+{"kind":"shape","id":"sh/szq9sja9","slide":15,"bbox":[72,356,500,160]}
+{"kind":"textbox","id":"sh/3ax8fe9s","slide":15,"text":"能 → 贵州舒适环线\n现在就按 7 晚去锁贵阳 / 兴义 / 织金住宿","textPreview":"能 → 贵州舒适环线 | 现在就按 7 晚去锁贵阳 / 兴义 / 织金住宿","textChars":35,"textLines":2,"bbox":[106,400,430,76]}
+{"kind":"shape","id":"sh/i9o7m9s7","slide":15,"bbox":[620,356,588,160]}
+{"kind":"textbox","id":"sh/8fetcjed","slide":15,"text":"不能 → 贵州高强度版 / 呼和浩特稳妥线\n优先锁交通，再决定住景区还是住城市基地","textPreview":"不能 → 贵州高强度版 / 呼和浩特稳妥线 | 优先锁交通，再决定住景区还是住城市基地","textChars":41,"textLines":2,"bbox":[654,400,520,76]}
+{"kind":"textbox","id":"sh/9gnalovy","slide":15,"text":"报告文件：PPTX 可编辑版 + CSV 证据表\n查询基准日：2026-08-03 · 动态价格请在下单前复核","textPreview":"报告文件：PPTX 可编辑版 + CSV 证据表 | 查询基准日：2026-08-03 · 动态价格请在下单前复核","textChars":55,"textLines":2,"bbox":[72,600,820,56]}
+{"kind":"notes","id":"nt/4eokgb","slide":15,"text":"收尾：请根据返程日做路线分叉。报告没有把动态报价和小红书原文不可读部分伪装成已确认事实。\n\n[Sources]\nS17 国务院办公厅 2026 国庆假期 — https://big5.www.gov.cn/gate/big5/www.gov.cn/yaowen/liebiao/202511/content_7047099.htm\nS18 2026 国庆高速免费说明 — https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html\nS37 小红书：贵阳丝娃娃搜索 — https://www.xiaohongshu.com/search_result?keyword=%E8%B4%B5%E9%98%B3%20%E4%B8%9D%E5%A8%83%E5%A8%83\nS41 小红书：呼和浩特烧麦搜索 — https://www.xiaohongshu.com/search_result?keyword=%E5%91%BC%E5%92%8C%E6%B5%A9%E7%89%B9%20%E7%83%A7%E9%BA%A6"}
