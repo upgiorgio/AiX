@@ -24,7 +24,7 @@
 
 ### ✅ 无需修改，三端直接调用
 
-**Base URL**: `https://aix-ai-api.musd-app.workers.dev`
+**Base URL**: `https://ai.qdd.app`
 
 > CORS 已全部放开（`Access-Control-Allow-Origin: *`），iOS/Android/小程序可直接请求。
 
@@ -33,7 +33,7 @@
 ```swift
 // AI 流式生成
 func streamGenerate(prompt: String, system: String = "", onChunk: @escaping (String) -> Void, onDone: @escaping () -> Void) {
-    let url = URL(string: "https://aix-ai-api.musd-app.workers.dev/ai/stream")!
+    let url = URL(string: "https://ai.qdd.app/ai/stream")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -49,7 +49,7 @@ func streamGenerate(prompt: String, system: String = "", onChunk: @escaping (Str
 
 // URL 内容提取
 func extractURL(_ urlString: String) async throws -> ArticleExtract {
-    let url = URL(string: "https://aix-ai-api.musd-app.workers.dev/url/extract")!
+    let url = URL(string: "https://ai.qdd.app/url/extract")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -74,7 +74,7 @@ struct ArticleExtract: Codable {
 function aiGenerate(prompt, system = '') {
   return new Promise((resolve, reject) => {
     wx.request({
-      url: 'https://aix-ai-api.musd-app.workers.dev/ai/generate',
+      url: 'https://ai.qdd.app/ai/generate',
       method: 'POST',
       header: { 'Content-Type': 'application/json' },
       data: { prompt, system, fast: false },
@@ -121,7 +121,7 @@ data class ArticleExtract(
 
 // Retrofit 初始化
 val retrofit = Retrofit.Builder()
-    .baseUrl("https://aix-ai-api.musd-app.workers.dev/")
+    .baseUrl("https://ai.qdd.app/")
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 ```
@@ -443,7 +443,7 @@ struct CardDesignerView: View {
 
 ```javascript
 // utils/aiService.js
-const AI_BASE = 'https://aix-ai-api.musd-app.workers.dev'
+const AI_BASE = 'https://ai.qdd.app'
 
 // 注意：小程序需要在微信公众平台将此域名加入「request合法域名」
 // 微信公众平台 → 开发 → 开发管理 → 开发设置 → 服务器域名
@@ -494,7 +494,7 @@ export const extractUrl = (url) => {
 **域名白名单**（微信公众平台必须配置）：
 ```
 request合法域名：
-  https://aix-ai-api.musd-app.workers.dev
+  https://ai.qdd.app
 ```
 
 ### 5.4 小程序卡片导出方案

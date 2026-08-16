@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-13",
+  "publishPolicy": "monitor-only-human-review-required",
+  "sources": [
+    {
+      "id": "ru-extension",
+      "countryCode": "RU",
+      "label": "中国驻俄罗斯使馆｜免签延期公告",
+      "url": "https://ru.china-embassy.gov.cn/lsfw/zytz_142816/202607/t20260721_11989093.htm",
+      "cadence": "weekly",
+      "risk": "critical",
+      "watch": ["2027-12-31", "30天", "免签"]
+    },
+    {
+      "id": "kr-shanghai-c39",
+      "countryCode": "KR",
+      "label": "韩国驻上海总领馆｜C-3-9公告",
+      "url": "https://overseas.mofa.go.kr/cn-shanghai-zh/brd/m_492/view.do?seq=760835",
+      "cadence": "weekly",
+      "risk": "high",
+      "watch": ["C-3-9", "20"]
+    },
+    {
+      "id": "kh-temporary-waiver",
+      "countryCode": "KH",
+      "label": "中国驻柬埔寨使馆｜限时免签",
+      "url": "https://kh.china-embassy.gov.cn/lsfws/lsbh/202606/t20260620_11949230.htm",
+      "cadence": "weekly",
+      "risk": "critical",
+      "watch": ["2026年10月15日", "14天"]
+    },
+    {
+      "id": "ph-14-day-waiver",
+      "countryCode": "PH",
+      "label": "菲律宾外交部｜中国公民14天免签",
+      "url": "https://beijingpe.dfa.gov.ph/announcements/1388-philippines-to-allow-visa-free-entry-for-14-days-for-chinese-nationals",
+      "cadence": "weekly",
+      "risk": "critical",
+      "watch": ["14 days", "NAIA", "MCIA"]
+    },
+    {
+      "id": "br-temporary-waiver",
+      "countryCode": "BR",
+      "label": "巴西驻广州总领馆｜限时免签",
+      "url": "https://www.gov.br/mre/pt-br/consulado-cantao/EN/visas/info",
+      "cadence": "weekly",
+      "risk": "critical",
+      "watch": ["December 31, 2026", "30 days"]
+    }
+  ]
+}

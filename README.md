@@ -114,7 +114,7 @@ python3 -m http.server 4173
 
 ### AI 后端（KimiClaw / Kimi）
 
-文案卡片套件默认请求 Cloudflare Worker：`https://aix-ai-api.musd-app.workers.dev`。Worker 现在会优先使用 Kimi/Moonshot 兼容 OpenAI 的接口，缺少密钥时才回退到 Cloudflare Workers AI。
+文案卡片套件默认请求 Cloudflare Worker：`https://ai.qdd.app`。Worker 现在会优先使用 Kimi/Moonshot 兼容 OpenAI 的接口，缺少密钥时回退到 Cloudflare Workers AI；前后端均带有界限明确的超时，避免界面无限重连。
 
 ```bash
 cd ai-worker

@@ -46,7 +46,7 @@
 │  Vercel 托管 · GitHub 自动部署 · PWA 支持                 │
 ├─────────────────────────────────────────────────────────┤
 │          AI 后端 (Cloudflare Worker)                     │
-│  aix-ai-api.musd-app.workers.dev                        │
+│  ai.qdd.app                                             │
 │  /ai/generate  /ai/stream  /url/extract                  │
 │  模型: Kimi/Moonshot 优先 · Cloudflare AI 兜底           │
 ├─────────────────────────────────────────────────────────┤
@@ -164,7 +164,7 @@
 
 ## 4. AI 后端接口合约
 
-**Worker URL**: `https://aix-ai-api.musd-app.workers.dev`
+**Worker URL**: `https://ai.qdd.app`
 **Account**: Cloudflare 主账号 (07728da33c7e188b00a80f1462376afc)
 **部署配置**: `ai-worker/wrangler.toml`
 
@@ -491,7 +491,7 @@ platformMockConfigs = {
 | 服务 | URL | 托管平台 | 账号 |
 |------|-----|---------|------|
 | 主站 | https://x.banana.school | Vercel | team_calleZxNrMqEshvTET0TK8rU |
-| AI Worker | https://aix-ai-api.musd-app.workers.dev | CF Workers 主账号 | 07728da33c7e188b00a80f1462376afc |
+| AI Worker | https://ai.qdd.app | CF Workers 主账号 | 07728da33c7e188b00a80f1462376afc |
 | 热点 API | https://x.banana.school/api/hot-topics | Vercel Serverless | 同主站 |
 
 ### 10.2 本地开发

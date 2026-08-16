@@ -1946,7 +1946,7 @@ function showNextStepBanner() {
 /* ─── Phase 2: AI Cancel + Timeout ─────────────────── */
 let generateAbortController = null;
 let generateTimeoutId = null;
-const GENERATE_TIMEOUT_MS = 30000;
+const GENERATE_TIMEOUT_MS = 28000;
 
 function setGenerateBtnStop(isStreaming) {
   const btn = $("generateBtn");
@@ -1985,7 +1985,7 @@ function cancelGeneration(reason) {
   setGenerateBtnLoading(false);
 
   if (reason === "timeout") {
-    flash("生成超时（30 秒），已保留已生成内容", "error");
+    flash("AI 服务响应超时，已保留已生成内容；可稍后重试", "error");
   } else {
     flash("已停止生成，保留已有内容");
   }

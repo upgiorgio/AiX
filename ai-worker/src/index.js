@@ -12,9 +12,12 @@ const CORS = {
 };
 
 const MODEL_DEFAULT = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
-const MODEL_FAST    = "@cf/meta/llama-3.1-8b-instruct";
+// The non-suffixed llama-3.1-8b-instruct model was deprecated by Workers AI
+// on 2026-05-30 and returns 5028. Keep the fast path on the active model.
+const MODEL_FAST    = "@cf/meta/llama-3.1-8b-instruct-fast";
 const KIMI_BASE_URL_DEFAULT = "https://api.moonshot.cn/v1";
 const KIMI_MODEL_DEFAULT = "kimi-k2.6";
+const REQUEST_TIMEOUT_MS = 20_000;
 
 function ok(body, extra = {}) {
   return new Response(body, {
@@ -55,19 +58,27 @@ async function callKimiChat(messages, env, { fast = false, stream = false, maxTo
   const cfg = getKimiConfig(env, fast);
   if (!cfg) throw new Error("Kimi API key missing");
 
-  const resp = await fetch(`${cfg.baseUrl}/chat/completions`, {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort("upstream timeout"), REQUEST_TIMEOUT_MS);
+  let resp;
+  try {
+    resp = await fetch(`${cfg.baseUrl}/chat/completions`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${cfg.key}`,
     },
-    body: JSON.stringify({
+      body: JSON.stringify({
       model: cfg.model,
       messages,
       stream,
       max_tokens: maxTokens,
-    }),
-  });
+      }),
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
 
   if (!resp.ok) {
     const text = await resp.text();

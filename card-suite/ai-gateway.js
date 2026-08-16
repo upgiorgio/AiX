@@ -1,14 +1,15 @@
 /**
  * AiX AI Gateway v1.0
  * 统一 AI 接入层 — 所有工具页面共享
- * Worker: https://aix-ai-api.musd-app.workers.dev
+ * Worker: https://ai.qdd.app
  */
 
-const AI_WORKER   = "https://aix-ai-api.musd-app.workers.dev";
+const AI_WORKER   = "https://ai.qdd.app";
 const AI_CFG_KEY  = "aix-ai-settings-v1";
 const OPENAI_BASE_URL = "https://api.openai.com/v1";
 const KIMI_BASE_URL = "https://api.moonshot.cn/v1";
 const KIMI_MODEL = "kimi-k2.6";
+const AI_REQUEST_TIMEOUT_MS = 28_000;
 
 /* ── Settings ── */
 function normalizeProvider(provider) {
@@ -39,6 +40,22 @@ function hasAIKey() {
   return (s.provider === "openai" && !!s.openaiKey) || (s.provider === "kimi" && !!s.kimiKey);
 }
 
+function requestSignal(signal, timeoutMs = AI_REQUEST_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(new DOMException("AI request timed out", "TimeoutError")), timeoutMs);
+  if (signal) {
+    if (signal.aborted) controller.abort(signal.reason);
+    else signal.addEventListener("abort", () => controller.abort(signal.reason), { once: true });
+  }
+  return { signal: controller.signal, dispose: () => clearTimeout(timeout) };
+}
+
+async function fetchWithTimeout(url, options = {}, timeoutMs = AI_REQUEST_TIMEOUT_MS) {
+  const scoped = requestSignal(options.signal, timeoutMs);
+  try { return await fetch(url, { ...options, signal: scoped.signal }); }
+  finally { scoped.dispose(); }
+}
+
 /* ── Core: generate (non-streaming) ── */
 async function aiGenerate(prompt, { system = "", fast = false } = {}) {
   const s = getAISettings();
@@ -53,7 +70,7 @@ async function aiGenerate(prompt, { system = "", fast = false } = {}) {
       baseUrl: normalizeBaseUrl(s.kimiBaseUrl, KIMI_BASE_URL),
     });
   }
-  const res = await fetch(`${AI_WORKER}/ai/generate`, {
+  const res = await fetchWithTimeout(`${AI_WORKER}/ai/generate`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ prompt, system, fast }),
@@ -82,7 +99,7 @@ async function aiStream(prompt, { system = "", onChunk, onDone, onError, fast = 
     });
   }
   try {
-    const res = await fetch(`${AI_WORKER}/ai/stream`, {
+    const res = await fetchWithTimeout(`${AI_WORKER}/ai/stream`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt, system, fast }),
@@ -111,13 +128,16 @@ async function aiStream(prompt, { system = "", onChunk, onDone, onError, fast = 
     }
     onDone?.();
   } catch (e) {
-    onError?.(e.message);
+    const message = e?.name === "TimeoutError" || e?.name === "AbortError"
+      ? "AI 服务响应超时，请稍后重试；已保留当前内容"
+      : (e?.message || "网络连接失败");
+    onError?.(message);
   }
 }
 
 /* ── URL Extract ── */
 async function aiExtractUrl(url) {
-  const res = await fetch(`${AI_WORKER}/url/extract`, {
+  const res = await fetchWithTimeout(`${AI_WORKER}/url/extract`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ url }),
@@ -131,7 +151,7 @@ async function callChatCompletions(prompt, { system, key, model, baseUrl }) {
   const messages = [];
   if (system) messages.push({ role: "system", content: system });
   messages.push({ role: "user", content: prompt });
-  const res = await fetch(`${normalizeBaseUrl(baseUrl, OPENAI_BASE_URL)}/chat/completions`, {
+  const res = await fetchWithTimeout(`${normalizeBaseUrl(baseUrl, OPENAI_BASE_URL)}/chat/completions`, {
     method: "POST",
     headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
     body: JSON.stringify({ model, messages, max_tokens: 2048 }),
@@ -149,7 +169,7 @@ async function streamChatCompletions(prompt, { system, key, model, baseUrl, onCh
   if (system) messages.push({ role: "system", content: system });
   messages.push({ role: "user", content: prompt });
   try {
-    const res = await fetch(`${normalizeBaseUrl(baseUrl, OPENAI_BASE_URL)}/chat/completions`, {
+    const res = await fetchWithTimeout(`${normalizeBaseUrl(baseUrl, OPENAI_BASE_URL)}/chat/completions`, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` },
       body: JSON.stringify({ model, messages, max_tokens: 2048, stream: true }),
@@ -177,7 +197,12 @@ async function streamChatCompletions(prompt, { system, key, model, baseUrl, onCh
       }
     }
     onDone?.();
-  } catch (e) { onError?.(e.message); }
+  } catch (e) {
+    const message = e?.name === "TimeoutError" || e?.name === "AbortError"
+      ? "AI 服务响应超时，请稍后重试；已保留当前内容"
+      : (e?.message || "网络连接失败");
+    onError?.(message);
+  }
 }
 
 /* ── Settings Modal (injected into DOM) ── */

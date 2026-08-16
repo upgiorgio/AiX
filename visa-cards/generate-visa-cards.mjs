@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { remainingCountries } from "./remaining-countries.mjs";
+import { enrichCountries } from "./application-guides.mjs";
+import { expansionCountries, expansionGuides } from "./expansion-countries.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const VERIFIED = "2026-07-28";
@@ -10,7 +12,7 @@ const c = (title, answer, bullets, sourceIds, tone = "standard") => ({
   title, answer, bullets, sourceIds, tone
 });
 
-const countries = [
+const countries = enrichCountries([
   {
     slug: "美国签证-乔大帅",
     code: "US",
@@ -166,14 +168,14 @@ const countries = [
       visa: "一般观光通常为 C-3-9",
       arrivalCard: "按韩国入境部门当期要求",
       fee: "按签证类别、领区及签证中心通知",
-      processing: "领区差异明显，广州一般观光自 2026-06-01 起标示 10 个工作日内",
+      processing: "领区差异明显；广州一般观光标示 10 个工作日内，上海自 2026-07-13 起最长约 20 个工作日",
       districtException: "必须按常住地所属使领馆/签证中心核验",
       risk: "高"
     },
     sources: [
       { id: "embassy", label: "韩国驻华使馆｜签证材料", url: "https://overseas.mofa.go.kr/cn-zh/brd/m_1201/view.do?page=1&seq=695439", pageDate: "2026-07-14" },
       { id: "visa", label: "Korea Visa Portal", url: "https://www.visa.go.kr/", pageDate: "2026-07-28" },
-      { id: "shanghai", label: "韩国驻上海总领馆｜公告", url: "https://overseas.mofa.go.kr/cn-shanghai-zh/brd/m_492/list.do", pageDate: "2026-07-28" },
+      { id: "shanghai", label: "韩国驻上海总领馆｜C-3-9 审理时间调整公告", url: "https://overseas.mofa.go.kr/cn-shanghai-zh/brd/m_492/view.do?seq=760835", pageDate: "2026-07-06" },
       { id: "guangzhou", label: "韩国驻广州总领馆｜VISA", url: "https://overseas.mofa.go.kr/cn-guangzhou-zh/wpge/m_91/contents.do", pageDate: "2026-06-01" }
     ],
     cards: [
@@ -182,7 +184,7 @@ const countries = [
       c("电子申请表怎么填？", "以 Visa Portal 和领区通知为准", ["姓名拼音、护照号逐字核对", "旅行目的与行程一致", "打印、签字要求按受理机构执行"], ["visa"]),
       c("从哪里递交？", "多数普通申请转由所属签证申请中心受理", ["先看使领馆最新公告", "外交、公务或紧急人道情况可能另有渠道", "只用官方指向的中心入口"], ["embassy"]),
       c("基础材料怎么分组？", "身份、申请表、行程、资金与在职/在学证明", ["领区清单优先于通用攻略", "提交复印件时核对是否需原件", "被要求补件会延长审理"], ["embassy"]),
-      c("领区差异有多大？", "可能直接影响受理资格与审理时间", ["上海 2026-07 曾连续调整旅游签业务", "广州一般观光标示 10 个工作日内", "每次提交前重开本领区公告"], ["shanghai", "guangzhou"], "risk"),
+      c("领区差异有多大？", "可能直接影响受理资格与审理时间", ["上海自 2026-07-13 起 C-3-9 最长约 20 个工作日", "广州一般观光标示 10 个工作日内", "每次提交前重开本领区公告"], ["shanghai", "guangzhou"], "risk"),
       c("团签、济州或过境免签", "都是有条件例外，不能等同全国自由行免签", ["核对出发地、目的地、路线和团队资格", "任一条件不符就按普通签证准备", "不要购买所谓“口岸包过”服务"], ["embassy"]),
       c("进度和签发结果怎么查？", "在 Korea Visa Portal 查询", ["按系统要求输入护照与英文姓名", "签发确认书信息要逐项核对", "状态更新不等于已拿到全部旅行文件"], ["visa"]),
       c("入境申报与随身材料", "按出发时的韩国官方入境规则办理", ["随身带返程票、住宿、行程与资金证明", "签证不保证入境", "回答与申请用途一致"], ["visa"]),
@@ -358,8 +360,9 @@ const countries = [
       c("新加坡官方来源与核验记录", "互免、入境卡、e-Pass 和延期都只看 ICA", ["协议生效：2024-02-09", "Entering Singapore 页面：2026-06-01", "每月复核入境要求与防钓鱼提醒"], ["waiver", "entry", "sgac", "extend"])
     ]
   },
-  ...remainingCountries
-];
+  ...remainingCountries,
+  ...expansionCountries
+], expansionGuides);
 
 const template = (data) => `<!doctype html>
 <html lang="zh-CN">
@@ -389,12 +392,29 @@ button,select,input{font:inherit}.app{display:grid;grid-template-columns:320px m
 .rule{width:53px;border-top:5px solid var(--orange);margin:0 0 22px}.bullets{display:grid;gap:12px}.bullet{display:grid;grid-template-columns:17px 1fr;gap:8px;font-size:18px;line-height:1.55;outline:none}.bullet::before{content:"◆";color:var(--orange);font-size:9px;margin-top:8px}.risk .answer{color:var(--danger)}.risk .rule{border-color:var(--danger)}.risk .bullet::before{color:var(--danger)}
 .verify{margin-top:auto;border-top:1px solid #bcb09c;padding-top:13px;display:grid;grid-template-columns:1fr auto;gap:15px;font:10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#5e646a}.verify b{color:var(--ink)}
 .card-foot{position:relative;z-index:1;min-height:72px;background:#e8ddca;padding:12px 30px 10px;border-top:1px solid #cabda7;font-size:10px;line-height:1.48;color:#58606a}.foot-top{display:flex;justify-content:space-between;gap:15px}.page{font:700 16px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--orange)}.disclaimer{margin-top:4px}
+.application-box{margin-top:20px;padding:13px;background:#efe7d7;border:1px solid #c9bda9;font-size:12px;line-height:1.6}.application-box h2{margin:0 0 7px;font:700 18px "Kaiti SC","STKaiti",serif}.application-box a{display:block;color:#184b71;text-decoration:underline;text-underline-offset:3px;margin:5px 0}.application-box ul{margin:8px 0 0;padding-left:18px;color:#59626b}.application-box small{display:block;margin-top:8px;color:#7b6a59;font-size:10px}
 .sources{max-width:1100px;margin:18px auto 0;background:#f4eee3;border:1px solid #c4b9a8;padding:14px 18px}.sources summary{cursor:pointer;font-weight:700}.sources a{color:#184b71;word-break:break-all}.sources li{margin:8px 0;font-size:13px}
 .passport-card[data-layout="x"]{--cw:800px;--ch:450px}.passport-card[data-layout="x"] .card-head{height:88px;padding:16px 26px}.passport-card[data-layout="x"] .country{font-size:25px}.passport-card[data-layout="x"] .card-main{padding:20px 30px 10px}.passport-card[data-layout="x"] .question{font-size:20px;margin-bottom:10px}.passport-card[data-layout="x"] .answer{font-size:31px;margin-bottom:13px}.passport-card[data-layout="x"] .rule{margin-bottom:11px;border-width:3px}.passport-card[data-layout="x"] .bullets{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px}.passport-card[data-layout="x"] .bullet{font-size:14px;line-height:1.4}.passport-card[data-layout="x"] .verify{padding-top:7px}.passport-card[data-layout="x"] .card-foot{min-height:54px;padding:7px 25px;font-size:8px}
 .passport-card[data-layout="square"]{--cw:600px;--ch:600px}.passport-card[data-layout="square"] .answer{font-size:37px}.passport-card[data-layout="square"] .card-main{padding-top:28px}.passport-card[data-layout="square"] .bullet{font-size:16px}
 .passport-card[data-layout="wechat"]{--cw:900px;--ch:383px}.passport-card[data-layout="wechat"] .card-head{height:76px;padding:12px 28px}.passport-card[data-layout="wechat"] .country{font-size:23px}.passport-card[data-layout="wechat"] .flag{font-size:27px}.passport-card[data-layout="wechat"] .card-main{padding:15px 30px 8px}.passport-card[data-layout="wechat"] .question{font-size:17px;margin-bottom:7px}.passport-card[data-layout="wechat"] .answer{font-size:29px;margin-bottom:9px}.passport-card[data-layout="wechat"] .rule{display:none}.passport-card[data-layout="wechat"] .bullets{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.passport-card[data-layout="wechat"] .bullet{font-size:12px;line-height:1.35}.passport-card[data-layout="wechat"] .verify{padding-top:5px}.passport-card[data-layout="wechat"] .card-foot{min-height:46px;padding:6px 27px;font-size:8px}.passport-card[data-layout="wechat"] .disclaimer{display:none}
 @media(max-width:900px){.app{display:block}.panel{position:relative;height:auto}.workspace{padding:18px 8px}.stage{overflow:auto;justify-content:start}.workspace-head{padding:0 8px}.passport-card{transform-origin:top left}.sources{margin:14px 8px}}
 @media print{.panel,.workspace-head,.sources{display:none}.app,.workspace,.stage{display:block;padding:0;background:#fff}.passport-card{box-shadow:none}}
+/* Passport Desk editor refresh: keep the card tool consistent with qdd.app. */
+:root{--ui:#10283f;--ui-2:#1c3b58;--paper:#f5f6f2;--line:#d9ded9;--soft:#edf1ed;--sans:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--sans)}
+body{background:radial-gradient(circle at 75% 0,rgba(239,131,84,.12),transparent 30rem),var(--paper)}
+.app{grid-template-columns:300px minmax(0,1fr);gap:0}
+.panel{padding:26px 21px;background:linear-gradient(165deg,var(--ui),#0d2135);border-right:0;box-shadow:12px 0 32px rgba(18,34,56,.08)}
+.brand{font-family:var(--sans);font-size:19px;letter-spacing:-.03em}.en{color:#e9a47f}.label{margin-top:20px;color:#a8bac7}.control,.btn{border-radius:10px;padding:11px 12px;border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.08)}
+.btn{margin:5px 0;transition:transform .18s ease,background .18s ease,border-color .18s ease}.btn:hover{background:rgba(255,255,255,.15);border-color:var(--orange);transform:translateY(-1px)}.btn.primary{background:var(--orange);color:var(--ui)}
+.card-list{gap:5px}.card-jump{border-radius:7px;padding:8px 0;border-color:rgba(255,255,255,.16);background:rgba(255,255,255,.08)}
+.application-box{border-radius:13px;background:rgba(255,255,255,.96);border:0;color:var(--ink);box-shadow:0 12px 26px rgba(0,0,0,.12)}.application-box h2{font-family:var(--sans);font-size:16px}.application-box a{color:var(--ui-2);font-weight:700}.application-box small{color:#7b6a59}
+.workspace{padding:32px;min-width:0}.workspace-head{max-width:1120px}.workspace-head h1{font-family:var(--sans);font-size:28px;letter-spacing:-.04em}.workspace-head p{color:#6b7b86}.counter{color:#71818b}
+.stage{max-width:1120px;border:1px solid var(--line);border-radius:22px;background:#e9eeea;box-shadow:inset 0 0 0 1px rgba(255,255,255,.48);padding:34px;min-height:calc(100vh - 145px)}
+.passport-card{border-radius:18px;box-shadow:0 22px 58px rgba(18,34,56,.17);border:1px solid rgba(18,34,56,.16)}
+.card-head{border-radius:17px 17px 0 0}.card-main{font-family:var(--sans)}.question{font-family:var(--sans);font-size:24px}.answer{font-family:var(--sans);font-size:37px;letter-spacing:-.055em}.bullet{font-size:17px}.card-foot{border-radius:0 0 17px 17px}
+.sources{border:1px solid var(--line);border-radius:13px;background:#fff;box-shadow:0 8px 24px rgba(18,34,56,.06)}.sources a{color:var(--ui-2)}
+@media(max-width:900px){.workspace{padding:20px 12px}.stage{padding:20px;border-radius:16px}.workspace-head{display:block}.counter{margin-top:8px}.passport-card{border-radius:14px}}
 </style>
 </head>
 <body>
@@ -402,7 +422,7 @@ button,select,input{font:inherit}.app{display:grid;grid-template-columns:320px m
 <div class="app">
   <aside class="panel">
     <h1 class="brand">qdd.app｜乔大帅出境说明书</h1>
-    <p class="en">CHINA PASSPORT BRIEF · 政策核验版</p>
+    <p class="en">中国护照出境说明 · 人工核对版</p>
     <div class="label">平台尺寸</div>
     <select id="preset" class="control">
       <option value="xhs">小红书 / 公众号 1080×1440</option>
@@ -411,6 +431,7 @@ button,select,input{font:inherit}.app{display:grid;grid-template-columns:320px m
       <option value="wechat">公众号头图 900×383</option>
     </select>
     <div class="label">卡片导航</div><div class="card-list" id="cardList"></div>
+    ${data.application ? `<section class="application-box"><h2>${data.application.routeLabel}</h2><a href="${data.application.applicationUrl}" target="_blank" rel="noopener">${data.application.applicationLabel} ↗</a>${data.application.documentsUrl ? `<a href="${data.application.documentsUrl}" target="_blank" rel="noopener">官方材料清单 ↗</a>` : ""}<ul>${data.application.requiredDocuments.slice(0, 5).map(item => `<li>${item.required === false ? "按需" : "必看"}：${item.name}</li>`).join("")}</ul><small>成功率：${data.application.successRate.label}</small></section>` : ""}
     <div class="label">导出</div>
     <button class="btn primary" id="downloadOne">下载此卡 PNG</button>
     <button class="btn" id="downloadAll">下载全部 PNG</button>
@@ -453,11 +474,11 @@ function fitCardText(card){
 function render(){
  const item=data.cards[current], card=$("#card"), layout=$("#preset").value;
  card.dataset.layout=layout; card.className="passport-card "+(item.tone==="risk"?"risk":"");
- card.innerHTML='<header class="card-head"><div><div class="series">CHINA PASSPORT BRIEF · '+esc(data.code)+'</div><div class="country">'+esc(data.flag)+" "+esc(data.country)+'</div></div><div class="flag">'+esc(data.flag)+'</div></header>'+
+ card.innerHTML='<header class="card-head"><div><div class="series">中国护照出境说明 · '+esc(data.code)+'</div><div class="country">'+esc(data.flag)+" "+esc(data.country)+'</div></div><div class="flag">'+esc(data.flag)+'</div></header>'+
  '<main class="card-main"><h2 class="question" contenteditable="true" data-field="title">'+esc(item.title)+'</h2><div class="answer" contenteditable="true" data-field="answer">'+esc(item.answer)+'</div><div class="rule"></div><div class="bullets">'+item.bullets.map((b,i)=>'<div class="bullet" contenteditable="true" data-bullet="'+i+'">'+esc(b)+'</div>').join("")+'</div>'+
- '<div class="verify"><div><b>核验标签 VERIFIED</b><br>政策生效 '+esc(data.policyEffective)+' · 官方页 '+esc(data.officialUpdated)+' · 本页核验 '+esc(data.verified)+'</div><div>'+esc(data.pattern)+'</div></div></main>'+
+ '<div class="verify"><div><b>核验状态：已核验</b><br>政策生效 '+esc(data.policyEffective)+' · 官方页 '+esc(data.officialUpdated)+' · 本页核验 '+esc(data.verified)+'</div><div>'+esc(data.pattern)+'</div></div></main>'+
  '<footer class="card-foot"><div class="foot-top"><div>适用：中国大陆居民 · 中国普通护照 · 短期旅游<br>qdd.app · @乔大帅 整理 · '+esc(sourceLabel(item.sourceIds))+'</div><div class="page">'+String(current+1).padStart(2,"0")+' / '+String(data.cards.length).padStart(2,"0")+'</div></div><div class="disclaimer">以官方最终审核及入境决定为准 · 下次复核 '+esc(data.nextReview)+'</div></footer>';
- $("#counter").textContent="CARD "+String(current+1).padStart(2,"0")+" / "+String(data.cards.length).padStart(2,"0");
+ $("#counter").textContent="第 "+String(current+1).padStart(2,"0")+" 张 / 共 "+String(data.cards.length).padStart(2,"0")+" 张";
  $$(".card-jump").forEach((b,i)=>b.classList.toggle("active",i===current));
  card.querySelectorAll("[contenteditable]").forEach(el=>el.addEventListener("input",()=>{
    if(el.dataset.field)data.cards[current][el.dataset.field]=el.textContent.trim();

@@ -16,6 +16,14 @@ const emptyState = document.querySelector("#empty-state");
 const filterButtons = [...document.querySelectorAll(".filter")];
 let activeFilter = "all";
 
+if (searchInput) {
+  const initialQuery = new URLSearchParams(window.location.search).get("q");
+  if (initialQuery) {
+    searchInput.value = initialQuery;
+    requestAnimationFrame(() => document.querySelector("#countries")?.scrollIntoView({ block: "start" }));
+  }
+}
+
 function filterCountries() {
   if (!countryGrid) return;
   const query = (searchInput?.value || "").trim().toLowerCase();
@@ -34,8 +42,12 @@ function filterCountries() {
 }
 
 searchInput?.addEventListener("input", filterCountries);
+if (searchInput?.value) filterCountries();
 document.querySelector("#country-search")?.addEventListener("submit", event => {
   event.preventDefault();
+  const query = searchInput?.value.trim() || "";
+  const nextUrl = query ? `/?q=${encodeURIComponent(query)}` : "/";
+  window.history.replaceState(null, "", nextUrl);
   document.querySelector("#countries")?.scrollIntoView({ behavior: "smooth" });
   filterCountries();
 });

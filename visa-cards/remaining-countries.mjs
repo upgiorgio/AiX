@@ -114,7 +114,7 @@ export const remainingCountries = [
   {
     slug: "阿联酋免签-乔大帅", code: "AE", flag: "🇦🇪", country: "阿联酋", topic: "30 天免签",
     accent: "#d66d3d", secondary: "#244447", pattern: "EMIRATES / 13",
-    policyEffective: "2018-01-16", officialUpdated: "2026-07-29", verified: VERIFIED, nextReview: "2026-08-29",
+    policyEffective: "2016-11-01", officialUpdated: "2026-07-29", verified: VERIFIED, nextReview: "2026-08-29",
     fields: {
       passport: "有效中国普通护照", purpose: "短期旅游及获准访问", stay: "免签停留最多 30 天",
       cumulative: "延期与再次入境须按移民机关当期规则", visa: "符合条件可免签",
@@ -192,12 +192,12 @@ export const remainingCountries = [
   {
     slug: "新西兰签证-乔大帅", code: "NZ", flag: "🇳🇿", country: "新西兰", topic: "Visitor Visa",
     accent: "#d56e3d", secondary: "#183d55", pattern: "AOTEAROA / 16",
-    policyEffective: "2025-11-03", officialUpdated: "2026-07-29", verified: VERIFIED, nextReview: "2026-08-29",
+    policyEffective: "不适用（Visitor Visa 为现行类别）", officialUpdated: "2026-08-13", verified: "2026-08-13", nextReview: "2026-09-13",
     fields: {
       passport: "中国普通护照", purpose: "旅游、探亲访友", stay: "多次签每 12 个月累计最多 6 个月；单次签最多 9 个月/18 个月",
       cumulative: "以获批签证的入境次数和条件为准", visa: "通常需要 Visitor Visa；符合澳洲出发试点者可改用 NZeTA",
       arrivalCard: "需要 New Zealand Traveller Declaration，最早出发前 24 小时提交",
-      fee: "Visitor Visa 自 NZD 441 起", processing: "官方当前显示 80% 约 1.5–2 周，动态变化",
+      fee: "Visitor Visa 自 NZD 441 起", processing: "官方当前显示 80% 约 1.5 周，动态变化",
       districtException: "持合资格澳大利亚签证且每次从澳大利亚出发者，可在试点期用 NZeTA", risk: "中高"
     },
     sources: [
@@ -209,9 +209,9 @@ export const remainingCountries = [
     cards: [
       c("中国护照去新西兰要签证吗？", "通常要办 Visitor Visa", ["适用旅游和探亲访友", "可在线申请", "获批不等于保证入境"], ["guide", "visitor"]),
       c("能停留多久？", "多次签与单次签规则不同", ["多次签：每 12 个月累计最多 6 个月", "单次签：最多 9 个月/18 个月", "最终以签证条件为准"], ["guide", "visitor"]),
-      c("费用和时间", "自 NZD 441 起，80% 约 1.5–2 周", ["处理时间会动态变化", "材料不足可能延误或拒签", "官方建议获批前别订不可退行程"], ["guide", "visitor"]),
+      c("费用和时间", "自 NZD 441 起，80% 约 1.5 周", ["处理时间会动态变化", "材料不足可能延误或拒签", "官方建议获批前别订不可退行程"], ["guide", "visitor"]),
       c("材料核心是什么？", "真实访客、足够资金、会按期离境", ["中文文件需按要求提供英文翻译", "提交原件扫描件和译文", "行程与个人财务能力匹配"], ["guide"]),
-      c("特殊 NZeTA 试点", "持合资格澳签并从澳大利亚出发，可免 Visitor Visa", ["试点自 2025-11-03 起运行 12 个月", "每次都必须从澳大利亚出发", "停留最多 3 个月并持有效 NZeTA"], ["trial", "nzeta"], "risk"),
+      c("特殊 NZeTA 试点", "持合资格澳签并从澳大利亚出发，可免 Visitor Visa", ["试点自 2025-11-03 起，官方现称持续至另行通知", "每次都必须从澳大利亚出发", "停留最多 3 个月并持有效 NZeTA"], ["trial", "nzeta"], "risk"),
       c("NZTD 什么时候填？", "最早可在开始旅行前 24 小时提交", ["数字或纸质申报按官方要求", "如实申报食品、药品与生物安全物品", "保存提交确认"], ["guide"]),
       c("入境时准备什么？", "护照、签证/NZeTA、返程、住宿和资金证明", ["边检会判断是否仍为真实访客", "海关和生物安全检查独立进行", "回答与申请保持一致"], ["guide", "visitor"]),
       c("新西兰官方来源与核验记录", "普通路径与澳洲出发试点必须分开写", ["本页核验：2026-07-29", "试点到期前重点复核", "费用和处理时间每次出发前重查"], ["guide", "visitor", "trial", "nzeta"])
@@ -220,7 +220,7 @@ export const remainingCountries = [
   {
     slug: "加拿大签证-乔大帅", code: "CA", flag: "🇨🇦", country: "加拿大", topic: "Visitor Visa",
     accent: "#d85f3a", secondary: "#34404b", pattern: "CANADA / 17",
-    policyEffective: "2026-05-26", officialUpdated: "2026-07-19", verified: VERIFIED, nextReview: "2026-08-29",
+    policyEffective: "不适用（Visitor Visa 为现行类别）", officialUpdated: "2026-08-13", verified: "2026-08-13", nextReview: "2026-09-13",
     fields: {
       passport: "中国普通护照", purpose: "短期旅游、探亲访友", stay: "多数访客每次最多 6 个月，边境官可决定更短或更长",
       cumulative: "签证有效期不等于获准停留期", visa: "需要 Visitor Visa（TRV）",
@@ -296,29 +296,192 @@ export const remainingCountries = [
     ]
   },
   {
-    slug: "俄罗斯电子签-乔大帅", code: "RU", flag: "🇷🇺", country: "俄罗斯", topic: "统一电子签证",
+    slug: "俄罗斯免签-乔大帅", code: "RU", flag: "🇷🇺", country: "俄罗斯", topic: "30 天临时免签",
     accent: "#d3633b", secondary: "#29405c", pattern: "RUSSIA / 20",
-    policyEffective: "2025-08-23", officialUpdated: "2026-07-29", verified: VERIFIED, nextReview: "2026-08-05",
+    policyEffective: "2025-12-01", officialUpdated: "2026-07-21", verified: "2026-08-13", nextReview: "2026-08-20",
     fields: {
-      passport: "符合名单要求的中国普通护照", purpose: "旅游、私人访问、商务及电子签允许活动",
-      stay: "单次最多 30 天", cumulative: "签发后 120 天内使用，离境不得晚于第 120 天",
-      visa: "需要，可申请统一电子签证", arrivalCard: "按俄罗斯边境与移民登记要求",
-      fee: "以俄罗斯外交部电子签系统支付页为准", processing: "官方称 4 个日历日，不含提交当天",
-      districtException: "只能从政府批准的电子签口岸出入境；住宿方通常办理移民登记", risk: "高"
+      passport: "有效中国普通护照", purpose: "旅游、探亲访友、商务、科技文化交流、体育及过境等公告列明目的",
+      stay: "每次最多 30 天", cumulative: "官方公告仅明确单次不超过 30 天；频繁入境仍由边境机关审核",
+      visa: "符合公告目的可免签，现行安排延长至 2027-12-31", arrivalCard: "按俄罗斯边境与移民登记要求",
+      fee: "免签本身无签证费", processing: "入境现场审核，不承诺准入",
+      districtException: "工作、新闻采访、学习、居留及国际道路运输人员不适用，须预先办理相应签证", risk: "高"
     },
     sources: [
-      { id: "portal", label: "俄罗斯外交部｜统一电子签", url: "https://electronic-visa.kdmid.ru/index_en.html", pageDate: "2026-07-29" },
-      { id: "faq", label: "俄罗斯外交部｜电子签 FAQ", url: "https://electronic-visa.kdmid.ru/faq_en.html", pageDate: "2026-07-29" }
+      { id: "start", label: "中国驻哈巴罗夫斯克总领馆｜俄罗斯对中国公民免签政策说明", url: "https://khabarovsk.china-consulate.gov.cn/lsfw/ZYTZ/202512/t20251202_11764651.htm", pageDate: "2025-12-02" },
+      { id: "extend", label: "中国驻俄罗斯使馆｜俄方延长对中国公民免签政策", url: "https://ru.china-embassy.gov.cn/lsfw/zytz_142816/202607/t20260721_11989093.htm", pageDate: "2026-07-21" },
+      { id: "qa", label: "俄罗斯驻华使馆答问｜免签适用范围与入境要求", url: "https://www.xuancheng.gov.cn/Special/show/19605.html", pageDate: "2025-12-02" }
     ],
     cards: [
-      c("中国护照去俄罗斯怎么签？", "短期旅游可申请统一电子签证", ["不需要邀请函或旅游确认函", "在线填表、付费、收取签发通知", "适用目的以官方清单为准"], ["portal", "faq"]),
-      c("2025 年后有效期怎么变？", "签发后 120 天内使用，单次最多停留 30 天", ["新规则自 2025-08-23 起适用", "离境不得晚于签发后第 120 天", "有效期不等于能住 120 天"], ["faq"], "risk"),
-      c("多久处理？", "官方称 4 个日历日，不含提交当天", ["周末和法定假日计入官方处理表述", "退回修改后会重新计算", "不要压着出发日申请"], ["portal", "faq"]),
-      c("只认哪个网站？", "只认 electronic-visa.kdmid.ru", ["警惕代办仿冒站", "逐字核对护照号和姓名", "保存通知并下载到手机"], ["portal"], "risk"),
-      c("哪些口岸能走？", "只能从政府批准的电子签口岸出入境", ["入境和离境口岸都必须在名单内", "不能从未授权口岸离境", "订票前先查最新口岸清单"], ["faq"]),
-      c("入境随身材料", "护照、电子签通知、返程、住宿和保险等", ["承运人和边境都会核验通知", "电子版之外建议准备打印备份", "签证不保证入境"], ["portal"]),
-      c("移民登记怎么做？", "一般需在抵达住宿地后 7 个工作日内办理", ["住酒店通常由酒店自动办理", "住私人住所要确认申报责任", "保存登记凭证至离境"], ["faq"], "risk"),
-      c("俄罗斯官方来源与核验记录", "有效期、停留期、口岸和登记均以外交部系统为准", ["政策生效：2025-08-23", "本页核验：2026-07-29", "每周扫描口岸与电子签规则"], ["portal", "faq"])
+      c("中国护照去俄罗斯免签吗？", "符合公告目的可免签，每次最多停留 30 天", ["适用有效中国普通护照", "现行安排延长至 2027-12-31", "边境机关仍作最终入境决定"], ["start", "extend"]),
+      c("免签到什么时候？", "俄方已把现行政策延长至 2027-12-31", ["最初安排自 2025-12-01 实施", "临时政策仍可能再次调整", "出发前重新查看使馆公告"], ["start", "extend"], "risk"),
+      c("哪些旅行目的适用？", "旅游、探亲访友、商务、交流、体育及过境等公告列明目的", ["入境时应能说明真实目的", "准备行程、住宿与返程证据", "目的不符可能被拒绝入境"], ["start", "qa"]),
+      c("哪些情况不能用免签？", "工作、新闻采访、学习、居留等须预先办相应签证", ["国际道路运输人员也不适用", "不要用短期免签替代工作或居留许可", "不确定时先向俄方使领馆核验"], ["start", "qa"], "risk"),
+      c("从哪些口岸可以入境？", "可从对外开放的俄罗斯边境检查站办理入境", ["航班与陆路口岸运营状态可能变化", "途经第三国要另查过境规则", "承运人仍会独立审核旅行文件"], ["qa"]),
+      c("入境随身材料", "护照、返程或续程、住宿、资金与行程证明", ["免签不等于无条件入境", "材料应与停留天数和旅行目的一致", "建议保存官方公告离线副本"], ["start", "qa"]),
+      c("抵达后还要做什么？", "按住宿地要求完成移民登记", ["酒店通常协助办理", "住私人住所要与接待方确认责任和时限", "保存登记凭证至离境"], ["qa"], "risk"),
+      c("俄罗斯官方来源与核验记录", "免签起始、适用范围与延期公告已交叉核验", ["政策生效：2025-12-01", "官方更新：2026-07-21", "本站核验：2026-08-13；每周复核"], ["start", "extend", "qa"])
+    ]
+  },
+  {
+    slug: "菲律宾免签-乔大帅", code: "PH", flag: "🇵🇭", country: "菲律宾", topic: "14 天限时免签 + eTravel",
+    accent: "#d8673c", secondary: "#1d4055", pattern: "MANILA / 21", policyEffective: "2026-01-16", officialUpdated: "2026-01-22", verified: "2026-08-13", nextReview: "2026-08-20",
+    fields: { passport: "中国普通护照", purpose: "仅旅游或商务", stay: "最多 14 天，不可延期或转换", cumulative: "限时安排暂为一年，期满前复核", visa: "符合条件可免签；转机、工作、学习等另办签证", arrivalCard: "需要 eTravel，抵达前 72 小时内登记", fee: "免签和 eTravel 本身无签证费；eTravel 免费", processing: "入境由菲律宾边检逐案决定", districtException: "仅 NAIA 马尼拉或 MCIA 宿务入境", risk: "高" },
+    sources: [
+      { id: "dfa", label: "菲律宾外交部｜14 天免签公告", url: "https://chongqingpcg.dfa.gov.ph/example-pages/news-press-releases/1167-philippines-to-allow-visa-free-entry-for-14-days-for-chinese-nationals", pageDate: "2026-01-16" },
+      { id: "embassy", label: "中国驻菲律宾使馆｜免签提醒", url: "https://ph.china-embassy.gov.cn/chn/lsfw/202601/t20260122_11843596.htm", pageDate: "2026-01-22" },
+      { id: "evisa", label: "菲律宾 eVisaPH｜中国公民政策", url: "https://evisa.gov.ph/page/policy?l1=Non-Immigrant+Visas", pageDate: "2026-08-13" },
+      { id: "etravel", label: "菲律宾 eTravel｜官方 FAQ", url: "https://etravel.gov.ph/en/frequently-asked-questions", pageDate: "2026-08-13" }
+    ],
+    cards: [
+      c("中国护照去菲律宾免签吗？", "符合条件可免签 14 天", ["仅限旅游或商务", "只可从 NAIA 或 MCIA 入境", "安排暂为一年并会复核"], ["dfa", "embassy"]),
+      c("14 天能延期或转签吗？", "不能延期，也不能转换为其他签证类别", ["超过 14 天要提前查 eVisa 或传统签证", "不要买超过许可期限的不可退行程", "最终以入境记录为准"], ["dfa", "evisa"], "risk"),
+      c("哪些机场可以用？", "仅马尼拉 NAIA 和宿务 MCIA", ["其他机场、海港或陆路口岸不要套用", "转机赴第三国不适用该免签", "联程路线也要逐段核对过境规则"], ["embassy", "evisa"]),
+      c("eTravel 什么时候填？", "抵达前 72 小时内在官方系统登记", ["eTravel 是入境申报，不是签证", "官方注册免费", "保存 QR 信息供值机和边检核验"], ["etravel"]),
+      c("入境需要准备什么？", "护照、酒店、返程/续程和行程证明", ["护照拟停留期后至少 6 个月有效", "准备必要的资金或商务证明", "材料与旅游/商务目的保持一致"], ["embassy"]),
+      c("哪些情况不能用免签？", "工作、学习、转机赴第三国或更长停留不适用", ["提前申请相应签证", "不要把免签当作菲律宾境内转身份通道", "按 eVisaPH 或使领馆要求准备"], ["embassy", "evisa"], "risk"),
+      c("会不会有个人成功率？", "免签没有签证成功率，入境由边检决定", ["无“包入境”或内部通道", "黑名单或不良记录仍可能影响准入", "不要相信中介承诺"], ["dfa", "embassy"]),
+      c("菲律宾官方来源与核验记录", "免签范围、机场、eTravel 和备用签证路径分开核对", ["政策生效：2026-01-16", "本站核验：2026-08-13", "限时安排应每周扫描官方公告"], ["dfa", "embassy", "evisa", "etravel"])
+    ]
+  },
+  {
+    slug: "柬埔寨免签-乔大帅", code: "KH", flag: "🇰🇭", country: "柬埔寨", topic: "14 天限时免签 + e-Arrival",
+    accent: "#c9603d", secondary: "#273f50", pattern: "ANGKOR / 22", policyEffective: "2026-06-15", officialUpdated: "2026-06-20", verified: "2026-08-13", nextReview: "2026-09-01",
+    fields: { passport: "中国普通护照", purpose: "本轮限时政策按短期旅游口径", stay: "单次不超过 14 天；免签期内可多次入境", cumulative: "无另行累计上限；每次均不超过 14 天", visa: "2026-06-15 至 2026-10-15 限时免签", arrivalCard: "需要 e-Arrival，抵达前 7 天内填写", fee: "免签和 e-Arrival 本身无签证费", processing: "口岸现场审核，不承诺准入", districtException: "中国或第三国出发均可；口岸规则仍需核对", risk: "高" },
+    sources: [
+      { id: "embassy", label: "中国驻柬埔寨使馆｜限时免签提醒", url: "https://kh.china-embassy.gov.cn/lsfws/lsbh/202606/t20260620_11949230.htm", pageDate: "2026-06-20" },
+      { id: "arrival", label: "柬埔寨 e-Arrival｜官方入口", url: "https://www.arrival.gov.kh/", pageDate: "2026-08-13" },
+      { id: "evisa", label: "柬埔寨政府｜e-Visa 官方网站", url: "https://www.evisa.gov.kh/", pageDate: "2026-08-13" },
+      { id: "gdi", label: "柬埔寨移民总局｜e-Arrival 说明", url: "https://immigration.gov.kh/public/", pageDate: "2026-08-13" }
+    ],
+    cards: [
+      c("中国护照去柬埔寨免签吗？", "可以，但只限 2026-06-15 至 10-15", ["中国普通护照适用", "中国或第三国出发均可", "单次不超过 14 天"], ["embassy"]),
+      c("14 天是怎么计算？", "每次入境最多 14 天，免签期内可多次入境", ["每次入境重新核对期限", "政策结束后不能继续套用", "不要自行写成可延期"], ["embassy"], "risk"),
+      c("e-Arrival 什么时候填？", "抵达前 7 天内可通过官方入口填写", ["也可抵达口岸现场操作", "保存电子入境卡", "e-Arrival 不是签证，也不收费"], ["embassy", "arrival"]),
+      c("免签要准备什么？", "护照、入境卡、住宿、返程和短期行程", ["边检可能补充询问旅行目的", "材料齐全不等于保证入境", "拒绝任何口岸索要小费行为并保留证据"], ["embassy"]),
+      c("免签结束后怎么办？", "改查柬埔寨官方 e-Visa 或其他签证", ["evisa.gov.kh 是官方电子签入口", "免签结束后不要沿用旧结论", "签证类别要匹配真实目的"], ["evisa", "gdi"]),
+      c("有没有签证成功率？", "免签没有签证成功率，入境由边检决定", ["不写包过或保证入境", "不引用旅行社通过率", "以官方入境决定为准"], ["embassy"]),
+      c("最容易踩的仿冒站？", "收费 e-Arrival 或非 gov.kh 电子签站都要警惕", ["e-Arrival 只认 arrival.gov.kh", "电子签只认 evisa.gov.kh", "不要向第三方提交护照或付款"], ["arrival", "evisa"], "risk"),
+      c("柬埔寨官方来源与核验记录", "限时免签、入境卡和回退签证路径分开记录", ["政策生效：2026-06-15", "限时结束：2026-10-15", "本站核验：2026-08-13；每周复核"], ["embassy", "arrival", "evisa"])
+    ]
+  },
+  {
+    slug: "巴西免签-乔大帅", code: "BR", flag: "🇧🇷", country: "巴西", topic: "30 天限时免签",
+    accent: "#c96b38", secondary: "#1e493f", pattern: "BRASIL / 23", policyEffective: "2026-05-11", officialUpdated: "2026-05-11", verified: "2026-08-13", nextReview: "2026-12-15",
+    fields: { passport: "有效中国普通护照", purpose: "旅游、商务、过境、艺术或体育活动", stay: "可多次入境；每个 migration year 累计不超过 30 天", cumulative: "migration year 从首次入境日起连续 12 个月计算", visa: "2026-05-11 至 2026-12-31 符合条件可免签", arrivalCard: "按巴西边检、承运人及入境要求", fee: "限时免签本身无签证费", processing: "入境现场审核，不承诺准入", districtException: "工作、学习和其他目的需相应签证", risk: "高" },
+    sources: [
+      { id: "mre", label: "巴西外交部驻广州总领馆｜签证与免签", url: "https://www.gov.br/mre/pt-br/consulado-cantao/EN/visas/info", pageDate: "2026-05-11" },
+      { id: "note", label: "巴西外交部｜中巴换文", url: "https://aplicacao.itamaraty.gov.br/ApiConcordia/Documento/download/34167", pageDate: "2026-05-07" },
+      { id: "vfs", label: "巴西签证中心 VFS｜其他目的申请", url: "https://visa.vfsglobal.com/chn/en/bra/apply-visa", pageDate: "2026-08-13" }
+    ],
+    cards: [
+      c("中国护照去巴西免签吗？", "可以，但这是 2026 年限时安排", ["2026-05-11 生效", "有效至 2026-12-31", "仅适用于公告列明短期目的"], ["mre", "note"]),
+      c("每次能待几天？", "可多次入境，但每个 migration year 累计不超过 30 天", ["migration year 从首次入境日开始", "不是自然年 1 月到 12 月", "不允许把 30 天反复刷新"], ["mre", "note"], "risk"),
+      c("哪些目的适用？", "旅游、商务、过境、艺术或体育活动", ["工作和学习不在免签范围", "商务访问不等于在巴西就业", "目的要能用行程或活动材料解释"], ["mre", "note"]),
+      c("入境要带什么？", "护照、返程/续程、住宿或活动证明", ["承运人和边检可能要求补充材料", "按 migration year 记录历史入境", "免签不等于无条件放行"], ["mre"]),
+      c("超过 30 天怎么办？", "超过累计上限或其他目的要提前申请相应签证", ["巴西外交部页面指向 VFS 申请流程", "不要先免签入境再从事工作", "签证类别按实际目的选择"], ["mre", "vfs"], "risk"),
+      c("巴西免签有成功率吗？", "免签没有签证成功率，入境由边检决定", ["不引用旅行社通过率", "不承诺一定登机或入境", "官方换文只说明政策条件"], ["mre", "note"]),
+      c("30 天累计怎么记？", "从第一次入境日起连续 12 个月建立个人记录", ["每次入境和离境日期都保存", "家庭多人也应分别记录", "政策解释变化时回到官方页面核对"], ["mre"]),
+      c("巴西官方来源与核验记录", "免签期限、累计口径和回退签证路径分开核验", ["政策生效：2026-05-11", "政策截止：2026-12-31", "本站核验：2026-08-13；12 月前再次复核"], ["mre", "note", "vfs"])
+    ]
+  },
+  {
+    slug: "哈萨克斯坦免签-乔大帅", code: "KZ", flag: "🇰🇿", country: "哈萨克斯坦", topic: "30/90/180 免签",
+    accent: "#d66d3d", secondary: "#24445b", pattern: "KAZAKHSTAN / 24", policyEffective: "2023-11-10", officialUpdated: "2026-08-14", verified: "2026-08-14", nextReview: "2026-09-14",
+    fields: {
+      passport: "中国普通护照、旅行证等协定适用证件", purpose: "旅游、私人事务、商务、医疗、国际运输及过境", stay: "单次不超过 30 天",
+      cumulative: "每 180 天累计不超过 90 天", visa: "符合协定目的可免签", arrivalCard: "接待方须在抵达后 3 个工作日内完成外国人到达申报", fee: "免签本身无签证费",
+      processing: "入境与接待方申报现场核验", districtException: "工作、学习、长期居留及超出协定目的需提前办理相应签证；哈萨克斯坦不办落地签", risk: "中高"
+    },
+    sources: [
+      { id: "agreement", label: "中国外交部｜中哈互免签证协定", url: "https://www.mfa.gov.cn/wjbzwfwpt/kzx/tzgg/202311/t20231103_11172619.html", pageDate: "2023-11-03" },
+      { id: "china", label: "中国领事服务网｜哈萨克斯坦入境居留", url: "https://cs.mfa.gov.cn/zggmcg/ljmdd/yz_645708/hskst_646454/", pageDate: "2026-08-14" },
+      { id: "regime", label: "哈萨克斯坦外交部｜外国人签证制度", url: "https://www.gov.kz/memleket/entities/mfa/activities/34747?lang=en&parentId=3053", pageDate: "2026-07-14" },
+      { id: "notify", label: "哈萨克斯坦政府｜外国人到达申报", url: "https://www.gov.kz/situations/497/1149?lang=en", pageDate: "2024-08-05" }
+    ],
+    cards: [
+      c("中国护照去哈萨克斯坦免签吗？", "免签，单次最多 30 天", ["中国普通护照适用", "每 180 天累计最多 90 天", "旅游、商务等协定目的可用"], ["agreement", "china"]),
+      c("30 天和 90 天怎么分？", "30 天是单次上限，90 天是滚动 180 天累计上限", ["短暂离境不会自动清零", "多次往返要自己记录", "边境系统记录是最终依据"], ["agreement"], "risk"),
+      c("入境后谁要做登记？", "接待方须在抵达后 3 个工作日内申报", ["酒店、房东或其他接待方负责通知", "每次入境和变更住址都要关注", "旅客本人应主动确认申报已完成"], ["notify", "china"]),
+      c("要不要自己去移民局？", "一般由接待方通过系统申报，旅客不等于要亲自办登记", ["可使用 vmp.gov.kz 或 eQonaq 等官方渠道", "住私人住所要先和接待方确认", "保存申报或住宿凭证"], ["notify"], "risk"),
+      c("入境随身材料", "护照、返程/续程、住宿地址和旅行目的证明", ["边境可能询问资金和下一程", "材料要和免签目的、停留天数一致", "免签不等于保证入境"], ["china", "notify"]),
+      c("哪些目的不能用免签？", "工作、学习、长期居留和超出协定目的需相应签证", ["哈萨克斯坦不办理落地签", "不要用频繁出入境代替居留许可", "签证类别要匹配真实目的"], ["china", "regime"], "risk"),
+      c("需要申请签证时去哪？", "按哈萨克斯坦驻华使领馆和官方规则提前办理", ["签证需国内审批和返签号时可能更久", "不要把免签入口当成工作签证入口", "只从外交部或使领馆页面进入"], ["china", "regime"]),
+      c("哈萨克斯坦官方来源与核验记录", "协定、入境规则和住宿申报分开核验", ["政策生效：2023-11-10", "本站核验：2026-08-14", "下次复核：2026-09-14；变动时提前复核"], ["agreement", "china", "regime", "notify"])
+    ]
+  },
+  {
+    slug: "乌兹别克斯坦免签-乔大帅", code: "UZ", flag: "🇺🇿", country: "乌兹别克斯坦", topic: "30/90/180 免签",
+    accent: "#d66e3b", secondary: "#244a59", pattern: "UZBEKISTAN / 25", policyEffective: "2025-06-01", officialUpdated: "2026-08-14", verified: "2026-08-14", nextReview: "2026-09-14",
+    fields: {
+      passport: "中国普通、因公普通及公务护照", purpose: "旅游、私人事务、商务、过境等免签允许目的", stay: "单次不超过 30 天",
+      cumulative: "每 180 天累计不超过 90 天", visa: "符合中乌协定可免签", arrivalCard: "住宿地点须在入境后 3 个工作日内完成登记", fee: "免签本身无签证费",
+      processing: "入境现场审核；住宿登记由酒店或接待方办理", districtException: "工作、学习、媒体报道或超过 30 天需提前申请相应签证", risk: "中高"
+    },
+    sources: [
+      { id: "agreement", label: "乌兹别克斯坦外交部｜中乌互免签证协定", url: "https://gov.uz/en/mfa/news/view/53659", pageDate: "2025-05-13" },
+      { id: "china", label: "中国领事服务网｜乌兹别克斯坦入境居留", url: "https://cs.mfa.gov.cn/zggmcg/ljmdd/yz_645708/wzbkst_647880/rjjl_647890/", pageDate: "2026-08-14" },
+      { id: "registration", label: "乌兹别克斯坦政府｜外国人登记说明", url: "https://my.gov.uz/en/for-foreigners", pageDate: "2026-07-28" },
+      { id: "visa", label: "乌兹别克斯坦政府｜签证与电子签", url: "https://gov.uz/en/mfa/pages/o-zbekiston-respublikasi-vizasi", pageDate: "2026-06-01" }
+    ],
+    cards: [
+      c("中国护照去乌兹别克斯坦免签吗？", "免签，单次最多 30 天", ["中乌互免自 2025-06-01 生效", "每 180 天累计最多 90 天", "旅游、商务、过境等目的仍要符合规则"], ["agreement", "china"]),
+      c("超过 30 天能不能续？", "不能把免签直接续成长期停留，需提前申请签证", ["每次停留不能超过 30 天", "工作、学习、媒体活动不在免签范围", "不要先入境再赌能否转身份"], ["agreement", "visa"], "risk"),
+      c("住宿登记是必须的吗？", "通常要在入境后 3 个工作日内登记住宿", ["酒店、民宿等住宿机构通常代办", "住私人住所要由接待方或本人按官方系统办理", "变更住址要重新登记"], ["registration", "china"], "risk"),
+      c("登记凭证要留着吗？", "要，离境或被查验时可能要求出示", ["保存电子或纸质登记确认", "不要只相信口头说‘酒店已经办了’", "短期过境或不超过规定时长的例外也要出发前确认"], ["registration"]),
+      c("入境随身材料", "护照、返程/续程、住宿和旅行目的证明", ["护照建议至少留足 6 个月有效期", "边境可能询问资金与行程", "免签不代表无条件入境"], ["registration", "china"]),
+      c("需要申请签证时去哪？", "通过乌兹别克斯坦使领馆或官方 e-Visa 入口办理", ["网上申请表通常需英文填写", "邀请函等材料按签证类别准备", "不要把旅行社收费链接当官方入口"], ["visa", "china"]),
+      c("乌兹别克斯坦免签不能做什么？", "工作、学习、媒体报道等须先取得相应许可", ["商务访问不等于在当地就业", "长期居留另走正式路径", "目的不符可能影响入境"], ["agreement", "visa"], "risk"),
+      c("乌兹别克斯坦官方来源与核验记录", "免签协定、住宿登记和回退签证路径分开记录", ["政策生效：2025-06-01", "本站核验：2026-08-14", "下次复核：2026-09-14"], ["agreement", "registration", "visa", "china"])
+    ]
+  },
+  {
+    slug: "塞尔维亚免签-乔大帅", code: "RS", flag: "🇷🇸", country: "塞尔维亚", topic: "30 天免签",
+    accent: "#d6633b", secondary: "#2a3f5e", pattern: "SERBIA / 26", policyEffective: "2017-01-15", officialUpdated: "2026-08-14", verified: "2026-08-14", nextReview: "2026-09-14",
+    fields: {
+      passport: "有效中国普通护照", purpose: "旅游、商务、探亲及过境等短期访问", stay: "自首次入境起不超过 30 天",
+      cumulative: "中塞普通护照互免规则按单次 30 天理解；其他签证便利不要混用", visa: "普通短期访问免签", arrivalCard: "按塞尔维亚边境与住宿登记要求", fee: "免签本身无签证费",
+      processing: "入境现场审核", districtException: "工作、学习、长期居留等目的需相应签证/许可；如不适用免签可用官方外国人门户申请", risk: "中"
+    },
+    sources: [
+      { id: "regime", label: "塞尔维亚外交部｜中国签证制度", url: "https://www.mfa.gov.rs/en/citizens/travel-abroad/visas-and-states-travel-advisory/china", pageDate: "2026-08-14" },
+      { id: "entry", label: "塞尔维亚外交部｜一般入境要求", url: "https://www.mfa.gov.rs/en/citizens/travel-serbia/general-entry-requirements", pageDate: "2026-08-14" },
+      { id: "agreement", label: "塞尔维亚政府｜中塞互免协议生效", url: "https://www.srbija.gov.rs/vest/en/120331/agreement-on-abolition-of-visas-between-serbia-china-in-force.php", pageDate: "2017-01-16" },
+      { id: "portal", label: "塞尔维亚外国人门户｜签证申请备用入口", url: "https://welcometoserbia.gov.rs/", pageDate: "2026-08-14" }
+    ],
+    cards: [
+      c("中国护照去塞尔维亚免签吗？", "免签，短期访问最多 30 天", ["适用有效中国普通护照", "中塞普通护照协议已生效", "旅游、商务和过境仍要符合入境要求"], ["regime", "agreement"]),
+      c("30 天从什么时候开始？", "从首次入境日期起计算", ["不要把签证便利中的 90/180 口径套到普通护照互免", "离境前自行核对日期", "边境系统记录为最终依据"], ["regime", "agreement"], "risk"),
+      c("边境会查什么？", "护照、返程/续程、住宿、资金和旅行目的", ["官方一般要求列出每天约 50 欧元资金证明", "可能要求酒店订单或邀请函", "过境还要证明能进入下一国"], ["entry"]),
+      c("健康保险要不要带？", "官方建议携带覆盖至少 20,000 欧元医疗费用的保险", ["建议把保单和行程一起保存", "保险不是免签替代物", "个别公共卫生要求按出发前公告核对"], ["entry"]),
+      c("入境被问到怎么办？", "如实说明目的、住宿和返程安排", ["不要用虚假酒店或邀请函", "资料前后一致比堆材料更重要", "边境机关可基于个案拒绝入境"], ["entry"], "risk"),
+      c("想工作或待更久怎么办？", "提前走塞尔维亚相应签证或居留路径", ["免签旅游不能转成就业许可", "不适用免签时可查官方外国人门户", "不要依赖中介保证转身份"], ["regime", "portal"], "risk"),
+      c("塞尔维亚有电子签申请吗？", "需要签证的情形可从官方外国人门户开始核对", ["普通中国护照短期旅游优先看免签规则", "申请入口和所需材料以门户动态清单为准", "不要把第三方服务商当政府机关"], ["portal", "regime"]),
+      c("塞尔维亚官方来源与核验记录", "互免协议、国别制度和一般入境要求交叉核验", ["政策生效：2017-01-15", "本站核验：2026-08-14", "下次复核：2026-09-14"], ["regime", "agreement", "entry", "portal"])
+    ]
+  },
+  {
+    slug: "摩洛哥免签-乔大帅", code: "MA", flag: "🇲🇦", country: "摩洛哥", topic: "90 天免签",
+    accent: "#d5623d", secondary: "#304a45", pattern: "MOROCCO / 27", policyEffective: "2016-06-01", officialUpdated: "2026-08-14", verified: "2026-08-14", nextReview: "2026-09-14",
+    fields: {
+      passport: "中国普通护照", purpose: "短期旅游、商务、过境等入境允许目的", stay: "自入境日起不超过 90 天",
+      cumulative: "当前官方页面按单次免签期限表述；超过 90 天应提前咨询居留/签证路径", visa: "中国护照免签入境", arrivalCard: "按摩洛哥边检、承运人和海关当期要求", fee: "免签本身无签证费",
+      processing: "入境现场审核", districtException: "工作、长期居留等目的不能只用旅游免签；护照有效期应大于 6 个月", risk: "中"
+    },
+    sources: [
+      { id: "entry", label: "中国领事服务网｜摩洛哥入境居留", url: "https://cs.mfa.gov.cn/zggmcg/ljmdd/fz_648564/mlg_650861/rjjl_650871/", pageDate: "2026-08-14" },
+      { id: "detail", label: "中国领事服务网｜摩洛哥免签细化说明", url: "https://cs.mfa.gov.cn/zggmcg/ljmdd/fz_648564/mlg_650861/fwxx/201606/t20160607_940983.shtml", pageDate: "2016-06-07" },
+      { id: "consulat", label: "摩洛哥领事事务官方门户", url: "https://www.consulat.ma/", pageDate: "2026-08-14" },
+      { id: "customs", label: "摩洛哥海关官方门户", url: "https://www.douane.gov.ma/", pageDate: "2026-08-14" }
+    ],
+    cards: [
+      c("中国护照去摩洛哥免签吗？", "免签，最长停留 90 天", ["中国普通护照适用", "免签自 2016-06-01 实施", "实际准入仍由边境机关决定"], ["entry", "detail"]),
+      c("护照要剩多久有效？", "入境时有效期应大于 6 个月", ["破损、空白页不足也可能影响登机", "儿童需要自己的有效旅行证件", "出发前让承运人再次核对"], ["entry", "detail"]),
+      c("边检可能要看什么？", "机票、酒店订单、公司邀请函等行程材料可能被查", ["免签不等于只带护照就一定放行", "商务和旅游目的要与材料一致", "建议保存返程/续程和资金证明"], ["entry"]),
+      c("90 天是自然年额度吗？", "页面明确按入境日起不超过 90 天表述", ["不要自行写成每年自动重置", "超过 90 天要提前咨询居留或签证", "离境日纳入个人行程规划"], ["entry", "detail"], "risk"),
+      c("第三国飞过去可以吗？", "免签判断看中国护照和摩洛哥规则，不以是否从中国出发为前提", ["仍要满足转机国家过境要求", "白本护照也不能跳过边境审查", "保持完整行程证据"], ["detail"]),
+      c("能不能工作或长期住？", "不能用旅游免签替代工作许可或居留证", ["长期居留应抵达后及时咨询当地部门", "超期且未办居留可能面临罚款或驱逐", "不要相信‘免签转工签包办’"], ["entry"], "risk"),
+      c("入境前有没有网上申请？", "短期免签本身没有签证申请流程", ["可查看摩洛哥领事事务门户的最新要求", "海关物品和货币规则另看官方海关页面", "警惕收费仿冒签证站"], ["consulat", "customs"]),
+      c("摩洛哥官方来源与核验记录", "免签结论、边检材料和海关规则分别记录", ["政策生效：2016-06-01", "本站核验：2026-08-14", "下次复核：2026-09-14"], ["entry", "detail", "consulat", "customs"])
     ]
   }
 ];

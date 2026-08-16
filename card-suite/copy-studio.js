@@ -292,7 +292,7 @@ async function generateWithAI(versionIdx = 0) {
 
   const btn = $("aiGenerateBtn");
   if (btn) btn.disabled = true;
-  setStatus("AI 生成中…", true);
+  setStatus("AI 生成中…（最长等待 28 秒）", true);
   $("draftOutput").value = "";
 
   let full = "";
@@ -313,7 +313,9 @@ async function generateWithAI(versionIdx = 0) {
     },
     onError(msg) {
       $("draftOutput").value = `[生成失败] ${msg}\n\n请检查 AI 设置或稍后重试。`;
-      setStatus("生成失败：" + msg);
+      setStatus(msg.includes("超时")
+        ? "生成超时：当前内容已保留，请稍后重试"
+        : "生成失败：" + msg);
       if (btn) btn.disabled = false;
     },
   });
